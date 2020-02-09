@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Demo on Takuya Kobayashi</title>
+    <link>/tags/demo/</link>
+    <description>Recent content in Demo on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Jun 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>App by flask and AWS</title>
+      <link>/app/classify/</link>
+      <pubDate>Sun, 23 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/app/classify/</guid>
+      <description>Testing Flask and AWS, to demo my research results in the future [&lt;code&gt;Flask&lt;/code&gt;,&lt;code&gt;Demo&lt;/code&gt;,&lt;code&gt;AWS&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Action Segmentation Demo</title>
+      <link>/app/demo/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/app/demo/</guid>
+      <description>Showcasing the first 500frames  [&lt;code&gt;Development&lt;/code&gt;,&lt;code&gt;Demo&lt;/code&gt;]</description>
+    </item>
+    
+  </channel>
+</rss>

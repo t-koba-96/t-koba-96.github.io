@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Video Classification on Takuya Kobayashi</title>
+    <link>/tags/video-classification/</link>
+    <description>Recent content in Video Classification on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Dec 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/video-classification/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Joint research</title>
+      <link>/project/joint-research/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/joint-research/</guid>
+      <description>Research result [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Action&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Demo for action segmentation</title>
+      <link>/project/demo/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/demo/</guid>
+      <description>A demo for viusalising segmentation results per frame [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Dash&lt;/code&gt;,&lt;code&gt;GCP&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Action segmentation using public dataset</title>
+      <link>/project/action/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/action/</guid>
+      <description>Github project + Demo App [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Action Classification&lt;/code&gt;,&lt;code&gt;GCP&lt;/code&gt;,&lt;code&gt;Dash&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Action Segmentation Demo</title>
+      <link>/app/demo/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/app/demo/</guid>
+      <description>Showcasing the first 500frames  [&lt;code&gt;Dash&lt;/code&gt;,&lt;code&gt;GCP&lt;/code&gt;,&lt;code&gt;HTML/CSS&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Demo with Public Dataset</title>
+      <link>/app/demo-light/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/app/demo-light/</guid>
+      <description>Updated demo version  [&lt;code&gt;GCP&lt;/code&gt;,&lt;code&gt;Dash&lt;/code&gt;,&lt;code&gt;HTML/CSS&lt;/code&gt;]</description>
+    </item>
+    
+  </channel>
+</rss>

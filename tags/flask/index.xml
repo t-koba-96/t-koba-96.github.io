@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flask on Takuya Kobayashi</title>
+    <link>/tags/flask/</link>
+    <description>Recent content in Flask on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Aug 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Demo for food-101</title>
+      <link>/app/food-101-app/</link>
+      <pubDate>Sat, 24 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/app/food-101-app/</guid>
+      <description>A demo app to showcase food-101 [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Flask&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Demo using Flask and AWS</title>
+      <link>/project/flask/</link>
+      <pubDate>Sat, 24 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/flask/</guid>
+      <description>A demo app to showcase my research result [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Flask&lt;/code&gt;,&lt;code&gt;AWS&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>App by flask and AWS</title>
+      <link>/app/classify/</link>
+      <pubDate>Sun, 23 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/app/classify/</guid>
+      <description>Testing Flask and AWS, to demo my research results in the future [&lt;code&gt;Flask&lt;/code&gt;,&lt;code&gt;AWS&lt;/code&gt;,&lt;code&gt;HTML/CSS&lt;/code&gt;]</description>
+    </item>
+    
+  </channel>
+</rss>

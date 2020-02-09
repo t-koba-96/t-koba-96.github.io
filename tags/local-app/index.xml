@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Local App on Takuya Kobayashi</title>
+    <link>/tags/local-app/</link>
+    <description>Recent content in Local App on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Aug 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/local-app/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Demo for food-101</title>
+      <link>/app/food-101-app/</link>
+      <pubDate>Sat, 24 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/app/food-101-app/</guid>
+      <description>A demo app to showcase food-101 [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Flask&lt;/code&gt;]</description>
+    </item>
+    
+  </channel>
+</rss>

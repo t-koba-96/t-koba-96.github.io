@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Takuya Kobayashi</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Monthly</title>
+      <link>/tags/monthly/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/monthly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Atcoder</title>
+      <link>/tags/atcoder/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/atcoder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Memo</title>
+      <link>/tags/memo/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/memo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CV</title>
+      <link>/tags/cv/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/cv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Video Classification</title>
+      <link>/tags/video-classification/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/video-classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS</title>
+      <link>/tags/aws/</link>
+      <pubDate>Sat, 24 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flask</title>
+      <link>/tags/flask/</link>
+      <pubDate>Sat, 24 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Image Classification</title>
+      <link>/tags/image-classification/</link>
+      <pubDate>Sat, 24 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/image-classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Local App</title>
+      <link>/tags/local-app/</link>
+      <pubDate>Sat, 24 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/local-app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dash</title>
+      <link>/tags/dash/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/dash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GCP</title>
+      <link>/tags/gcp/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/gcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Profile</title>
+      <link>/tags/profile/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/profile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML/CSS</title>
+      <link>/tags/html/css/</link>
+      <pubDate>Sun, 23 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/html/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Released</title>
+      <link>/tags/web-released/</link>
+      <pubDate>Sun, 23 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/web-released/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pose Estimation</title>
+      <link>/tags/pose-estimation/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/pose-estimation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Attention</title>
+      <link>/tags/attention/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/attention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Random</title>
+      <link>/tags/random/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/random/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Swift</title>
+      <link>/tags/swift/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/swift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iOS</title>
+      <link>/tags/ios/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

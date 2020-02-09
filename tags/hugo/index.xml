@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Takuya Kobayashi</title>
+    <link>/tags/hugo/</link>
+    <description>Recent content in Hugo on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugoで作成したポートフォリオをGithubPagesで公開してみた</title>
+      <link>/blog/template/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/template/</guid>
+      <description>Portfolio using Hugo  [&lt;code&gt;Profile&lt;/code&gt;,&lt;code&gt;Hugo&lt;/code&gt;]</description>
+    </item>
+    
+  </channel>
+</rss>

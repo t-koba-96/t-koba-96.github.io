@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iOSApp on Takuya Kobayashi</title>
+    <link>/tags/iosapp/</link>
+    <description>Recent content in iOSApp on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/iosapp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating iOS App as hobby</title>
+      <link>/pages/project/ios/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/pages/project/ios/</guid>
+      <description>Example : iOS drawing App writen by Swift [&lt;code&gt;Development&lt;/code&gt;]</description>
+    </item>
+    
+  </channel>
+</rss>

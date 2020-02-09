@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Action Classification on Takuya Kobayashi</title>
+    <link>/tags/action-classification/</link>
+    <description>Recent content in Action Classification on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Dec 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/action-classification/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Joint research</title>
+      <link>/project/joint-research/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/joint-research/</guid>
+      <description>Research result [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Action Classification&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Action segmentation using public dataset</title>
+      <link>/project/action/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/action/</guid>
+      <description>Github project + Demo App [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Action Classification&lt;/code&gt;]</description>
+    </item>
+    
+  </channel>
+</rss>

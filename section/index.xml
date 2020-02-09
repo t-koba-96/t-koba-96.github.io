@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sections on Takuya Kobayashi</title>
+    <link>/section/</link>
+    <description>Recent content in Sections on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/section/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>App Page</title>
+      <link>/section/app/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/section/app/</guid>
+      <description>Hello!</description>
+    </item>
+    
+    <item>
+      <title>Blog Page</title>
+      <link>/section/blog/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/section/blog/</guid>
+      <description>Hello!</description>
+    </item>
+    
+    <item>
+      <title>Contact Page</title>
+      <link>/section/contact/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/section/contact/</guid>
+      <description>Hello!</description>
+    </item>
+    
+    <item>
+      <title>Gallery Page</title>
+      <link>/section/gallery/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/section/gallery/</guid>
+      <description>Hello!</description>
+    </item>
+    
+    <item>
+      <title>Projects Page</title>
+      <link>/section/project/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/section/project/</guid>
+      <description>Hello!</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Takuya Kobayashi</title>
+    <link>/project/</link>
+    <description>Recent content in Projects on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Dec 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Joint research</title>
+      <link>/project/joint-research/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/joint-research/</guid>
+      <description>Research result [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Action&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Demo using Flask and AWS</title>
+      <link>/project/flask/</link>
+      <pubDate>Sat, 24 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/flask/</guid>
+      <description>A demo app to showcase my research result [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Flask&lt;/code&gt;,&lt;code&gt;AWS&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Demo for action segmentation</title>
+      <link>/project/demo/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/demo/</guid>
+      <description>A demo for viusalising segmentation results per frame [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Dash&lt;/code&gt;,&lt;code&gt;GCP&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Action segmentation using public dataset</title>
+      <link>/project/action/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/action/</guid>
+      <description>Github project + Demo App [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Action Classification&lt;/code&gt;,&lt;code&gt;GCP&lt;/code&gt;,&lt;code&gt;Dash&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Hand-Pose Estimator</title>
+      <link>/project/handpose/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/handpose/</guid>
+      <description>Github project [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Pose Estimation&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Attention for food classification</title>
+      <link>/project/food/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/food/</guid>
+      <description>Github project [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Attention&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Creating iOS App as hobby</title>
+      <link>/project/ios/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/ios/</guid>
+      <description>Example : iOS drawing App writen by Swift [&lt;code&gt;iOS&lt;/code&gt;,&lt;code&gt;Swift&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Paper summary</title>
+      <link>/project/papersummary/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/papersummary/</guid>
+      <description>Summary of paper, dataset, etc. [&lt;code&gt;Paper&lt;/code&gt;]</description>
+    </item>
+    
+  </channel>
+</rss>

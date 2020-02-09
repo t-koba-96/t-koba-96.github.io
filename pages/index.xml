@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Takuya Kobayashi</title>
+    <link>/pages/</link>
+    <description>Recent content in Pages on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Atcoder 自分用備忘録</title>
+      <link>/pages/blog/atcoder/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/blog/atcoder/</guid>
+      <description>Atcoder  [&lt;code&gt;Memo&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Joint research</title>
+      <link>/pages/project/joint-research/</link>
+      <pubDate>Thu, 24 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/pages/project/joint-research/</guid>
+      <description>Research result [&lt;code&gt;CV&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>簡易化した動画認識デモの使い方を軽く説明</title>
+      <link>/pages/blog/demo/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/blog/demo/</guid>
+      <description>Action Segmentation Demo [&lt;code&gt;Development&lt;/code&gt;,&lt;code&gt;Dash&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Hugoで作成したポートフォリオをGithubPagesで公開してみた</title>
+      <link>/pages/blog/template/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/blog/template/</guid>
+      <description>Portfolio using Hugo  [&lt;code&gt;Development&lt;/code&gt;,&lt;code&gt;Hugo&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Demo using Flask and AWS</title>
+      <link>/pages/project/flask/</link>
+      <pubDate>Mon, 24 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/pages/project/flask/</guid>
+      <description>A demo app to showcase my research result [&lt;code&gt;Development&lt;/code&gt;,&lt;code&gt;Flask&lt;/code&gt;,&lt;code&gt;AWS&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>App by flask and AWS</title>
+      <link>/pages/app/classify/</link>
+      <pubDate>Sun, 23 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/pages/app/classify/</guid>
+      <description>Testing Flask and AWS, to demo my research results in the future [&lt;code&gt;Flask&lt;/code&gt;,&lt;code&gt;Demo&lt;/code&gt;,&lt;code&gt;AWS&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Action Segmentation Demo</title>
+      <link>/pages/app/demo/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/pages/app/demo/</guid>
+      <description>Showcasing the first 500frames  [&lt;code&gt;Development&lt;/code&gt;,&lt;code&gt;Demo&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Demo for action segmentation</title>
+      <link>/pages/project/demo/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/pages/project/demo/</guid>
+      <description>A demo for viusalising segmentation results per frame [&lt;code&gt;Development&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Action segmentation using public dataset</title>
+      <link>/pages/project/action/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/pages/project/action/</guid>
+      <description>Github project [&lt;code&gt;CV&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Attention for food classification</title>
+      <link>/pages/project/food/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/pages/project/food/</guid>
+      <description>Github project [&lt;code&gt;CV&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Paper summary</title>
+      <link>/pages/project/papresummary/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/pages/project/papresummary/</guid>
+      <description>Summary of paper, dataset, etc. [&lt;code&gt;Paper&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Creating iOS App as hobby</title>
+      <link>/pages/project/ios/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/pages/project/ios/</guid>
+      <description>Example : iOS drawing App writen by Swift [&lt;code&gt;Development&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Other Projects</title>
+      <link>/pages/project/other/</link>
+      <pubDate>Tue, 30 Apr 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/pages/project/other/</guid>
+      <description>A demo for viusalising segmentation results per frame [&lt;code&gt;Other&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Top page photos</title>
+      <link>/pages/gallery/top-page/</link>
+      <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/gallery/top-page/</guid>
+      <description> Overview ・Photos at the top page
+・Some of the places I travelled
+       </description>
+    </item>
+    
+    <item>
+      <title>Malta/Italia trip</title>
+      <link>/pages/gallery/italy/</link>
+      <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/gallery/italy/</guid>
+      <description> Overview Rome , Malta
+        </description>
+    </item>
+    
+  </channel>
+</rss>
