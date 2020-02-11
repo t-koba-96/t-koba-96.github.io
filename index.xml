@@ -260,7 +260,7 @@ if __name__ == &#39;__main__&#39;:
 
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;how-to-try-on-our-local&#34;&gt;How to try on our local&lt;/h2&gt;
+&lt;h2 id=&#34;how-to-try-on-our-local-need-gpu&#34;&gt;How to try on our local (Need GPU)&lt;/h2&gt;
 
 &lt;p&gt;First, check &lt;a href=&#34;https://github.com/t-koba-96/food-101-app&#34; target=&#34;_blank&#34;&gt;Github page&lt;/a&gt;&lt;/p&gt;
 
@@ -278,11 +278,15 @@ if __name__ == &#39;__main__&#39;:
 
 &lt;p&gt;&lt;code&gt;$ pip install -r requirements.txt&lt;/code&gt;&lt;/p&gt;
 
+&lt;p&gt;・Install model weight file&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ sh get_weigth.sh&lt;/code&gt;&lt;/p&gt;
+
 &lt;p&gt;・Launch the app&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;$ python app.py&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;You can now see your website at local host &lt;a href=&#34;http://0.0.0.0:80/&#34; target=&#34;_blank&#34;&gt;http://0.0.0.0:80/&lt;/a&gt; .&lt;br /&gt;
+&lt;p&gt;You can now see your website at local host &lt;a href=&#34;http://127.0.0.1:8050/&#34; target=&#34;_blank&#34;&gt;http://127.0.0.1:8050/&lt;/a&gt; .&lt;br /&gt;
 It takes a while for launch since it loads the model weight first.&lt;/p&gt;
 
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
