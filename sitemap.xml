@@ -181,7 +181,104 @@
   </url>
   
   <url>
+    <loc>/paper/03/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/10/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/09/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/project/demo/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/07/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/08/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/paper-action-recognition/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/paper-action-segmentation/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/paper-attention/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/paper-pose-estimation/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/paper-semantic-segmentation/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/papers/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/paper/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/paper/05/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/04/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/02/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/11/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/01/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/06/</loc>
     <lastmod>2019-07-17T00:00:00+09:00</lastmod>
   </url>
   
@@ -301,6 +398,11 @@
   
   <url>
     <loc>/section/gallery/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/section/paper/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   

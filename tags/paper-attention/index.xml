@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper - Attention on Takuya Kobayashi</title>
+    <link>/tags/paper-attention/</link>
+    <description>Recent content in Paper - Attention on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/paper-attention/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Attention Branch Network : Learning of Attention Mechanism for Visual Explanation #9</title>
+      <link>/paper/09/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/09/</guid>
+      <description> 論文情報 ・Hiroshi Fukui
+・2019 CVPR
+・paper
+・code(pytorch)
+概要 画像分類のタスクにおいて，主にVisualiseの際に用いられるCAMの出力をAttentionのように使って中間層の特徴マップに掛け合わせることによって，精度向上を実現．
+手法 Attention branchとPerception branchから構成される．Attention branchでは特徴マップからCAMの出力を得て，画像分類の際に認識に寄与する領域をVisualize.
+得たAttention map を元の特徴マップに掛け合わせたのち，元の特徴マップを足し合わせ，Perception branchにおいて画像の分類．
+実験 新規性 ・VisualizeのためのAttention Mapを再び画像分類に利用
+コメント・メモ ・実装試したい
+編集日 2019/4/22
+URL → Paper Top Page </description>
+    </item>
+    
+  </channel>
+</rss>

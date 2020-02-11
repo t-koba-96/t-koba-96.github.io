@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper - Action Segmentation on Takuya Kobayashi</title>
+    <link>/tags/paper-action-segmentation/</link>
+    <description>Recent content in Paper - Action Segmentation on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/paper-action-segmentation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Action segmentation Datasets #10</title>
+      <link>/paper/10/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/10/</guid>
+      <description>Action segmentation Datasets まとめ</description>
+    </item>
+    
+    <item>
+      <title>MS-TCN: Multi-Stage Temporal Convolutional Network for Action Segmentation #8</title>
+      <link>/paper/08/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/08/</guid>
+      <description> 論文情報 ・Yazan Abu Farha and Juergen Gall
+・201９ CVPR
+・paper
+・code(pytorch)
+概要 行動認識のタスクにおいて,Temporal Convolutional Networksを複数重ねるMulti-TCNの提案．２個目以降のTCNには各クラスのPredictのSoftmax値を入力とすることで，OverSegmentation（予測結果の頻繁な変化）の抑止を実現．
+手法 下図のようにTCNを複数ステージ重ねていき，最終ステージの出力を予測結果として用いる．特徴として，２ステージ目以降の入力は前のステージのSoftmax出力を使う．
+イメージとしては，１ステージ目で大まかな行動の認識を行って，２ステージ目以降では時系列情報を考慮しながら細かい行動遷移の予測（主にOversegmentationの抑止）を行っている感じ？
+ロス 交差エントロピーに加え，以下のようにフレーム間での正解クラスの予測値の変化を罰している．クラスが本当に切り替わるところは考慮しないよう，閾値を設けている．
+実験 Dataset 50salads
+Single-TCNとの比較 ロスの違いによる比較 新規性 ・クラス毎のsoftmax値を次のステージへの入力に用いている
+・ロスの提案
+コメント・メモ ステージへの入力の工夫が面白いと感じた．Action SegmentationのlossはCross Entropyだけじゃなく付加的に色々試してみる価値あり．
+編集日 2019/4/22
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>Temporal Convolutional Networks for Action Segmentation and Detection #2</title>
+      <link>/paper/02/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/02/</guid>
+      <description> 論文情報 ・Colin Lea , Michael D. Flynn , Rene ́ Vidal , Austin Reiter , Gregory D. Hager
+・2016 CVPR
+・paper
+・code(pytorch)
+・code(keras)
+概要 詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.
+２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.
+手法 提案した両方のTCNにおいて、入力は各フレームから何かしらのCNN(Resnet,VGG等)を用いて抽出した特徴量を時系列順に並べたものであり、出力としては行動クラス結果が各フレームごとに出力される.
+ED-TCN エンコーダとデコーダを組み合わせたTCN. エンコーダで畳み込み＋MaxPoolingを行うことで時系列を考慮した特徴抽出、その後デコーダで畳み込み＋アップサンプリングを行うことで各フレームごとの行動クラス確率分布を得る.
+Dilated TCN 時系列の畳み込みとしてDilated Convolutionを用いた手法. Dilated Convolutionとは簡単に説明すると、入力の間隔を空けて(間を0とみなす)畳み込みを行うこと(d=1なら間隔なし、d=２なら間隔１、d=4なら間隔３). dの値をどんどん(本論文では指数関数的に)大きくしていったDilated Convolution層を重ねることで、より長期的な時系列の範囲で特徴抽出を行うことが可能となる. またスキップコネクションの導入で層を深くすることを可能に．
+実験 50salads、MERL Shopping、GTEAの３種のデータセットを用いて、Spatial CNN等との比較
+特徴・新規性 ・各層ごとに同時に処理を行うため、入力フレーム数が増えても処理時間に影響をあまり与えない.
+→フレームごとに処理を行うLSTM等と比較して高速な処理
+・３Dconvは動画全体(数フレーム分)に対して1つの行動クラスの出力であるのに対し、TCNでは各フレームごとに行動クラスの出力が可能
+コメント・メモ 実装した体感DilatedよりEDの方が精度良い？
+Dilatedはより長期的な記憶が可能である点が長所？
+編集日 2018/11/30
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>TricorNet: A Hybrid Temporal Convolutional and Recurrent Network for Video Action Segmentation #11</title>
+      <link>/paper/11/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/11/</guid>
+      <description> 論文情報 ・Li Ding, Chenliang Xu
+・2017
+・paper
+概要 アクションセグメンテーションのタスク．TCNとBi-Directional LSTMを組み合わせることによって精度が向上したという論文．
+手法 以下が手法の概要．ベースラインとして用いるのはEncoder-Decoder型のTCN．Encoder側は従来通り行い，Decoder側のUp-samplingの前にBi-LSTMを挟むことによって，時系列方向に圧縮された段階において特徴量の洗練を行なっている．
+LSTMを挿入する層をいじることで，３種類のネットワークを提案，比較している．
+実験 50salads，GTEA，JIGSAW を利用．
+新規性 ・TCNとLSTMのハイブリッド
+コメント・メモ ・エンコーダを通した後の時系列方向に圧縮された特徴量にLSTMで処理をかけるという手法は面白い
+編集日 2019/08/02
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>Weakly-Supervised Action Segmentation with Iterative Soft Boundary Assignment #6</title>
+      <link>/paper/06/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/06/</guid>
+      <description> 論文情報 ・Li Ding, Chenliang xu
+・2018 CVPR
+・paper
+概要 Action Segmentation のタスクにおいてWeakly-supervisedな手法. 学習用の動画デートセットの正解として，動画内の行動ラベルの順番のみ与える（各フレームにおける正解ラベルはなし）. 同様のWeakly-Supervisedな手法と比較して最高精度を記録．
+手法 ネットワーク全体の概要は以下の通り．
+本手法では，Action Segmentationを行う部分としてTCFPN ，認識結果を元にフレーム毎の正解ラベルの予測を行い，ground truth を更新する部分としてISBAをそれぞれ新たに提案している．
+TCFPN Action Segmentationを行う既存手法であるED-TCN と物体検出のタスクにおいて用いられるFeature Pyramid Networkを組み合わせた手法．単純にEncoder-Decoderのみを使うと，正確な特徴量を抽出できるものの，位置情報（今回の場合時間情報）が大雑把なものとなってしまう．そこで，Encoderの各層を1×1convして加えることで，より正確な位置情報を得ることが可能となる，というイメージ．
+TCFPNでSegmentationを行うには，フレーム毎の行動ラベルが必要なので，動画に対してN個の行動が順に起こるというWeaklyなラベルが与えられた時，動画のフレームをN等分して行動ラベルの初期値として与えてやる．その際0，１のみのOne-hotな表現ではなく，動画の行動が徐々に移り変わるだろうという予測を基に，以下のようなSoft Boundaryなラベル付けを行う．
+ISBA TCFPNの出力を元にフレーム毎の正解ラベルの予測，更新を行う部分．要ははじめに与えたN等分するようなフレーム毎の行動の正解ラベルでは正確ではないため，TCFPNの出力を元にフレーム毎の正解を新たに予測し，更新することで実際のground truthに近いラベルを得ようという考え．
+学習・テスト TCFPNとISBAを繰り返し行い，認識結果を元にフレーム単位の行動ラベルを更新していくことで，フレーム単位の行動ラベルをground truthに近づけることと，Action Segmentationの精度の向上を同時に目指す． ISBAにおいて独自のロスを導入し，3回連続でロスが小さくならなければ終了し，最もロスの小さかった時の結果を最終出力とする．
+実験 Breakfast datasetを用いて他のWeakly-Supervisedな手法との比較.
+学習時の評価 テスト時の評価 ちなみにfully-Supervisedな時の提案手法のaccuracyは52.0
+新規性 ・新たなWeakly-Supervisedな手法の提案．それにより最高精度を記録．
+・行動認識の結果を元に正解ラベルを更新していくという発想．
+コメント・メモ ISBAの終了のタイミングを測るためのロスの取り方が不思議に感じた（詳しくは論文参照）
+編集日 2018/2/22
+URL → Paper Top Page </description>
+    </item>
+    
+  </channel>
+</rss>

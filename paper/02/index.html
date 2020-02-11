@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Takuya Kobayashi">
+
+  
+  
+  
+    
+  
+  <meta name="description" content=" 論文情報 ・Colin Lea , Michael D. Flynn , Rene ́ Vidal , Austin Reiter , Gregory D. Hager
+・2016 CVPR
+・paper
+・code(pytorch)
+・code(keras)
+概要 詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.
+２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.
+手法 提案した両方のTCNにおいて、入力は各フレームから何かしらのCNN(Resnet,VGG等)を用いて抽出した特徴量を時系列順に並べたものであり、出力としては行動クラス結果が各フレームごとに出力される.
+ED-TCN エンコーダとデコーダを組み合わせたTCN. エンコーダで畳み込み＋MaxPoolingを行うことで時系列を考慮した特徴抽出、その後デコーダで畳み込み＋アップサンプリングを行うことで各フレームごとの行動クラス確率分布を得る.
+Dilated TCN 時系列の畳み込みとしてDilated Convolutionを用いた手法. Dilated Convolutionとは簡単に説明すると、入力の間隔を空けて(間を0とみなす)畳み込みを行うこと(d=1なら間隔なし、d=２なら間隔１、d=4なら間隔３). dの値をどんどん(本論文では指数関数的に)大きくしていったDilated Convolution層を重ねることで、より長期的な時系列の範囲で特徴抽出を行うことが可能となる. またスキップコネクションの導入で層を深くすることを可能に．
+実験 50salads、MERL Shopping、GTEAの３種のデータセットを用いて、Spatial CNN等との比較
+特徴・新規性 ・各層ごとに同時に処理を行うため、入力フレーム数が増えても処理時間に影響をあまり与えない.
+→フレームごとに処理を行うLSTM等と比較して高速な処理
+・３Dconvは動画全体(数フレーム分)に対して1つの行動クラスの出力であるのに対し、TCNでは各フレームごとに行動クラスの出力が可能
+コメント・メモ 実装した体感DilatedよりEDの方が精度良い？
+Dilatedはより長期的な記憶が可能である点が長所？
+編集日 2018/11/30
+URL → Paper Top Page ">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/paper/02/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.b758f8907157a692a8ecdf56cce719a3.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/paper/02/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Takuya Kobayashi">
+  <meta property="og:url" content="/paper/02/">
+  <meta property="og:title" content="Temporal Convolutional Networks for Action Segmentation and Detection #2 | Takuya Kobayashi">
+  <meta property="og:description" content=" 論文情報 ・Colin Lea , Michael D. Flynn , Rene ́ Vidal , Austin Reiter , Gregory D. Hager
+・2016 CVPR
+・paper
+・code(pytorch)
+・code(keras)
+概要 詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.
+２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.
+手法 提案した両方のTCNにおいて、入力は各フレームから何かしらのCNN(Resnet,VGG等)を用いて抽出した特徴量を時系列順に並べたものであり、出力としては行動クラス結果が各フレームごとに出力される.
+ED-TCN エンコーダとデコーダを組み合わせたTCN. エンコーダで畳み込み＋MaxPoolingを行うことで時系列を考慮した特徴抽出、その後デコーダで畳み込み＋アップサンプリングを行うことで各フレームごとの行動クラス確率分布を得る.
+Dilated TCN 時系列の畳み込みとしてDilated Convolutionを用いた手法. Dilated Convolutionとは簡単に説明すると、入力の間隔を空けて(間を0とみなす)畳み込みを行うこと(d=1なら間隔なし、d=２なら間隔１、d=4なら間隔３). dの値をどんどん(本論文では指数関数的に)大きくしていったDilated Convolution層を重ねることで、より長期的な時系列の範囲で特徴抽出を行うことが可能となる. またスキップコネクションの導入で層を深くすることを可能に．
+実験 50salads、MERL Shopping、GTEAの３種のデータセットを用いて、Spatial CNN等との比較
+特徴・新規性 ・各層ごとに同時に処理を行うため、入力フレーム数が増えても処理時間に影響をあまり与えない.
+→フレームごとに処理を行うLSTM等と比較して高速な処理
+・３Dconvは動画全体(数フレーム分)に対して1つの行動クラスの出力であるのに対し、TCNでは各フレームごとに行動クラスの出力が可能
+コメント・メモ 実装した体感DilatedよりEDの方が精度良い？
+Dilatedはより長期的な記憶が可能である点が長所？
+編集日 2018/11/30
+URL → Paper Top Page "><meta property="og:image" content="/paper/02/featured.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-07-17T00:00:00&#43;09:00">
+  
+  <meta property="article:modified_time" content="2019-07-17T00:00:00&#43;09:00">
+  
+
+  
+
+  
+
+  <title>Temporal Convolutional Networks for Action Segmentation and Detection #2 | Takuya Kobayashi</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Takuya Kobayashi</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about">
+            
+            <span>About me</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/section/project/">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/section/app/">
+            
+            <span>Applications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/section/blog/">
+            
+            <span>Blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/section/gallery/">
+            
+            <span>Gallery</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/section/contact/">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Temporal Convolutional Networks for Action Segmentation and Detection #2</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2019-07-17 00:00:00 &#43;0900 JST" itemprop="datePublished">
+<meta content="2019-07-17 00:00:00 &#43;0900 JST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Jul 17, 2019</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/papers/">Papers</a></span>
+  
+
+  
+    
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h2 id="論文情報"><code>論文情報</code></h2>
+
+<p>・Colin Lea , Michael D. Flynn , Rene ́ Vidal , Austin Reiter , Gregory D. Hager</p>
+
+<p>・2016 CVPR</p>
+
+<p>・<a href="https://arxiv.org/pdf/1611.05267.pdf" target="_blank">paper</a></p>
+
+<p>・<a href="https://github.com/locuslab/TCN" target="_blank">code(pytorch)</a></p>
+
+<p>・<a href="https://github.com/colincsl/TemporalConvolutionalNetworks" target="_blank">code(keras)</a></p>
+
+<h2 id="概要"><code>概要</code></h2>
+
+<p>詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.<br />
+２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.</p>
+
+<h2 id="手法"><code>手法</code></h2>
+
+<p>提案した両方のTCNにおいて、入力は各フレームから何かしらのCNN(Resnet,VGG等)を用いて抽出した特徴量を時系列順に並べたものであり、出力としては行動クラス結果が各フレームごとに出力される.</p>
+
+<h2 id="ed-tcn">ED-TCN</h2>
+
+<p>エンコーダとデコーダを組み合わせたTCN. エンコーダで畳み込み＋MaxPoolingを行うことで時系列を考慮した特徴抽出、その後デコーダで畳み込み＋アップサンプリングを行うことで各フレームごとの行動クラス確率分布を得る.</p>
+
+<p><img width="400" alt="2018-11-30 22 19 28" src="https://user-images.githubusercontent.com/38309191/49291542-0babc380-f4ee-11e8-9912-026b18f4d8bb.png"></p>
+
+<h2 id="dilated-tcn">Dilated TCN</h2>
+
+<p>時系列の畳み込みとしてDilated Convolutionを用いた手法. Dilated Convolutionとは簡単に説明すると、入力の間隔を空けて(間を0とみなす)畳み込みを行うこと(d=1なら間隔なし、d=２なら間隔１、d=4なら間隔３). dの値をどんどん(本論文では指数関数的に)大きくしていったDilated Convolution層を重ねることで、より長期的な時系列の範囲で特徴抽出を行うことが可能となる. またスキップコネクションの導入で層を深くすることを可能に．</p>
+
+<p><img width="400" alt="2018-11-30 22 20 33" src="https://user-images.githubusercontent.com/38309191/49291590-2bdb8280-f4ee-11e8-9444-01090dd85fe5.png"></p>
+
+<h2 id="実験"><code>実験</code></h2>
+
+<p>50salads、MERL Shopping、GTEAの３種のデータセットを用いて、Spatial CNN等との比較</p>
+
+<p><img width="600" alt="2018-11-30 21 58 12" src="https://user-images.githubusercontent.com/38309191/49291839-e53a5800-f4ee-11e8-9325-46725b25cd76.png"></p>
+
+<p><img width="374" alt="2018-11-30 22 27 34" src="https://user-images.githubusercontent.com/38309191/49291938-292d5d00-f4ef-11e8-9b6f-afef4c731408.png"></p>
+
+<h2 id="特徴-新規性"><code>特徴・新規性</code></h2>
+
+<p>・各層ごとに同時に処理を行うため、入力フレーム数が増えても処理時間に影響をあまり与えない.<br />
+　→フレームごとに処理を行うLSTM等と比較して高速な処理</p>
+
+<p>・３Dconvは動画全体(数フレーム分)に対して1つの行動クラスの出力であるのに対し、TCNでは各フレームごとに行動クラスの出力が可能</p>
+
+<h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
+
+<p>実装した体感DilatedよりEDの方が精度良い？<br />
+Dilatedはより長期的な記憶が可能である点が長所？</p>
+
+<h2 id="編集日"><code>編集日</code></h2>
+
+<p>2018/11/30</p>
+
+<h2 id="url"><code>URL</code></h2>
+
+<h2 id="paper-top-page-section-paper"><a href="/section/paper">→ Paper Top Page</a></h2>
+
+    </div>
+
+    <div class="hr-light"></div>
+<b>Tags</b>
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/paper-action-segmentation/">Paper - Action Segmentation</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu4880dec98f6a43a1201e2c99360ca8ef_2730675_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/authors/admin/">Takuya Kobayashi</a></h5>
+      <h6 class="card-subtitle">Master&rsquo;s student majoring Computer Vision</h6>
+      <p class="card-text" itemprop="description">My research interests includes human action recognition, attention modules, pose estimation and image classification.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/t-koba-96" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/paper/10/">Action segmentation Datasets #10</a></li>
+          
+          <li><a href="/paper/08/">MS-TCN: Multi-Stage Temporal Convolutional Network for Action Segmentation #8</a></li>
+          
+          <li><a href="/paper/11/">TricorNet: A Hybrid Temporal Convolutional and Recurrent Network for Video Action Segmentation #11</a></li>
+          
+          <li><a href="/paper/06/">Weakly-Supervised Action Segmentation with Iterative Soft Boundary Assignment #6</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+   
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.15494b02d66be9b96bab2e305f69c460.js"></script>
+
+  </body>
+</html>
+
