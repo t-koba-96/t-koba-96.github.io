@@ -6,10 +6,24 @@
     <description>Recent content in Paper - Action Segmentation on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="/tags/paper-action-segmentation/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>When will you do what? - Anticipating Temporal Occurrences of Activities  #13</title>
+      <link>/paper/13/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/13/</guid>
+      <description> 論文情報 ・Yazan Abu Farha, Alexander Richard, Juergen Gall
+・CVPR 2018
+・paper
+概要   Slideshare 
+編集日 2020/02/13
+URL → Paper Top Page </description>
+    </item>
     
     <item>
       <title>Action segmentation Datasets #10</title>

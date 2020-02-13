@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper - VSE on Takuya Kobayashi</title>
+    <link>/tags/paper-vse/</link>
+    <description>Recent content in Paper - VSE on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Feb 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/paper-vse/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dynamic Graph Attention for Referring Expression Comprehension #12</title>
+      <link>/paper/12/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/12/</guid>
+      <description> 論文情報 ・Sibei Yang et al.
+・ICCV 2019
+・paper
+概要   SlideShare 
+編集日 2020/02/10
+URL → Paper Top Page </description>
+    </item>
+    
+  </channel>
+</rss>

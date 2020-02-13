@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paper - Action Segmentation</title>
+      <link>/tags/paper-action-segmentation/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/paper-action-segmentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paper - Attention</title>
+      <link>/tags/paper-attention/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/paper-attention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paper - Graph Conv</title>
+      <link>/tags/paper-graph-conv/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/paper-graph-conv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paper - VSE</title>
+      <link>/tags/paper-vse/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/paper-vse/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Monthly</title>
@@ -116,24 +152,6 @@
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/tags/paper-action-recognition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Paper - Action Segmentation</title>
-      <link>/tags/paper-action-segmentation/</link>
-      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
-      
-      <guid>/tags/paper-action-segmentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Paper - Attention</title>
-      <link>/tags/paper-attention/</link>
-      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
-      
-      <guid>/tags/paper-attention/</guid>
       <description></description>
     </item>
     

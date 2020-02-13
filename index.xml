@@ -6,10 +6,104 @@
     <description>Recent content on Takuya Kobayashi</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2020 00:00:00 +0900</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dynamic Graph Attention for Referring Expression Comprehension #12</title>
+      <link>/paper/12/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/12/</guid>
+      <description>
+
+&lt;h2 id=&#34;論文情報&#34;&gt;&lt;code&gt;論文情報&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;・Sibei Yang et al.&lt;/p&gt;
+
+&lt;p&gt;・ICCV 2019&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://arxiv.org/pdf/1909.08164.pdf&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/kOohmBLKKdrRO0&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/secret/kOohmBLKKdrRO0&#34; title=&#34; Dynamic Graph Attention for Referring Expression Comprehension&#34; target=&#34;_blank&#34;&gt; SlideShare&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;編集日&#34;&gt;&lt;code&gt;編集日&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;2020/02/10&lt;/p&gt;
+
+&lt;h2 id=&#34;url&#34;&gt;&lt;code&gt;URL&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;paper-top-page-section-paper&#34;&gt;&lt;a href=&#34;/section/paper&#34;&gt;→ Paper Top Page&lt;/a&gt;&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Graph Convolution #14</title>
+      <link>/paper/14/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/14/</guid>
+      <description>
+
+&lt;p&gt;## &lt;code&gt;論文情報&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;複数あり&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://arxiv.org/pdf/1703.06103.pdf&#34; target=&#34;_blank&#34;&gt;Modeling Relational Data with Graph Convolutional Networks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://arxiv.org/pdf/1609.02907.pdf&#34; target=&#34;_blank&#34;&gt;Semi-Supervised Classification with Graph Convolutional Networks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://arxiv.org/pdf/1710.10903.pdf&#34; target=&#34;_blank&#34;&gt;Graph Attention Networks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://arxiv.org/pdf/1808.00191.pdf&#34; target=&#34;_blank&#34;&gt;Graph R-CNN  for Scene Graph Generation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/dzB1IQ9SqZjAH0&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/TakuyaKobayashi12/graph-conv&#34; title=&#34;Graph conv&#34; target=&#34;_blank&#34;&gt;Slidesh are&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;編集日&#34;&gt;&lt;code&gt;編集日&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;2020/02/13&lt;/p&gt;
+
+&lt;h2 id=&#34;url&#34;&gt;&lt;code&gt;URL&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;paper-top-page-section-paper&#34;&gt;&lt;a href=&#34;/section/paper&#34;&gt;→ Paper Top Page&lt;/a&gt;&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>When will you do what? - Anticipating Temporal Occurrences of Activities  #13</title>
+      <link>/paper/13/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/13/</guid>
+      <description>
+
+&lt;h2 id=&#34;論文情報&#34;&gt;&lt;code&gt;論文情報&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;・Yazan Abu Farha, Alexander Richard, Juergen Gall&lt;/p&gt;
+
+&lt;p&gt;・CVPR 2018&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;http://openaccess.thecvf.com/content_cvpr_2018/papers/Abu_Farha_When_Will_You_CVPR_2018_paper.pdf&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/hU2F4mGmCwhLD&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/TakuyaKobayashi12/when-will-you-do-what-anticipating-temporal-occurrences-of-activities-cvpr2018&#34; title=&#34;When will you do what? - Anticipating Temporal Occurrences of Activities (CVPR2018)&#34; target=&#34;_blank&#34;&gt; &lt;/strong&gt;Slideshare&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;編集日&#34;&gt;&lt;code&gt;編集日&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;2020/02/13&lt;/p&gt;
+
+&lt;h2 id=&#34;url&#34;&gt;&lt;code&gt;URL&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;paper-top-page-section-paper&#34;&gt;&lt;a href=&#34;/section/paper&#34;&gt;→ Paper Top Page&lt;/a&gt;&lt;/h2&gt;
+</description>
+    </item>
     
     <item>
       <title>2020 February (Atcoder)</title>
