@@ -344,15 +344,7 @@ if __name__ == &#39;__main__&#39;:
 
 &lt;p&gt;Demo app for my &lt;a href=&#34;../../project/food&#34;&gt;food-101 project&lt;/a&gt;&lt;/p&gt;
 
-
-
-
-&lt;figure&gt;
-
-&lt;img src=&#34;featured.png&#34; /&gt;
-
-
-&lt;/figure&gt;
+&lt;video src=&#34;demo.mov&#34; controls&gt;&lt;/video&gt;
 
 &lt;h2 id=&#34;how-to-try-on-your-local-need-gpu&#34;&gt;How to try on your local (Need GPU)&lt;/h2&gt;
 
@@ -724,7 +716,7 @@ I3Dの入力は3×224×224×64フレーム．C3D(3×112×112×16フレーム)に
 &lt;p&gt;Made a demo for showing the prediction outputs of action segmentation, using my method for prediction. Able to know the output probablitiy for each video frame, both manually and automatically. Used dash and plotly libraries for the demo.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Try it out in my apps page : &lt;a href=&#34;https://t-koba-96.github.io/app/&#34; target=&#34;_blank&#34;&gt;Application page&lt;/a&gt;
+&lt;li&gt;Try it out in my apps page : &lt;a href=&#34;/app/&#34;&gt;Application page&lt;/a&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1393,6 +1385,10 @@ Also, if you want more info for the demo, check out my &lt;a href=&#34;/blog/dem
 &lt;h2 id=&#34;contents&#34;&gt;Contents&lt;/h2&gt;
 
 &lt;p&gt;Image classification for the food-101 dataset using attention. Introduced attention layer in Resnet&amp;rsquo;s residual block for visualization and also for increasing accuracy. Showed an output example in the following figure.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Check the demo video in my apps page : &lt;a href=&#34;/app/food-101-app/&#34;&gt;Application page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 
 
