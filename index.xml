@@ -704,6 +704,141 @@ I3Dの入力は3×224×224×64フレーム．C3D(3×112×112×16フレーム)に
     </item>
     
     <item>
+      <title>Attention is all you need #15</title>
+      <link>/paper/15/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/15/</guid>
+      <description>
+
+&lt;h2 id=&#34;論文情報&#34;&gt;&lt;code&gt;論文情報&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;・Ashish Vaswani, Noam Shazeer et al.&lt;/p&gt;
+
+&lt;p&gt;・2017 NIPS&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://arxiv.org/pdf/1706.03762.pdf&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;機械翻訳用のネットワーク，トランスフォーマーの提案．従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法．&lt;/p&gt;
+
+&lt;h2 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;ネットワーク全体の概要は以下の通り．&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75124684-3934ec00-56f4-11ea-924e-ceb279131c5b.png&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;エンコーダ・デコーダ共に，この手法のキモとなるMulti-Head Attentionを残差接続したものを複数層重ねた構造になっている．
+図中の Inputsは翻訳前言語の原文, Outputsは学習時においてGroundTruth・推論時はBeginning of sentence，Output Probabilitiesにおいて翻訳した文章を得る．&lt;/p&gt;
+
+&lt;h2 id=&#34;アテンションの構造&#34;&gt;&lt;code&gt;アテンションの構造&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;アテンションの構造は以下のScaled Dot-Product Attention.　元の入力バッチからQ(Query),K(Key),V(Value)の３つを新たに用意して，そのうちQとKを用いて元のValueに掛け合わせるような重みマップ（Attention Map）のようなものを作成してあげる．&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 20 18&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125018-2cb19300-56f6-11ea-8b22-64e8126b8aed.png&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;単純にAttentionではなくMulti-Headと表現されているのは，このアテンション計算の際にh分割して計算したのち，最後にまたコンカットしていることを指している．（多分計算コストの削減？精度的な寄与も関係あるかも）&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125112-d42ec580-56f6-11ea-8897-627484d38380.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;既存手法に対する優位性&#34;&gt;&lt;code&gt;既存手法に対する優位性&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;畳み込みとかリカレントネットワークに比べて長い時系列情報を見れるよねという話．あとリカレントネットワークは前の情報を引き継いで随時計算するのに対し，アテンションは一気に計算できるので，計算速度も全然早い．&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125218-78187100-56f7-11ea-9e6c-5ff03ec2ecd6.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125333-f6751300-56f7-11ea-8a68-4fd175ff4451.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;アテンションのみによる新たなネットワークの提案．&lt;/p&gt;
+
+&lt;p&gt;State of the art の更新．&lt;/p&gt;
+
+&lt;h2 id=&#34;コメント-メモ&#34;&gt;&lt;code&gt;コメント・メモ&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;↓参考になるサイト&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://nlp.seas.harvard.edu/2018/04/03/attention.html&#34; target=&#34;_blank&#34;&gt;実装&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://jalammar.github.io/illustrated-transformer/&#34; target=&#34;_blank&#34;&gt;手法解説&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;編集日&#34;&gt;&lt;code&gt;編集日&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;2019/12/10&lt;/p&gt;
+
+&lt;h2 id=&#34;url&#34;&gt;&lt;code&gt;URL&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;paper-top-page-section-paper&#34;&gt;&lt;a href=&#34;/section/paper&#34;&gt;→ Paper Top Page&lt;/a&gt;&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding #16</title>
+      <link>/paper/16/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/16/</guid>
+      <description>
+
+&lt;h2 id=&#34;論文情報&#34;&gt;&lt;code&gt;論文情報&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;・Jacob Devlin, Ming-Wei Chang et al.&lt;/p&gt;
+
+&lt;p&gt;・2018&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://arxiv.org/pdf/1706.03762.pdf&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://github.com/google-research/bert&#34; target=&#34;_blank&#34;&gt;code(Tensorflow)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Bi-directional な &lt;a href=&#34;/paper/15/&#34;&gt;Transformer&lt;/a&gt; を用いて，自然言語分野における新たな事前学習手法を提案．言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成．&lt;/p&gt;
+
+&lt;h2 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習．&lt;br /&gt;
+　トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM．&lt;br /&gt;
+　単一の文章における単語の関連性による出現確率についてだけでなく，２つの文章を比較させることによって文章全体としてより良い特徴表現を得ようということを目的としているのがNSP.&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75126078-ac8e2c00-56fb-11ea-8461-a89f2a8048e0.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;masked-language-model&#34;&gt;Masked Language Model&lt;/h2&gt;
+
+&lt;p&gt;入力の単語を予めいくつかマスキングしてしまい穴埋め問題を溶かせることによって，マスキングした部分の単語を前後の文脈の理解から復元させるタスク．入力シーケンスのうち，15%をランダムに選んでその部分の予測を行う．選んだ部分のうち80%はマスキング，10%は別の単語に置き換え，残りの10%はそのままの単語として入力させている．前後の文脈を考慮した特徴量抽出を行うことが目的．&lt;/p&gt;
+
+&lt;h2 id=&#34;next-sentence-prediction&#34;&gt;Next Sentence Prediction&lt;/h2&gt;
+
+&lt;p&gt;２つの文章を並べて入力してあげて，２文目が１文目の次に来る文かどうかを予測するタスク．２つの文章を比較して予測結果を返すため，文章全体として良い特徴表現を得ることが期待できる．&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34;  src=&#34;https://user-images.githubusercontent.com/38309191/75126590-0ee82c00-56fe-11ea-852f-ec956e4050cf.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img width=&#34;800&#34; alt=&#34;2019-02-22 16 19 00&#34;  src=&#34;https://user-images.githubusercontent.com/38309191/75126606-20c9cf00-56fe-11ea-8818-cac7e646c346.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;新たな事前学習の枠組み．&lt;/p&gt;
+
+&lt;p&gt;様々なタスクに転用するだけで精度向上．&lt;/p&gt;
+
+&lt;h2 id=&#34;コメント-メモ&#34;&gt;&lt;code&gt;コメント・メモ&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;編集日&#34;&gt;&lt;code&gt;編集日&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;2019/12/10&lt;/p&gt;
+
+&lt;h2 id=&#34;url&#34;&gt;&lt;code&gt;URL&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;paper-top-page-section-paper&#34;&gt;&lt;a href=&#34;/section/paper&#34;&gt;→ Paper Top Page&lt;/a&gt;&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Demo for action segmentation</title>
       <link>/project/demo/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>

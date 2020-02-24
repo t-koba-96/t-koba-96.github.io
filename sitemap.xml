@@ -247,6 +247,16 @@
   </url>
   
   <url>
+    <loc>/paper/15/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/16/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/project/demo/</loc>
     <lastmod>2019-07-17T00:00:00+09:00</lastmod>
   </url>
@@ -263,6 +273,12 @@
   
   <url>
     <loc>/tags/paper-action-recognition/</loc>
+    <lastmod>2019-07-17T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/paper-nlp/</loc>
     <lastmod>2019-07-17T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>

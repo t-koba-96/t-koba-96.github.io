@@ -86,6 +86,52 @@ URL → Paper Top Page </description>
     </item>
     
     <item>
+      <title>Attention is all you need #15</title>
+      <link>/paper/15/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/15/</guid>
+      <description> 論文情報 ・Ashish Vaswani, Noam Shazeer et al.
+・2017 NIPS
+・paper
+概要 機械翻訳用のネットワーク，トランスフォーマーの提案．従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法．
+手法 ネットワーク全体の概要は以下の通り．
+エンコーダ・デコーダ共に，この手法のキモとなるMulti-Head Attentionを残差接続したものを複数層重ねた構造になっている． 図中の Inputsは翻訳前言語の原文, Outputsは学習時においてGroundTruth・推論時はBeginning of sentence，Output Probabilitiesにおいて翻訳した文章を得る．
+アテンションの構造 アテンションの構造は以下のScaled Dot-Product Attention.　元の入力バッチからQ(Query),K(Key),V(Value)の３つを新たに用意して，そのうちQとKを用いて元のValueに掛け合わせるような重みマップ（Attention Map）のようなものを作成してあげる．
+単純にAttentionではなくMulti-Headと表現されているのは，このアテンション計算の際にh分割して計算したのち，最後にまたコンカットしていることを指している．（多分計算コストの削減？精度的な寄与も関係あるかも）
+既存手法に対する優位性 畳み込みとかリカレントネットワークに比べて長い時系列情報を見れるよねという話．あとリカレントネットワークは前の情報を引き継いで随時計算するのに対し，アテンションは一気に計算できるので，計算速度も全然早い．
+実験 新規性 アテンションのみによる新たなネットワークの提案．
+State of the art の更新．
+コメント・メモ ↓参考になるサイト
+実装
+手法解説
+編集日 2019/12/10
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding #16</title>
+      <link>/paper/16/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/16/</guid>
+      <description> 論文情報 ・Jacob Devlin, Ming-Wei Chang et al.
+・2018
+・paper
+・code(Tensorflow)
+概要 Bi-directional な Transformer を用いて，自然言語分野における新たな事前学習手法を提案．言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成．
+手法 MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習．
+トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM．
+単一の文章における単語の関連性による出現確率についてだけでなく，２つの文章を比較させることによって文章全体としてより良い特徴表現を得ようということを目的としているのがNSP.
+Masked Language Model 入力の単語を予めいくつかマスキングしてしまい穴埋め問題を溶かせることによって，マスキングした部分の単語を前後の文脈の理解から復元させるタスク．入力シーケンスのうち，15%をランダムに選んでその部分の予測を行う．選んだ部分のうち80%はマスキング，10%は別の単語に置き換え，残りの10%はそのままの単語として入力させている．前後の文脈を考慮した特徴量抽出を行うことが目的．
+Next Sentence Prediction ２つの文章を並べて入力してあげて，２文目が１文目の次に来る文かどうかを予測するタスク．２つの文章を比較して予測結果を返すため，文章全体として良い特徴表現を得ることが期待できる．
+実験 新規性 新たな事前学習の枠組み．
+様々なタスクに転用するだけで精度向上．
+コメント・メモ 編集日 2019/12/10
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
       <title>Dual Attention Network for Scene Segmentation #7</title>
       <link>/paper/07/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
