@@ -839,6 +839,68 @@ I3Dの入力は3×224×224×64フレーム．C3D(3×112×112×16フレーム)に
     </item>
     
     <item>
+      <title>BMN: Boundary-Matching Network for Temporal Action Proposal Generation #17</title>
+      <link>/paper/17/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/17/</guid>
+      <description>
+
+&lt;h2 id=&#34;論文情報&#34;&gt;&lt;code&gt;論文情報&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;・Tianwei Lin, Xiao Liu et al.&lt;/p&gt;
+
+&lt;p&gt;・2019 ICCV&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://arxiv.org/pdf/1907.09702.pdf&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://github.com/JJBOY/BMN-Boundary-Matching-Network&#34; target=&#34;_blank&#34;&gt;code(pytorch)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Temporal action proposalのタスク．従来のような始点終点予測とは別に，Proposalの始点と長さを表すヒートマップを作成する．最終的に始点終点情報とヒートマップのConfidenceを組み合わせることで，Proposalを出してくる手法を提案．&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130552-5f698480-5712-11ea-921e-d6e5f8fc4711.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;ネットワーク全体の概要は以下の通り．&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130736-3d243680-5713-11ea-965e-4e9466b9dc7e.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;bm-confidence-map&#34;&gt;BM confidence map&lt;/h2&gt;
+
+&lt;p&gt;ヒートマップは始点を横軸，Proposalの長さを縦軸として予測される．つまり同一の始点から始まる長さの違うProposalについても，ヒートマップを利用することによってConfidenceの算出が容易となる．このようにヒートマップはconfidenceのスコアを測るために用いる．&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130601-a22b5c80-5712-11ea-94e6-a73ccc9f399f.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;ActivityNetを用いて他手法との比較．&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130962-2d592200-5714-11ea-8030-b0158af42f4f.png&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;出力例&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130996-537ec200-5714-11ea-8657-4585050d66ba.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;ヒートマップを用いたConfidenceの算出&lt;/p&gt;
+
+&lt;h2 id=&#34;コメント-メモ&#34;&gt;&lt;code&gt;コメント・メモ&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;編集日&#34;&gt;&lt;code&gt;編集日&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;2019/12/10&lt;/p&gt;
+
+&lt;h2 id=&#34;url&#34;&gt;&lt;code&gt;URL&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;paper-top-page-section-paper&#34;&gt;&lt;a href=&#34;/section/paper&#34;&gt;→ Paper Top Page&lt;/a&gt;&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Demo for action segmentation</title>
       <link>/project/demo/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>

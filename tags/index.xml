@@ -39,11 +39,20 @@
     </item>
     
     <item>
-      <title>Paper - VSE</title>
-      <link>/tags/paper-vse/</link>
+      <title>Paper - NLP</title>
+      <link>/tags/paper-nlp/</link>
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
       
-      <guid>/tags/paper-vse/</guid>
+      <guid>/tags/paper-nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paper - Video Understanding</title>
+      <link>/tags/paper-video-understanding/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/paper-video-understanding/</guid>
       <description></description>
     </item>
     
@@ -152,15 +161,6 @@
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/tags/paper-action-recognition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Paper - NLP</title>
-      <link>/tags/paper-nlp/</link>
-      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
-      
-      <guid>/tags/paper-nlp/</guid>
       <description></description>
     </item>
     

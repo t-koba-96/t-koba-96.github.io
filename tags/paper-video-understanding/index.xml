@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper - Video Understanding on Takuya Kobayashi</title>
+    <link>/tags/paper-video-understanding/</link>
+    <description>Recent content in Paper - Video Understanding on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Feb 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/paper-video-understanding/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dynamic Graph Attention for Referring Expression Comprehension #12</title>
+      <link>/paper/12/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/12/</guid>
+      <description> 論文情報 ・Sibei Yang et al.
+・ICCV 2019
+・paper
+概要   SlideShare 
+編集日 2020/02/10
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>BMN: Boundary-Matching Network for Temporal Action Proposal Generation #17</title>
+      <link>/paper/17/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/17/</guid>
+      <description> 論文情報 ・Tianwei Lin, Xiao Liu et al.
+・2019 ICCV
+・paper
+・code(pytorch)
+概要 Temporal action proposalのタスク．従来のような始点終点予測とは別に，Proposalの始点と長さを表すヒートマップを作成する．最終的に始点終点情報とヒートマップのConfidenceを組み合わせることで，Proposalを出してくる手法を提案．
+手法 ネットワーク全体の概要は以下の通り．
+BM confidence map ヒートマップは始点を横軸，Proposalの長さを縦軸として予測される．つまり同一の始点から始まる長さの違うProposalについても，ヒートマップを利用することによってConfidenceの算出が容易となる．このようにヒートマップはconfidenceのスコアを測るために用いる．
+実験 ActivityNetを用いて他手法との比較．
+出力例
+新規性 ヒートマップを用いたConfidenceの算出
+コメント・メモ 編集日 2019/12/10
+URL → Paper Top Page </description>
+    </item>
+    
+  </channel>
+</rss>

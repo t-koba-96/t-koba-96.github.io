@@ -132,6 +132,26 @@ URL → Paper Top Page </description>
     </item>
     
     <item>
+      <title>BMN: Boundary-Matching Network for Temporal Action Proposal Generation #17</title>
+      <link>/paper/17/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/17/</guid>
+      <description> 論文情報 ・Tianwei Lin, Xiao Liu et al.
+・2019 ICCV
+・paper
+・code(pytorch)
+概要 Temporal action proposalのタスク．従来のような始点終点予測とは別に，Proposalの始点と長さを表すヒートマップを作成する．最終的に始点終点情報とヒートマップのConfidenceを組み合わせることで，Proposalを出してくる手法を提案．
+手法 ネットワーク全体の概要は以下の通り．
+BM confidence map ヒートマップは始点を横軸，Proposalの長さを縦軸として予測される．つまり同一の始点から始まる長さの違うProposalについても，ヒートマップを利用することによってConfidenceの算出が容易となる．このようにヒートマップはconfidenceのスコアを測るために用いる．
+実験 ActivityNetを用いて他手法との比較．
+出力例
+新規性 ヒートマップを用いたConfidenceの算出
+コメント・メモ 編集日 2019/12/10
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
       <title>Dual Attention Network for Scene Segmentation #7</title>
       <link>/paper/07/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
