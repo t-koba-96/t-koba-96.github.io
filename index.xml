@@ -6,10 +6,34 @@
     <description>Recent content on Takuya Kobayashi</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Feb 2020 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0900</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Demo for VSE</title>
+      <link>/app/vse-app/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/app/vse-app/</guid>
+      <description>
+
+&lt;h2 id=&#34;contents&#34;&gt;Contents&lt;/h2&gt;
+
+&lt;p&gt;Demo app for my &lt;a href=&#34;../../project/vse&#34;&gt;VSE project&lt;/a&gt;&lt;/p&gt;
+
+&lt;video src=&#34;demo.mov&#34; controls&gt;&lt;/video&gt;
+
+&lt;p&gt;Used python framework Flask and designed HTML, CSS, Javascript(jQuery) by myself.&lt;/p&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Github : &lt;a href=&#34;https://github.com/t-koba-96/visual-semantic-embedding&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Dynamic Graph Attention for Referring Expression Comprehension #12</title>
@@ -1608,6 +1632,46 @@ Also, if you want more info for the demo, check out my &lt;a href=&#34;/blog/dem
 &lt;ul&gt;
 &lt;li&gt;Github : &lt;a href=&#34;https://github.com/t-koba-96/food-101&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Libraries : &lt;a href=&#34;https://www.vision.ee.ethz.ch/datasets_extra/food-101/&#34; target=&#34;_blank&#34;&gt;food-101 dataset&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Visual Semantic Embedding</title>
+      <link>/project/vse/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/vse/</guid>
+      <description>
+
+&lt;h2 id=&#34;contents&#34;&gt;Contents&lt;/h2&gt;
+
+&lt;p&gt;Trying models and outputting some demo of visual semantic embedding which I am interested in.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Check the demo video in my apps page : &lt;a href=&#34;/app/vse-app/&#34;&gt;Application page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;featured.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  &lt;h4&gt;Using &lt;a href=&#34;http://cocodataset.org/#home&#34; target=&#34;_blank&#34;&gt;coco2017 dataset&lt;/a&gt;&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Github : &lt;a href=&#34;https://github.com/t-koba-96/visual-semantic-embedding&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

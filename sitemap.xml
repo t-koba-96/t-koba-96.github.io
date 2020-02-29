@@ -3,8 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/categories/application/</loc>
+    <lastmod>2020-02-27T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/app/</loc>
+    <lastmod>2020-02-27T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cv/</loc>
+    <lastmod>2020-02-27T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
-    <lastmod>2020-02-13T00:00:00+09:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/app/vse-app/</loc>
+    <lastmod>2020-02-27T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/flask/</loc>
+    <lastmod>2020-02-27T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/image-classification/</loc>
+    <lastmod>2020-02-27T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/local-app/</loc>
+    <lastmod>2020-02-27T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-02-27T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-02-27T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -56,18 +109,6 @@
   
   <url>
     <loc>/paper/</loc>
-    <lastmod>2020-02-13T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-02-13T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2020-02-13T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -146,12 +187,6 @@
   </url>
   
   <url>
-    <loc>/tags/cv/</loc>
-    <lastmod>2019-12-28T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/project/joint-research/</loc>
     <lastmod>2019-12-28T00:00:00+09:00</lastmod>
   </url>
@@ -181,18 +216,6 @@
   </url>
   
   <url>
-    <loc>/categories/application/</loc>
-    <lastmod>2019-08-24T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/app/</loc>
-    <lastmod>2019-08-24T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/app/food-101-app/</loc>
     <lastmod>2019-08-24T00:00:00+09:00</lastmod>
   </url>
@@ -200,24 +223,6 @@
   <url>
     <loc>/project/flask/</loc>
     <lastmod>2019-08-24T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/flask/</loc>
-    <lastmod>2019-08-24T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/image-classification/</loc>
-    <lastmod>2019-08-24T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/local-app/</loc>
-    <lastmod>2019-08-24T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -398,6 +403,11 @@
   
   <url>
     <loc>/project/food/</loc>
+    <lastmod>2019-05-24T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/vse/</loc>
     <lastmod>2019-05-24T00:00:00+09:00</lastmod>
   </url>
   

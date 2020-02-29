@@ -6,10 +6,19 @@
     <description>Recent content in CV on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Dec 2019 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="/tags/cv/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Demo for VSE</title>
+      <link>/app/vse-app/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/app/vse-app/</guid>
+      <description>A demo app to showcase VSE [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Flask&lt;/code&gt;]</description>
+    </item>
     
     <item>
       <title>Joint research</title>
@@ -99,6 +108,15 @@
       
       <guid>/project/food/</guid>
       <description>Github project [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Attention&lt;/code&gt;]</description>
+    </item>
+    
+    <item>
+      <title>Visual Semantic Embedding</title>
+      <link>/project/vse/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/project/vse/</guid>
+      <description>Github project [&lt;code&gt;CV&lt;/code&gt;]</description>
     </item>
     
   </channel>

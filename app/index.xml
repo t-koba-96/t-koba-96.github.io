@@ -6,10 +6,19 @@
     <description>Recent content in Apps on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Aug 2019 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="/app/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Demo for VSE</title>
+      <link>/app/vse-app/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/app/vse-app/</guid>
+      <description>A demo app to showcase VSE [&lt;code&gt;CV&lt;/code&gt;,&lt;code&gt;Flask&lt;/code&gt;]</description>
+    </item>
     
     <item>
       <title>Demo for food-101</title>
