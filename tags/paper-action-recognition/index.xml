@@ -6,10 +6,29 @@
     <description>Recent content in Paper - Action Recognition on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 12 Aug 2019 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="/tags/paper-action-recognition/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SlowFast Networks for Video Recognition #18</title>
+      <link>/paper/18/</link>
+      <pubDate>Mon, 12 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/18/</guid>
+      <description> 論文情報 ・Christoph Feichtenhofer et al. (Facebook)
+・2019 CVPR
+・paper
+概要 タイトルの通り，フレームレートの違う２種類（Slow , Fast）の入力を組み合わせることによって動画認識の精度が向上したという内容．SlowではSemanticな情報（長期に渡って普遍的な情報），Fastでは動きの情報（短期的に遷移する情報）を認識できるので，これらを組み合わせれば両方の情報を得られるよねというストーリー．
+手法 ネットワーク全体の概要は以下の通り．
+特徴量の結合 各ブロックにおいて，Fastの特徴量をSlowの特徴次元数に合わせてコンカット．最終的には，行動ラベル予測を行う全結合層の前で２つの特徴量を単純にコンカット
+実験 ActivityNetを用いて他手法との比較．ResnetベースのNon-LocalBlockを用いた際に最も良い結果．
+Slow + Path による改善 新規性 SlowとFastの２つのPathを利用．
+コメント・メモ 単純なのに良い精度．動画のFrameRateの調整は正直最適解がわからないけど，組み合わせることで精度に寄与するのは面白い．
+編集日 2019/08/12
+URL → Paper Top Page </description>
+    </item>
     
     <item>
       <title>3DCNN #3</title>

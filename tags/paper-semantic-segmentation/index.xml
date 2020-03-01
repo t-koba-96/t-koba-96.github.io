@@ -32,5 +32,28 @@
 URL → Paper Top Page </description>
     </item>
     
+    <item>
+      <title>Mask Scoring R-CNN #19</title>
+      <link>/paper/19/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/19/</guid>
+      <description> 論文情報 ・Zhaojin Huang et al.
+・2019 CVPR
+・paper
+・code(pytorch)
+概要 Mask-RCNNの改善手法．Mask-RCNNの課題としてクラススコアだけでマスクを評価していたため，スコアが高くてもMaskの質が低い事が挙げられた．そこで新たなマスクスコアの指標を用いることで，スコアとマスクの質に適切な相関関係が出る事を確認．また従来のMask-RCNNのネットワークに,MaskIoUを回帰して求めるMaskIoUHeadブロックを導入．
+手法 ネットワーク全体の概要は以下の通り．
+新たなマスクスコアの定義 マスクスコアについて Mask R-CNN : クラススコア
+Mask Scoring R-CNN : クラススコア✖️MaskIoU
+GTと予測マスクのピクセルレベルでの重なり具合まで考慮するように工夫．
+MaskIoUHead 従来の物体検出＋クラススコア，マスク推定に加え，新たにMaskIoUを回帰して求めるブロックの導入
+実験 COCO 2017　を用いて他手法との比較．
+新規性 新しいマスクスコアの提案．MaskIoU回帰ブロックの導入．
+コメント・メモ マスクスコアの改善に関してはより直感的で理に適ってると感じた．
+編集日 2019/06/03
+URL → Paper Top Page </description>
+    </item>
+    
   </channel>
 </rss>
