@@ -27,23 +27,19 @@
   
     
   
-  <meta name="description" content=" 論文情報 ・Jacob Devlin, Ming-Wei Chang et al.
-・2018
+  <meta name="description" content=" 論文情報 ・Chao-Yuan Wu et al. (Facebook research)
 ・paper
-・code(Tensorflow)
-概要 Bi-directional な Transformer を用いて，自然言語分野における新たな事前学習手法を提案．言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成．
-手法 MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習．
-トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM．
-単一の文章における単語の関連性による出現確率についてだけでなく，２つの文章を比較させることによって文章全体としてより良い特徴表現を得ようということを目的としているのがNSP.
-Masked Language Model 入力の単語を予めいくつかマスキングしてしまい穴埋め問題を溶かせることによって，マスキングした部分の単語を前後の文脈の理解から復元させるタスク．入力シーケンスのうち，15%をランダムに選んでその部分の予測を行う．選んだ部分のうち80%はマスキング，10%は別の単語に置き換え，残りの10%はそのままの単語として入力させている．前後の文脈を考慮した特徴量抽出を行うことが目的．
-Next Sentence Prediction ２つの文章を並べて入力してあげて，２文目が１文目の次に来る文かどうかを予測するタスク．２つの文章を比較して予測結果を返すため，文章全体として良い特徴表現を得ることが期待できる．
-実験 新規性 新たな事前学習の枠組み．
-様々なタスクに転用するだけで精度向上．
-コメント・メモ 編集日 2019/12/10
+概要 ３DCNNでは4秒近くにおける時系列情報しか捉えられない．そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文．
+手法 ３DCNNの元論文では，何フレームごとかに得た特徴をROI Poolingによってある区間における平均特徴量としたのち，全結合層で分類問題を解く（下図）．しかしこれではShortTermな情報しか捉えられず，ビデオ全体から判断が必要な情報が抜け落ちてしまう．
+そこでFeatureBankOperationを導入し，ShortTermとは別に得たLongTermな情報も同時に捉えるようなネットワークを用意してあげて，そこから得た特徴量も用いて認識を行う．
+FeatureBankOperatorの構造は以下．
+実験 新規性 ShortTerm&#43;LongTerm
+コメント・メモ 単純な理論だが精度向上に結構寄与してる．
+編集日 2019/08/14
 URL → Paper Top Page ">
 
   
-  <link rel="alternate" hreflang="en-us" href="/paper/16/">
+  <link rel="alternate" hreflang="en-us" href="/paper/23/">
 
   
 
@@ -108,7 +104,7 @@ URL → Paper Top Page ">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/paper/16/">
+  <link rel="canonical" href="/paper/23/">
 
   
   
@@ -119,34 +115,30 @@ URL → Paper Top Page ">
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Takuya Kobayashi">
-  <meta property="og:url" content="/paper/16/">
-  <meta property="og:title" content="BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding #16 | Takuya Kobayashi">
-  <meta property="og:description" content=" 論文情報 ・Jacob Devlin, Ming-Wei Chang et al.
-・2018
+  <meta property="og:url" content="/paper/23/">
+  <meta property="og:title" content="Long-Term Feature Banks for Detailed Video Understanding #23 | Takuya Kobayashi">
+  <meta property="og:description" content=" 論文情報 ・Chao-Yuan Wu et al. (Facebook research)
 ・paper
-・code(Tensorflow)
-概要 Bi-directional な Transformer を用いて，自然言語分野における新たな事前学習手法を提案．言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成．
-手法 MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習．
-トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM．
-単一の文章における単語の関連性による出現確率についてだけでなく，２つの文章を比較させることによって文章全体としてより良い特徴表現を得ようということを目的としているのがNSP.
-Masked Language Model 入力の単語を予めいくつかマスキングしてしまい穴埋め問題を溶かせることによって，マスキングした部分の単語を前後の文脈の理解から復元させるタスク．入力シーケンスのうち，15%をランダムに選んでその部分の予測を行う．選んだ部分のうち80%はマスキング，10%は別の単語に置き換え，残りの10%はそのままの単語として入力させている．前後の文脈を考慮した特徴量抽出を行うことが目的．
-Next Sentence Prediction ２つの文章を並べて入力してあげて，２文目が１文目の次に来る文かどうかを予測するタスク．２つの文章を比較して予測結果を返すため，文章全体として良い特徴表現を得ることが期待できる．
-実験 新規性 新たな事前学習の枠組み．
-様々なタスクに転用するだけで精度向上．
-コメント・メモ 編集日 2019/12/10
-URL → Paper Top Page "><meta property="og:image" content="/paper/16/featured.png">
+概要 ３DCNNでは4秒近くにおける時系列情報しか捉えられない．そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文．
+手法 ３DCNNの元論文では，何フレームごとかに得た特徴をROI Poolingによってある区間における平均特徴量としたのち，全結合層で分類問題を解く（下図）．しかしこれではShortTermな情報しか捉えられず，ビデオ全体から判断が必要な情報が抜け落ちてしまう．
+そこでFeatureBankOperationを導入し，ShortTermとは別に得たLongTermな情報も同時に捉えるようなネットワークを用意してあげて，そこから得た特徴量も用いて認識を行う．
+FeatureBankOperatorの構造は以下．
+実験 新規性 ShortTerm&#43;LongTerm
+コメント・メモ 単純な理論だが精度向上に結構寄与してる．
+編集日 2019/08/14
+URL → Paper Top Page "><meta property="og:image" content="/paper/23/featured.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-07-17T00:00:00&#43;09:00">
+  <meta property="article:published_time" content="2019-08-14T00:00:00&#43;09:00">
   
-  <meta property="article:modified_time" content="2019-07-17T00:00:00&#43;09:00">
-  
-
+  <meta property="article:modified_time" content="2019-08-14T00:00:00&#43;09:00">
   
 
   
 
-  <title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding #16 | Takuya Kobayashi</title>
+  
+
+  <title>Long-Term Feature Banks for Detailed Video Understanding #23 | Takuya Kobayashi</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -441,7 +433,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/16/featured.p
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding #16</h1>
+  <h1 itemprop="name">Long-Term Feature Banks for Detailed Video Understanding #23</h1>
 
   
 
@@ -450,8 +442,8 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/16/featured.p
 
 
 
-<meta content="2019-07-17 00:00:00 &#43;0900 JST" itemprop="datePublished">
-<meta content="2019-07-17 00:00:00 &#43;0900 JST" itemprop="dateModified">
+<meta content="2019-08-14 00:00:00 &#43;0900 JST" itemprop="datePublished">
+<meta content="2019-08-14 00:00:00 &#43;0900 JST" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -464,7 +456,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/16/featured.p
     
       
     
-    <time>Jul 17, 2019</time>
+    <time>Aug 14, 2019</time>
   </span>
   
 
@@ -517,51 +509,47 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/16/featured.p
 
 <h2 id="論文情報"><code>論文情報</code></h2>
 
-<p>・Jacob Devlin, Ming-Wei Chang et al.</p>
+<p>・Chao-Yuan Wu et al. (Facebook research)</p>
 
-<p>・2018</p>
-
-<p>・<a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">paper</a></p>
-
-<p>・<a href="https://github.com/google-research/bert" target="_blank">code(Tensorflow)</a></p>
+<p>・<a href="https://arxiv.org/pdf/1812.05038.pdf" target="_blank">paper</a></p>
 
 <h2 id="概要"><code>概要</code></h2>
 
-<p>Bi-directional な <a href="/paper/15/">Transformer</a> を用いて，自然言語分野における新たな事前学習手法を提案．言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成．</p>
+<p>３DCNNでは4秒近くにおける時系列情報しか捉えられない．そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文．</p>
+
+<p><img width="655" alt="スクリーンショット 2020-03-06 12 52 25" src="https://user-images.githubusercontent.com/38309191/76048917-56e23b00-5fa9-11ea-8618-ca469d4c0bc9.png"></p>
 
 <h2 id="手法"><code>手法</code></h2>
 
-<p>MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習．<br />
-　トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM．<br />
-　単一の文章における単語の関連性による出現確率についてだけでなく，２つの文章を比較させることによって文章全体としてより良い特徴表現を得ようということを目的としているのがNSP.</p>
+<p>３DCNNの元論文では，何フレームごとかに得た特徴をROI Poolingによってある区間における平均特徴量としたのち，全結合層で分類問題を解く（下図）．しかしこれではShortTermな情報しか捉えられず，ビデオ全体から判断が必要な情報が抜け落ちてしまう．</p>
 
-<p><img width="600" alt="2019-02-22 16 19 00" src="https://user-images.githubusercontent.com/38309191/75126078-ac8e2c00-56fb-11ea-8461-a89f2a8048e0.png"></p>
+<p><img width="436" alt="スクリーンショット 2020-03-06 12 56 58" src="https://user-images.githubusercontent.com/38309191/76050201-fb647d00-5fa9-11ea-8d3d-ea07d839e0c4.png"></p>
 
-<h2 id="masked-language-model">Masked Language Model</h2>
+<p>そこでFeatureBankOperationを導入し，ShortTermとは別に得たLongTermな情報も同時に捉えるようなネットワークを用意してあげて，そこから得た特徴量も用いて認識を行う．</p>
 
-<p>入力の単語を予めいくつかマスキングしてしまい穴埋め問題を溶かせることによって，マスキングした部分の単語を前後の文脈の理解から復元させるタスク．入力シーケンスのうち，15%をランダムに選んでその部分の予測を行う．選んだ部分のうち80%はマスキング，10%は別の単語に置き換え，残りの10%はそのままの単語として入力させている．前後の文脈を考慮した特徴量抽出を行うことが目的．</p>
+<p><img width="512" alt="スクリーンショット 2020-03-06 12 57 15" src="https://user-images.githubusercontent.com/38309191/76050211-03bcb800-5faa-11ea-8d51-86a5ef139f8d.png"></p>
 
-<h2 id="next-sentence-prediction">Next Sentence Prediction</h2>
+<p>FeatureBankOperatorの構造は以下．</p>
 
-<p>２つの文章を並べて入力してあげて，２文目が１文目の次に来る文かどうかを予測するタスク．２つの文章を比較して予測結果を返すため，文章全体として良い特徴表現を得ることが期待できる．</p>
-
-<p><img width="600" alt="2019-02-22 16 19 00"  src="https://user-images.githubusercontent.com/38309191/75126590-0ee82c00-56fe-11ea-852f-ec956e4050cf.png"></p>
+<p><img width="636" alt="スクリーンショット 2020-03-06 12 59 27" src="https://user-images.githubusercontent.com/38309191/76050307-526a5200-5faa-11ea-8a9a-1ab6a57fb7f7.png"></p>
 
 <h2 id="実験"><code>実験</code></h2>
 
-<p><img width="800" alt="2019-02-22 16 19 00"  src="https://user-images.githubusercontent.com/38309191/75126606-20c9cf00-56fe-11ea-8818-cac7e646c346.png"></p>
+<p><img width="704" alt="スクリーンショット 2020-03-06 13 02 12" src="https://user-images.githubusercontent.com/38309191/76050422-b3922580-5faa-11ea-8c98-89f688cd23a4.png"></p>
+
+<p><img width="900" alt="スクリーンショット 2020-03-06 13 03 27" src="https://user-images.githubusercontent.com/38309191/76050485-e1776a00-5faa-11ea-8a14-a6204f5e55d4.png"></p>
 
 <h2 id="新規性"><code>新規性</code></h2>
 
-<p>新たな事前学習の枠組み．</p>
-
-<p>様々なタスクに転用するだけで精度向上．</p>
+<p>ShortTerm+LongTerm</p>
 
 <h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
 
+<p>単純な理論だが精度向上に結構寄与してる．</p>
+
 <h2 id="編集日"><code>編集日</code></h2>
 
-<p>2019/12/10</p>
+<p>2019/08/14</p>
 
 <h2 id="url"><code>URL</code></h2>
 
@@ -575,7 +563,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/16/featured.p
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/paper-nlp/">Paper - NLP</a>
+  <a class="badge badge-light" href="/tags/paper-action-recognition/">Paper - Action Recognition</a>
   
 </div>
 
@@ -657,11 +645,15 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/16/featured.p
         <h3>Related</h3>
         <ul>
           
-          <li><a href="/paper/15/">Attention is all you need #15</a></li>
+          <li><a href="/paper/18/">SlowFast Networks for Video Recognition #18</a></li>
           
-          <li><a href="/paper/21/">VideoBERT: A Joint Model for Video and Language Representation Learning #21</a></li>
+          <li><a href="/paper/03/">3DCNN #3</a></li>
           
-          <li><a href="/paper/20/">言語事前学習　参考スライド（外部引用） #20</a></li>
+          <li><a href="/paper/05/">Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset #5</a></li>
+          
+          <li><a href="/paper/04/">Skeleton-Based Action Recognition With Convolutional Neural Networks #4</a></li>
+          
+          <li><a href="/paper/01/">Two-Stream Convolutional Networks for Action Recognition in Videos #1</a></li>
           
         </ul>
       </div>
