@@ -3,6 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-03-06T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/paper/24/</loc>
+    <lastmod>2020-03-06T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/paper-graph-conv/</loc>
+    <lastmod>2020-03-06T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/papers/</loc>
+    <lastmod>2020-03-06T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/paper/</loc>
+    <lastmod>2020-03-06T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-03-06T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-03-06T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/paper/26/</loc>
+    <lastmod>2020-03-04T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/paper-action-recognition/</loc>
+    <lastmod>2020-03-04T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/authors/admin/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
   </url>
@@ -31,25 +83,7 @@
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/monthly/</loc>
-    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -96,6 +130,17 @@
   </url>
   
   <url>
+    <loc>/tags/paper-rp/</loc>
+    <lastmod>2020-02-24T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/paper/28/</loc>
+    <lastmod>2020-02-24T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/paper/12/</loc>
     <lastmod>2020-02-13T00:00:00+09:00</lastmod>
   </url>
@@ -118,12 +163,6 @@
   </url>
   
   <url>
-    <loc>/tags/paper-graph-conv/</loc>
-    <lastmod>2020-02-13T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/paper-nlp/</loc>
     <lastmod>2020-02-13T00:00:00+09:00</lastmod>
     <priority>0</priority>
@@ -131,18 +170,6 @@
   
   <url>
     <loc>/tags/paper-video-understanding/</loc>
-    <lastmod>2020-02-13T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/papers/</loc>
-    <lastmod>2020-02-13T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/paper/</loc>
     <lastmod>2020-02-13T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -215,6 +242,16 @@
   </url>
   
   <url>
+    <loc>/paper/29/</loc>
+    <lastmod>2019-10-21T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/30/</loc>
+    <lastmod>2019-10-21T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/aws/</loc>
     <lastmod>2019-08-24T00:00:00+09:00</lastmod>
     <priority>0</priority>
@@ -253,9 +290,13 @@
   </url>
   
   <url>
-    <loc>/tags/paper-action-recognition/</loc>
+    <loc>/paper/25/</loc>
     <lastmod>2019-08-14T00:00:00+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/paper/27/</loc>
+    <lastmod>2019-08-14T00:00:00+09:00</lastmod>
   </url>
   
   <url>
@@ -472,6 +513,11 @@
   <url>
     <loc>/project/papersummary/</loc>
     <lastmod>2019-05-12T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/paper/31/</loc>
+    <lastmod>2019-02-26T00:00:00+09:00</lastmod>
   </url>
   
   <url>

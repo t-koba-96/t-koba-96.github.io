@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paper - Graph Conv</title>
+      <link>/tags/paper-graph-conv/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/paper-graph-conv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paper - Action Recognition</title>
+      <link>/tags/paper-action-recognition/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/paper-action-recognition/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Monthly</title>
@@ -57,6 +75,15 @@
     </item>
     
     <item>
+      <title>Paper - RP</title>
+      <link>/tags/paper-rp/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/paper-rp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Paper - Action Segmentation</title>
       <link>/tags/paper-action-segmentation/</link>
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
@@ -71,15 +98,6 @@
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
       
       <guid>/tags/paper-attention/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Paper - Graph Conv</title>
-      <link>/tags/paper-graph-conv/</link>
-      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
-      
-      <guid>/tags/paper-graph-conv/</guid>
       <description></description>
     </item>
     
@@ -152,15 +170,6 @@
       <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/gcp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Paper - Action Recognition</title>
-      <link>/tags/paper-action-recognition/</link>
-      <pubDate>Wed, 14 Aug 2019 00:00:00 +0900</pubDate>
-      
-      <guid>/tags/paper-action-recognition/</guid>
       <description></description>
     </item>
     

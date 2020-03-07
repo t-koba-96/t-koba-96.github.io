@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper - RP on Takuya Kobayashi</title>
+    <link>/tags/paper-rp/</link>
+    <description>Recent content in Paper - RP on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/paper-rp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Temporal Cycle-Consistency Learning #28</title>
+      <link>/paper/28/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/28/</guid>
+      <description> 論文情報 ・Debidatta Dwibedi et al.
+・paper
+概要 異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現．
+手法 まず動画のペアにおいて，各フレームの埋め込み表現をエンコーダによって得る．このうち１つのフレームに注目したとき（下図の右下赤い点），ペア動画においてその埋め込み表現から最も近いフレームを選ぶ．同様にして元の動画からもうひとつ点を選んだとき，最初の赤い点にもどることが理想であるが，違うフレームが選ばれたときはそこでロスをとることによって正解に近づけていくことを考える．
+しかし単純に上のように定義しただけでは損失関数の微分が不可能なため，勾配の計算ができない．そこでペア動画の各フレームにおいて距離空間に応じた重みを計算し，その重み付きの和を計算して，近似した近傍点を求める．同様に，近似した近傍点から元動画の各フレームの距離空間に応じた重みを計算し，その重み付きの和を計算することでロスをとる．
+実験 新規性 動画ペアにおいて，似た動作同士を近づけるような表現学習の方法を提案．
+コメント・メモ 編集日 2020/02/24
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>Representation Learning with Contrastive Predictive Coding #29</title>
+      <link>/paper/29/</link>
+      <pubDate>Mon, 21 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/29/</guid>
+      <description> 論文情報 ・Aaron van den Oord et al.
+・paper
+概要 画像や音声における新しい表現学習の方法を提案．エンコーダーとGRUを組み合わせてGRUが次のエンコーダの出力を予測して,その相互情報量の最大化によって良い特徴表現を獲得する．
+手法 下図は音声入力の例．
+GRUの出力が次の潜在表現を回帰・予測し，その相互情報量の最大化を目指すことによって良い特徴表現を得る．
+ロス NCEベースのロスを使用し，同じペアは近づけるように，ランダムにサンプルしたペアを遠ざけるよう学習．
+画像の場合 画像の場合そのままでは系列データにできないので，パッチごとにずらしていくことで系列データとして扱う．
+実験 画像 言語 t-SNEによる音声表現の可視化 新規性 系列データにおいて次の潜在表現を予測し，相互情報量の最大化を目的にすることによる良い表現の獲得．
+参考文献 ・相互情報量最大化による表現学習
+  [DL輪読会]相互情報量最大化による表現学習  from Deep Learning JP 
+編集日 2019/10/21
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>Video Representation Learning by Dense Predictive Coding #30</title>
+      <link>/paper/30/</link>
+      <pubDate>Mon, 21 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/30/</guid>
+      <description> 論文情報 ・Tengda Han et al.
+・paper
+概要 Predictive Codingで用いた手法を動画にも適用した論文．動画の次の潜在表現を回帰で予測させてあげて，相互情報量 の最大化を目指す．
+手法 全体としての考え方はPredictive Codingと一緒．ただし今回は動画を入力として扱うので，単純にフレームごとに系列データとして扱っていく．
+PositiveペアとNegativeペアによるMetric Learning．NegativeとしてはTemporalとSpatialがあり，フレーム内での同じ位置でも時間情報が違ったらNegativeとして遠ざけるよう学習する（背景に依存して動画全体として変化の少ない特徴表現となることを避けるため？）．
+実験 新規性 相互情報量最大化の考え方を動画にも応用．
+メモ 編集日 2019/10/21
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding #16</title>
+      <link>/paper/16/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/16/</guid>
+      <description> 論文情報 ・Jacob Devlin, Ming-Wei Chang et al.
+・2018
+・paper
+・code(Tensorflow)
+概要 Bi-directional な Transformer を用いて，自然言語分野における新たな事前学習手法を提案．言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成．
+手法 MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習．
+トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM．
+単一の文章における単語の関連性による出現確率についてだけでなく，２つの文章を比較させることによって文章全体としてより良い特徴表現を得ようということを目的としているのがNSP.
+Masked Language Model 入力の単語を予めいくつかマスキングしてしまい穴埋め問題を溶かせることによって，マスキングした部分の単語を前後の文脈の理解から復元させるタスク．入力シーケンスのうち，15%をランダムに選んでその部分の予測を行う．選んだ部分のうち80%はマスキング，10%は別の単語に置き換え，残りの10%はそのままの単語として入力させている．前後の文脈を考慮した特徴量抽出を行うことが目的．
+Next Sentence Prediction ２つの文章を並べて入力してあげて，２文目が１文目の次に来る文かどうかを予測するタスク．２つの文章を比較して予測結果を返すため，文章全体として良い特徴表現を得ることが期待できる．
+実験 新規性 新たな事前学習の枠組み．
+様々なタスクに転用するだけで精度向上．
+コメント・メモ 編集日 2019/12/10
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>Time-Contrastive Networks: Self-Supervised Learning from Video #22</title>
+      <link>/paper/22/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/22/</guid>
+      <description> 論文情報 ・Pierre Sermanet et al. (Google Brain)
+・paper
+概要 Action recognition　におけるSelf-supervisedな事前学習方法の提案．異なる視点から撮った同じアクションにおける同フレームは同じアクションであるとみなせるため，同じフレーム同士は近づけて，ことなるフレームは遠ざけるといったトリプレットな学習方法ができる．
+手法 概要図は以下の通り．
+異なる視点のビデオを比べたとき，同じタイムスタンプである青フレームはPositive 同士，それに対して赤フレームはNegativeであるといえる．このような設定で学習させることで，同じ行動でもで視点が変わった際の対応関係を学習可能，より頑健なFeature抽出が可能に．
+ロス トリプレットロスとして定義ができる．
+データセット スマートフォンによるマルチビューな撮影
+実験 Action Alignment のタスクで評価．
+新規性 同時フレームに注目したSelf-supervisedな事前学習方法を提案．
+コメント・メモ 編集日 2019/06/03
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>VideoBERT: A Joint Model for Video and Language Representation Learning #21</title>
+      <link>/paper/21/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/21/</guid>
+      <description> 論文情報 ・Chen Sun et al. (Google Research)
+・2019 CVPR
+・paper
+概要 Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，Bertを応用することでマルチモーダルに事前学習させる方法を提案．基本的にはBertのMask穴埋め問題をLanguage+Visionに拡張したもの．
+Downstreamのタスクとしては入力テキスト情報に対応したビデオフレームの出力や，入力ビデオの次におきうるアクションのビデオ出力等が挙げられる．
+手法 ネットワーク全体の概要は以下の通り．
+マスク穴埋め問題 ランダムで入力をマスクして，出力を予測させることでSelf-supervisedに学習するのはBertと一緒．違いとして，文章同士で入力ではなく，文章と対応するビデオのセットでの入力となる．ビデオ側のトークンはクラスタリングで定義し，４階層✖️12次元の計20736次元の階層的Kmeansによって分類し，言語側と同じくクロスエントロピーをロスとして学習．
+実験 様々なDown Streamタスクでの比較．
+⓵ Action classification
+⓶　Video captioning
+新規性 BertのようにSelf-supervisedな事前学習方法の提案によって大きなデータセット規模での学習を可能とし，精度の向上
+コメント・メモ Videoの入力があいまいなイメージ．Bertへの入力としてどのようなルールでフレームを選んでくるかは難しい問題に感じる．
+編集日 2019/03/04
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>言語事前学習　参考スライド（外部引用） #20</title>
+      <link>/paper/20/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/20/</guid>
+      <description> 情報 言語における事前学習の参考スライド（引用）
+概要 ⓵事前学習言語モデルを用いたVision &amp;amp; Languageの動向
+ 
+⓶事前学習言語モデルの動向
+ コメント・メモ 編集日 2019/02/23
+URL → Paper Top Page </description>
+    </item>
+    
+  </channel>
+</rss>
