@@ -4,7 +4,42 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-03-06T00:00:00+09:00</lastmod>
+    <lastmod>2020-03-07T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/paper/32/</loc>
+    <lastmod>2020-03-07T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/paper-image-understanding/</loc>
+    <lastmod>2020-03-07T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/papers/</loc>
+    <lastmod>2020-03-07T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/paper/</loc>
+    <lastmod>2020-03-07T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-03-07T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-03-07T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -20,37 +55,8 @@
   </url>
   
   <url>
-    <loc>/categories/papers/</loc>
+    <loc>/tags/paper-object-detection/</loc>
     <lastmod>2020-03-06T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/paper/</loc>
-    <lastmod>2020-03-06T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-03-06T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-03-06T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/paper/26/</loc>
-    <lastmod>2020-03-04T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/paper-action-recognition/</loc>
-    <lastmod>2020-03-04T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -136,6 +142,12 @@
   </url>
   
   <url>
+    <loc>/tags/paper-video-understanding/</loc>
+    <lastmod>2020-02-24T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/paper/28/</loc>
     <lastmod>2020-02-24T00:00:00+09:00</lastmod>
   </url>
@@ -164,12 +176,6 @@
   
   <url>
     <loc>/tags/paper-nlp/</loc>
-    <lastmod>2020-02-13T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/paper-video-understanding/</loc>
     <lastmod>2020-02-13T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -215,6 +221,17 @@
   <url>
     <loc>/tags/memo/</loc>
     <lastmod>2019-05-12T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/paper/26/</loc>
+    <lastmod>2020-01-15T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/paper-action-recognition/</loc>
+    <lastmod>2020-01-15T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper - Object Detection on Takuya Kobayashi</title>
+    <link>/tags/paper-object-detection/</link>
+    <description>Recent content in Paper - Object Detection on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/paper-object-detection/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Graph R-CNN for Scene Graph Generation #24</title>
+      <link>/paper/24/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/24/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

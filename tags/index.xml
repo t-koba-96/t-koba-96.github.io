@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paper - Image Understanding</title>
+      <link>/tags/paper-image-understanding/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/paper-image-understanding/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Paper - Graph Conv</title>
@@ -21,11 +30,11 @@
     </item>
     
     <item>
-      <title>Paper - Action Recognition</title>
-      <link>/tags/paper-action-recognition/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0900</pubDate>
+      <title>Paper - Object Detection</title>
+      <link>/tags/paper-object-detection/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0900</pubDate>
       
-      <guid>/tags/paper-action-recognition/</guid>
+      <guid>/tags/paper-object-detection/</guid>
       <description></description>
     </item>
     
@@ -84,6 +93,15 @@
     </item>
     
     <item>
+      <title>Paper - Video Understanding</title>
+      <link>/tags/paper-video-understanding/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/paper-video-understanding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Paper - Action Segmentation</title>
       <link>/tags/paper-action-segmentation/</link>
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
@@ -111,15 +129,6 @@
     </item>
     
     <item>
-      <title>Paper - Video Understanding</title>
-      <link>/tags/paper-video-understanding/</link>
-      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
-      
-      <guid>/tags/paper-video-understanding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Atcoder</title>
       <link>/tags/atcoder/</link>
       <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
@@ -134,6 +143,15 @@
       <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/memo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paper - Action Recognition</title>
+      <link>/tags/paper-action-recognition/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/tags/paper-action-recognition/</guid>
       <description></description>
     </item>
     

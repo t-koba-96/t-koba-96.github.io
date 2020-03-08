@@ -30,7 +30,7 @@
   <meta name="description" content=" ">
 
   
-  <link rel="alternate" hreflang="en-us" href="/paper/24/">
+  <link rel="alternate" hreflang="en-us" href="/paper/32/">
 
   
 
@@ -95,7 +95,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/paper/24/">
+  <link rel="canonical" href="/paper/32/">
 
   
   
@@ -106,21 +106,21 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Takuya Kobayashi">
-  <meta property="og:url" content="/paper/24/">
-  <meta property="og:title" content="Graph R-CNN for Scene Graph Generation #24 | Takuya Kobayashi">
-  <meta property="og:description" content=" "><meta property="og:image" content="/paper/24/featured.png">
+  <meta property="og:url" content="/paper/32/">
+  <meta property="og:title" content="Graphical Contrastive Losses for Scene Graph Parsing #32 | Takuya Kobayashi">
+  <meta property="og:description" content=" "><meta property="og:image" content="/paper/32/featured.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2020-03-06T00:00:00&#43;09:00">
+  <meta property="article:published_time" content="2020-03-07T00:00:00&#43;09:00">
   
-  <meta property="article:modified_time" content="2020-03-06T00:00:00&#43;09:00">
-  
-
+  <meta property="article:modified_time" content="2020-03-07T00:00:00&#43;09:00">
   
 
   
 
-  <title>Graph R-CNN for Scene Graph Generation #24 | Takuya Kobayashi</title>
+  
+
+  <title>Graphical Contrastive Losses for Scene Graph Parsing #32 | Takuya Kobayashi</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -415,7 +415,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Graph R-CNN for Scene Graph Generation #24</h1>
+  <h1 itemprop="name">Graphical Contrastive Losses for Scene Graph Parsing #32</h1>
 
   
 
@@ -424,8 +424,8 @@
 
 
 
-<meta content="2020-03-06 00:00:00 &#43;0900 JST" itemprop="datePublished">
-<meta content="2020-03-06 00:00:00 &#43;0900 JST" itemprop="dateModified">
+<meta content="2020-03-07 00:00:00 &#43;0900 JST" itemprop="datePublished">
+<meta content="2020-03-07 00:00:00 &#43;0900 JST" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -438,7 +438,7 @@
     
       
     
-    <time>Mar 6, 2020</time>
+    <time>Mar 7, 2020</time>
   </span>
   
 
@@ -491,142 +491,132 @@
 
 <h2 id="論文情報"><code>論文情報</code></h2>
 
-<p>・Jianwei Yang et al. (Facebook research)</p>
+<p>・Ji Zhang et al.</p>
 
-<p>・ECCV 2018</p>
+<p>・CVPR 2019</p>
 
-<p>・<a href="https://arxiv.org/pdf/1808.00191.pdf" target="_blank">paper</a></p>
+<p>・<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_Graphical_Contrastive_Losses_for_Scene_Graph_Parsing_CVPR_2019_paper.pdf" target="_blank">paper</a></p>
 
-<p>・<a href="https://github.com/jwyang/graph-rcnn.pytorch" target="_blank">code (pytorch)</a></p>
+<p>・<a href="https://github.com/NVIDIA/ContrastiveLosses4VRD" target="_blank">code (pytorch)</a></p>
 
 <h2 id="概要"><code>概要</code></h2>
 
-<p>GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法．Graphの参考資料は<a href="../14">こちら</a>．SceneGraphとは<a href="../31">VisualGenome</a>において定義されているもので，{Subject,Relationship(Predicate),Object} (+Attribute) によるグラフ構造で表される．例として，A man is swinging a bat というような画像内の関係性があったとき， {man, swinging, bat} (+Attribute)というふうになる．これらの関係性を考えていき，最終的には(d)の関係性の出力を目指す．</p>
+<p>シーングラフの生成において従来モデルの課題点を指摘した上で，それを改善するための新たなロスを提案し，SoTAを達成.</p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76067616-05e73c80-5fd3-11ea-8119-67d05fc1a697.png" alt="スクリーンショット 2020-03-06 17 50 46" /></p>
+<p><img width="600" alt="2019-02-22 16 19 00" src="featured.png"></p>
 
-<h2 id="手法"><code>手法</code></h2>
+<h2 id="シーングラフにおける言葉の定義"><code>シーングラフにおける言葉の定義</code></h2>
 
-<p>全体の概要図配下の通り．３つのパートに分かれている．</p>
+<p>まずはじめに論文の内容とは関係ないが，<a href="../24">Graph-RCNN</a>ではあいまいになっていて読みにくかったシーングラフにおける言葉の定義をしっかり記していてくれたのが地味にありがたい．</p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76140206-372b3f80-609b-11ea-9f11-7ea8112540ea.png" alt="スクリーンショット 2020-03-07 17 43 51" /></p>
+<p>・シーングラフを構成するにあたって必要にになるのは，objectとsubject,それをつなぐ関係性であるpredicateと，objectやsubjectに関するattributeの4つ．<br />
+<strong><em>[object, subject, predicate, attribute]</em></strong></p>
 
-<p>⓵ Object Region Proposal<br />
-⓶ Relationship Proposal<br />
-⓷ Graph Labeling</p>
+<p>・実際に画像上に登場する物体(Object or Subject)は総称してentity.<br />
+<strong><em>[enitity]</em></strong></p>
 
-<p><img width="948" alt="スクリーンショット 2020-03-07 17 43 38" src="https://user-images.githubusercontent.com/38309191/76140203-30043180-609b-11ea-8bd6-e15aeac7e84c.png"></p>
+<p>・最終的に求めるべきobject,subject,predicateの関係性を<s,pred,o>と定義し，これのことをrelationshipsと呼ぶ．<br />
+<strong><em>[relationships]</em></strong></p>
 
-<h2 id="object-region-proposal">Object Region Proposal</h2>
+<h2 id="従来手法の課題点"><code>従来手法の課題点</code></h2>
 
-<p>Faster R-CNNを学習させて物体検出．出力としては物体の位置情報（BoundingBox），特徴量，クラスラベルの３つがある．</p>
+<p><a href="../25">MotifNet</a>のように，従来の手法ではまず初めにentityの情報を得てから，それをもとにpredicateをラベルのクラス分類問題として解くことでrelationshipsを求めるという２段階のアプローチが主流である．しかし，このようなアプローチには２つの課題が存在すると主張している．</p>
 
-<h2 id="relationship-proposal">Relationship Proposal 　</h2>
+<h2 id="⓵-entity-instance-confusion">⓵ Entity Instance Confusion</h2>
 
-<p>物体検出したもののうち，全てを繋ぐようなグラフ構造はパラメータ数的にも，現実世界における物体の関係性的にも現実的ではないため，本当に重要なエッジのみ抽出する段階．</p>
+<p>同じラベルのentityが複数登場した時，relationshipにおけるenitityがそのうちのどれであるかの判断が難しくなる．以下の例では，男の人が持っているのではない方のワイングラスにobjectが付加されてしまっている．</p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76140280-00a1f480-609c-11ea-9b85-3001bb7db3da.png" alt="スクリーンショット 2020-03-07 17 49 27" /></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76162930-5b634b00-6185-11ea-9618-2ccf2b3978e6.png" alt="スクリーンショット 2020-03-08 21 39 54" /></p>
 
-<p>物体がObjectである場合とSubjectである場合（Relationship次第でどっちにもなり得るということ）は分けて考慮する必要があるため，構造は一緒だが異なるパラメータをもつ学習モデルを用意してあげて，それらのを通した行列積をエッジのスコアとして用いる．</p>
+<h2 id="⓶-proximal-rel-ambiguity">⓶ Proximal Rel Ambiguity</h2>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76140311-5e364100-609c-11ea-81d0-41da86f15864.png" alt="スクリーンショット 2020-03-07 17 52 05" /></p>
+<p>同様に同じラベルのpredicateを持ちうるobjectとsubjectのペアが複数ある時も，どのobjectとsubjectがペアであるかの判別が難しい．以下の例ではplaysというpredicateに対して3人の男と３つの楽器によるペアを判別する必要があるが，正しくマッチングできていないことがみて取れる．</p>
 
-<p>最終的に，スコアの高い上位k個のエッジを次のフェーズの入力として用いる．</p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76162933-6027ff00-6185-11ea-88fc-4cebc7aca47b.png" alt="スクリーンショット 2020-03-08 21 40 03" /></p>
 
-<p>また，物体ペアに関するNMSもここで行う．通常と違って，物体ペアによるIoU値を用いてNMSを行う．</p>
+<p>上記の２つともの問題点が発生する原因として，relationshipsを求める際にそれぞれ独立のクラス分類問題として解いてしまっていることがあげられる．そのため同じ物体や考えられるペアが複数存在してもそれぞれを独立の問題として解いてしまっており，お互いを比較した上でどちらがより正しいかを考慮できていない．<br />
+本論文ではそれを解決するための新たなロスを提案している．</p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76141173-0cde7f80-60a5-11ea-9593-b7484fc969db.png" alt="スクリーンショット 2020-03-07 18 54 13" /></p>
+<h2 id="提案するロス"><code>提案するロス</code></h2>
 
-<h2 id="graph-labeling">Graph Labeling</h2>
+<p>新たなロス関数では３種類のロスを組み合わせたものとなっている．</p>
 
-<p>AttentionalGCNを用いて最終的に物体，関係性の分類．GraphConvによってobject，relationshipがまわりのグラフ構造を考慮した上でそれぞれの特徴量を更新していく．</p>
+<h2 id="⓵-class-agnostic-loss">⓵ CLass Agnostic Loss</h2>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76141118-a3f70780-60a4-11ea-824c-756aa12e8372.png" alt="スクリーンショット 2020-03-07 18 51 19" /></p>
+<p>クラスラベルを考慮しないトリプレットロス．背景（関連なし）クラスを除いた全てのpredicateクラスに関して，以下のような関数として定義する．</p>
 
-<p>A. Objectの更新について</p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76163467-a4b59980-6189-11ea-9feb-1105c568c435.png" alt="スクリーンショット 2020-03-08 22 10 34" /></p>
 
-<p>大きく３つの関係性を踏まえて特徴量の更新　</p>
+<p>今各entityにおいて，関係性を持つ他のentityとの間のスコアのうち最小のものを最大化し，関係性を持たない他のentityとの間のスコアのうち最大のものを最小化することを考える．そのためには，objectとsubjectに分けるとそれぞれ</p>
 
-<p>⓵ 自分のまわりのObject(Message from other objects)</p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76163471-ac753e00-6189-11ea-9382-7195dcb3e477.png" alt="スクリーンショット 2020-03-08 22 10 47" /></p>
 
-<p>ただしObjectに関してはSkipconnectionを採用していて，離れたノード同士の関係性も考慮するようにしている．アテンションのαがskipとされているのもそのためである．特徴行列に掛け合わせる隣接行列のパラメータも学習させることで，隣接行列がノード同士の関係性を表すアテンションであるとみなすのがAttentionalGCN．そのため通常は同じノードを繋ぐ対角成分は１，エッジによってつながっていないノード同士は0となるようにし，残りの部分を学習させていくが，skipの場合は全ノード考慮するため，０成分で埋めずに対角成分以外をすべて更新していく．</p>
+<p>を最大化することと同義．そのため最小化するロス関数は</p>
 
-<p>⓶ Subjectからみたrelationship</p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76163474-b39c4c00-6189-11ea-8067-cf13f3e631d0.png" alt="スクリーンショット 2020-03-08 22 11 00" /></p>
 
-<p>⓷ Objectからみたrelationship</p>
+<p>となる．</p>
 
-<p>注意としては⓶，⓷を区別する必要あり</p>
+<h2 id="⓶-entity-class-aware-loss">⓶ Entity Class Aware Loss</h2>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76140548-15cc5280-609f-11ea-9358-abb51ee7b3de.png" alt="スクリーンショット 2020-03-07 18 11 30" /></p>
+<p>EntityInstanceConfusionを解決するためのロス．基本的には⓵と同じだが，対応するentityのクラスが同じ中でトリプレットロスを計算する．</p>
 
-<p>B. Relationshipの更新について</p>
+<p>各クラスcに属するenitityに対して</p>
 
-<p>⓵ Relationshipからみたsubject</p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76163672-88b2f780-618b-11ea-91dd-b7590118d0bd.png" alt="スクリーンショット 2020-03-08 22 24 05" /></p>
 
-<p>⓶ Relationshipからみたobject</p>
+<p>を計算するため，ロス関数は</p>
 
-<p>同様に⓶，⓷の区別の必要あり．</p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76163675-90729c00-618b-11ea-8632-364ef7e3fae9.png" alt="スクリーンショット 2020-03-08 22 24 19" /></p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76141083-4d89c900-60a4-11ea-90f7-8eb612ca3059.png" alt="スクリーンショット 2020-03-07 18 48 54" /></p>
+<p>となる．</p>
 
-<h2 id="損失関数-学習"><code>損失関数・学習</code></h2>
+<h2 id="⓷-predicate-class-aware-loss">⓷ Predicate Class Aware Loss</h2>
 
-<p><a href="https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation" target="_blank">参考文献</a>より引用</p>
+<p>⓶のpredicate版．ProximalRelAmbiguityを解決するためのロス．entityに付加されているpredicateのクラスが同じ中でトリプレットロスを計算する．</p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76140447-cfc2bf00-609d-11ea-893a-14f26273a77d.png" alt="スクリーンショット 2020-03-07 18 01 35" /></p>
+<p>各predicateクラスeが付加されているentityに対して</p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76140449-d2251900-609d-11ea-96e9-47ae94ed1bc1.png" alt="スクリーンショット 2020-03-07 18 01 55" /></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76163717-f19a6f80-618b-11ea-9ece-95c1462c1eb3.png" alt="スクリーンショット 2020-03-08 22 27 01" /></p>
 
-<h2 id="評価方法"><code>評価方法</code></h2>
+<p>を計算するため，ロス関数は</p>
 
-<p><a href="../31">VisualGenome</a>で用いられていたSGGenという評価方法を改善し，SGGen+と呼ばれる新たな評価軸を提案．</p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76163722-fa8b4100-618b-11ea-9847-4253ee8df19b.png" alt="スクリーンショット 2020-03-08 22 27 18" /></p>
 
-<h2 id="sggen">SGGen</h2>
+<p>となる．</p>
 
-<p>以下の二つの評価によって決定される．</p>
+<h2 id="最終的なロス">最終的なロス</h2>
 
-<p>⓵　{Subject,Relationship(Predicate),Object}　のすべての要素が完全に一致している<br />
-⓶　SubjectとObjectのローカライズ（位置予測）におけるIoUがともに0.5以上</p>
+<p>以上３つのロスを(L1,2,3)，従来のcrossentropyloss(L0)に加えることによって学習する．</p>
 
-<p>について，両方満たしているときのみ正解として扱われ，１点加点される．しかしこれでは条件が厳しいため，見当違いな出力と１箇所だけ違う惜しい出力も同じとみなされ，結果の反映が正確にできていないと言える．</p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76163726-ff4ff500-618b-11ea-986e-ebfba67def58.png" alt="スクリーンショット 2020-03-08 22 27 26" /></p>
 
-<h2 id="sggen-1">SGGen+</h2>
+<h2 id="モデル"><code>モデル</code></h2>
 
-<p>そこで新しく，以下の３つの評価それぞれについて，満たしていれば随時１点加点される．</p>
+<p>RelDNと呼ばれるモデルを提案．</p>
 
-<p>⓵C(0)：正しく認識された(位置，クラス) Objectノードの数<br />
-⓶C(P)：SubjectとObjectのローカライズ（位置予測）におけるIoUがともに0.5以上で，Relation(predicat)が正しいとき<br />
-⓷C(T)：SGGenの評価</p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76164082-4b506900-618f-11ea-8fdb-23d7a2c4e348.png" alt="スクリーンショット 2020-03-08 22 51 01" /></p>
 
-<p>これらの合計点数をノードとエッジの合計Nで割ったもの.</p>
+<p>Semantic, Spatial, Visualの３つのmoduleを用意し，最後に足し合わせたのちsoftmaxをかけてpredicateを出力．<br />
+Visualのうち，relationships全体の特徴量の抽出のみ別に用意したCNN(構造は同じ)を用いて行う．理由としては関係性を捉えるための特徴としてはその限定された領域に注目して欲しく，全体をみてしまうCNNと区別したかったから．（以下図参照）</p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76139951-df8bd480-6098-11ea-96c9-42f4e52a928e.png" alt="スクリーンショット 2020-03-07 17 27 03" /></p>
-
-<h2 id="比較結果">比較結果</h2>
-
-<p>SGGenとSGGen+の比較結果(SGGen+については分母)．SGGen+を用いた方が，より正解に近いグラフが出力できたときそれをより反映できるような評価値となっている．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76068119-e7357580-5fd3-11ea-8499-d496d1665b0a.png" alt="スクリーンショット 2020-03-06 17 57 07" /></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76164160-eea17e00-618f-11ea-9cfc-0599176007df.png" alt="スクリーンショット 2020-03-08 22 55 36" /></p>
 
 <h2 id="実験"><code>実験</code></h2>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76068156-fc120900-5fd3-11ea-916c-334c0d994886.png" alt="スクリーンショット 2020-03-06 17 57 42" /></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76164113-7dfa6180-618f-11ea-884d-be2c85bae456.png" alt="スクリーンショット 2020-03-08 22 52 27" /></p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76068178-07653480-5fd4-11ea-82b7-d46162aef160.png" alt="スクリーンショット 2020-03-06 17 57 57" /></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76164212-666fa880-6190-11ea-881a-46f2b7445677.png" alt="スクリーンショット 2020-03-08 22 58 56" /></p>
 
 <h2 id="新規性"><code>新規性</code></h2>
 
-<p>GraphConvを用いたシーングラフの生成に関する初期の論文であり基本形．</p>
+<p>シーングラフ用の新たなロスの提案．</p>
 
 <h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
 
-<p><a href="https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation" target="_blank">参考文献</a></p>
-
-<p>Objectという単語がSubjectと区別している場合としていない場合の２通りの使われ方がしていて紛らわしく感じた．</p>
-
 <h2 id="編集日"><code>編集日</code></h2>
 
-<p>2020/03/06</p>
+<p>2020/03/07</p>
 
 <h2 id="url"><code>URL</code></h2>
 
@@ -640,9 +630,7 @@
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/paper-graph-conv/">Paper - Graph Conv</a>
-  
-  <a class="badge badge-light" href="/tags/paper-object-detection/">Paper - Object Detection</a>
+  <a class="badge badge-light" href="/tags/paper-image-understanding/">Paper - Image Understanding</a>
   
 </div>
 
@@ -724,13 +712,7 @@
         <h3>Related</h3>
         <ul>
           
-          <li><a href="/paper/12/">Dynamic Graph Attention for Referring Expression Comprehension #12</a></li>
-          
-          <li><a href="/paper/14/">Graph Convolution #14</a></li>
-          
-          <li><a href="/paper/26/">Action Genome: Actions as Composition of Spatio-temporal Scene Graphs #26</a></li>
-          
-          <li><a href="/paper/31/">Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations #31</a></li>
+          <li><a href="/paper/25/">Neural Motifs: Scene Graph Parsing with Global Context #25</a></li>
           
         </ul>
       </div>

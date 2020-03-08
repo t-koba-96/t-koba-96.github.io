@@ -6,7 +6,7 @@
     <description>Recent content in Paper - Action Recognition on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jan 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="/tags/paper-action-recognition/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Action Genome: Actions as Composition of Spatio-temporal Scene Graphs #26</title>
       <link>/paper/26/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0900</pubDate>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0900</pubDate>
       
       <guid>/paper/26/</guid>
       <description> 論文情報 ・Jingwei Ji et al.
@@ -29,7 +29,7 @@
 既存のシーングラフ生成モデルをActionGenomeに適用した際の精度．既存の手法は画像ベースの手法のため精度も低く，動画用に改善の余地ありとのこと．
 新規性 動画用のシーングラフを提案．シーングラフを用いたActionRecognitionの手法．
 コメント・メモ 公開されたら触ってみたい．
-編集日 2020/03/04
+編集日 2020/01/15
 URL → Paper Top Page </description>
     </item>
     

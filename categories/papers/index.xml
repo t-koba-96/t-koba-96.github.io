@@ -6,10 +6,19 @@
     <description>Recent content in Papers on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="/categories/papers/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Graphical Contrastive Losses for Scene Graph Parsing #32</title>
+      <link>/paper/32/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/32/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Graph R-CNN for Scene Graph Generation #24</title>
@@ -18,28 +27,6 @@
       
       <guid>/paper/24/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Action Genome: Actions as Composition of Spatio-temporal Scene Graphs #26</title>
-      <link>/paper/26/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0900</pubDate>
-      
-      <guid>/paper/26/</guid>
-      <description> 論文情報 ・Jingwei Ji et al.
-・paper
-・データセット未だ公開なし
-概要 Visual Genomeの動画版のデータセット．またFeature Banksを用いた手法の提案．
-データセット データセットのラベル内容としては動画中のActionの領域とそのCaption，またVisualGenomeのようなSceneGraphが与えられている．
-動画内の各Actionに関して，Actionを均等な時間間隔で分割した際の5フレームを抽出し，その5フレームにおけるシーングラフのラベルを作成．上記の例では１つの動画で４つのアクションが起きているため，4✖️5の合計20フレーム分のシーングラフが存在する．
-他のデータセットとの比較としては以下の通り．
-手法 動画から各Actionを抽出するAction Recognitionのタスクを考える．同グループの以前の研究であるFeature Banksをベースラインとして用いている．従来のように抽出した3DCNN特徴に加えて，今回のラベルによって得られるシーングラフを予測させてobjectとrelationshipsを捉えたfeatured map を同様にFeature bank として長期の時系列情報として保持することで，行動の分類を行っている．
-実験 提案手法の評価．シーングラフ の利用によって精度の向上を確認．
-既存のシーングラフ生成モデルをActionGenomeに適用した際の精度．既存の手法は画像ベースの手法のため精度も低く，動画用に改善の余地ありとのこと．
-新規性 動画用のシーングラフを提案．シーングラフを用いたActionRecognitionの手法．
-コメント・メモ 公開されたら触ってみたい．
-編集日 2020/03/04
-URL → Paper Top Page </description>
     </item>
     
     <item>
@@ -92,6 +79,28 @@ URL → Paper Top Page </description>
 ・paper
 概要   Slideshare 
 編集日 2020/02/13
+URL → Paper Top Page </description>
+    </item>
+    
+    <item>
+      <title>Action Genome: Actions as Composition of Spatio-temporal Scene Graphs #26</title>
+      <link>/paper/26/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/26/</guid>
+      <description> 論文情報 ・Jingwei Ji et al.
+・paper
+・データセット未だ公開なし
+概要 Visual Genomeの動画版のデータセット．またFeature Banksを用いた手法の提案．
+データセット データセットのラベル内容としては動画中のActionの領域とそのCaption，またVisualGenomeのようなSceneGraphが与えられている．
+動画内の各Actionに関して，Actionを均等な時間間隔で分割した際の5フレームを抽出し，その5フレームにおけるシーングラフのラベルを作成．上記の例では１つの動画で４つのアクションが起きているため，4✖️5の合計20フレーム分のシーングラフが存在する．
+他のデータセットとの比較としては以下の通り．
+手法 動画から各Actionを抽出するAction Recognitionのタスクを考える．同グループの以前の研究であるFeature Banksをベースラインとして用いている．従来のように抽出した3DCNN特徴に加えて，今回のラベルによって得られるシーングラフを予測させてobjectとrelationshipsを捉えたfeatured map を同様にFeature bank として長期の時系列情報として保持することで，行動の分類を行っている．
+実験 提案手法の評価．シーングラフ の利用によって精度の向上を確認．
+既存のシーングラフ生成モデルをActionGenomeに適用した際の精度．既存の手法は画像ベースの手法のため精度も低く，動画用に改善の余地ありとのこと．
+新規性 動画用のシーングラフを提案．シーングラフを用いたActionRecognitionの手法．
+コメント・メモ 公開されたら触ってみたい．
+編集日 2020/01/15
 URL → Paper Top Page </description>
     </item>
     
@@ -157,19 +166,48 @@ URL → Paper Top Page </description>
       <guid>/paper/25/</guid>
       <description> 論文情報 ・Rowan Zellers et al.
 ・paper
-概要 手法 実験 新規性 コメント・メモ 編集日 2019/08/14
+・code (pytorch)
+概要 シーングラフ生成のタスクで既存のVisualGenomeデータセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案．
+シーングラフの作成における考察 VisualGenomeを用いたシーングラフ生成の過程において，以下の２つの特徴があったと主張．
+⓵ Objectの情報からRelationを更新することはRelationを予測する上で有効であるが，逆はそうではない． 下図は，右下に書かれてる四角の中の右半分の情報(Head=始点のObject，Tail=終点のObject，Edge=Relation)を用いて残りの左半分を予測したときのtopK/精度を示したもの．
+見ると，headやtailからedgeを推測する際の精度が高いのに対し，edgeからhead, tailを予測するのは非常に難しくなっているのがわかる．
+既存手法ではobjectとrelationの相互関係性に注目し，relationからobject情報を更新していたが，この操作にはあまり意味がないことを主張している．
+⓶ 半分以上の画像において，一枚の中に複数回以上登場する同一の関係性（Motif）が存在している 動物と手足の関係や，木のように１つではなく大量に存在している物が写っている際，同じ関係性のMotifは何度も登場する可能性が高い．これらについて調査したところ，半分以上の画像においてこのような反復の関係性が確認された．
+手法 今までのGraphConvを使った手法(Graph-RCNNとか)と違いLSTMを用いた手法（下図）．
+構造としては，物体領域検出，物体クラス分類，関係性抽出の3段階構造．(B=BoundingBox, O=CLasslabel, R=Relation)
+Objectcontext予測のあとにEdgecontext予測を持ってきているのは，上記の考察における⓵の理由に基づいている． 以下分けてみていく．
+⓵ BoundingBox BoundingBoxの出力にはFaster-RCNNを利用．Faster-RCNNの出力はboundingboxの他に領域における特徴ベクトルと仮のクラスラベル（次のステップで更新していく）．
+⓶ Objects biLSTMを用いて⓵で得た仮のクラスラベルを更新していく．得たBoundingBoxで得た結果を系列情報として順番にbiLSTMに入力し，最終的なクラスラベルの予測を行う．各層の入力として⓵のクラスラベルの他に，前の入力におけるLSTMの最終出力（クラスのone-hot）を用いる．
+⓷ Relations 同様にbiLSTMを用いたedge情報の予測．入力として⓶で得たクラスのone-hotと，⓶のLSTMの隠れ層の出力を用いる． 最後に得た出力同士の全ての組み合わせを考えていき，関係性なしラベルを含んだエッジのラベルを予測させる．⓵で得たboundingbox，⓶で得たクラスラベル，⓷で得たEdgeの関係性ラベルを組み合わせて，最終的にシーングラフが作成できる．
+実験 VisualGenomeを用いて評価．
+[Scene Graph Detection] &amp;hellip; ラベル情報なしでBBox, Object, Relation 全て予測
+[Scene Graph Classification] &amp;hellip; BBoxラベルありでObject, Relation 予測
+[Predicate Classification] &amp;hellip; BBox, Objectラベルありで Relation 予測
+生成例
+新規性 LSTMを用いた手法
+コメント・メモ 編集日 2019/08/14
 URL → Paper Top Page </description>
     </item>
     
     <item>
-      <title>Transferable Interactiveness Knowledge for Human-Object Interaction Detection #27</title>
+      <title>Rethinking the Evaluation of Video Summaries #27</title>
       <link>/paper/27/</link>
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/27/</guid>
-      <description> 論文情報 ・Yong-Lu Li et al.
+      <description> 論文情報 ・Mayu Otani et al.
+・CVPR 2019
 ・paper
-概要 手法 実験 新規性 コメント・メモ 編集日 2019/08/14
+概要 動画要約のタスクにおいて，今までの評価指標では要約の良さを正しく評価できていないことを問題提起し，新たな評価指標の提案．
+動画要約の評価指標 今まで，動画要約の評価指標としてはF1スコアが用いられていた．
+F1スコアを計算する際の教師ラベル（選択フレーム）の決め方は動画要約というタスク独特の難しい部分となってくる．動画要約は人それぞれの感じ方に依存する部分もあり，これが絶対正解であるという決まりがないためである．そこで，SumMeやTVSum等の有名なデータセットでは十何人程度の個人の評価による手動のアノテーションがつけられている．
+今回の問題提起は各フレームの重要度を計算する際に，ランダムに選んだ場合とSoTAの手法を用いた場合とでは上記の評価方法ではほとんど結果が変わらないということであり，実験結果でも示されている．水色が重要度をランダムで決めた場合，薄い赤色がdppLSTMという既存手法を用いた場合であるが，どの条件下においてもF１スコアにほとんど差が生まれていないことがわかる．
+評価手法の提案 そこでスピアーマンの相関係数をもちいて，予測した結果と教師ラベルの重要度の順位における相関をロスとして用いる（詳しくは研究室同期の記事にあり）．　また評価の良し悪しを可視化結果として確認するため，以下のような並び替えを考える．
+まずフレームを予測スコアが高い順に左から順に並び替える．その後，並び替えたフレーム順に人間スコアを積み上げていき，図の一番下のようなブロックを作っていく．もし予測スコアと人間のつけたスコアに相関があれば，始めのほうは大きいブロックが積み上がり，最後の方に小さいのがくるので，左に膨らんだカーブを描くような結果となる．
+実験 TVSumデータセットでの評価．しっかり区別化できていることがわかる．
+可視化結果に関しても，dqqLSTMを用いた際にランダムの際より左上に膨らんでいる様子がみて取れる．
+新規性 新たな評価手法の提案．
+コメント・メモ 編集日 2019/08/14
 URL → Paper Top Page </description>
     </item>
     

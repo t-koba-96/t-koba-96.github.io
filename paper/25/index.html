@@ -29,7 +29,26 @@
   
   <meta name="description" content=" 論文情報 ・Rowan Zellers et al.
 ・paper
-概要 手法 実験 新規性 コメント・メモ 編集日 2019/08/14
+・code (pytorch)
+概要 シーングラフ生成のタスクで既存のVisualGenomeデータセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案．
+シーングラフの作成における考察 VisualGenomeを用いたシーングラフ生成の過程において，以下の２つの特徴があったと主張．
+⓵ Objectの情報からRelationを更新することはRelationを予測する上で有効であるが，逆はそうではない． 下図は，右下に書かれてる四角の中の右半分の情報(Head=始点のObject，Tail=終点のObject，Edge=Relation)を用いて残りの左半分を予測したときのtopK/精度を示したもの．
+見ると，headやtailからedgeを推測する際の精度が高いのに対し，edgeからhead, tailを予測するのは非常に難しくなっているのがわかる．
+既存手法ではobjectとrelationの相互関係性に注目し，relationからobject情報を更新していたが，この操作にはあまり意味がないことを主張している．
+⓶ 半分以上の画像において，一枚の中に複数回以上登場する同一の関係性（Motif）が存在している 動物と手足の関係や，木のように１つではなく大量に存在している物が写っている際，同じ関係性のMotifは何度も登場する可能性が高い．これらについて調査したところ，半分以上の画像においてこのような反復の関係性が確認された．
+手法 今までのGraphConvを使った手法(Graph-RCNNとか)と違いLSTMを用いた手法（下図）．
+構造としては，物体領域検出，物体クラス分類，関係性抽出の3段階構造．(B=BoundingBox, O=CLasslabel, R=Relation)
+Objectcontext予測のあとにEdgecontext予測を持ってきているのは，上記の考察における⓵の理由に基づいている． 以下分けてみていく．
+⓵ BoundingBox BoundingBoxの出力にはFaster-RCNNを利用．Faster-RCNNの出力はboundingboxの他に領域における特徴ベクトルと仮のクラスラベル（次のステップで更新していく）．
+⓶ Objects biLSTMを用いて⓵で得た仮のクラスラベルを更新していく．得たBoundingBoxで得た結果を系列情報として順番にbiLSTMに入力し，最終的なクラスラベルの予測を行う．各層の入力として⓵のクラスラベルの他に，前の入力におけるLSTMの最終出力（クラスのone-hot）を用いる．
+⓷ Relations 同様にbiLSTMを用いたedge情報の予測．入力として⓶で得たクラスのone-hotと，⓶のLSTMの隠れ層の出力を用いる． 最後に得た出力同士の全ての組み合わせを考えていき，関係性なしラベルを含んだエッジのラベルを予測させる．⓵で得たboundingbox，⓶で得たクラスラベル，⓷で得たEdgeの関係性ラベルを組み合わせて，最終的にシーングラフが作成できる．
+実験 VisualGenomeを用いて評価．
+[Scene Graph Detection] &hellip; ラベル情報なしでBBox, Object, Relation 全て予測
+[Scene Graph Classification] &hellip; BBoxラベルありでObject, Relation 予測
+[Predicate Classification] &hellip; BBox, Objectラベルありで Relation 予測
+生成例
+新規性 LSTMを用いた手法
+コメント・メモ 編集日 2019/08/14
 URL → Paper Top Page ">
 
   
@@ -113,7 +132,26 @@ URL → Paper Top Page ">
   <meta property="og:title" content="Neural Motifs: Scene Graph Parsing with Global Context #25 | Takuya Kobayashi">
   <meta property="og:description" content=" 論文情報 ・Rowan Zellers et al.
 ・paper
-概要 手法 実験 新規性 コメント・メモ 編集日 2019/08/14
+・code (pytorch)
+概要 シーングラフ生成のタスクで既存のVisualGenomeデータセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案．
+シーングラフの作成における考察 VisualGenomeを用いたシーングラフ生成の過程において，以下の２つの特徴があったと主張．
+⓵ Objectの情報からRelationを更新することはRelationを予測する上で有効であるが，逆はそうではない． 下図は，右下に書かれてる四角の中の右半分の情報(Head=始点のObject，Tail=終点のObject，Edge=Relation)を用いて残りの左半分を予測したときのtopK/精度を示したもの．
+見ると，headやtailからedgeを推測する際の精度が高いのに対し，edgeからhead, tailを予測するのは非常に難しくなっているのがわかる．
+既存手法ではobjectとrelationの相互関係性に注目し，relationからobject情報を更新していたが，この操作にはあまり意味がないことを主張している．
+⓶ 半分以上の画像において，一枚の中に複数回以上登場する同一の関係性（Motif）が存在している 動物と手足の関係や，木のように１つではなく大量に存在している物が写っている際，同じ関係性のMotifは何度も登場する可能性が高い．これらについて調査したところ，半分以上の画像においてこのような反復の関係性が確認された．
+手法 今までのGraphConvを使った手法(Graph-RCNNとか)と違いLSTMを用いた手法（下図）．
+構造としては，物体領域検出，物体クラス分類，関係性抽出の3段階構造．(B=BoundingBox, O=CLasslabel, R=Relation)
+Objectcontext予測のあとにEdgecontext予測を持ってきているのは，上記の考察における⓵の理由に基づいている． 以下分けてみていく．
+⓵ BoundingBox BoundingBoxの出力にはFaster-RCNNを利用．Faster-RCNNの出力はboundingboxの他に領域における特徴ベクトルと仮のクラスラベル（次のステップで更新していく）．
+⓶ Objects biLSTMを用いて⓵で得た仮のクラスラベルを更新していく．得たBoundingBoxで得た結果を系列情報として順番にbiLSTMに入力し，最終的なクラスラベルの予測を行う．各層の入力として⓵のクラスラベルの他に，前の入力におけるLSTMの最終出力（クラスのone-hot）を用いる．
+⓷ Relations 同様にbiLSTMを用いたedge情報の予測．入力として⓶で得たクラスのone-hotと，⓶のLSTMの隠れ層の出力を用いる． 最後に得た出力同士の全ての組み合わせを考えていき，関係性なしラベルを含んだエッジのラベルを予測させる．⓵で得たboundingbox，⓶で得たクラスラベル，⓷で得たEdgeの関係性ラベルを組み合わせて，最終的にシーングラフが作成できる．
+実験 VisualGenomeを用いて評価．
+[Scene Graph Detection] &hellip; ラベル情報なしでBBox, Object, Relation 全て予測
+[Scene Graph Classification] &hellip; BBoxラベルありでObject, Relation 予測
+[Predicate Classification] &hellip; BBox, Objectラベルありで Relation 予測
+生成例
+新規性 LSTMを用いた手法
+コメント・メモ 編集日 2019/08/14
 URL → Paper Top Page "><meta property="og:image" content="/paper/25/featured.png">
   <meta property="og:locale" content="en-us">
   
@@ -501,21 +539,79 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/25/featured.p
 
 <p>・<a href="https://arxiv.org/pdf/1711.06640.pdf" target="_blank">paper</a></p>
 
+<p>・<a href="https://github.com/rowanz/neural-motifs" target="_blank">code (pytorch)</a></p>
+
 <h2 id="概要"><code>概要</code></h2>
+
+<p>シーングラフ生成のタスクで既存の<a href="../31">VisualGenome</a>データセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案．</p>
 
 <p><img src="https://user-images.githubusercontent.com/38309191/76068490-97a37980-5fd4-11ea-8535-6f52a8d9c9e8.png" alt="スクリーンショット 2020-03-06 18 02 02" /></p>
 
+<h2 id="シーングラフの作成における考察"><code>シーングラフの作成における考察</code></h2>
+
+<p><a href="../31">VisualGenome</a>を用いたシーングラフ生成の過程において，以下の２つの特徴があったと主張．</p>
+
+<h3 id="⓵-objectの情報からrelationを更新することはrelationを予測する上で有効であるが-逆はそうではない">⓵ Objectの情報からRelationを更新することはRelationを予測する上で有効であるが，逆はそうではない．</h3>
+
+<p>下図は，右下に書かれてる四角の中の右半分の情報(Head=始点のObject，Tail=終点のObject，Edge=Relation)を用いて残りの左半分を予測したときのtopK/精度を示したもの．</p>
+
+<p><img src="https://user-images.githubusercontent.com/38309191/76158369-956a2800-6158-11ea-9a39-676a55e028bb.png" alt="スクリーンショット 2020-03-08 16 19 05" /></p>
+
+<p>見ると，headやtailからedgeを推測する際の精度が高いのに対し，edgeからhead, tailを予測するのは非常に難しくなっているのがわかる．<br />
+既存手法ではobjectとrelationの相互関係性に注目し，relationからobject情報を更新していたが，この操作にはあまり意味がないことを主張している．</p>
+
+<h3 id="⓶-半分以上の画像において-一枚の中に複数回以上登場する同一の関係性-motif-が存在している">⓶ 半分以上の画像において，一枚の中に複数回以上登場する同一の関係性（Motif）が存在している</h3>
+
+<p>動物と手足の関係や，木のように１つではなく大量に存在している物が写っている際，同じ関係性のMotifは何度も登場する可能性が高い．これらについて調査したところ，半分以上の画像においてこのような反復の関係性が確認された．</p>
+
+<p><img src="https://user-images.githubusercontent.com/38309191/76158493-9fd8f180-6159-11ea-9fca-7a353bd0d3c6.png" alt="スクリーンショット 2020-03-08 16 26 50" /></p>
+
 <h2 id="手法"><code>手法</code></h2>
+
+<p>今までのGraphConvを使った手法(<a href="../24">Graph-RCNN</a>とか)と違いLSTMを用いた手法（下図）．</p>
 
 <p><img src="https://user-images.githubusercontent.com/38309191/76068549-af7afd80-5fd4-11ea-9f76-c4475098d09c.png" alt="スクリーンショット 2020-03-06 18 02 40" /></p>
 
+<p>構造としては，物体領域検出，物体クラス分類，関係性抽出の3段階構造．(B=BoundingBox, O=CLasslabel,
+ R=Relation)</p>
+
+<p><img src="https://user-images.githubusercontent.com/38309191/76158755-8dac8280-615c-11ea-8d24-b686ce921610.png" alt="スクリーンショット 2020-03-08 16 47 48" /></p>
+
+<p>Objectcontext予測のあとにEdgecontext予測を持ってきているのは，上記の考察における⓵の理由に基づいている．
+以下分けてみていく．</p>
+
+<p><img src="https://user-images.githubusercontent.com/38309191/76158834-7c17aa80-615d-11ea-99a8-95f72ea38336.png" alt="スクリーンショット 2020-03-08 16 54 28" /></p>
+
+<h2 id="⓵-boundingbox">⓵ BoundingBox</h2>
+
+<p>BoundingBoxの出力にはFaster-RCNNを利用．Faster-RCNNの出力はboundingboxの他に領域における特徴ベクトルと仮のクラスラベル（次のステップで更新していく）．</p>
+
+<h2 id="⓶-objects">⓶ Objects</h2>
+
+<p>biLSTMを用いて⓵で得た仮のクラスラベルを更新していく．得たBoundingBoxで得た結果を系列情報として順番にbiLSTMに入力し，最終的なクラスラベルの予測を行う．各層の入力として⓵のクラスラベルの他に，前の入力におけるLSTMの最終出力（クラスのone-hot）を用いる．</p>
+
+<h2 id="⓷-relations">⓷ Relations</h2>
+
+<p>同様にbiLSTMを用いたedge情報の予測．入力として⓶で得たクラスのone-hotと，⓶のLSTMの隠れ層の出力を用いる．
+最後に得た出力同士の全ての組み合わせを考えていき，関係性なしラベルを含んだエッジのラベルを予測させる．⓵で得たboundingbox，⓶で得たクラスラベル，⓷で得たEdgeの関係性ラベルを組み合わせて，最終的にシーングラフが作成できる．</p>
+
 <h2 id="実験"><code>実験</code></h2>
 
+<p><a href="../31">VisualGenome</a>を用いて評価．</p>
+
+<p>[Scene Graph Detection] &hellip; ラベル情報なしでBBox, Object, Relation 全て予測<br />
+[Scene Graph Classification] &hellip; BBoxラベルありでObject, Relation 予測<br />
+[Predicate Classification] &hellip; BBox, Objectラベルありで Relation 予測</p>
+
 <p><img src="https://user-images.githubusercontent.com/38309191/76068692-f49f2f80-5fd4-11ea-9839-0bdb1013e0b7.png" alt="スクリーンショット 2020-03-06 18 04 37" /></p>
+
+<p>生成例</p>
 
 <p><img src="https://user-images.githubusercontent.com/38309191/76068711-fec12e00-5fd4-11ea-8daa-d376668d9803.png" alt="スクリーンショット 2020-03-06 18 04 54" /></p>
 
 <h2 id="新規性"><code>新規性</code></h2>
+
+<p>LSTMを用いた手法</p>
 
 <h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
 
@@ -535,7 +631,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/25/featured.p
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/paper-graph-conv/">Paper - Graph Conv</a>
+  <a class="badge badge-light" href="/tags/paper-image-understanding/">Paper - Image Understanding</a>
   
 </div>
 
@@ -611,18 +707,6 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/25/featured.p
 
 
       
-      
-      <div class="article-widget">
-        <div class="hr-light"></div>
-        <h3>Related</h3>
-        <ul>
-          
-          <li><a href="/paper/27/">Transferable Interactiveness Knowledge for Human-Object Interaction Detection #27</a></li>
-          
-          <li><a href="/paper/31/">Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations #31</a></li>
-          
-        </ul>
-      </div>
       
     
 

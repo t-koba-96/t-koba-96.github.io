@@ -27,9 +27,19 @@
   
     
   
-  <meta name="description" content=" 論文情報 ・Yong-Lu Li et al.
+  <meta name="description" content=" 論文情報 ・Mayu Otani et al.
+・CVPR 2019
 ・paper
-概要 手法 実験 新規性 コメント・メモ 編集日 2019/08/14
+概要 動画要約のタスクにおいて，今までの評価指標では要約の良さを正しく評価できていないことを問題提起し，新たな評価指標の提案．
+動画要約の評価指標 今まで，動画要約の評価指標としてはF1スコアが用いられていた．
+F1スコアを計算する際の教師ラベル（選択フレーム）の決め方は動画要約というタスク独特の難しい部分となってくる．動画要約は人それぞれの感じ方に依存する部分もあり，これが絶対正解であるという決まりがないためである．そこで，SumMeやTVSum等の有名なデータセットでは十何人程度の個人の評価による手動のアノテーションがつけられている．
+今回の問題提起は各フレームの重要度を計算する際に，ランダムに選んだ場合とSoTAの手法を用いた場合とでは上記の評価方法ではほとんど結果が変わらないということであり，実験結果でも示されている．水色が重要度をランダムで決めた場合，薄い赤色がdppLSTMという既存手法を用いた場合であるが，どの条件下においてもF１スコアにほとんど差が生まれていないことがわかる．
+評価手法の提案 そこでスピアーマンの相関係数をもちいて，予測した結果と教師ラベルの重要度の順位における相関をロスとして用いる（詳しくは研究室同期の記事にあり）．　また評価の良し悪しを可視化結果として確認するため，以下のような並び替えを考える．
+まずフレームを予測スコアが高い順に左から順に並び替える．その後，並び替えたフレーム順に人間スコアを積み上げていき，図の一番下のようなブロックを作っていく．もし予測スコアと人間のつけたスコアに相関があれば，始めのほうは大きいブロックが積み上がり，最後の方に小さいのがくるので，左に膨らんだカーブを描くような結果となる．
+実験 TVSumデータセットでの評価．しっかり区別化できていることがわかる．
+可視化結果に関しても，dqqLSTMを用いた際にランダムの際より左上に膨らんでいる様子がみて取れる．
+新規性 新たな評価手法の提案．
+コメント・メモ 編集日 2019/08/14
 URL → Paper Top Page ">
 
   
@@ -110,10 +120,20 @@ URL → Paper Top Page ">
   
   <meta property="og:site_name" content="Takuya Kobayashi">
   <meta property="og:url" content="/paper/27/">
-  <meta property="og:title" content="Transferable Interactiveness Knowledge for Human-Object Interaction Detection #27 | Takuya Kobayashi">
-  <meta property="og:description" content=" 論文情報 ・Yong-Lu Li et al.
+  <meta property="og:title" content="Rethinking the Evaluation of Video Summaries #27 | Takuya Kobayashi">
+  <meta property="og:description" content=" 論文情報 ・Mayu Otani et al.
+・CVPR 2019
 ・paper
-概要 手法 実験 新規性 コメント・メモ 編集日 2019/08/14
+概要 動画要約のタスクにおいて，今までの評価指標では要約の良さを正しく評価できていないことを問題提起し，新たな評価指標の提案．
+動画要約の評価指標 今まで，動画要約の評価指標としてはF1スコアが用いられていた．
+F1スコアを計算する際の教師ラベル（選択フレーム）の決め方は動画要約というタスク独特の難しい部分となってくる．動画要約は人それぞれの感じ方に依存する部分もあり，これが絶対正解であるという決まりがないためである．そこで，SumMeやTVSum等の有名なデータセットでは十何人程度の個人の評価による手動のアノテーションがつけられている．
+今回の問題提起は各フレームの重要度を計算する際に，ランダムに選んだ場合とSoTAの手法を用いた場合とでは上記の評価方法ではほとんど結果が変わらないということであり，実験結果でも示されている．水色が重要度をランダムで決めた場合，薄い赤色がdppLSTMという既存手法を用いた場合であるが，どの条件下においてもF１スコアにほとんど差が生まれていないことがわかる．
+評価手法の提案 そこでスピアーマンの相関係数をもちいて，予測した結果と教師ラベルの重要度の順位における相関をロスとして用いる（詳しくは研究室同期の記事にあり）．　また評価の良し悪しを可視化結果として確認するため，以下のような並び替えを考える．
+まずフレームを予測スコアが高い順に左から順に並び替える．その後，並び替えたフレーム順に人間スコアを積み上げていき，図の一番下のようなブロックを作っていく．もし予測スコアと人間のつけたスコアに相関があれば，始めのほうは大きいブロックが積み上がり，最後の方に小さいのがくるので，左に膨らんだカーブを描くような結果となる．
+実験 TVSumデータセットでの評価．しっかり区別化できていることがわかる．
+可視化結果に関しても，dqqLSTMを用いた際にランダムの際より左上に膨らんでいる様子がみて取れる．
+新規性 新たな評価手法の提案．
+コメント・メモ 編集日 2019/08/14
 URL → Paper Top Page "><meta property="og:image" content="/paper/27/featured.png">
   <meta property="og:locale" content="en-us">
   
@@ -126,7 +146,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/27/featured.p
 
   
 
-  <title>Transferable Interactiveness Knowledge for Human-Object Interaction Detection #27 | Takuya Kobayashi</title>
+  <title>Rethinking the Evaluation of Video Summaries #27 | Takuya Kobayashi</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -421,7 +441,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/27/featured.p
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Transferable Interactiveness Knowledge for Human-Object Interaction Detection #27</h1>
+  <h1 itemprop="name">Rethinking the Evaluation of Video Summaries #27</h1>
 
   
 
@@ -497,27 +517,53 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/27/featured.p
 
 <h2 id="論文情報"><code>論文情報</code></h2>
 
-<p>・Yong-Lu Li et al.</p>
+<p>・Mayu Otani et al.</p>
 
-<p>・<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Transferable_Interactiveness_Knowledge_for_Human-Object_Interaction_Detection_CVPR_2019_paper.pdf" target="_blank">paper</a></p>
+<p>・CVPR 2019</p>
+
+<p>・<a href="https://arxiv.org/pdf/1903.11328.pdf" target="_blank">paper</a></p>
 
 <h2 id="概要"><code>概要</code></h2>
 
+<p>動画要約のタスクにおいて，今までの評価指標では要約の良さを正しく評価できていないことを問題提起し，新たな評価指標の提案．</p>
+
 <p><img width="600" alt="2019-02-22 16 19 00" src="featured.png"></p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76070272-94f65380-5fd7-11ea-9773-35b519fdbb25.png" alt="スクリーンショット 2020-03-06 18 23 29" /></p>
+<h2 id="動画要約の評価指標"><code>動画要約の評価指標</code></h2>
 
-<h2 id="手法"><code>手法</code></h2>
+<p>今まで，動画要約の評価指標としてはF1スコアが用いられていた．</p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76070288-9aec3480-5fd7-11ea-8065-2bfa40b9c433.png" alt="スクリーンショット 2020-03-06 18 23 39" /></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76150328-9bc2ba80-60ec-11ea-866d-8040c26eb0e0.png" alt="スクリーンショット 2020-03-08 3 26 07" /></p>
+
+<p>F1スコアを計算する際の教師ラベル（選択フレーム）の決め方は動画要約というタスク独特の難しい部分となってくる．動画要約は人それぞれの感じ方に依存する部分もあり，これが絶対正解であるという決まりがないためである．そこで，SumMeやTVSum等の有名なデータセットでは十何人程度の個人の評価による手動のアノテーションがつけられている．</p>
+
+<p>今回の問題提起は各フレームの重要度を計算する際に，ランダムに選んだ場合とSoTAの手法を用いた場合とでは上記の評価方法ではほとんど結果が変わらないということであり，実験結果でも示されている．水色が重要度をランダムで決めた場合，薄い赤色がdppLSTMという既存手法を用いた場合であるが，どの条件下においてもF１スコアにほとんど差が生まれていないことがわかる．</p>
+
+<p><img src="https://user-images.githubusercontent.com/38309191/76150466-3a9be680-60ee-11ea-911d-be8918987c72.png" alt="スクリーンショット 2020-03-08 3 38 03" /></p>
+
+<h2 id="評価手法の提案">評価手法の提案</h2>
+
+<p>そこでスピアーマンの相関係数をもちいて，予測した結果と教師ラベルの重要度の順位における相関をロスとして用いる（詳しくは<a href="https://ledge.ai/rethinking-video-summarization/" target="_blank">研究室同期の記事</a>にあり）．　　</p>
+
+<p>また評価の良し悪しを可視化結果として確認するため，以下のような並び替えを考える．</p>
+
+<p><img src="https://user-images.githubusercontent.com/38309191/76150527-d3326680-60ee-11ea-87fd-a57a5debdf22.png" alt="スクリーンショット 2020-03-08 3 42 20" /></p>
+
+<p>まずフレームを予測スコアが高い順に左から順に並び替える．その後，並び替えたフレーム順に人間スコアを積み上げていき，図の一番下のようなブロックを作っていく．もし予測スコアと人間のつけたスコアに相関があれば，始めのほうは大きいブロックが積み上がり，最後の方に小さいのがくるので，左に膨らんだカーブを描くような結果となる．</p>
 
 <h2 id="実験"><code>実験</code></h2>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76070338-b1928b80-5fd7-11ea-8e85-531bbdfd2981.png" alt="スクリーンショット 2020-03-06 18 24 17" /></p>
+<p>TVSumデータセットでの評価．しっかり区別化できていることがわかる．</p>
 
-<p><img src="https://user-images.githubusercontent.com/38309191/76070364-bce5b700-5fd7-11ea-8347-76b84f886aa3.png" alt="スクリーンショット 2020-03-06 18 24 36" /></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76150733-e7776300-60f0-11ea-8598-6432653063f4.png" alt="スクリーンショット 2020-03-08 3 57 10" /></p>
+
+<p>可視化結果に関しても，dqqLSTMを用いた際にランダムの際より左上に膨らんでいる様子がみて取れる．</p>
+
+<p><img src="https://user-images.githubusercontent.com/38309191/76150724-d7f81a00-60f0-11ea-9140-3814fad39429.png" alt="スクリーンショット 2020-03-08 3 56 47" /></p>
 
 <h2 id="新規性"><code>新規性</code></h2>
+
+<p>新たな評価手法の提案．</p>
 
 <h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
 
@@ -537,7 +583,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/27/featured.p
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/paper-graph-conv/">Paper - Graph Conv</a>
+  <a class="badge badge-light" href="/tags/paper-video-understanding/">Paper - Video Understanding</a>
   
 </div>
 
@@ -619,9 +665,9 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/27/featured.p
         <h3>Related</h3>
         <ul>
           
-          <li><a href="/paper/25/">Neural Motifs: Scene Graph Parsing with Global Context #25</a></li>
+          <li><a href="/paper/17/">BMN: Boundary-Matching Network for Temporal Action Proposal Generation #17</a></li>
           
-          <li><a href="/paper/31/">Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations #31</a></li>
+          <li><a href="/paper/21/">VideoBERT: A Joint Model for Video and Language Representation Learning #21</a></li>
           
         </ul>
       </div>
