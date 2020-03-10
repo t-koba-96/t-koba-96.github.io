@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper - Other on Takuya Kobayashi</title>
+    <link>/tags/paper-other/</link>
+    <description>Recent content in Paper - Other on Takuya Kobayashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/paper-other/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>読む予定の論文　保管場所 #00</title>
+      <link>/paper/00/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0900</pubDate>
+      
+      <guid>/paper/00/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
