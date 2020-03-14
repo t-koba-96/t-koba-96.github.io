@@ -30,7 +30,7 @@
   <meta name="description" content=" ">
 
   
-  <link rel="alternate" hreflang="en-us" href="/paper/33/">
+  <link rel="alternate" hreflang="en-us" href="/paper/34/">
 
   
 
@@ -95,7 +95,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/paper/33/">
+  <link rel="canonical" href="/paper/34/">
 
   
   
@@ -106,9 +106,9 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Takuya Kobayashi">
-  <meta property="og:url" content="/paper/33/">
-  <meta property="og:title" content="NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning #33 | Takuya Kobayashi">
-  <meta property="og:description" content=" "><meta property="og:image" content="/paper/33/featured.png">
+  <meta property="og:url" content="/paper/34/">
+  <meta property="og:title" content="Completeness Modeling and Context Separation for Weakly Supervised Temporal Action Localization #34 | Takuya Kobayashi">
+  <meta property="og:description" content=" "><meta property="og:image" content="/paper/34/featured.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2020-01-27T00:00:00&#43;09:00">
@@ -120,7 +120,7 @@
 
   
 
-  <title>NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning #33 | Takuya Kobayashi</title>
+  <title>Completeness Modeling and Context Separation for Weakly Supervised Temporal Action Localization #34 | Takuya Kobayashi</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -415,7 +415,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning #33</h1>
+  <h1 itemprop="name">Completeness Modeling and Context Separation for Weakly Supervised Temporal Action Localization #34</h1>
 
   
 
@@ -491,35 +491,48 @@
 
 <h2 id="論文情報"><code>論文情報</code></h2>
 
-<p>・Alexander Richard et al.</p>
+<p>・Daochang Liu et al.</p>
 
-<p>・ICCV 2018</p>
+<p>・CVPR 2019</p>
 
-<p>・<a href="https://alexanderrichard.github.io/publications/pdf/richard_nn_viterbi.pdf" target="_blank">paper</a></p>
+<p>・<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Liu_Completeness_Modeling_and_Context_Separation_for_Weakly_Supervised_Temporal_Action_CVPR_2019_paper.pdf" target="_blank">paper</a></p>
 
 <h2 id="概要"><code>概要</code></h2>
 
-<p>クラスラベルの遷移順のみのWeaklyなラベルを用いたAction Segmentation. Viterbi algorism を用いた方法を提案．</p>
-
-<h2 id="提案手法"><code>提案手法</code></h2>
+<p>動画のクラスラベルのみのWeaklyなラベルを用いたTemporal Action Localization.</p>
 
 <p><img width="600" alt="2019-02-22 16 19 00" src="featured.png"></p>
 
-<p>LSTMか何かしらの時系列モデルを通して得た特徴量のsoftmax値に関して，クラスの遷移順を教師ラベルとして，その各クラスの長さを求めるようなvitervi algorism を定義．Viterbiを適用する前と適用したあとでCrossentropy Lossをとる．Viterbiを通す前の結果を通した後の遷移に近づけるイメージ．</p>
+<h2 id="weaklyなラベルによる難点"><code>Weaklyなラベルによる難点</code></h2>
 
-<p><img width="417" alt="スクリーンショット 2020-03-14 19 06 43" src="https://user-images.githubusercontent.com/38309191/76679833-01e89980-6627-11ea-8496-ee43a1f8e74b.png"></p>
+<p>Weaklyなラベルによる難点は主に２つあり，解決するための手法を提案．　　</p>
+
+<h2 id="⓵-action-completeness-modeling">⓵ Action completeness modeling</h2>
+
+<p>下図の上部参照． 例えばPKでは選手がシュートする動きとボールが飛んでいく動きによって構成されるが，Weaklyでは動画のクラス分類を元に解くのでより分類において重要であるシュートのところのみ切り取られやすい．そこでこれらの行動を分けて予測するようなマルチブランチのネットワーク構造にする．</p>
+
+<h2 id="⓶-action-context-separation">⓶ Action-context separation</h2>
+
+<p>下図の下部参照．行動の前景と背景ではフレーム全体としてのContextはあまり変わらない（どちらにもビリヤード台はずっと写ってる）．これに関しては人物や物の情報がアクションには関わっていると仮定し，OpticalFlowを用いた解決法を提案．</p>
+
+<p><img src="https://user-images.githubusercontent.com/38309191/76378934-1829f780-6392-11ea-8145-b0e018b61c22.png" alt="スクリーンショット 2020-03-11 12 16 07" /></p>
+
+<h2 id="提案手法"><code>提案手法</code></h2>
+
+<p><img src="https://user-images.githubusercontent.com/38309191/76379387-43f9ad00-6393-11ea-90fe-582e28b16f52.png" alt="スクリーンショット 2020-03-11 12 24 30" /></p>
+
+<p>マルチブランチネットワークとアテンションモデルによって構成．マルチブランチNetworkではアクションをK分割して，それぞれの集合（Averageをとる）として求める全体のアクションを得るといった考え方．K分割したブランチにおいてそれぞれで違う部分に注目してもらう必要があるため，DiversityLossを採用．アテンションモデルでは時系列方向にSoftmaxをかけてフレームの重要度を算出．最後にこれらをかけあわせ，動画単位での MILLossをとる．<br />
+推論時はマルチブランチをAverageした結果を利用．</p>
 
 <h2 id="実験"><code>実験</code></h2>
 
-<p><img width="462" alt="スクリーンショット 2020-03-14 19 10 20" src="https://user-images.githubusercontent.com/38309191/76679875-74f21000-6627-11ea-8c8f-84b2c2931f88.png"></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76379423-5e338b00-6393-11ea-9281-00de6e0f5ee6.png" alt="スクリーンショット 2020-03-11 12 25 12" /></p>
 
-<p><img width="450" alt="スクリーンショット 2020-03-14 19 10 29" src="https://user-images.githubusercontent.com/38309191/76679878-7a4f5a80-6627-11ea-88dc-cdd3858225e8.png"></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76379450-6e4b6a80-6393-11ea-9a6e-78045527b853.png" alt="スクリーンショット 2020-03-11 12 25 40" /></p>
 
 <h2 id="新規性"><code>新規性</code></h2>
 
-<p>Viterbiによる手法．</p>
-
-<p>今まではクラスの遷移ラベルから，フレーム単位での仮のラベルを使うことでロスを計算していたが，そうではなくviterbiを通す前と後でロスをとることで仮ラベルをなくし，精度向上．</p>
+<p>マルチブランチによる推定．</p>
 
 <h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
 
@@ -539,7 +552,7 @@
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/paper-action-segmentation/">Paper - Action Segmentation</a>
+  <a class="badge badge-light" href="/tags/paper-video-understanding/">Paper - Video Understanding</a>
   
 </div>
 
@@ -621,15 +634,13 @@
         <h3>Related</h3>
         <ul>
           
-          <li><a href="/paper/10/">Action segmentation Datasets #10</a></li>
+          <li><a href="/paper/30/">Video Representation Learning by Dense Predictive Coding #30</a></li>
           
-          <li><a href="/paper/08/">MS-TCN: Multi-Stage Temporal Convolutional Network for Action Segmentation #8</a></li>
+          <li><a href="/paper/27/">Rethinking the Evaluation of Video Summaries #27</a></li>
           
-          <li><a href="/paper/02/">Temporal Convolutional Networks for Action Segmentation and Detection #2</a></li>
+          <li><a href="/paper/17/">BMN: Boundary-Matching Network for Temporal Action Proposal Generation #17</a></li>
           
-          <li><a href="/paper/11/">TricorNet: A Hybrid Temporal Convolutional and Recurrent Network for Video Action Segmentation #11</a></li>
-          
-          <li><a href="/paper/06/">Weakly-Supervised Action Segmentation with Iterative Soft Boundary Assignment #6</a></li>
+          <li><a href="/paper/21/">VideoBERT: A Joint Model for Video and Language Representation Learning #21</a></li>
           
         </ul>
       </div>
