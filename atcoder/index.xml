@@ -6,10 +6,19 @@
     <description>Recent content in Atcoders on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/atcoder/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2020 April (Atcoder)</title>
+      <link>/atcoder/april/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/atcoder/april/</guid>
+      <description>WTD</description>
+    </item>
     
     <item>
       <title>2020 April (Atcoder)</title>
