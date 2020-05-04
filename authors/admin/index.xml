@@ -6,10 +6,28 @@
     <description>Recent content on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2020 April (Atcoder)</title>
+      <link>/atcoder/may/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/atcoder/may/</guid>
+      <description>WTD</description>
+    </item>
+    
+    <item>
+      <title>2020 April (Atcoder)</title>
+      <link>/atcoder/contests/166/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/atcoder/contests/166/</guid>
+      <description>WTD</description>
+    </item>
     
     <item>
       <title>2020 April (Atcoder)</title>
@@ -116,7 +134,7 @@
     <item>
       <title></title>
       <link>/authors/admin/</link>
-      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/authors/admin/</guid>
       <description>I’m a Second year Master’s student who belongs to Professor Aoki&amp;rsquo;s laboratory at Keio University. Though I belong to the Department of Electronic Engineering, I am majoring in Computer Vision topics. More specifically, my main research topic is human action recognition/ segmentation using fine-grained videos.

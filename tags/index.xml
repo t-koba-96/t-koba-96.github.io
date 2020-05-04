@@ -6,26 +6,26 @@
     <description>Recent content in Tags on Takuya Kobayashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Contest</title>
-      <link>/tags/contest/</link>
-      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Monthly</title>
+      <link>/tags/monthly/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/contest/</guid>
+      <guid>/tags/monthly/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Monthly</title>
-      <link>/tags/monthly/</link>
-      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Contest</title>
+      <link>/tags/contest/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/monthly/</guid>
+      <guid>/tags/contest/</guid>
       <description></description>
     </item>
     
