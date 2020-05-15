@@ -139,6 +139,58 @@ D問題
 &lt;p&gt;↓ncrの組み合わせのmod算出&lt;br /&gt;
 &lt;a href=&#34;https://qiita.com/derodero24/items/91b6468e66923a87f39f&#34; target=&#34;_blank&#34;&gt;qiita記事(番外編参照)&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&#34;12th&#34;&gt;・12th&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://atcoder.jp/contests/panasonic2020&#34; target=&#34;_blank&#34;&gt;Panasonic&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[&lt;code&gt;Keyword・Memo&lt;/code&gt;]
+C,D問題．&lt;/p&gt;
+
+&lt;p&gt;math.sqrt は数が大きい時に精度低い．
+以下が代替案．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;from decimal import Decimal
+Decimal(&#39;2&#39;)**Decimal(&#39;0.5&#39;)
+#Decimal(&#39;1.41421356237309504880168872421&#39;)  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;13th&#34;&gt;・13th&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://atcoder.jp/contests/abc143&#34; target=&#34;_blank&#34;&gt;AtCoder Beginner Contest 143&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[&lt;code&gt;Keyword・Memo&lt;/code&gt;]
+D問題．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;from numba import njit
+ 
+@njit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;14th&#34;&gt;・14th&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://qiita.com/drken/items/e77685614f3c6bf86f44#%E4%BE%8B%E9%A1%8C-2-2-1%E7%A1%AC%E8%B2%A8%E3%81%AE%E5%95%8F%E9%A1%8C&#34; target=&#34;_blank&#34;&gt;2-2-1 硬貨の問題&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://qiita.com/drken/items/e77685614f3c6bf86f44#%E4%BE%8B%E9%A1%8C-2-2-2%E5%8C%BA%E9%96%93%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E5%95%8F%E9%A1%8C&#34; target=&#34;_blank&#34;&gt;2-2-2 区間スケジューリング問題&lt;/a&gt;&lt;br /&gt;
+１だけ&lt;/p&gt;
+
+&lt;p&gt;[&lt;code&gt;Keyword・Memo&lt;/code&gt;]&lt;br /&gt;
+貪欲法　←→　DP&lt;br /&gt;
+の使い分け&lt;/p&gt;
+
+&lt;h2 id=&#34;15th&#34;&gt;・15th&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://qiita.com/drken/items/e77685614f3c6bf86f44#%E4%BE%8B%E9%A1%8C-2-2-2%E5%8C%BA%E9%96%93%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E5%95%8F%E9%A1%8C&#34; target=&#34;_blank&#34;&gt;2-2-2 区間スケジューリング問題&lt;/a&gt;&lt;br /&gt;
+2バン&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://qiita.com/drken/items/e77685614f3c6bf86f44#%E4%BE%8B%E9%A1%8C-2-2-3best-cow-line-poj-no3617&#34; target=&#34;_blank&#34;&gt;2-2-3 Best Cow Line&lt;/a&gt;&lt;br /&gt;
+1，２バン&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://qiita.com/drken/items/e77685614f3c6bf86f44#%E4%BE%8B%E9%A1%8C-2-2-4sarumans-army-poj-no3069&#34; target=&#34;_blank&#34;&gt;2-2-4 Saruman&amp;rsquo;s army&lt;/a&gt;&lt;br /&gt;
+1ばん&lt;/p&gt;
+
+&lt;p&gt;[&lt;code&gt;Keyword・Memo&lt;/code&gt;]&lt;br /&gt;
+or &amp;lt; and &amp;lt; not&lt;/p&gt;
+
 
 
 
