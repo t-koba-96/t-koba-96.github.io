@@ -8,7 +8,7 @@
   </url>
   
   <url>
-    <loc>/atcoder/contests/167/</loc>
+    <loc>/atcoder/kako/contests/167/</loc>
     <lastmod>2020-05-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -55,7 +55,7 @@
   </url>
   
   <url>
-    <loc>/atcoder/may/</loc>
+    <loc>/atcoder/kako/may/</loc>
     <lastmod>2019-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -66,22 +66,22 @@
   </url>
   
   <url>
-    <loc>/atcoder/contests/166/</loc>
+    <loc>/atcoder/kako/contests/166/</loc>
     <lastmod>2020-05-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/atcoder/contest/</loc>
+    <loc>/atcoder/kako/contest/</loc>
     <lastmod>2020-04-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/atcoder/contests/1/</loc>
+    <loc>/atcoder/kako/contests/1/</loc>
     <lastmod>2020-04-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/atcoder/april/</loc>
+    <loc>/atcoder/kako/april/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -126,7 +126,7 @@
   </url>
   
   <url>
-    <loc>/atcoder/march/</loc>
+    <loc>/atcoder/kako/march/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -222,7 +222,7 @@
   </url>
   
   <url>
-    <loc>/atcoder/february/</loc>
+    <loc>/atcoder/kako/february/</loc>
     <lastmod>2019-01-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -237,7 +237,7 @@
   </url>
   
   <url>
-    <loc>/atcoder/january/</loc>
+    <loc>/atcoder/kako/january/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -245,6 +245,11 @@
     <loc>/tags/atcoder/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/atcoder/kako/mein/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
