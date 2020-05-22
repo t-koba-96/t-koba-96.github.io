@@ -1266,7 +1266,11 @@ if __name__ == &#39;__main__&#39;:
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;二分探索&#34;&gt;二分探索&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
@@ -1274,7 +1278,11 @@ if __name__ == &#39;__main__&#39;:
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;bfs-幅優先探索&#34;&gt;BFS（幅優先探索）&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/abc007/tasks/abc007_3&#34; target=&#34;_blank&#34;&gt;ABC007 C. 幅優先探索&lt;/a&gt; (BFS dequeなし)&lt;/p&gt;
 
@@ -1284,11 +1292,15 @@ if __name__ == &#39;__main__&#39;:
 
 &lt;h3 id=&#34;ダイクストラ法&#34;&gt;ダイクストラ法&lt;/h3&gt;
 
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
 &lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/abc020/tasks/abc020_c&#34; target=&#34;_blank&#34;&gt;ABC020 C. 壁抜け&lt;/a&gt; (ダイクストラ + 二分探索)&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;dp&#34;&gt;DP&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
