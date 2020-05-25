@@ -1266,17 +1266,31 @@ if __name__ == &#39;__main__&#39;:
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
+&lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/abc002/tasks/abc002_4&#34; target=&#34;_blank&#34;&gt;ABC002 D. 派閥&lt;/a&gt; (bit全探索)&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;貪欲法&#34;&gt;貪欲法&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/keyence2020/tasks/keyence2020_b&#34; target=&#34;_blank&#34;&gt;キーエンス2020 B. Robot Arms&lt;/a&gt; (区間スケジューリング)&lt;/p&gt;
+
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;二分探索&#34;&gt;二分探索&lt;/h3&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
+&lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/abc077/tasks/arc084_a&#34; target=&#34;_blank&#34;&gt;ABC077 C. Snuke Festival&lt;/a&gt; (bisect_left,bisect_right)&lt;/p&gt;
+
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;dfs-深さ優先探索&#34;&gt;DFS（深さ優先探索）&lt;/h3&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/atc001/tasks/dfs_a&#34; target=&#34;_blank&#34;&gt;ATC001 A. 深さ優先探索&lt;/a&gt; (DFS 基本)&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
@@ -1301,6 +1315,12 @@ if __name__ == &#39;__main__&#39;:
 &lt;h3 id=&#34;dp&#34;&gt;DP&lt;/h3&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/dp/tasks/dp_d&#34; target=&#34;_blank&#34;&gt;EDP D. Knapsack 1&lt;/a&gt; (ナップサックDP 基本)&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/dp/tasks/dp_e&#34; target=&#34;_blank&#34;&gt;EDP E. Knapsack 2&lt;/a&gt; (ナップサックDP 容量の大きいケース)&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/abc153/tasks/abc153_e&#34; target=&#34;_blank&#34;&gt;ABC153 E. Crested Ibis vs Monster&lt;/a&gt; (ナップサックDP　個数制限なし)&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
