@@ -1302,6 +1302,8 @@ if __name__ == &#39;__main__&#39;:
 
 &lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/abc151/tasks/abc151_d&#34; target=&#34;_blank&#34;&gt;ABC151 D. Maze Master&lt;/a&gt; (BFS dequeあり)&lt;/p&gt;
 
+&lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/abc157/tasks/abc157_d&#34; target=&#34;_blank&#34;&gt;ABC157 D. Friend Suggestions&lt;/a&gt; (N=10**5の全パターン探索、pythonだと計算の工夫必要)&lt;/p&gt;
+
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;ダイクストラ法&#34;&gt;ダイクストラ法&lt;/h3&gt;
@@ -1321,6 +1323,21 @@ if __name__ == &#39;__main__&#39;:
 &lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/dp/tasks/dp_e&#34; target=&#34;_blank&#34;&gt;EDP E. Knapsack 2&lt;/a&gt; (ナップサックDP 容量の大きいケース)&lt;/p&gt;
 
 &lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/abc153/tasks/abc153_e&#34; target=&#34;_blank&#34;&gt;ABC153 E. Crested Ibis vs Monster&lt;/a&gt; (ナップサックDP　個数制限なし)&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;アルゴリズム別備忘録-1&#34;&gt;&lt;code&gt;アルゴリズム別備忘録&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;組み合わせ-ncr-計算&#34;&gt;組み合わせ(nCr)計算&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://qiita.com/derodero24/items/91b6468e66923a87f39f&#34; target=&#34;_blank&#34;&gt;nCrの計算速度参考&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;https://atcoder.jp/contests/abc145/tasks/abc145_d&#34; target=&#34;_blank&#34;&gt;ABC145 D. Knight&lt;/a&gt; (nCr)&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
