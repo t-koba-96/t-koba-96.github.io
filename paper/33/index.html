@@ -40,7 +40,7 @@
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <meta name="theme-color" content="#30921D">
   
 
   
@@ -81,7 +81,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
+  <link rel="stylesheet" href="/css/academic.min.eee246c8cdf0e5470b0ec51e38815b5d.css">
 
   
 
@@ -494,12 +494,12 @@
 <h2 id="概要"><code>概要</code></h2>
 <p>クラスラベルの遷移順のみのWeaklyなラベルを用いたAction Segmentation. Viterbi algorism を用いた方法を提案．</p>
 <h2 id="提案手法"><code>提案手法</code></h2>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 19 00" src="featured.png">  
 <p>LSTMか何かしらの時系列モデルを通して得た特徴量のsoftmax値に関して，クラスの遷移順を教師ラベルとして，その各クラスの長さを求めるようなvitervi algorism を定義．Viterbiを適用する前と適用したあとでCrossentropy Lossをとる．Viterbiを通す前の結果を通した後の遷移に近づけるイメージ．</p>
-<!-- raw HTML omitted -->
+<img width="417" alt="スクリーンショット 2020-03-14 19 06 43" src="https://user-images.githubusercontent.com/38309191/76679833-01e89980-6627-11ea-8496-ee43a1f8e74b.png">
 <h2 id="実験"><code>実験</code></h2>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<img width="462" alt="スクリーンショット 2020-03-14 19 10 20" src="https://user-images.githubusercontent.com/38309191/76679875-74f21000-6627-11ea-8c8f-84b2c2931f88.png">
+<img width="450" alt="スクリーンショット 2020-03-14 19 10 29" src="https://user-images.githubusercontent.com/38309191/76679878-7a4f5a80-6627-11ea-88dc-cdd3858225e8.png">
 <h2 id="新規性"><code>新規性</code></h2>
 <p>Viterbiによる手法．</p>
 <p>今まではクラスの遷移ラベルから，フレーム単位での仮のラベルを使うことでロスを計算していたが，そうではなくviterbiを通す前と後でロスをとることで仮ラベルをなくし，精度向上．</p>

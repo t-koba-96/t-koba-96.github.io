@@ -54,7 +54,7 @@ URL → Paper Top Page ">
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <meta name="theme-color" content="#30921D">
   
 
   
@@ -95,7 +95,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
+  <link rel="stylesheet" href="/css/academic.min.eee246c8cdf0e5470b0ec51e38815b5d.css">
 
   
 
@@ -523,15 +523,15 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/04/featured.p
 <p>Skeleton-basedの行動認識においてCNNを用いた手法. Skeleton motion によるTwo-stream化とSkeleton Transformerによって精度向上を実現、実験においてLSTMより良い結果.</p>
 <h2 id="手法"><code>手法</code></h2>
 <p>ネットワークの構造は以下の通り.</p>
-<!-- raw HTML omitted -->
+<img width="664" alt="2018-12-05 10 24 16" src="https://user-images.githubusercontent.com/38309191/49491271-e8d73180-f896-11e8-9cc2-de60e0549323.png">
 <p>関節座標をフレーム順に並べて2次元の入力とし、CNNを用いた畳み込みによって特徴抽出. データセットとしてはRGBDを用いるため、x,y,z座標をそれぞれチャネル方向に重ねて3チャネルとする. それとは別に、フレーム間の座標の変化（差）も同じ様に時間順に並べ(Skeleton motion)、入力として用いる.<br>
 全体としては静止画を評価する関節座標の入力と、画像間の変化(RGBにおけるフローに対応)を評価するフレーム間の座標変化の入力(Skeleton motion)によるTwo-streamのネットワークとなっている.<br>
 また、座標方向に適当に並べられている座標（頭、左腕、右足、等の順番）を並び替えながら(Skeleton Transformer)、最も学習しやすい並び順を行動認識と同時に学習することによって精度向上を実現.</p>
 <h2 id="実験"><code>実験</code></h2>
 <p>NTU　RGBDデータセットを用いてLSTMを用いた手法との比較.</p>
-<!-- raw HTML omitted -->
+<img width="468" alt="2018-12-05 10 24 34" src="https://user-images.githubusercontent.com/38309191/49491307-04dad300-f897-11e8-9645-fdae8eaa929b.png">
 <p>また、今回の手法においてTwo-streamにした場合としていない場合の比較（Montionの有無). 関節座標の並び順を学習した場合と学習しなかった場合の比較(Transの有無).</p>
-<!-- raw HTML omitted -->
+<img width="480" alt="2018-12-05 10 24 26" src="https://user-images.githubusercontent.com/38309191/49491288-f42a5d00-f896-11e8-8b7d-5d637c4da976.png">
 <h2 id="新規性"><code>新規性</code></h2>
 <p>・Skeleton basedな手法においても、フレーム間の変化を入力として用いたTwo-stream networkが有効であることを証明.</p>
 <p>・関節座標の並び順(頭、腕、足等の並び順)は学習のしやすさに影響してくる. 並び順を同時に学習することで精度の向上が可能.</p>

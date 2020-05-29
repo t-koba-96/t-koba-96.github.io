@@ -50,7 +50,7 @@ URL → Paper Top Page ">
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <meta name="theme-color" content="#30921D">
   
 
   
@@ -91,7 +91,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
+  <link rel="stylesheet" href="/css/academic.min.eee246c8cdf0e5470b0ec51e38815b5d.css">
 
   
 
@@ -515,14 +515,14 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/18/featured.p
 <p>タイトルの通り，フレームレートの違う２種類（Slow , Fast）の入力を組み合わせることによって動画認識の精度が向上したという内容．SlowではSemanticな情報（長期に渡って普遍的な情報），Fastでは動きの情報（短期的に遷移する情報）を認識できるので，これらを組み合わせれば両方の情報を得られるよねというストーリー．</p>
 <h2 id="手法"><code>手法</code></h2>
 <p>ネットワーク全体の概要は以下の通り．</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 19 00" src="featured.png">
 <h2 id="特徴量の結合">特徴量の結合</h2>
 <p>各ブロックにおいて，Fastの特徴量をSlowの特徴次元数に合わせてコンカット．最終的には，行動ラベル予測を行う全結合層の前で２つの特徴量を単純にコンカット</p>
 <h2 id="実験"><code>実験</code></h2>
 <p>ActivityNetを用いて他手法との比較．ResnetベースのNon-LocalBlockを用いた際に最も良い結果．</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 21 40" src="https://user-images.githubusercontent.com/38309191/75627234-d66eb380-5c11-11ea-96fb-f7be0647a4a7.png">
 <h2 id="slow--path-による改善">Slow + Path による改善</h2>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 21 40" src="https://user-images.githubusercontent.com/38309191/75627271-10d85080-5c12-11ea-8eee-df2a4b76cee3.png">
 <h2 id="新規性"><code>新規性</code></h2>
 <p>SlowとFastの２つのPathを利用．</p>
 <h2 id="コメントメモ"><code>コメント・メモ</code></h2>

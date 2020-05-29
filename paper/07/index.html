@@ -52,7 +52,7 @@ URL → Paper Top Page ">
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <meta name="theme-color" content="#30921D">
   
 
   
@@ -93,7 +93,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
+  <link rel="stylesheet" href="/css/academic.min.eee246c8cdf0e5470b0ec51e38815b5d.css">
 
   
 
@@ -519,12 +519,12 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/07/featured.p
 <p>セグメンテーションのタスクにおいて，画像のspatial方向とchannel方向にそれぞれアテンションをかけてやることで精度向上を実現．</p>
 <h2 id="手法"><code>手法</code></h2>
 <p>resnetの中間層の特徴マップにおいて，画像のspatial方向とchannel方向にそれぞれアテンションを導入．アテンションのかけ方は単純なspatialなアテンションではなく，画像中の各ピクセルに対するその他の全ての点の重みづけを行うようなものとなっている．このようなアテンションを取ることによって，畳み込みの狭い受容野では比較できない遠い点同士の比較も重みづけされることでできるようになり，セグメンテーションの際の各ピクセルのクラス分けの精度の向上につながる．</p>
-<!-- raw HTML omitted -->
+<img width="688" alt="スクリーンショット 2019-04-09 22 57 14" src="https://user-images.githubusercontent.com/38309191/55806289-f0476980-5b1a-11e9-910b-0bf712eec03d.png">  
 <p>具体的なアテンションマップ付近の構造は以下の通り，うまくreshapeを組み合わせる．また，元の特徴マップをアテンションをかけた特徴マップに掛け合わせる．</p>
-<!-- raw HTML omitted -->
+<img width="450" alt="スクリーンショット 2019-04-09 22 57 23" src="https://user-images.githubusercontent.com/38309191/55806291-f1789680-5b1a-11e9-8b5c-03ff1f3abfe3.png">
 <h2 id="実験"><code>実験</code></h2>
 <p>結果例.大きい物体でも，しっかり同一クラスとして認識できるようになっている．</p>
-<!-- raw HTML omitted -->
+<img width="427" alt="スクリーンショット 2019-04-09 22 57 46" src="https://user-images.githubusercontent.com/38309191/55806301-f3425a00-5b1a-11e9-9ab1-39bed14b4f19.png">
 <h2 id="新規性"><code>新規性</code></h2>
 <p>・ピクセル同士の重みづけというアテンションマップの提案</p>
 <h2 id="詳しくは"><code>詳しくは</code></h2>

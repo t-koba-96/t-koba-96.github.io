@@ -53,7 +53,7 @@ URL → Paper Top Page ">
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <meta name="theme-color" content="#30921D">
   
 
   
@@ -94,7 +94,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
+  <link rel="stylesheet" href="/css/academic.min.eee246c8cdf0e5470b0ec51e38815b5d.css">
 
   
 
@@ -523,17 +523,17 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/08/featured.p
 <h2 id="手法"><code>手法</code></h2>
 <p>下図のようにTCNを複数ステージ重ねていき，最終ステージの出力を予測結果として用いる．特徴として，２ステージ目以降の入力は前のステージのSoftmax出力を使う．<br>
 イメージとしては，１ステージ目で大まかな行動の認識を行って，２ステージ目以降では時系列情報を考慮しながら細かい行動遷移の予測（主にOversegmentationの抑止）を行っている感じ？</p>
-<!-- raw HTML omitted -->
+<img width="369" alt="スクリーンショット 2019-04-22 20 25 22" src="https://user-images.githubusercontent.com/38309191/56498481-d1929b00-653c-11e9-9e08-1e375a0fa2e9.png">
 <h2 id="ロス">ロス</h2>
 <p>交差エントロピーに加え，以下のようにフレーム間での正解クラスの予測値の変化を罰している．クラスが本当に切り替わるところは考慮しないよう，閾値を設けている．</p>
-<!-- raw HTML omitted -->
+<img width="294" alt="スクリーンショット 2019-04-22 20 33 21" src="https://user-images.githubusercontent.com/38309191/56498721-018e6e00-653e-11e9-89bc-31d3d5fe8e91.png">
 <h2 id="実験"><code>実験</code></h2>
 <h2 id="dataset">Dataset</h2>
 <p><a href="https://cvip.computing.dundee.ac.uk/datasets/foodpreparation/50salads/">50salads</a></p>
 <h2 id="single-tcnとの比較">Single-TCNとの比較</h2>
-<!-- raw HTML omitted -->
+<img width="353" alt="スクリーンショット 2019-04-22 20 36 36" src="https://user-images.githubusercontent.com/38309191/56498806-5cc06080-653e-11e9-8412-199647b033b3.png">  
 <h2 id="ロスの違いによる比較">ロスの違いによる比較</h2>
-<!-- raw HTML omitted -->
+<img width="358" alt="スクリーンショット 2019-04-22 20 36 46" src="https://user-images.githubusercontent.com/38309191/56498809-5e8a2400-653e-11e9-8cca-71b62d40f6d6.png">
 <h2 id="新規性"><code>新規性</code></h2>
 <p>・クラス毎のsoftmax値を次のステージへの入力に用いている</p>
 <p>・ロスの提案</p>

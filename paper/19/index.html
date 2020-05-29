@@ -54,7 +54,7 @@ URL → Paper Top Page ">
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <meta name="theme-color" content="#30921D">
   
 
   
@@ -95,7 +95,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
+  <link rel="stylesheet" href="/css/academic.min.eee246c8cdf0e5470b0ec51e38815b5d.css">
 
   
 
@@ -524,19 +524,19 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/19/featured.p
 <p>Mask-RCNNの改善手法．Mask-RCNNの課題としてクラススコアだけでマスクを評価していたため，スコアが高くてもMaskの質が低い事が挙げられた．そこで新たなマスクスコアの指標を用いることで，スコアとマスクの質に適切な相関関係が出る事を確認．また従来のMask-RCNNのネットワークに,MaskIoUを回帰して求めるMaskIoUHeadブロックを導入．</p>
 <h2 id="手法"><code>手法</code></h2>
 <p>ネットワーク全体の概要は以下の通り．</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 19 00" src="featured.png">
 <h2 id="新たなマスクスコアの定義">新たなマスクスコアの定義</h2>
 <h3 id="マスクスコアについて">マスクスコアについて</h3>
 <p>Mask R-CNN : クラススコア<br>
 Mask Scoring R-CNN : クラススコア✖️MaskIoU</p>
 <p>GTと予測マスクのピクセルレベルでの重なり具合まで考慮するように工夫．</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 21 40" src="https://user-images.githubusercontent.com/38309191/75632379-cae5b180-5c3e-11ea-8652-ef97b42e7eef.png">  
 <h2 id="maskiouhead">MaskIoUHead</h2>
 <p>従来の物体検出＋クラススコア，マスク推定に加え，新たにMaskIoUを回帰して求めるブロックの導入</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 21 40" src="https://user-images.githubusercontent.com/38309191/75632471-b7871600-5c3f-11ea-9833-b2a9d6d89d71.png">
 <h2 id="実験"><code>実験</code></h2>
 <p>COCO 2017　を用いて他手法との比較．</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 21 40" src="https://user-images.githubusercontent.com/38309191/75632523-2a908c80-5c40-11ea-8763-9f489a6568a5.png">
 <h2 id="新規性"><code>新規性</code></h2>
 <p>新しいマスクスコアの提案．MaskIoU回帰ブロックの導入．</p>
 <h2 id="コメントメモ"><code>コメント・メモ</code></h2>

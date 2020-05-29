@@ -57,7 +57,7 @@ URL → Paper Top Page ">
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <meta name="theme-color" content="#30921D">
   
 
   
@@ -98,7 +98,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
+  <link rel="stylesheet" href="/css/academic.min.eee246c8cdf0e5470b0ec51e38815b5d.css">
 
   
 
@@ -534,14 +534,14 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/02/featured.p
 <p>提案した両方のTCNにおいて、入力は各フレームから何かしらのCNN(Resnet,VGG等)を用いて抽出した特徴量を時系列順に並べたものであり、出力としては行動クラス結果が各フレームごとに出力される.</p>
 <h2 id="ed-tcn">ED-TCN</h2>
 <p>エンコーダとデコーダを組み合わせたTCN. エンコーダで畳み込み＋MaxPoolingを行うことで時系列を考慮した特徴抽出、その後デコーダで畳み込み＋アップサンプリングを行うことで各フレームごとの行動クラス確率分布を得る.</p>
-<!-- raw HTML omitted -->
+<img width="400" alt="2018-11-30 22 19 28" src="https://user-images.githubusercontent.com/38309191/49291542-0babc380-f4ee-11e8-9912-026b18f4d8bb.png">
 <h2 id="dilated-tcn">Dilated TCN</h2>
 <p>時系列の畳み込みとしてDilated Convolutionを用いた手法. Dilated Convolutionとは簡単に説明すると、入力の間隔を空けて(間を0とみなす)畳み込みを行うこと(d=1なら間隔なし、d=２なら間隔１、d=4なら間隔３). dの値をどんどん(本論文では指数関数的に)大きくしていったDilated Convolution層を重ねることで、より長期的な時系列の範囲で特徴抽出を行うことが可能となる. またスキップコネクションの導入で層を深くすることを可能に．</p>
-<!-- raw HTML omitted -->
+<img width="400" alt="2018-11-30 22 20 33" src="https://user-images.githubusercontent.com/38309191/49291590-2bdb8280-f4ee-11e8-9444-01090dd85fe5.png">
 <h2 id="実験"><code>実験</code></h2>
 <p>50salads、MERL Shopping、GTEAの３種のデータセットを用いて、Spatial CNN等との比較</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<img width="600" alt="2018-11-30 21 58 12" src="https://user-images.githubusercontent.com/38309191/49291839-e53a5800-f4ee-11e8-9325-46725b25cd76.png">
+<img width="374" alt="2018-11-30 22 27 34" src="https://user-images.githubusercontent.com/38309191/49291938-292d5d00-f4ef-11e8-9b6f-afef4c731408.png">
 <h2 id="特徴新規性"><code>特徴・新規性</code></h2>
 <p>・各層ごとに同時に処理を行うため、入力フレーム数が増えても処理時間に影響をあまり与えない.<br>
 　→フレームごとに処理を行うLSTM等と比較して高速な処理</p>

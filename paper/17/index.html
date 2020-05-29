@@ -51,7 +51,7 @@ URL → Paper Top Page ">
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <meta name="theme-color" content="#30921D">
   
 
   
@@ -92,7 +92,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
+  <link rel="stylesheet" href="/css/academic.min.eee246c8cdf0e5470b0ec51e38815b5d.css">
 
   
 
@@ -516,18 +516,18 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/17/featured.p
 <p>・<a href="https://github.com/JJBOY/BMN-Boundary-Matching-Network">code(pytorch)</a></p>
 <h2 id="概要"><code>概要</code></h2>
 <p>Temporal action proposalのタスク．従来のような始点終点予測とは別に，Proposalの始点と長さを表すヒートマップを作成する．最終的に始点終点情報とヒートマップのConfidenceを組み合わせることで，Proposalを出してくる手法を提案．</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 19 00" src="https://user-images.githubusercontent.com/38309191/75130552-5f698480-5712-11ea-921e-d6e5f8fc4711.png">
 <h2 id="手法"><code>手法</code></h2>
 <p>ネットワーク全体の概要は以下の通り．</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 19 00" src="https://user-images.githubusercontent.com/38309191/75130736-3d243680-5713-11ea-965e-4e9466b9dc7e.png">
 <h2 id="bm-confidence-map">BM confidence map</h2>
 <p>ヒートマップは始点を横軸，Proposalの長さを縦軸として予測される．つまり同一の始点から始まる長さの違うProposalについても，ヒートマップを利用することによってConfidenceの算出が容易となる．このようにヒートマップはconfidenceのスコアを測るために用いる．</p>
-<!-- raw HTML omitted -->
+<img width="400" alt="2019-02-22 16 19 00" src="https://user-images.githubusercontent.com/38309191/75130601-a22b5c80-5712-11ea-94e6-a73ccc9f399f.png">
 <h2 id="実験"><code>実験</code></h2>
 <p>ActivityNetを用いて他手法との比較．</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 21 40" src="https://user-images.githubusercontent.com/38309191/75130962-2d592200-5714-11ea-8030-b0158af42f4f.png">
 <p>出力例</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 21 40" src="https://user-images.githubusercontent.com/38309191/75130996-537ec200-5714-11ea-8657-4585050d66ba.png">
 <h2 id="新規性"><code>新規性</code></h2>
 <p>ヒートマップを用いたConfidenceの算出</p>
 <h2 id="コメントメモ"><code>コメント・メモ</code></h2>

@@ -53,7 +53,7 @@ URL → Paper Top Page ">
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <meta name="theme-color" content="#30921D">
   
 
   
@@ -94,7 +94,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
+  <link rel="stylesheet" href="/css/academic.min.eee246c8cdf0e5470b0ec51e38815b5d.css">
 
   
 
@@ -524,14 +524,14 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/16/featured.p
 <p>MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習．<br>
 　トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM．<br>
 　単一の文章における単語の関連性による出現確率についてだけでなく，２つの文章を比較させることによって文章全体としてより良い特徴表現を得ようということを目的としているのがNSP.</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 19 00" src="https://user-images.githubusercontent.com/38309191/75126078-ac8e2c00-56fb-11ea-8461-a89f2a8048e0.png">
 <h2 id="masked-language-model">Masked Language Model</h2>
 <p>入力の単語を予めいくつかマスキングしてしまい穴埋め問題を溶かせることによって，マスキングした部分の単語を前後の文脈の理解から復元させるタスク．入力シーケンスのうち，15%をランダムに選んでその部分の予測を行う．選んだ部分のうち80%はマスキング，10%は別の単語に置き換え，残りの10%はそのままの単語として入力させている．前後の文脈を考慮した特徴量抽出を行うことが目的．</p>
 <h2 id="next-sentence-prediction">Next Sentence Prediction</h2>
 <p>２つの文章を並べて入力してあげて，２文目が１文目の次に来る文かどうかを予測するタスク．２つの文章を比較して予測結果を返すため，文章全体として良い特徴表現を得ることが期待できる．</p>
-<!-- raw HTML omitted -->
+<img width="600" alt="2019-02-22 16 19 00"  src="https://user-images.githubusercontent.com/38309191/75126590-0ee82c00-56fe-11ea-852f-ec956e4050cf.png">
 <h2 id="実験"><code>実験</code></h2>
-<!-- raw HTML omitted -->
+<img width="800" alt="2019-02-22 16 19 00"  src="https://user-images.githubusercontent.com/38309191/75126606-20c9cf00-56fe-11ea-8818-cac7e646c346.png">
 <h2 id="新規性"><code>新規性</code></h2>
 <p>新たな事前学習の枠組み．</p>
 <p>様々なタスクに転用するだけで精度向上．</p>
