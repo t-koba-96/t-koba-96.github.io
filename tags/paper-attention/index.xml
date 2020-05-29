@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paper - Attention on Takuya Kobayashi</title>
@@ -17,11 +17,10 @@
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
       
       <guid>/paper/12/</guid>
-      <description> 論文情報 ・Sibei Yang et al.
+      <description>論文情報 ・Sibei Yang et al.
 ・ICCV 2019
 ・paper
-概要   SlideShare 
-編集日 2020/02/10
+概要 編集日 2020/02/10
 URL → Paper Top Page </description>
     </item>
     
@@ -31,7 +30,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/09/</guid>
-      <description> 論文情報 ・Hiroshi Fukui
+      <description>論文情報 ・Hiroshi Fukui
 ・2019 CVPR
 ・paper
 ・code(pytorch)

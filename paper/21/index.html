@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content=" 論文情報 ・Chen Sun et al. (Google Research)
+  <meta name="description" content="論文情報 ・Chen Sun et al. (Google Research)
 ・2019 CVPR
 ・paper
 概要 Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，Bertを応用することでマルチモーダルに事前学習させる方法を提案．基本的にはBertのMask穴埋め問題をLanguage&#43;Visionに拡張したもの．
@@ -94,7 +94,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.b758f8907157a692a8ecdf56cce719a3.css">
+  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
 
   
 
@@ -121,7 +121,7 @@ URL → Paper Top Page ">
   <meta property="og:site_name" content="Takuya Kobayashi">
   <meta property="og:url" content="/paper/21/">
   <meta property="og:title" content="VideoBERT: A Joint Model for Video and Language Representation Learning #21 | Takuya Kobayashi">
-  <meta property="og:description" content=" 論文情報 ・Chen Sun et al. (Google Research)
+  <meta property="og:description" content="論文情報 ・Chen Sun et al. (Google Research)
 ・2019 CVPR
 ・paper
 概要 Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，Bertを応用することでマルチモーダルに事前学習させる方法を提案．基本的にはBertのMask穴埋め問題をLanguage&#43;Visionに拡張したもの．
@@ -513,64 +513,34 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/21/featured.p
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<h2 id="論文情報"><code>論文情報</code></h2>
-
+      <h2 id="論文情報"><code>論文情報</code></h2>
 <p>・Chen Sun et al. (Google Research)</p>
-
 <p>・2019 CVPR</p>
-
-<p>・<a href="https://arxiv.org/pdf/1904.01766.pdf" target="_blank">paper</a></p>
-
+<p>・<a href="https://arxiv.org/pdf/1904.01766.pdf">paper</a></p>
 <h2 id="概要"><code>概要</code></h2>
-
 <p>Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，<a href="../16">Bert</a>を応用することでマルチモーダルに事前学習させる方法を提案．基本的には<a href="../16">Bert</a>のMask穴埋め問題をLanguage+Visionに拡張したもの．</p>
-
-<p><img width="600" alt="2019-02-22 16 19 00" src="featured.png"></p>
-
+<!-- raw HTML omitted -->
 <p>Downstreamのタスクとしては入力テキスト情報に対応したビデオフレームの出力や，入力ビデオの次におきうるアクションのビデオ出力等が挙げられる．</p>
-
 <h2 id="手法"><code>手法</code></h2>
-
 <p>ネットワーク全体の概要は以下の通り．</p>
-
-<p><img width="800" alt="スクリーンショット 2020-03-06 12 15 33" src="https://user-images.githubusercontent.com/38309191/76046767-2fd53a80-5fa4-11ea-818a-03af32cd8904.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="マスク穴埋め問題">マスク穴埋め問題</h2>
-
 <p>ランダムで入力をマスクして，出力を予測させることでSelf-supervisedに学習するのはBertと一緒．違いとして，文章同士で入力ではなく，文章と対応するビデオのセットでの入力となる．ビデオ側のトークンはクラスタリングで定義し，４階層✖️12次元の計20736次元の階層的Kmeansによって分類し，言語側と同じくクロスエントロピーをロスとして学習．</p>
-
-<p><img width="618" alt="スクリーンショット 2020-03-06 12 20 13" src="https://user-images.githubusercontent.com/38309191/76047018-d6b9d680-5fa4-11ea-9011-73bd036d5fa9.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="実験"><code>実験</code></h2>
-
 <p>様々なDown Streamタスクでの比較．</p>
-
 <p>⓵ Action classification</p>
-
-<p><img width="800" alt="スクリーンショット 2020-03-06 12 24 30" src="https://user-images.githubusercontent.com/38309191/76047240-6f505680-5fa5-11ea-906d-27f0afef1bb2.png"></p>
-
+<!-- raw HTML omitted -->
 <p>⓶　Video captioning</p>
-
-<p><img width="800" alt="スクリーンショット 2020-03-06 12 24 45" src="https://user-images.githubusercontent.com/38309191/76047253-79725500-5fa5-11ea-9aa3-79f3ee5e5d25.png">
-<img width="800" alt="スクリーンショット 2020-03-06 12 24 59" src="https://user-images.githubusercontent.com/38309191/76047261-80996300-5fa5-11ea-926b-25367f985f12.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="新規性"><code>新規性</code></h2>
-
 <p>BertのようにSelf-supervisedな事前学習方法の提案によって大きなデータセット規模での学習を可能とし，精度の向上</p>
-
-<h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
-
+<h2 id="コメントメモ"><code>コメント・メモ</code></h2>
 <p>Videoの入力があいまいなイメージ．Bertへの入力としてどのようなルールでフレームを選んでくるかは難しい問題に感じる．</p>
-
 <h2 id="編集日"><code>編集日</code></h2>
-
 <p>2019/03/04</p>
-
 <h2 id="url"><code>URL</code></h2>
-
-<h2 id="paper-top-page-section-paper"><a href="/section/paper">→ Paper Top Page</a></h2>
+<h2 id="-paper-top-pagesectionpaper"><a href="/section/paper">→ Paper Top Page</a></h2>
 
     </div>
 
@@ -856,7 +826,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/21/featured.p
     
     
     
-    <script src="/js/academic.min.15494b02d66be9b96bab2e305f69c460.js"></script>
+    <script src="/js/academic.min.8f3d53582b3c04a038fca31bcc86151b.js"></script>
 
   </body>
 </html>

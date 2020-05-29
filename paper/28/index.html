@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content=" 論文情報 ・Debidatta Dwibedi et al.
+  <meta name="description" content="論文情報 ・Debidatta Dwibedi et al.
 ・paper
 概要 異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現．
 手法 まず動画のペアにおいて，各フレームの埋め込み表現をエンコーダによって得る．このうち１つのフレームに注目したとき（下図の右下赤い点），ペア動画においてその埋め込み表現から最も近いフレームを選ぶ．同様にして元の動画からもうひとつ点を選んだとき，最初の赤い点にもどることが理想であるが，違うフレームが選ばれたときはそこでロスをとることによって正解に近づけていくことを考える．
@@ -88,7 +88,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.b758f8907157a692a8ecdf56cce719a3.css">
+  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
 
   
 
@@ -115,7 +115,7 @@ URL → Paper Top Page ">
   <meta property="og:site_name" content="Takuya Kobayashi">
   <meta property="og:url" content="/paper/28/">
   <meta property="og:title" content="Temporal Cycle-Consistency Learning #28 | Takuya Kobayashi">
-  <meta property="og:description" content=" 論文情報 ・Debidatta Dwibedi et al.
+  <meta property="og:description" content="論文情報 ・Debidatta Dwibedi et al.
 ・paper
 概要 異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現．
 手法 まず動画のペアにおいて，各フレームの埋め込み表現をエンコーダによって得る．このうち１つのフレームに注目したとき（下図の右下赤い点），ペア動画においてその埋め込み表現から最も近いフレームを選ぶ．同様にして元の動画からもうひとつ点を選んだとき，最初の赤い点にもどることが理想であるが，違うフレームが選ばれたときはそこでロスをとることによって正解に近づけていくことを考える．
@@ -501,49 +501,27 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/28/featured.p
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<h2 id="論文情報"><code>論文情報</code></h2>
-
+      <h2 id="論文情報"><code>論文情報</code></h2>
 <p>・Debidatta Dwibedi et al.</p>
-
-<p>・<a href="https://arxiv.org/pdf/1904.07846.pdf" target="_blank">paper</a></p>
-
+<p>・<a href="https://arxiv.org/pdf/1904.07846.pdf">paper</a></p>
 <h2 id="概要"><code>概要</code></h2>
-
 <p>異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76135346-91131180-6069-11ea-8d1e-bd86a2119762.png" alt="スクリーンショット 2020-03-07 11 48 27" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76135346-91131180-6069-11ea-8d1e-bd86a2119762.png" alt="スクリーンショット 2020-03-07 11 48 27"></p>
 <h2 id="手法"><code>手法</code></h2>
-
 <p>まず動画のペアにおいて，各フレームの埋め込み表現をエンコーダによって得る．このうち１つのフレームに注目したとき（下図の右下赤い点），ペア動画においてその埋め込み表現から最も近いフレームを選ぶ．同様にして元の動画からもうひとつ点を選んだとき，最初の赤い点にもどることが理想であるが，違うフレームが選ばれたときはそこでロスをとることによって正解に近づけていくことを考える．</p>
-
-<p><img width="600" alt="2019-02-22 16 19 00" src="featured.png"></p>
-
+<!-- raw HTML omitted -->
 <p>しかし単純に上のように定義しただけでは損失関数の微分が不可能なため，勾配の計算ができない．そこでペア動画の各フレームにおいて距離空間に応じた重みを計算し，その重み付きの和を計算して，近似した近傍点を求める．同様に，近似した近傍点から元動画の各フレームの距離空間に応じた重みを計算し，その重み付きの和を計算することでロスをとる．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76135486-af2d4180-606a-11ea-8f5e-70fec33a07df.png" alt="スクリーンショット 2020-03-07 11 56 26" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76135486-af2d4180-606a-11ea-8f5e-70fec33a07df.png" alt="スクリーンショット 2020-03-07 11 56 26"></p>
 <h2 id="実験"><code>実験</code></h2>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76135690-c40ad480-606c-11ea-8918-00c37b4bb45f.png" alt="スクリーンショット 2020-03-07 12 11 20" /></p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76135695-cff69680-606c-11ea-99bc-6c65699da600.png" alt="スクリーンショット 2020-03-07 12 11 38" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76135690-c40ad480-606c-11ea-8918-00c37b4bb45f.png" alt="スクリーンショット 2020-03-07 12 11 20"></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76135695-cff69680-606c-11ea-99bc-6c65699da600.png" alt="スクリーンショット 2020-03-07 12 11 38"></p>
 <h2 id="新規性"><code>新規性</code></h2>
-
 <p>動画ペアにおいて，似た動作同士を近づけるような表現学習の方法を提案．</p>
-
-<h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
-
+<h2 id="コメントメモ"><code>コメント・メモ</code></h2>
 <h2 id="編集日"><code>編集日</code></h2>
-
 <p>2020/02/24</p>
-
 <h2 id="url"><code>URL</code></h2>
-
-<h2 id="paper-top-page-section-paper"><a href="/section/paper">→ Paper Top Page</a></h2>
+<h2 id="-paper-top-pagesectionpaper"><a href="/section/paper">→ Paper Top Page</a></h2>
 
     </div>
 
@@ -833,7 +811,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/28/featured.p
     
     
     
-    <script src="/js/academic.min.15494b02d66be9b96bab2e305f69c460.js"></script>
+    <script src="/js/academic.min.8f3d53582b3c04a038fca31bcc86151b.js"></script>
 
   </body>
 </html>

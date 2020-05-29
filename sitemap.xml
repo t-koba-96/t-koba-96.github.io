@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -15,43 +15,36 @@
   <url>
     <loc>/categories/atcoder/</loc>
     <lastmod>2020-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/atcoder/</loc>
     <lastmod>2020-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/</loc>
     <lastmod>2020-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
     <lastmod>2020-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/contest/</loc>
     <lastmod>2020-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <lastmod>2020-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
     <lastmod>2020-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -62,7 +55,6 @@
   <url>
     <loc>/tags/monthly/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -93,19 +85,16 @@
   <url>
     <loc>/tags/paper-image-understanding/</loc>
     <lastmod>2020-03-07T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/papers/</loc>
     <lastmod>2020-03-07T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/paper/</loc>
     <lastmod>2020-03-07T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -116,13 +105,11 @@
   <url>
     <loc>/tags/paper-graph-conv/</loc>
     <lastmod>2020-03-06T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/paper-object-detection/</loc>
     <lastmod>2020-03-06T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -133,19 +120,16 @@
   <url>
     <loc>/categories/application/</loc>
     <lastmod>2020-02-27T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/app/</loc>
     <lastmod>2020-02-27T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/cv/</loc>
     <lastmod>2020-02-27T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -156,31 +140,26 @@
   <url>
     <loc>/tags/flask/</loc>
     <lastmod>2020-02-27T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/image-classification/</loc>
     <lastmod>2020-02-27T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/local-app/</loc>
     <lastmod>2020-02-27T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/paper-rp/</loc>
     <lastmod>2020-02-24T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/paper-video-understanding/</loc>
     <lastmod>2020-02-24T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -201,19 +180,16 @@
   <url>
     <loc>/tags/paper-action-segmentation/</loc>
     <lastmod>2020-02-13T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/paper-attention/</loc>
     <lastmod>2020-02-13T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/paper-nlp/</loc>
     <lastmod>2020-02-13T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -244,7 +220,6 @@
   <url>
     <loc>/tags/atcoder/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -260,19 +235,16 @@
   <url>
     <loc>/categories/blog/</loc>
     <lastmod>2019-09-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/blog/</loc>
     <lastmod>2019-09-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/memo/</loc>
     <lastmod>2019-05-12T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -283,7 +255,6 @@
   <url>
     <loc>/tags/paper-action-recognition/</loc>
     <lastmod>2020-01-15T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -294,19 +265,16 @@
   <url>
     <loc>/categories/project/</loc>
     <lastmod>2019-12-28T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/project/</loc>
     <lastmod>2019-12-28T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/video-classification/</loc>
     <lastmod>2019-12-28T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -322,7 +290,6 @@
   <url>
     <loc>/tags/aws/</loc>
     <lastmod>2019-08-24T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -338,13 +305,11 @@
   <url>
     <loc>/tags/dash/</loc>
     <lastmod>2019-09-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/gcp/</loc>
     <lastmod>2019-09-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -420,13 +385,11 @@
   <url>
     <loc>/tags/paper-pose-estimation/</loc>
     <lastmod>2019-07-17T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/paper-semantic-segmentation/</loc>
     <lastmod>2019-07-17T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -462,7 +425,6 @@
   <url>
     <loc>/tags/hugo/</loc>
     <lastmod>2019-06-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -473,7 +435,6 @@
   <url>
     <loc>/tags/profile/</loc>
     <lastmod>2019-06-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -482,15 +443,8 @@
   </url>
   
   <url>
-    <loc>/tags/html/css/</loc>
-    <lastmod>2019-06-23T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/web-released/</loc>
     <lastmod>2019-06-23T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -506,7 +460,6 @@
   <url>
     <loc>/tags/pose-estimation/</loc>
     <lastmod>2019-06-05T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -542,7 +495,6 @@
   <url>
     <loc>/tags/attention/</loc>
     <lastmod>2019-05-24T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -561,21 +513,18 @@
   </url>
   
   <url>
+    <loc>/tags/ios/</loc>
+    <lastmod>2019-05-15T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/random/</loc>
     <lastmod>2019-05-15T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/swift/</loc>
     <lastmod>2019-05-15T00:00:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/ios/</loc>
-    <lastmod>2019-05-15T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -621,13 +570,11 @@
   <url>
     <loc>/section/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/paper-other/</loc>
     <lastmod>2018-01-01T00:00:00+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -638,13 +585,11 @@
   <url>
     <loc>/gallery/</loc>
     <lastmod>2019-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/gallery/</loc>
     <lastmod>2019-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -663,8 +608,11 @@
   </url>
   
   <url>
+    <loc>/tags/html/css/</loc>
+  </url>
+  
+  <url>
     <loc>/publication_types/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

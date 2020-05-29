@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content=" 論文情報 ・Ranjay Krishna et al.
+  <meta name="description" content="論文情報 ・Ranjay Krishna et al.
 ・paper
 ・dataset
 概要 画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成．SceneGraphの研究分野で一般的に使われているデータセットとなっている．
@@ -95,7 +95,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.b758f8907157a692a8ecdf56cce719a3.css">
+  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
 
   
 
@@ -122,7 +122,7 @@ URL → Paper Top Page ">
   <meta property="og:site_name" content="Takuya Kobayashi">
   <meta property="og:url" content="/paper/31/">
   <meta property="og:title" content="Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations #31 | Takuya Kobayashi">
-  <meta property="og:description" content=" 論文情報 ・Ranjay Krishna et al.
+  <meta property="og:description" content="論文情報 ・Ranjay Krishna et al.
 ・paper
 ・dataset
 概要 画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成．SceneGraphの研究分野で一般的に使われているデータセットとなっている．
@@ -515,69 +515,37 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/31/featured.p
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<h2 id="論文情報"><code>論文情報</code></h2>
-
+      <h2 id="論文情報"><code>論文情報</code></h2>
 <p>・Ranjay Krishna et al.</p>
-
-<p>・<a href="https://arxiv.org/pdf/1602.07332.pdf" target="_blank">paper</a></p>
-
-<p>・<a href="http://visualgenome.org/" target="_blank">dataset</a></p>
-
+<p>・<a href="https://arxiv.org/pdf/1602.07332.pdf">paper</a></p>
+<p>・<a href="http://visualgenome.org/">dataset</a></p>
 <h2 id="概要"><code>概要</code></h2>
-
 <p>画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成．SceneGraphの研究分野で一般的に使われているデータセットとなっている．</p>
-
-<p><img width="600" alt="2019-02-22 16 19 00" src="featured.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="内容"><code>内容</code></h2>
-
 <p>データセット概要は下図．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76139109-98014a80-6090-11ea-9e98-5ab90485c1e4.png" alt="スクリーンショット 2020-03-07 16 27 41" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76139109-98014a80-6090-11ea-9e98-5ab90485c1e4.png" alt="スクリーンショット 2020-03-07 16 27 41"></p>
 <p>データセットの内容については以下で構成されている．</p>
-
 <h2 id="multiple-region-graphs-and-their-descriptions">Multiple region graphs and their descriptions</h2>
-
 <p>様々な関係性が存在する一つの画像を，一つの説明文だけで完結させてしまうのは現実的ではない．そこで画像内にBoundingBoxを複数用意し，そのなかでのシーングラフ(Region Graphs)，説明文章(Region Descriptions)をそれぞれ作成している．ひとつの画像に対して平均で42個のこのような領域が用意されている．</p>
-
 <h2 id="multiple-objects-and-their-bounding-boxes">Multiple objects and their bounding boxes</h2>
-
 <p>画像内に平均で２１個の物体情報とそのBoundingBoxを用意．同一物体に対して複数ラベル存在する場合（man and person），大きい括りのラベル(person)が選択される．</p>
-
 <h2 id="a-set-of-attributes">A set of attributes</h2>
-
 <p>画像内に平均で16個のAttributeラベルを用意．AttributeはObjectにつくものであり，一つのObjectに対して0個以上のAttributeが関連づいている．</p>
-
 <h2 id="a-set-of-relationships">A set of relationships</h2>
-
 <p>Relationshipとは２つのobjectをつなぐもの．有向グラフ構造のため，Relationshipをもっている２つのobjectの関係性の間には矢印が向く方と向けられる方が存在する．矢印の出発点がsubject，矢印の終着点がobjectと定義される．上の図の例で言えば，jumping over という関係性に関して，subject は man, object は fire hydrant となる．</p>
-
 <h2 id="one-scene-graph">One scene graph</h2>
-
 <p>今までRegionごとに得ていた情報をまとめて，画像全体として一つのScene Graph を作成．（上図の一番下）</p>
-
 <h2 id="データセット"><code>データセット</code></h2>
-
 <p>一部の例．より詳しい内容に関しては元論文をチェック．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76139540-3c38c080-6094-11ea-8aba-9b842ffb4d81.png" alt="スクリーンショット 2020-03-07 16 53 51" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76139540-3c38c080-6094-11ea-8aba-9b842ffb4d81.png" alt="スクリーンショット 2020-03-07 16 53 51"></p>
 <h2 id="新規性"><code>新規性</code></h2>
-
 <p>シーングラフ用の新たなデータセットの提案．</p>
-
-<h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
-
+<h2 id="コメントメモ"><code>コメント・メモ</code></h2>
 <h2 id="編集日"><code>編集日</code></h2>
-
 <p>2019/02/26</p>
-
 <h2 id="url"><code>URL</code></h2>
-
-<h2 id="paper-top-page-section-paper"><a href="/section/paper">→ Paper Top Page</a></h2>
+<h2 id="-paper-top-pagesectionpaper"><a href="/section/paper">→ Paper Top Page</a></h2>
 
     </div>
 
@@ -847,7 +815,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/31/featured.p
     
     
     
-    <script src="/js/academic.min.15494b02d66be9b96bab2e305f69c460.js"></script>
+    <script src="/js/academic.min.8f3d53582b3c04a038fca31bcc86151b.js"></script>
 
   </body>
 </html>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paper - Video Understanding on Takuya Kobayashi</title>
@@ -17,7 +17,7 @@
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0900</pubDate>
       
       <guid>/paper/28/</guid>
-      <description> 論文情報 ・Debidatta Dwibedi et al.
+      <description>論文情報 ・Debidatta Dwibedi et al.
 ・paper
 概要 異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現．
 手法 まず動画のペアにおいて，各フレームの埋め込み表現をエンコーダによって得る．このうち１つのフレームに注目したとき（下図の右下赤い点），ペア動画においてその埋め込み表現から最も近いフレームを選ぶ．同様にして元の動画からもうひとつ点を選んだとき，最初の赤い点にもどることが理想であるが，違うフレームが選ばれたときはそこでロスをとることによって正解に近づけていくことを考える．
@@ -33,11 +33,10 @@ URL → Paper Top Page </description>
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
       
       <guid>/paper/12/</guid>
-      <description> 論文情報 ・Sibei Yang et al.
+      <description>論文情報 ・Sibei Yang et al.
 ・ICCV 2019
 ・paper
-概要   SlideShare 
-編集日 2020/02/10
+概要 編集日 2020/02/10
 URL → Paper Top Page </description>
     </item>
     
@@ -56,7 +55,7 @@ URL → Paper Top Page </description>
       <pubDate>Mon, 21 Oct 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/30/</guid>
-      <description> 論文情報 ・Tengda Han et al.
+      <description>論文情報 ・Tengda Han et al.
 ・paper
 概要 Predictive Codingで用いた手法を動画にも適用した論文．動画の次の潜在表現を回帰で予測させてあげて，相互情報量 の最大化を目指す．
 手法 全体としての考え方はPredictive Codingと一緒．ただし今回は動画を入力として扱うので，単純にフレームごとに系列データとして扱っていく．
@@ -72,7 +71,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/27/</guid>
-      <description> 論文情報 ・Mayu Otani et al.
+      <description>論文情報 ・Mayu Otani et al.
 ・CVPR 2019
 ・paper
 概要 動画要約のタスクにおいて，今までの評価指標では要約の良さを正しく評価できていないことを問題提起し，新たな評価指標の提案．
@@ -94,7 +93,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/17/</guid>
-      <description> 論文情報 ・Tianwei Lin, Xiao Liu et al.
+      <description>論文情報 ・Tianwei Lin, Xiao Liu et al.
 ・2019 ICCV
 ・paper
 ・code(pytorch)
@@ -114,7 +113,7 @@ URL → Paper Top Page </description>
       <pubDate>Mon, 03 Jun 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/21/</guid>
-      <description> 論文情報 ・Chen Sun et al. (Google Research)
+      <description>論文情報 ・Chen Sun et al. (Google Research)
 ・2019 CVPR
 ・paper
 概要 Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，Bertを応用することでマルチモーダルに事前学習させる方法を提案．基本的にはBertのMask穴埋め問題をLanguage+Visionに拡張したもの．

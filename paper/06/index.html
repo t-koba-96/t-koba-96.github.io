@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content=" 論文情報 ・Li Ding, Chenliang xu
+  <meta name="description" content="論文情報 ・Li Ding, Chenliang xu
 ・2018 CVPR
 ・paper
 概要 Action Segmentation のタスクにおいてWeakly-supervisedな手法. 学習用の動画デートセットの正解として，動画内の行動ラベルの順番のみ与える（各フレームにおける正解ラベルはなし）. 同様のWeakly-Supervisedな手法と比較して最高精度を記録．
@@ -97,7 +97,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.b758f8907157a692a8ecdf56cce719a3.css">
+  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
 
   
 
@@ -124,7 +124,7 @@ URL → Paper Top Page ">
   <meta property="og:site_name" content="Takuya Kobayashi">
   <meta property="og:url" content="/paper/06/">
   <meta property="og:title" content="Weakly-Supervised Action Segmentation with Iterative Soft Boundary Assignment #6 | Takuya Kobayashi">
-  <meta property="og:description" content=" 論文情報 ・Li Ding, Chenliang xu
+  <meta property="og:description" content="論文情報 ・Li Ding, Chenliang xu
 ・2018 CVPR
 ・paper
 概要 Action Segmentation のタスクにおいてWeakly-supervisedな手法. 学習用の動画デートセットの正解として，動画内の行動ラベルの順番のみ与える（各フレームにおける正解ラベルはなし）. 同様のWeakly-Supervisedな手法と比較して最高精度を記録．
@@ -519,81 +519,43 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/06/featured.p
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<h2 id="論文情報"><code>論文情報</code></h2>
-
+      <h2 id="論文情報"><code>論文情報</code></h2>
 <p>・Li Ding, Chenliang xu</p>
-
 <p>・2018 CVPR</p>
-
-<p>・<a href="https://arxiv.org/pdf/1803.10699.pdf" target="_blank">paper</a></p>
-
+<p>・<a href="https://arxiv.org/pdf/1803.10699.pdf">paper</a></p>
 <h2 id="概要"><code>概要</code></h2>
-
 <p>Action Segmentation のタスクにおいてWeakly-supervisedな手法. 学習用の動画デートセットの正解として，動画内の行動ラベルの順番のみ与える（各フレームにおける正解ラベルはなし）. 同様のWeakly-Supervisedな手法と比較して最高精度を記録．</p>
-
 <h2 id="手法"><code>手法</code></h2>
-
 <p>ネットワーク全体の概要は以下の通り．</p>
-
-<p><img width="400" alt="2019-02-22 16 19 00" src="https://user-images.githubusercontent.com/38309191/53226176-9f3ffb00-36bd-11e9-9ce6-ec6e8827dd19.png"></p>
-
+<!-- raw HTML omitted -->
 <p>本手法では，Action Segmentationを行う部分としてTCFPN ，認識結果を元にフレーム毎の正解ラベルの予測を行い，ground truth を更新する部分としてISBAをそれぞれ新たに提案している．</p>
-
 <h2 id="tcfpn">TCFPN</h2>
-
-<p>Action Segmentationを行う既存手法である<a href="https://github.com/t-koba-96/papers/issues/2" target="_blank">ED-TCN</a> と物体検出のタスクにおいて用いられるFeature Pyramid Networkを組み合わせた手法．単純にEncoder-Decoderのみを使うと，正確な特徴量を抽出できるものの，位置情報（今回の場合時間情報）が大雑把なものとなってしまう．そこで，Encoderの各層を1×1convして加えることで，より正確な位置情報を得ることが可能となる，というイメージ．</p>
-
-<p><img width="400" alt="2019-02-22 16 20 18" src="https://user-images.githubusercontent.com/38309191/53226240-d4e4e400-36bd-11e9-9d2a-23bd0c876b9c.png"></p>
-
+<p>Action Segmentationを行う既存手法である<a href="https://github.com/t-koba-96/papers/issues/2">ED-TCN</a> と物体検出のタスクにおいて用いられるFeature Pyramid Networkを組み合わせた手法．単純にEncoder-Decoderのみを使うと，正確な特徴量を抽出できるものの，位置情報（今回の場合時間情報）が大雑把なものとなってしまう．そこで，Encoderの各層を1×1convして加えることで，より正確な位置情報を得ることが可能となる，というイメージ．</p>
+<!-- raw HTML omitted -->
 <p>TCFPNでSegmentationを行うには，フレーム毎の行動ラベルが必要なので，動画に対してN個の行動が順に起こるというWeaklyなラベルが与えられた時，動画のフレームをN等分して行動ラベルの初期値として与えてやる．その際0，１のみのOne-hotな表現ではなく，動画の行動が徐々に移り変わるだろうという予測を基に，以下のようなSoft Boundaryなラベル付けを行う．</p>
-
-<p><img width="400" alt="2019-02-22 16 21 40" src="https://user-images.githubusercontent.com/38309191/53226296-f80f9380-36bd-11e9-857d-a02678039e80.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="isba">ISBA</h2>
-
 <p>TCFPNの出力を元にフレーム毎の正解ラベルの予測，更新を行う部分．要ははじめに与えたN等分するようなフレーム毎の行動の正解ラベルでは正確ではないため，TCFPNの出力を元にフレーム毎の正解を新たに予測し，更新することで実際のground truthに近いラベルを得ようという考え．</p>
-
-<p><img width="450" alt="2019-02-22 16 22 38" src="https://user-images.githubusercontent.com/38309191/53226338-18d7e900-36be-11e9-848a-0f4a50c598b2.png"></p>
-
-<h2 id="学習-テスト">学習・テスト</h2>
-
+<!-- raw HTML omitted -->
+<h2 id="学習テスト">学習・テスト</h2>
 <p>TCFPNとISBAを繰り返し行い，認識結果を元にフレーム単位の行動ラベルを更新していくことで，フレーム単位の行動ラベルをground truthに近づけることと，Action Segmentationの精度の向上を同時に目指す． ISBAにおいて独自のロスを導入し，3回連続でロスが小さくならなければ終了し，最もロスの小さかった時の結果を最終出力とする．</p>
-
 <h2 id="実験"><code>実験</code></h2>
-
 <p>Breakfast datasetを用いて他のWeakly-Supervisedな手法との比較.</p>
-
-<p><img width="311" alt="2019-02-22 16 23 52" src="https://user-images.githubusercontent.com/38309191/53226421-4886f100-36be-11e9-8ac8-129b6a3637cf.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="学習時の評価">学習時の評価</h2>
-
-<p><img width="600" alt="2019-02-22 16 24 43" src="https://user-images.githubusercontent.com/38309191/53226454-65232900-36be-11e9-9b0c-6fad76b05171.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="テスト時の評価">テスト時の評価</h2>
-
-<p><img width="600" alt="2019-02-22 16 25 38" src="https://user-images.githubusercontent.com/38309191/53226501-86841500-36be-11e9-82f1-1fa6cf13f4ea.png"></p>
-
+<!-- raw HTML omitted -->
 <p>ちなみにfully-Supervisedな時の提案手法のaccuracyは52.0</p>
-
 <h2 id="新規性"><code>新規性</code></h2>
-
 <p>・新たなWeakly-Supervisedな手法の提案．それにより最高精度を記録．</p>
-
 <p>・行動認識の結果を元に正解ラベルを更新していくという発想．</p>
-
-<h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
-
+<h2 id="コメントメモ"><code>コメント・メモ</code></h2>
 <p>ISBAの終了のタイミングを測るためのロスの取り方が不思議に感じた（詳しくは論文参照）</p>
-
 <h2 id="編集日"><code>編集日</code></h2>
-
 <p>2018/2/22</p>
-
 <h2 id="url"><code>URL</code></h2>
-
-<h2 id="paper-top-page-section-paper"><a href="/section/paper">→ Paper Top Page</a></h2>
+<h2 id="-paper-top-pagesectionpaper"><a href="/section/paper">→ Paper Top Page</a></h2>
 
     </div>
 
@@ -879,7 +841,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/06/featured.p
     
     
     
-    <script src="/js/academic.min.15494b02d66be9b96bab2e305f69c460.js"></script>
+    <script src="/js/academic.min.8f3d53582b3c04a038fca31bcc86151b.js"></script>
 
   </body>
 </html>

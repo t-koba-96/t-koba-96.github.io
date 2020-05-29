@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content=" 論文情報 ・Colin Lea , Michael D. Flynn , Rene ́ Vidal , Austin Reiter , Gregory D. Hager
+  <meta name="description" content="論文情報 ・Colin Lea , Michael D. Flynn , Rene ́ Vidal , Austin Reiter , Gregory D. Hager
 ・2016 CVPR
 ・paper
 ・code(pytorch)
@@ -98,7 +98,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.b758f8907157a692a8ecdf56cce719a3.css">
+  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
 
   
 
@@ -125,7 +125,7 @@ URL → Paper Top Page ">
   <meta property="og:site_name" content="Takuya Kobayashi">
   <meta property="og:url" content="/paper/02/">
   <meta property="og:title" content="Temporal Convolutional Networks for Action Segmentation and Detection #2 | Takuya Kobayashi">
-  <meta property="og:description" content=" 論文情報 ・Colin Lea , Michael D. Flynn , Rene ́ Vidal , Austin Reiter , Gregory D. Hager
+  <meta property="og:description" content="論文情報 ・Colin Lea , Michael D. Flynn , Rene ́ Vidal , Austin Reiter , Gregory D. Hager
 ・2016 CVPR
 ・paper
 ・code(pytorch)
@@ -521,68 +521,38 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/02/featured.p
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<h2 id="論文情報"><code>論文情報</code></h2>
-
+      <h2 id="論文情報"><code>論文情報</code></h2>
 <p>・Colin Lea , Michael D. Flynn , Rene ́ Vidal , Austin Reiter , Gregory D. Hager</p>
-
 <p>・2016 CVPR</p>
-
-<p>・<a href="https://arxiv.org/pdf/1611.05267.pdf" target="_blank">paper</a></p>
-
-<p>・<a href="https://github.com/locuslab/TCN" target="_blank">code(pytorch)</a></p>
-
-<p>・<a href="https://github.com/colincsl/TemporalConvolutionalNetworks" target="_blank">code(keras)</a></p>
-
+<p>・<a href="https://arxiv.org/pdf/1611.05267.pdf">paper</a></p>
+<p>・<a href="https://github.com/locuslab/TCN">code(pytorch)</a></p>
+<p>・<a href="https://github.com/colincsl/TemporalConvolutionalNetworks">code(keras)</a></p>
 <h2 id="概要"><code>概要</code></h2>
-
-<p>詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.<br />
+<p>詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.<br>
 ２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.</p>
-
 <h2 id="手法"><code>手法</code></h2>
-
 <p>提案した両方のTCNにおいて、入力は各フレームから何かしらのCNN(Resnet,VGG等)を用いて抽出した特徴量を時系列順に並べたものであり、出力としては行動クラス結果が各フレームごとに出力される.</p>
-
 <h2 id="ed-tcn">ED-TCN</h2>
-
 <p>エンコーダとデコーダを組み合わせたTCN. エンコーダで畳み込み＋MaxPoolingを行うことで時系列を考慮した特徴抽出、その後デコーダで畳み込み＋アップサンプリングを行うことで各フレームごとの行動クラス確率分布を得る.</p>
-
-<p><img width="400" alt="2018-11-30 22 19 28" src="https://user-images.githubusercontent.com/38309191/49291542-0babc380-f4ee-11e8-9912-026b18f4d8bb.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="dilated-tcn">Dilated TCN</h2>
-
 <p>時系列の畳み込みとしてDilated Convolutionを用いた手法. Dilated Convolutionとは簡単に説明すると、入力の間隔を空けて(間を0とみなす)畳み込みを行うこと(d=1なら間隔なし、d=２なら間隔１、d=4なら間隔３). dの値をどんどん(本論文では指数関数的に)大きくしていったDilated Convolution層を重ねることで、より長期的な時系列の範囲で特徴抽出を行うことが可能となる. またスキップコネクションの導入で層を深くすることを可能に．</p>
-
-<p><img width="400" alt="2018-11-30 22 20 33" src="https://user-images.githubusercontent.com/38309191/49291590-2bdb8280-f4ee-11e8-9444-01090dd85fe5.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="実験"><code>実験</code></h2>
-
 <p>50salads、MERL Shopping、GTEAの３種のデータセットを用いて、Spatial CNN等との比較</p>
-
-<p><img width="600" alt="2018-11-30 21 58 12" src="https://user-images.githubusercontent.com/38309191/49291839-e53a5800-f4ee-11e8-9325-46725b25cd76.png"></p>
-
-<p><img width="374" alt="2018-11-30 22 27 34" src="https://user-images.githubusercontent.com/38309191/49291938-292d5d00-f4ef-11e8-9b6f-afef4c731408.png"></p>
-
-<h2 id="特徴-新規性"><code>特徴・新規性</code></h2>
-
-<p>・各層ごとに同時に処理を行うため、入力フレーム数が増えても処理時間に影響をあまり与えない.<br />
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="特徴新規性"><code>特徴・新規性</code></h2>
+<p>・各層ごとに同時に処理を行うため、入力フレーム数が増えても処理時間に影響をあまり与えない.<br>
 　→フレームごとに処理を行うLSTM等と比較して高速な処理</p>
-
 <p>・３Dconvは動画全体(数フレーム分)に対して1つの行動クラスの出力であるのに対し、TCNでは各フレームごとに行動クラスの出力が可能</p>
-
-<h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
-
-<p>実装した体感DilatedよりEDの方が精度良い？<br />
+<h2 id="コメントメモ"><code>コメント・メモ</code></h2>
+<p>実装した体感DilatedよりEDの方が精度良い？<br>
 Dilatedはより長期的な記憶が可能である点が長所？</p>
-
 <h2 id="編集日"><code>編集日</code></h2>
-
 <p>2018/11/30</p>
-
 <h2 id="url"><code>URL</code></h2>
-
-<h2 id="paper-top-page-section-paper"><a href="/section/paper">→ Paper Top Page</a></h2>
+<h2 id="-paper-top-pagesectionpaper"><a href="/section/paper">→ Paper Top Page</a></h2>
 
     </div>
 
@@ -868,7 +838,7 @@ Dilatedはより長期的な記憶が可能である点が長所？</p>
     
     
     
-    <script src="/js/academic.min.15494b02d66be9b96bab2e305f69c460.js"></script>
+    <script src="/js/academic.min.8f3d53582b3c04a038fca31bcc86151b.js"></script>
 
   </body>
 </html>

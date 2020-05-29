@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paper - Image Understanding on Takuya Kobayashi</title>
@@ -26,7 +26,7 @@
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/25/</guid>
-      <description> 論文情報 ・Rowan Zellers et al.
+      <description>論文情報 ・Rowan Zellers et al.
 ・paper
 ・code (pytorch)
 概要 シーングラフ生成のタスクで既存のVisualGenomeデータセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案．

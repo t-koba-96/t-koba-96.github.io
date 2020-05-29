@@ -81,7 +81,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.b758f8907157a692a8ecdf56cce719a3.css">
+  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
 
   
 
@@ -487,126 +487,69 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<h2 id="3d-cnn-とは"><code>3D CNN とは</code></h2>
-
-<p>動画の行動認識のタスクにおける最近（2018年12月現在)のトレンド. 入力動画に対して空間情報(2D)と時間情報(1D)をまとめて3Dの畳み込みを行うことにより、時空間情報を考慮した動画の行動認識を行うことが可能(理論上).<br />
+      <h2 id="3d-cnn-とは"><code>3D CNN とは</code></h2>
+<p>動画の行動認識のタスクにおける最近（2018年12月現在)のトレンド. 入力動画に対して空間情報(2D)と時間情報(1D)をまとめて3Dの畳み込みを行うことにより、時空間情報を考慮した動画の行動認識を行うことが可能(理論上).  <br>
 基本的に入力としては、動画をある決まった長さのtフレームごとに分割して入力する. 例えば、後ほど出てくるC3Dモデルでは動画全体を１６フレームごとに分割して入力する. 各入力ごとに出力行動クラスを1つずつ得る. 動画全体の出力行動クラスの決定方法としてはいくつかあるが、簡単な方法としては各出力の行動クラスの平均をとってやることによって、最も割合の高い行動クラスを出力とする方法がある. 以上の全体の流れを以下に図としてまとめた.</p>
-
-<p><img width="400" alt="2018-12-02 0 26 04" src="https://user-images.githubusercontent.com/38309191/49329852-e6d84e80-f5c8-11e8-9cb4-bb946231cf4b.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="主な論文"><code>主な論文</code></h2>
-
 <h3 id="3d-convolutional-neural-networks-for-human-action-recognition"><code>3D Convolutional Neural Networks for Human Action Recognition</code></h3>
-
-<p>・<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.442.8617&amp;rep=rep1&amp;type=pdf" target="_blank">paper</a></p>
-
+<p>・<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.442.8617&amp;rep=rep1&amp;type=pdf">paper</a></p>
 <p>・2013年</p>
-
 <p>最初に3D Convolutional Neural Networkによる手法を提案.</p>
-
 <p>全体像
-<img width="700" alt="2018-12-01 15 24 34" src="https://user-images.githubusercontent.com/38309191/49324980-4c065280-f57d-11e8-94d1-66576be02af2.png"></p>
-
+<!-- raw HTML omitted --></p>
 <p>やっていることとしては畳み込み層とサブサンプリング層を交互の重ねていき、時系列の特徴抽出を行なうことで最終的に入力の動画数フレーム分から1次元の特徴ベクトルを得る.</p>
-
 <p>本論文では時系列の畳み込み(3D convolution)の際、連続する3フレームごとにまとめて畳み込みを行なっている. 以下の図の同じ色は同じ重みを表している. 2D畳み込みの際のカーネルをチャネル方向1→3に拡張したと考えれば良い.</p>
-
-<p><img width="300" alt="2018-12-01 15 36 17" src="https://user-images.githubusercontent.com/38309191/49325046-dd29f900-f57e-11e8-8790-a575c5d5b980.png"></p>
-
+<!-- raw HTML omitted -->
 <h3 id="learning-spatiotemporal-features-with-3d-convolutional-networks-c3d"><code>Learning Spatiotemporal Features with 3D Convolutional Networks (C3D)</code></h3>
-
-<p>・<a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Tran_Learning_Spatiotemporal_Features_ICCV_2015_paper.pdf" target="_blank">paper</a></p>
-
+<p>・<a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Tran_Learning_Spatiotemporal_Features_ICCV_2015_paper.pdf">paper</a></p>
 <p>・2015年ICCV</p>
-
 <p>C3Dという3DCNNのモデルを提案している. 2D CNNと３D CNNの比較の図がわかりやすい. 2Dで畳み込んだ時と違って、３Dで畳み込んだ出力はまた3Dとして出てくる.</p>
-
-<p><img width="804" alt="2018-12-01 23 41 39" src="https://user-images.githubusercontent.com/38309191/49329472-b7264800-f5c2-11e8-8af4-fa19348a545a.png"></p>
-
-<p>C3Dの全体像は以下のようになっている. 入力としては3×112×112×16フレーム、畳み込みに用いるカーネルサイズは3×3×3となっている. カーネルサイズは実験的な結果の良さを基に決定している.<br />
+<!-- raw HTML omitted -->
+<p>C3Dの全体像は以下のようになっている. 入力としては3×112×112×16フレーム、畳み込みに用いるカーネルサイズは3×3×3となっている. カーネルサイズは実験的な結果の良さを基に決定している.<br>
 3DCNNはパラメータ数が多いため，畳み込み層が8層という浅い構造．</p>
-
-<p><img width="921" alt="2018-12-02 0 33 01" src="https://user-images.githubusercontent.com/38309191/49329909-de344800-f5c9-11e8-8d99-a5b2d65cd800.png"></p>
-
+<!-- raw HTML omitted -->
 <h3 id="実験">実験</h3>
-
 <p>UCF101データセットを用いて他手法と精度の比較</p>
-
-<p><img width="300" alt="2018-12-02 1 18 00" src="https://user-images.githubusercontent.com/38309191/49330323-27879600-f5d0-11e8-9cbe-cd09289ddef8.png"></p>
-
+<!-- raw HTML omitted -->
 <p>３DCNNを単体として用いた場合の精度は85.2%. 表を見れば分かるように最も優れているわけではない.</p>
-
-<p><img width="300" alt="2018-12-02 1 18 39" src="https://user-images.githubusercontent.com/38309191/49330325-3bcb9300-f5d0-11e8-8e07-4f21e9e0140a.png"></p>
-
+<!-- raw HTML omitted -->
 <h3 id="課題">課題</h3>
-
 <p>・３Dで畳み込むため、学習する必要があるパラメータ数が多い　　
 　→深い構造に出来ない(8層）
 　→より大規模なデータセットが必要</p>
-
 <h3 id="quo-vadis-action-recognition-a-new-model-and-the-kinetics-dataset-i3d"><code>Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset (I3D)</code></h3>
-
-<p>・<a href="https://arxiv.org/pdf/1705.07750.pdf" target="_blank">paper</a></p>
-
+<p>・<a href="https://arxiv.org/pdf/1705.07750.pdf">paper</a></p>
 <p>・2017年CVPR</p>
-
-<p>・<a href="https://github.com/t-koba-96/papers/issues/5" target="_blank">詳しくはここ</a></p>
-
-<p>上記の課題を解決するため、 Kineticsデータセット呼ばれる、行動認識用の新しい大規模な動画データセットを用い、3DCNNの精度向上を実現. 新しい３DCNNのモデルとして I3Dを提案.<br />
+<p>・<a href="https://github.com/t-koba-96/papers/issues/5">詳しくはここ</a></p>
+<p>上記の課題を解決するため、 Kineticsデータセット呼ばれる、行動認識用の新しい大規模な動画データセットを用い、3DCNNの精度向上を実現. 新しい３DCNNのモデルとして I3Dを提案.<br>
 I3Dの入力は3×224×224×64フレーム．C3D(3×112×112×16フレーム)に比べて入力画像は高解像度，1度に入力できる時間長は4倍になっている．</p>
-
-<p><img width="380" alt="2018-12-02 18 07 15" src="https://user-images.githubusercontent.com/38309191/49337849-45e7a300-f65d-11e8-969f-18b2bfeb9ba6.png"></p>
-
+<!-- raw HTML omitted -->
 <h3 id="特徴">特徴　　</h3>
-
 <p>・動画の大規模データセットKineticsの提案（動画版ImageNet)</p>
-
 <p>・2DCNNを3DCNNに拡張するという発想により，C3Dに比べて大幅なパラメータの削減（パラメータ数　C3D:79M , I3D:25M ）</p>
-
 <p>・上記の２つの要因により，深い構造が可能に（C3D:8層 , I3D:22層）</p>
-
 <p>・ ImageNet等の2DCNN用のネットワークによるPretrainが可能に(同じ画像を複数重ねて動画と見立てる)</p>
-
 <p>・画像とフローのTwo-Streamを用いることで精度の向上(以下の実験結果参照)</p>
-
 <h3 id="実験-1">実験</h3>
-
 <p>UCF-101、HMDB−51、Kineticsの３つのデータセットを用いて精度の比較. (e)Two-Stream I3Dが本論文の提案手法. 入力として画像のみ、オプティカルフロー、両方(Two-Stream)を用いた場合についても比較している.</p>
-
-<p><img width="170" alt="2018-12-02 18 23 24" src="https://user-images.githubusercontent.com/38309191/49337973-67498e80-f65f-11e8-93f7-5cebe2957c0d.png"></p>
-
-<p><img width="685" alt="2018-12-02 18 16 57" src="https://user-images.githubusercontent.com/38309191/49337910-7aa82a00-f65e-11e8-9188-9fc05f99897b.png"></p>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>入力がRGBのみの場合で比較した時state-of-the-art. そこにオプティカルフロー情報を加えることで、Two-Stream 2D Cnn の時のように精度向上が可能.</p>
-
-<h2 id="3d-cnn-感想-コメント"><code>3D CNN 感想・コメント</code>　　</h2>
-
+<h2 id="3d-cnn-感想コメント"><code>3D CNN 感想・コメント</code>　　</h2>
 <p>・現在のstate-of-the-art（有名なデータセットにおいては）</p>
-
 <p>・大規模データセットKinetics(画像でいうImagenet)の登場により精度向上</p>
-
 <p>・ Inception-1vやResNetを3Dに拡張する3DCNNモデルの登場によって，ImageNetでもPretrainが可能に</p>
-
 <p>・学習にかかる時間は長そう</p>
-
 <p>・3D convolutionで考慮できる時間情報はそんなに長くない(C3Dで16フレーム，I3Dで64フレームとか)</p>
-
 <p>・3D convolutionで時間情報も畳み込んでいるのに関わらず、更にオプティカルフローとのtwo-streamにすることで精度向上
 　→結局時間情報はどこで見ているの？</p>
-
 <p>・3D convolutionは結局時間情報を見ているのではなくて、入力の数フレームの中から最も識別しやすい部分(フレーム)の特徴を抽出しているだけでは、みたいな意見も見た.</p>
-
 <p>・フレーム単位の認識に用いても同様の精度を出せるのか検証したい．</p>
-
 <h2 id="編集日"><code>編集日</code></h2>
-
 <p>2018/12/1</p>
-
 <h2 id="url"><code>URL</code></h2>
-
-<h2 id="paper-top-page-section-paper"><a href="/section/paper">→ Paper Top Page</a></h2>
+<h2 id="-paper-top-pagesectionpaper"><a href="/section/paper">→ Paper Top Page</a></h2>
 
     </div>
 
@@ -892,7 +835,7 @@ I3Dの入力は3×224×224×64フレーム．C3D(3×112×112×16フレーム)に
     
     
     
-    <script src="/js/academic.min.15494b02d66be9b96bab2e305f69c460.js"></script>
+    <script src="/js/academic.min.8f3d53582b3c04a038fca31bcc86151b.js"></script>
 
   </body>
 </html>

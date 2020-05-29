@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paper - Semantic Segmentation on Takuya Kobayashi</title>
@@ -17,7 +17,7 @@
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/07/</guid>
-      <description> 論文情報 ・CVPR2019
+      <description>論文情報 ・CVPR2019
 ・paper
 ・code(pytorch)
 概要 セグメンテーションのタスクにおいて，画像のspatial方向とchannel方向にそれぞれアテンションをかけてやることで精度向上を実現．
@@ -38,7 +38,7 @@ URL → Paper Top Page </description>
       <pubDate>Mon, 03 Jun 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/19/</guid>
-      <description> 論文情報 ・Zhaojin Huang et al.
+      <description>論文情報 ・Zhaojin Huang et al.
 ・2019 CVPR
 ・paper
 ・code(pytorch)

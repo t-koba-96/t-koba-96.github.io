@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content=" 論文情報 ・Ashish Vaswani, Noam Shazeer et al.
+  <meta name="description" content="論文情報 ・Ashish Vaswani, Noam Shazeer et al.
 ・2017 NIPS
 ・paper
 概要 機械翻訳用のネットワーク，トランスフォーマーの提案．従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法．
@@ -96,7 +96,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.b758f8907157a692a8ecdf56cce719a3.css">
+  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
 
   
 
@@ -123,7 +123,7 @@ URL → Paper Top Page ">
   <meta property="og:site_name" content="Takuya Kobayashi">
   <meta property="og:url" content="/paper/15/">
   <meta property="og:title" content="Attention is all you need #15 | Takuya Kobayashi">
-  <meta property="og:description" content=" 論文情報 ・Ashish Vaswani, Noam Shazeer et al.
+  <meta property="og:description" content="論文情報 ・Ashish Vaswani, Noam Shazeer et al.
 ・2017 NIPS
 ・paper
 概要 機械翻訳用のネットワーク，トランスフォーマーの提案．従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法．
@@ -517,70 +517,38 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/15/featured.p
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<h2 id="論文情報"><code>論文情報</code></h2>
-
+      <h2 id="論文情報"><code>論文情報</code></h2>
 <p>・Ashish Vaswani, Noam Shazeer et al.</p>
-
 <p>・2017 NIPS</p>
-
-<p>・<a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">paper</a></p>
-
+<p>・<a href="https://arxiv.org/pdf/1706.03762.pdf">paper</a></p>
 <h2 id="概要"><code>概要</code></h2>
-
 <p>機械翻訳用のネットワーク，トランスフォーマーの提案．従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法．</p>
-
 <h2 id="手法"><code>手法</code></h2>
-
 <p>ネットワーク全体の概要は以下の通り．</p>
-
-<p><img width="400" alt="2019-02-22 16 19 00" src="https://user-images.githubusercontent.com/38309191/75124684-3934ec00-56f4-11ea-924e-ceb279131c5b.png"></p>
-
+<!-- raw HTML omitted -->
 <p>エンコーダ・デコーダ共に，この手法のキモとなるMulti-Head Attentionを残差接続したものを複数層重ねた構造になっている．
 図中の Inputsは翻訳前言語の原文, Outputsは学習時においてGroundTruth・推論時はBeginning of sentence，Output Probabilitiesにおいて翻訳した文章を得る．</p>
-
 <h2 id="アテンションの構造"><code>アテンションの構造</code></h2>
-
 <p>アテンションの構造は以下のScaled Dot-Product Attention.　元の入力バッチからQ(Query),K(Key),V(Value)の３つを新たに用意して，そのうちQとKを用いて元のValueに掛け合わせるような重みマップ（Attention Map）のようなものを作成してあげる．</p>
-
-<p><img width="400" alt="2019-02-22 16 20 18" src="https://user-images.githubusercontent.com/38309191/75125018-2cb19300-56f6-11ea-8b22-64e8126b8aed.png"></p>
-
+<!-- raw HTML omitted -->
 <p>単純にAttentionではなくMulti-Headと表現されているのは，このアテンション計算の際にh分割して計算したのち，最後にまたコンカットしていることを指している．（多分計算コストの削減？精度的な寄与も関係あるかも）</p>
-
-<p><img width="400" alt="2019-02-22 16 21 40" src="https://user-images.githubusercontent.com/38309191/75125112-d42ec580-56f6-11ea-8897-627484d38380.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="既存手法に対する優位性"><code>既存手法に対する優位性</code></h2>
-
 <p>畳み込みとかリカレントネットワークに比べて長い時系列情報を見れるよねという話．あとリカレントネットワークは前の情報を引き継いで随時計算するのに対し，アテンションは一気に計算できるので，計算速度も全然早い．</p>
-
-<p><img width="600" alt="2019-02-22 16 21 40" src="https://user-images.githubusercontent.com/38309191/75125218-78187100-56f7-11ea-9e6c-5ff03ec2ecd6.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="実験"><code>実験</code></h2>
-
-<p><img width="600" alt="2019-02-22 16 21 40" src="https://user-images.githubusercontent.com/38309191/75125333-f6751300-56f7-11ea-8a68-4fd175ff4451.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="新規性"><code>新規性</code></h2>
-
 <p>アテンションのみによる新たなネットワークの提案．</p>
-
 <p>State of the art の更新．</p>
-
-<h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
-
+<h2 id="コメントメモ"><code>コメント・メモ</code></h2>
 <p>↓参考になるサイト</p>
-
-<p><a href="https://nlp.seas.harvard.edu/2018/04/03/attention.html" target="_blank">実装</a></p>
-
-<p><a href="http://jalammar.github.io/illustrated-transformer/" target="_blank">手法解説</a></p>
-
+<p><a href="https://nlp.seas.harvard.edu/2018/04/03/attention.html">実装</a></p>
+<p><a href="http://jalammar.github.io/illustrated-transformer/">手法解説</a></p>
 <h2 id="編集日"><code>編集日</code></h2>
-
 <p>2019/12/10</p>
-
 <h2 id="url"><code>URL</code></h2>
-
-<h2 id="paper-top-page-section-paper"><a href="/section/paper">→ Paper Top Page</a></h2>
+<h2 id="-paper-top-pagesectionpaper"><a href="/section/paper">→ Paper Top Page</a></h2>
 
     </div>
 
@@ -864,7 +832,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/15/featured.p
     
     
     
-    <script src="/js/academic.min.15494b02d66be9b96bab2e305f69c460.js"></script>
+    <script src="/js/academic.min.8f3d53582b3c04a038fca31bcc86151b.js"></script>
 
   </body>
 </html>

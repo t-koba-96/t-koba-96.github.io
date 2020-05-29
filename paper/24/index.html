@@ -81,7 +81,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.b758f8907157a692a8ecdf56cce719a3.css">
+  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
 
   
 
@@ -487,150 +487,80 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<h2 id="論文情報"><code>論文情報</code></h2>
-
+      <h2 id="論文情報"><code>論文情報</code></h2>
 <p>・Jianwei Yang et al. (Facebook research)</p>
-
 <p>・ECCV 2018</p>
-
-<p>・<a href="https://arxiv.org/pdf/1808.00191.pdf" target="_blank">paper</a></p>
-
-<p>・<a href="https://github.com/jwyang/graph-rcnn.pytorch" target="_blank">code (pytorch)</a></p>
-
+<p>・<a href="https://arxiv.org/pdf/1808.00191.pdf">paper</a></p>
+<p>・<a href="https://github.com/jwyang/graph-rcnn.pytorch">code (pytorch)</a></p>
 <h2 id="概要"><code>概要</code></h2>
-
 <p>GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法．Graphの参考資料は<a href="../14">こちら</a>．SceneGraphとは<a href="../31">VisualGenome</a>において定義されているもので，{Subject,Relationship(Predicate),Object} (+Attribute) によるグラフ構造で表される．例として，A man is swinging a bat というような画像内の関係性があったとき， {man, swinging, bat} (+Attribute)というふうになる．これらの関係性を考えていき，最終的には(d)の関係性の出力を目指す．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76067616-05e73c80-5fd3-11ea-8119-67d05fc1a697.png" alt="スクリーンショット 2020-03-06 17 50 46" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76067616-05e73c80-5fd3-11ea-8119-67d05fc1a697.png" alt="スクリーンショット 2020-03-06 17 50 46"></p>
 <h2 id="手法"><code>手法</code></h2>
-
 <p>全体の概要図配下の通り．３つのパートに分かれている．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76140206-372b3f80-609b-11ea-9f11-7ea8112540ea.png" alt="スクリーンショット 2020-03-07 17 43 51" /></p>
-
-<p>⓵ Object Region Proposal<br />
-⓶ Relationship Proposal<br />
+<p><img src="https://user-images.githubusercontent.com/38309191/76140206-372b3f80-609b-11ea-9f11-7ea8112540ea.png" alt="スクリーンショット 2020-03-07 17 43 51"></p>
+<p>⓵ Object Region Proposal<br>
+⓶ Relationship Proposal<br>
 ⓷ Graph Labeling</p>
-
-<p><img width="948" alt="スクリーンショット 2020-03-07 17 43 38" src="https://user-images.githubusercontent.com/38309191/76140203-30043180-609b-11ea-8bd6-e15aeac7e84c.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="object-region-proposal">Object Region Proposal</h2>
-
 <p>Faster R-CNNを学習させて物体検出．出力としては物体の位置情報（BoundingBox），特徴量，クラスラベルの３つがある．</p>
-
-<h2 id="relationship-proposal">Relationship Proposal 　</h2>
-
+<h2 id="relationship-proposal-">Relationship Proposal 　</h2>
 <p>物体検出したもののうち，全てを繋ぐようなグラフ構造はパラメータ数的にも，現実世界における物体の関係性的にも現実的ではないため，本当に重要なエッジのみ抽出する段階．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76140280-00a1f480-609c-11ea-9b85-3001bb7db3da.png" alt="スクリーンショット 2020-03-07 17 49 27" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76140280-00a1f480-609c-11ea-9b85-3001bb7db3da.png" alt="スクリーンショット 2020-03-07 17 49 27"></p>
 <p>物体がObjectである場合とSubjectである場合（Relationship次第でどっちにもなり得るということ）は分けて考慮する必要があるため，構造は一緒だが異なるパラメータをもつ学習モデルを用意してあげて，それらのを通した行列積をエッジのスコアとして用いる．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76140311-5e364100-609c-11ea-81d0-41da86f15864.png" alt="スクリーンショット 2020-03-07 17 52 05" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76140311-5e364100-609c-11ea-81d0-41da86f15864.png" alt="スクリーンショット 2020-03-07 17 52 05"></p>
 <p>最終的に，スコアの高い上位k個のエッジを次のフェーズの入力として用いる．</p>
-
 <p>また，物体ペアに関するNMSもここで行う．通常と違って，物体ペアによるIoU値を用いてNMSを行う．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76141173-0cde7f80-60a5-11ea-9593-b7484fc969db.png" alt="スクリーンショット 2020-03-07 18 54 13" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76141173-0cde7f80-60a5-11ea-9593-b7484fc969db.png" alt="スクリーンショット 2020-03-07 18 54 13"></p>
 <h2 id="graph-labeling">Graph Labeling</h2>
-
 <p>AttentionalGCNを用いて最終的に物体，関係性の分類．GraphConvによってobject，relationshipがまわりのグラフ構造を考慮した上でそれぞれの特徴量を更新していく．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76141118-a3f70780-60a4-11ea-824c-756aa12e8372.png" alt="スクリーンショット 2020-03-07 18 51 19" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76141118-a3f70780-60a4-11ea-824c-756aa12e8372.png" alt="スクリーンショット 2020-03-07 18 51 19"></p>
 <p>A. Objectの更新について</p>
-
 <p>大きく３つの関係性を踏まえて特徴量の更新　</p>
-
 <p>⓵ 自分のまわりのObject(Message from other objects)</p>
-
 <p>ただしObjectに関してはSkipconnectionを採用していて，離れたノード同士の関係性も考慮するようにしている．アテンションのαがskipとされているのもそのためである．特徴行列に掛け合わせる隣接行列のパラメータも学習させることで，隣接行列がノード同士の関係性を表すアテンションであるとみなすのがAttentionalGCN．そのため通常は同じノードを繋ぐ対角成分は１，エッジによってつながっていないノード同士は0となるようにし，残りの部分を学習させていくが，skipの場合は全ノード考慮するため，０成分で埋めずに対角成分以外をすべて更新していく．</p>
-
 <p>⓶ Subjectからみたrelationship</p>
-
 <p>⓷ Objectからみたrelationship</p>
-
 <p>注意としては⓶，⓷を区別する必要あり</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76140548-15cc5280-609f-11ea-9358-abb51ee7b3de.png" alt="スクリーンショット 2020-03-07 18 11 30" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76140548-15cc5280-609f-11ea-9358-abb51ee7b3de.png" alt="スクリーンショット 2020-03-07 18 11 30"></p>
 <p>B. Relationshipの更新について</p>
-
 <p>⓵ Relationshipからみたsubject</p>
-
 <p>⓶ Relationshipからみたobject</p>
-
 <p>同様に⓶，⓷の区別の必要あり．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76141083-4d89c900-60a4-11ea-90f7-8eb612ca3059.png" alt="スクリーンショット 2020-03-07 18 48 54" /></p>
-
-<h2 id="損失関数-学習"><code>損失関数・学習</code></h2>
-
-<p><a href="https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation" target="_blank">参考文献</a>より引用</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76140447-cfc2bf00-609d-11ea-893a-14f26273a77d.png" alt="スクリーンショット 2020-03-07 18 01 35" /></p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76140449-d2251900-609d-11ea-96e9-47ae94ed1bc1.png" alt="スクリーンショット 2020-03-07 18 01 55" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76141083-4d89c900-60a4-11ea-90f7-8eb612ca3059.png" alt="スクリーンショット 2020-03-07 18 48 54"></p>
+<h2 id="損失関数学習"><code>損失関数・学習</code></h2>
+<p><a href="https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation">参考文献</a>より引用</p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76140447-cfc2bf00-609d-11ea-893a-14f26273a77d.png" alt="スクリーンショット 2020-03-07 18 01 35"></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76140449-d2251900-609d-11ea-96e9-47ae94ed1bc1.png" alt="スクリーンショット 2020-03-07 18 01 55"></p>
 <h2 id="評価方法"><code>評価方法</code></h2>
-
 <p><a href="../31">VisualGenome</a>で用いられていたSGGenという評価方法を改善し，SGGen+と呼ばれる新たな評価軸を提案．</p>
-
 <h2 id="sggen">SGGen</h2>
-
 <p>以下の二つの評価によって決定される．</p>
-
-<p>⓵　{Subject,Relationship(Predicate),Object}　のすべての要素が完全に一致している<br />
+<p>⓵　{Subject,Relationship(Predicate),Object}　のすべての要素が完全に一致している<br>
 ⓶　SubjectとObjectのローカライズ（位置予測）におけるIoUがともに0.5以上</p>
-
 <p>について，両方満たしているときのみ正解として扱われ，１点加点される．しかしこれでは条件が厳しいため，見当違いな出力と１箇所だけ違う惜しい出力も同じとみなされ，結果の反映が正確にできていないと言える．</p>
-
 <h2 id="sggen-1">SGGen+</h2>
-
 <p>そこで新しく，以下の３つの評価それぞれについて，満たしていれば随時１点加点される．</p>
-
-<p>⓵C(0)：正しく認識された(位置，クラス) Objectノードの数<br />
-⓶C(P)：SubjectとObjectのローカライズ（位置予測）におけるIoUがともに0.5以上で，Relation(predicat)が正しいとき<br />
+<p>⓵C(0)：正しく認識された(位置，クラス) Objectノードの数<br>
+⓶C(P)：SubjectとObjectのローカライズ（位置予測）におけるIoUがともに0.5以上で，Relation(predicat)が正しいとき<br>
 ⓷C(T)：SGGenの評価</p>
-
 <p>これらの合計点数をノードとエッジの合計Nで割ったもの.</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76139951-df8bd480-6098-11ea-96c9-42f4e52a928e.png" alt="スクリーンショット 2020-03-07 17 27 03" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76139951-df8bd480-6098-11ea-96c9-42f4e52a928e.png" alt="スクリーンショット 2020-03-07 17 27 03"></p>
 <h2 id="比較結果">比較結果</h2>
-
 <p>SGGenとSGGen+の比較結果(SGGen+については分母)．SGGen+を用いた方が，より正解に近いグラフが出力できたときそれをより反映できるような評価値となっている．</p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76068119-e7357580-5fd3-11ea-8499-d496d1665b0a.png" alt="スクリーンショット 2020-03-06 17 57 07" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76068119-e7357580-5fd3-11ea-8499-d496d1665b0a.png" alt="スクリーンショット 2020-03-06 17 57 07"></p>
 <h2 id="実験"><code>実験</code></h2>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76068156-fc120900-5fd3-11ea-916c-334c0d994886.png" alt="スクリーンショット 2020-03-06 17 57 42" /></p>
-
-<p><img src="https://user-images.githubusercontent.com/38309191/76068178-07653480-5fd4-11ea-82b7-d46162aef160.png" alt="スクリーンショット 2020-03-06 17 57 57" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/38309191/76068156-fc120900-5fd3-11ea-916c-334c0d994886.png" alt="スクリーンショット 2020-03-06 17 57 42"></p>
+<p><img src="https://user-images.githubusercontent.com/38309191/76068178-07653480-5fd4-11ea-82b7-d46162aef160.png" alt="スクリーンショット 2020-03-06 17 57 57"></p>
 <h2 id="新規性"><code>新規性</code></h2>
-
 <p>GraphConvを用いたシーングラフの生成に関する初期の論文であり基本形．</p>
-
-<h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
-
-<p><a href="https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation" target="_blank">参考文献</a></p>
-
+<h2 id="コメントメモ"><code>コメント・メモ</code></h2>
+<p><a href="https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation">参考文献</a></p>
 <p>Objectという単語がSubjectと区別している場合としていない場合の２通りの使われ方がしていて紛らわしく感じた．</p>
-
 <h2 id="編集日"><code>編集日</code></h2>
-
 <p>2020/03/06</p>
-
 <h2 id="url"><code>URL</code></h2>
-
-<h2 id="paper-top-page-section-paper"><a href="/section/paper">→ Paper Top Page</a></h2>
+<h2 id="-paper-top-pagesectionpaper"><a href="/section/paper">→ Paper Top Page</a></h2>
 
     </div>
 
@@ -918,7 +848,7 @@
     
     
     
-    <script src="/js/academic.min.15494b02d66be9b96bab2e305f69c460.js"></script>
+    <script src="/js/academic.min.8f3d53582b3c04a038fca31bcc86151b.js"></script>
 
   </body>
 </html>

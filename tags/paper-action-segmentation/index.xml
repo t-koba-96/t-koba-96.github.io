@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paper - Action Segmentation on Takuya Kobayashi</title>
@@ -17,11 +17,10 @@
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
       
       <guid>/paper/13/</guid>
-      <description> 論文情報 ・Yazan Abu Farha, Alexander Richard, Juergen Gall
+      <description>論文情報 ・Yazan Abu Farha, Alexander Richard, Juergen Gall
 ・CVPR 2018
 ・paper
-概要   Slideshare 
-編集日 2020/02/13
+概要 編集日 2020/02/13
 URL → Paper Top Page </description>
     </item>
     
@@ -49,7 +48,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/08/</guid>
-      <description> 論文情報 ・Yazan Abu Farha and Juergen Gall
+      <description>論文情報 ・Yazan Abu Farha and Juergen Gall
 ・201９ CVPR
 ・paper
 ・code(pytorch)
@@ -71,7 +70,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/02/</guid>
-      <description> 論文情報 ・Colin Lea , Michael D. Flynn , Rene ́ Vidal , Austin Reiter , Gregory D. Hager
+      <description>論文情報 ・Colin Lea , Michael D. Flynn , Rene ́ Vidal , Austin Reiter , Gregory D. Hager
 ・2016 CVPR
 ・paper
 ・code(pytorch)
@@ -97,7 +96,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/11/</guid>
-      <description> 論文情報 ・Li Ding, Chenliang Xu
+      <description>論文情報 ・Li Ding, Chenliang Xu
 ・2017
 ・paper
 概要 アクションセグメンテーションのタスク．TCNとBi-Directional LSTMを組み合わせることによって精度が向上したという論文．
@@ -116,7 +115,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/06/</guid>
-      <description> 論文情報 ・Li Ding, Chenliang xu
+      <description>論文情報 ・Li Ding, Chenliang xu
 ・2018 CVPR
 ・paper
 概要 Action Segmentation のタスクにおいてWeakly-supervisedな手法. 学習用の動画デートセットの正解として，動画内の行動ラベルの順番のみ与える（各フレームにおける正解ラベルはなし）. 同様のWeakly-Supervisedな手法と比較して最高精度を記録．

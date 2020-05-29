@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paper - Graph Conv on Takuya Kobayashi</title>
@@ -26,11 +26,10 @@
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
       
       <guid>/paper/12/</guid>
-      <description> 論文情報 ・Sibei Yang et al.
+      <description>論文情報 ・Sibei Yang et al.
 ・ICCV 2019
 ・paper
-概要   SlideShare 
-編集日 2020/02/10
+概要 編集日 2020/02/10
 URL → Paper Top Page </description>
     </item>
     
@@ -49,7 +48,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0900</pubDate>
       
       <guid>/paper/26/</guid>
-      <description> 論文情報 ・Jingwei Ji et al.
+      <description>論文情報 ・Jingwei Ji et al.
 ・paper
 ・データセット未だ公開なし
 概要 Visual Genomeの動画版のデータセット．またFeature Banksを用いた手法の提案．
@@ -71,7 +70,7 @@ URL → Paper Top Page </description>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/31/</guid>
-      <description> 論文情報 ・Ranjay Krishna et al.
+      <description>論文情報 ・Ranjay Krishna et al.
 ・paper
 ・dataset
 概要 画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成．SceneGraphの研究分野で一般的に使われているデータセットとなっている．

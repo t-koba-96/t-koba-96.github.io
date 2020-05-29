@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paper - Action Recognition on Takuya Kobayashi</title>
@@ -17,7 +17,7 @@
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0900</pubDate>
       
       <guid>/paper/26/</guid>
-      <description> 論文情報 ・Jingwei Ji et al.
+      <description>論文情報 ・Jingwei Ji et al.
 ・paper
 ・データセット未だ公開なし
 概要 Visual Genomeの動画版のデータセット．またFeature Banksを用いた手法の提案．
@@ -39,7 +39,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/23/</guid>
-      <description> 論文情報 ・Chao-Yuan Wu et al. (Facebook research)
+      <description>論文情報 ・Chao-Yuan Wu et al. (Facebook research)
 ・paper
 概要 ３DCNNでは4秒近くにおける時系列情報しか捉えられない．そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文．
 手法 ３DCNNの元論文では，何フレームごとかに得た特徴をROI Poolingによってある区間における平均特徴量としたのち，全結合層で分類問題を解く（下図）．しかしこれではShortTermな情報しか捉えられず，ビデオ全体から判断が必要な情報が抜け落ちてしまう．
@@ -57,7 +57,7 @@ URL → Paper Top Page </description>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/18/</guid>
-      <description> 論文情報 ・Christoph Feichtenhofer et al. (Facebook)
+      <description>論文情報 ・Christoph Feichtenhofer et al. (Facebook)
 ・2019 CVPR
 ・paper
 概要 タイトルの通り，フレームレートの違う２種類（Slow , Fast）の入力を組み合わせることによって動画認識の精度が向上したという内容．SlowではSemanticな情報（長期に渡って普遍的な情報），Fastでは動きの情報（短期的に遷移する情報）を認識できるので，これらを組み合わせれば両方の情報を得られるよねというストーリー．
@@ -85,7 +85,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/05/</guid>
-      <description> 論文情報 ・Joao Carreira , Andrew Zisserman
+      <description>論文情報 ・Joao Carreira , Andrew Zisserman
 ・2017 CVPR
 ・paper
 ・code(tensorflow)
@@ -100,7 +100,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/04/</guid>
-      <description> 論文情報 ・Chao Li , Qiaoyong Zhong , Die Xie , Shiliang Pu
+      <description>論文情報 ・Chao Li , Qiaoyong Zhong , Die Xie , Shiliang Pu
 ・2017 CVPR
 ・paper
 概要 Skeleton-basedの行動認識においてCNNを用いた手法. Skeleton motion によるTwo-stream化とSkeleton Transformerによって精度向上を実現、実験においてLSTMより良い結果.
@@ -123,7 +123,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/01/</guid>
-      <description> 論文情報 ・Karen Simonyan , Andrew Zisserman
+      <description>論文情報 ・Karen Simonyan , Andrew Zisserman
 ・2014
 ・paper
 ・code(pytorch)
@@ -145,7 +145,7 @@ URL → Paper Top Page </description>
       <pubDate>Mon, 03 Jun 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/22/</guid>
-      <description> 論文情報 ・Pierre Sermanet et al. (Google Brain)
+      <description>論文情報 ・Pierre Sermanet et al. (Google Brain)
 ・paper
 概要 Action recognition　におけるSelf-supervisedな事前学習方法の提案．異なる視点から撮った同じアクションにおける同フレームは同じアクションであるとみなせるため，同じフレーム同士は近づけて，ことなるフレームは遠ざけるといったトリプレットな学習方法ができる．
 手法 概要図は以下の通り．

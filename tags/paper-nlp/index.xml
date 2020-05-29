@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paper - NLP on Takuya Kobayashi</title>
@@ -17,11 +17,10 @@
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
       
       <guid>/paper/12/</guid>
-      <description> 論文情報 ・Sibei Yang et al.
+      <description>論文情報 ・Sibei Yang et al.
 ・ICCV 2019
 ・paper
-概要   SlideShare 
-編集日 2020/02/10
+概要 編集日 2020/02/10
 URL → Paper Top Page </description>
     </item>
     
@@ -31,7 +30,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/15/</guid>
-      <description> 論文情報 ・Ashish Vaswani, Noam Shazeer et al.
+      <description>論文情報 ・Ashish Vaswani, Noam Shazeer et al.
 ・2017 NIPS
 ・paper
 概要 機械翻訳用のネットワーク，トランスフォーマーの提案．従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法．
@@ -55,7 +54,7 @@ URL → Paper Top Page </description>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/16/</guid>
-      <description> 論文情報 ・Jacob Devlin, Ming-Wei Chang et al.
+      <description>論文情報 ・Jacob Devlin, Ming-Wei Chang et al.
 ・2018
 ・paper
 ・code(Tensorflow)
@@ -77,7 +76,7 @@ URL → Paper Top Page </description>
       <pubDate>Mon, 03 Jun 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/21/</guid>
-      <description> 論文情報 ・Chen Sun et al. (Google Research)
+      <description>論文情報 ・Chen Sun et al. (Google Research)
 ・2019 CVPR
 ・paper
 概要 Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，Bertを応用することでマルチモーダルに事前学習させる方法を提案．基本的にはBertのMask穴埋め問題をLanguage+Visionに拡張したもの．
@@ -99,11 +98,10 @@ URL → Paper Top Page </description>
       <pubDate>Mon, 03 Jun 2019 00:00:00 +0900</pubDate>
       
       <guid>/paper/20/</guid>
-      <description> 情報 言語における事前学習の参考スライド（引用）
+      <description>情報 言語における事前学習の参考スライド（引用）
 概要 ⓵事前学習言語モデルを用いたVision &amp;amp; Languageの動向
- 
 ⓶事前学習言語モデルの動向
- コメント・メモ 編集日 2019/02/23
+コメント・メモ 編集日 2019/02/23
 URL → Paper Top Page </description>
     </item>
     

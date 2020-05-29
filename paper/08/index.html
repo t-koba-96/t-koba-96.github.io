@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content=" 論文情報 ・Yazan Abu Farha and Juergen Gall
+  <meta name="description" content="論文情報 ・Yazan Abu Farha and Juergen Gall
 ・201９ CVPR
 ・paper
 ・code(pytorch)
@@ -94,7 +94,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.b758f8907157a692a8ecdf56cce719a3.css">
+  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
 
   
 
@@ -121,7 +121,7 @@ URL → Paper Top Page ">
   <meta property="og:site_name" content="Takuya Kobayashi">
   <meta property="og:url" content="/paper/08/">
   <meta property="og:title" content="MS-TCN: Multi-Stage Temporal Convolutional Network for Action Segmentation #8 | Takuya Kobayashi">
-  <meta property="og:description" content=" 論文情報 ・Yazan Abu Farha and Juergen Gall
+  <meta property="og:description" content="論文情報 ・Yazan Abu Farha and Juergen Gall
 ・201９ CVPR
 ・paper
 ・code(pytorch)
@@ -513,66 +513,36 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/08/featured.p
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<h2 id="論文情報"><code>論文情報</code></h2>
-
+      <h2 id="論文情報"><code>論文情報</code></h2>
 <p>・Yazan Abu Farha and Juergen Gall</p>
-
 <p>・201９  CVPR</p>
-
-<p>・<a href="https://arxiv.org/pdf/1903.01945.pdf" target="_blank">paper</a></p>
-
-<p>・<a href="https://github.com/yabufarha/ms-tcn" target="_blank">code(pytorch)</a></p>
-
+<p>・<a href="https://arxiv.org/pdf/1903.01945.pdf">paper</a></p>
+<p>・<a href="https://github.com/yabufarha/ms-tcn">code(pytorch)</a></p>
 <h2 id="概要"><code>概要</code></h2>
-
-<p>行動認識のタスクにおいて,<a href="https://github.com/t-koba-96/paper_summarize/issues/2" target="_blank">Temporal Convolutional Networks</a>を複数重ねるMulti-TCNの提案．２個目以降のTCNには各クラスのPredictのSoftmax値を入力とすることで，OverSegmentation（予測結果の頻繁な変化）の抑止を実現．</p>
-
+<p>行動認識のタスクにおいて,<a href="https://github.com/t-koba-96/paper_summarize/issues/2">Temporal Convolutional Networks</a>を複数重ねるMulti-TCNの提案．２個目以降のTCNには各クラスのPredictのSoftmax値を入力とすることで，OverSegmentation（予測結果の頻繁な変化）の抑止を実現．</p>
 <h2 id="手法"><code>手法</code></h2>
-
-<p>下図のようにTCNを複数ステージ重ねていき，最終ステージの出力を予測結果として用いる．特徴として，２ステージ目以降の入力は前のステージのSoftmax出力を使う．<br />
+<p>下図のようにTCNを複数ステージ重ねていき，最終ステージの出力を予測結果として用いる．特徴として，２ステージ目以降の入力は前のステージのSoftmax出力を使う．<br>
 イメージとしては，１ステージ目で大まかな行動の認識を行って，２ステージ目以降では時系列情報を考慮しながら細かい行動遷移の予測（主にOversegmentationの抑止）を行っている感じ？</p>
-
-<p><img width="369" alt="スクリーンショット 2019-04-22 20 25 22" src="https://user-images.githubusercontent.com/38309191/56498481-d1929b00-653c-11e9-9e08-1e375a0fa2e9.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="ロス">ロス</h2>
-
 <p>交差エントロピーに加え，以下のようにフレーム間での正解クラスの予測値の変化を罰している．クラスが本当に切り替わるところは考慮しないよう，閾値を設けている．</p>
-
-<p><img width="294" alt="スクリーンショット 2019-04-22 20 33 21" src="https://user-images.githubusercontent.com/38309191/56498721-018e6e00-653e-11e9-89bc-31d3d5fe8e91.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="実験"><code>実験</code></h2>
-
 <h2 id="dataset">Dataset</h2>
-
-<p><a href="https://cvip.computing.dundee.ac.uk/datasets/foodpreparation/50salads/" target="_blank">50salads</a></p>
-
+<p><a href="https://cvip.computing.dundee.ac.uk/datasets/foodpreparation/50salads/">50salads</a></p>
 <h2 id="single-tcnとの比較">Single-TCNとの比較</h2>
-
-<p><img width="353" alt="スクリーンショット 2019-04-22 20 36 36" src="https://user-images.githubusercontent.com/38309191/56498806-5cc06080-653e-11e9-8412-199647b033b3.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="ロスの違いによる比較">ロスの違いによる比較</h2>
-
-<p><img width="358" alt="スクリーンショット 2019-04-22 20 36 46" src="https://user-images.githubusercontent.com/38309191/56498809-5e8a2400-653e-11e9-8cca-71b62d40f6d6.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="新規性"><code>新規性</code></h2>
-
 <p>・クラス毎のsoftmax値を次のステージへの入力に用いている</p>
-
 <p>・ロスの提案</p>
-
-<h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
-
+<h2 id="コメントメモ"><code>コメント・メモ</code></h2>
 <p>ステージへの入力の工夫が面白いと感じた．Action SegmentationのlossはCross Entropyだけじゃなく付加的に色々試してみる価値あり．</p>
-
 <h2 id="編集日"><code>編集日</code></h2>
-
 <p>2019/4/22</p>
-
 <h2 id="url"><code>URL</code></h2>
-
-<h2 id="paper-top-page-section-paper"><a href="/section/paper">→ Paper Top Page</a></h2>
+<h2 id="-paper-top-pagesectionpaper"><a href="/section/paper">→ Paper Top Page</a></h2>
 
     </div>
 
@@ -858,7 +828,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/08/featured.p
     
     
     
-    <script src="/js/academic.min.15494b02d66be9b96bab2e305f69c460.js"></script>
+    <script src="/js/academic.min.8f3d53582b3c04a038fca31bcc86151b.js"></script>
 
   </body>
 </html>

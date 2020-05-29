@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content=" 論文情報 ・Karen Simonyan , Andrew Zisserman
+  <meta name="description" content="論文情報 ・Karen Simonyan , Andrew Zisserman
 ・2014
 ・paper
 ・code(pytorch)
@@ -94,7 +94,7 @@ URL → Paper Top Page ">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.b758f8907157a692a8ecdf56cce719a3.css">
+  <link rel="stylesheet" href="/css/academic.min.8c849d17433f9d03eade05ed83ddc627.css">
 
   
 
@@ -121,7 +121,7 @@ URL → Paper Top Page ">
   <meta property="og:site_name" content="Takuya Kobayashi">
   <meta property="og:url" content="/paper/01/">
   <meta property="og:title" content="Two-Stream Convolutional Networks for Action Recognition in Videos #1 | Takuya Kobayashi">
-  <meta property="og:description" content=" 論文情報 ・Karen Simonyan , Andrew Zisserman
+  <meta property="og:description" content="論文情報 ・Karen Simonyan , Andrew Zisserman
 ・2014
 ・paper
 ・code(pytorch)
@@ -513,62 +513,35 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/01/featured.p
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<h2 id="論文情報"><code>論文情報</code></h2>
-
+      <h2 id="論文情報"><code>論文情報</code></h2>
 <p>・Karen Simonyan , Andrew Zisserman</p>
-
 <p>・2014</p>
-
-<p>・<a href="https://arxiv.org/pdf/1406.2199.pdf" target="_blank">paper</a></p>
-
-<p>・<a href="https://github.com/jeffreyhuang1/two-stream-action-recognition" target="_blank">code(pytorch)</a></p>
-
-<p>・<a href="https://github.com/wushidonguc/two-stream-action-recognition-keras" target="_blank">code(keras)</a></p>
-
+<p>・<a href="https://arxiv.org/pdf/1406.2199.pdf">paper</a></p>
+<p>・<a href="https://github.com/jeffreyhuang1/two-stream-action-recognition">code(pytorch)</a></p>
+<p>・<a href="https://github.com/wushidonguc/two-stream-action-recognition-keras">code(keras)</a></p>
 <h2 id="概要"><code>概要</code></h2>
-
 <p>空間情報（静止画）と時間情報（ フレーム間の動き）をそれぞれ畳み込んだ結果を統合することによる行動認識の手法を提案.</p>
-
 <h2 id="手法"><code>手法</code></h2>
-
 <p>Spatial stream ConvNet(以後Spatial Conv)とTemporal stream ConvNet(以後Temporal Conv)の組み合わせ. Spatial Convでは各フレームの静止画（RGB画像）を入力して畳み込み、空間情報の抽出によるクラス分類. Temporal Convでは各フレームのオプティカルフローを入力して畳み込み、動き情報の抽出によるクラス分類.   下図のように，Spatial Convにおける1つの入力フレームに対して，Temporal ConvではそのフレームからNフレーム分のオプティカルフローを用いる．（RGBとオプティカルフローの入力が1:N）．
 最終的な結果は、それぞれのネットワークのクラスの確率分布を統合し、最も高確率のクラスを出力.</p>
-
-<p><img width="576" alt="2018-11-30 18 23 32" src="https://user-images.githubusercontent.com/38309191/49281264-7b5e8600-f4cf-11e8-8a46-6902f75e2b90.png"></p>
-
+<!-- raw HTML omitted -->
 <p>Temporal Convにおいて、オプティカルフローは各フレームにおいてそれぞれ X,Y 方向に2次元配列として入力. よって、入力動画のRGBフレーム数がTの時、入力するオプティカルフローのフレーム数は2NT</p>
-
-<p><img width="590" alt="2018-11-30 18 23 42" src="https://user-images.githubusercontent.com/38309191/49281727-a4334b00-f4d0-11e8-934d-088a32deb1b5.png"></p>
-
+<!-- raw HTML omitted -->
 <h2 id="実験"><code>実験</code></h2>
-
 <p>UCF-101、HMDB-51データセットを用いてハンドクラフト特徴量を用いた行動認識（IDT等）と比較.</p>
-
 <p>・UCF-101データセット
-<img width="400" alt="2018-11-30 18 34 21" src="https://user-images.githubusercontent.com/38309191/49281444-eb6d0c00-f4cf-11e8-9372-f63bb53526b7.png"></p>
-
+<!-- raw HTML omitted --></p>
 <p>・HMDB-501
-<img width="400" alt="2018-11-30 18 46 21" src="https://user-images.githubusercontent.com/38309191/49281736-abf2ef80-f4d0-11e8-8edb-4dfbeb960410.png"></p>
-
+<!-- raw HTML omitted --></p>
 <p>またSpatial Conv、Temporal Convそれぞれ単独で用いた場合とも比較.</p>
-
-<p><img width="604" alt="2018-11-30 18 51 39" src="https://user-images.githubusercontent.com/38309191/49281864-03915b00-f4d1-11e8-9b05-6e2f15c48694.png"></p>
-
+<!-- raw HTML omitted -->
 <p>UCF-101においては最も高精度. HMDB-51においてはハンドクラフトの方が高精度の場合も</p>
-
-<h2 id="コメント-メモ"><code>コメント・メモ</code></h2>
-
+<h2 id="コメントメモ"><code>コメント・メモ</code></h2>
 <p>・Two Stream は 3DCNNとかでも効果が確認されているし，オプティカルフローはなんだかんだ優秀？</p>
-
 <h2 id="編集日"><code>編集日</code></h2>
-
 <p>2018/11/30</p>
-
 <h2 id="url"><code>URL</code></h2>
-
-<h2 id="paper-top-page-section-paper"><a href="/section/paper">→ Paper Top Page</a></h2>
+<h2 id="-paper-top-pagesectionpaper"><a href="/section/paper">→ Paper Top Page</a></h2>
 
     </div>
 
@@ -854,7 +827,7 @@ URL → Paper Top Page "><meta property="og:image" content="/paper/01/featured.p
     
     
     
-    <script src="/js/academic.min.15494b02d66be9b96bab2e305f69c460.js"></script>
+    <script src="/js/academic.min.8f3d53582b3c04a038fca31bcc86151b.js"></script>
 
   </body>
 </html>
