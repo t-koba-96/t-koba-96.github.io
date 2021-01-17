@@ -7,7 +7,7 @@
 
 To watch in local  
 
-``````
+```
 hugo -w server
 ```
 
