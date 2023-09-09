@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Noam Shazeer | Bianca Blog</title>
+    <link>https://example.com/author/noam-shazeer/</link>
+      <atom:link href="https://example.com/author/noam-shazeer/index.xml" rel="self" type="application/rss+xml" />
+    <description>Noam Shazeer</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Noam Shazeer</title>
+      <link>https://example.com/author/noam-shazeer/</link>
+    </image>
+    
+    <item>
+      <title>Attention is all you need</title>
+      <link>https://example.com/publication/transformer/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/transformer/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;機械翻訳用のネットワーク，トランスフォーマーの提案。従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ネットワーク全体の概要は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75124684-3934ec00-56f4-11ea-924e-ceb279131c5b.png&#34;&gt;
+&lt;p&gt;エンコーダ・デコーダ共に，この手法のキモとなるMulti-Head Attentionを残差接続したものを複数層重ねた構造になっている。
+図中の Inputsは翻訳前言語の原文, Outputsは学習時においてGroundTruth・推論時はBeginning of sentence，Output Probabilitiesにおいて翻訳した文章を得る。&lt;/p&gt;
+&lt;h2 id=&#34;アテンションの構造&#34;&gt;アテンションの構造&lt;/h2&gt;
+&lt;p&gt;アテンションの構造は以下のScaled Dot-Product Attention.　元の入力バッチからQ(Query),K(Key),V(Value)の３つを新たに用意して，そのうちQとKを用いて元のValueに掛け合わせるような重みマップ（Attention Map）のようなものを作成してあげる。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 20 18&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125018-2cb19300-56f6-11ea-8b22-64e8126b8aed.png&#34;&gt;
+&lt;p&gt;単純にAttentionではなくMulti-Headと表現されているのは，このアテンション計算の際にh分割して計算したのち，最後にまたコンカットしていることを指している。（多分計算コストの削減？精度的な寄与も関係あるかも）&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125112-d42ec580-56f6-11ea-8897-627484d38380.png&#34;&gt;
+&lt;h2 id=&#34;既存手法に対する優位性&#34;&gt;既存手法に対する優位性&lt;/h2&gt;
+&lt;p&gt;畳み込みとかリカレントネットワークに比べて長い時系列情報を見れるよねという話。あとリカレントネットワークは前の情報を引き継いで随時計算するのに対し，アテンションは一気に計算できるので，計算速度も全然早い。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125218-78187100-56f7-11ea-9e6c-5ff03ec2ecd6.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125333-f6751300-56f7-11ea-8a68-4fd175ff4451.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;アテンションのみによる新たなネットワークの提案。&lt;/p&gt;
+&lt;p&gt;State of the art の更新。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

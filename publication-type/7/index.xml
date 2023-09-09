@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>7 | Bianca Blog</title>
+    <link>https://example.com/publication-type/7/</link>
+      <atom:link href="https://example.com/publication-type/7/index.xml" rel="self" type="application/rss+xml" />
+    <description>7</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>7</title>
+      <link>https://example.com/publication-type/7/</link>
+    </image>
+    
+    <item>
+      <title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</title>
+      <link>https://example.com/publication/bert/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/bert/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Bi-directional な &lt;a href=&#34;https://example.com/paper/15/&#34;&gt;Transformer&lt;/a&gt; を用いて，自然言語分野における新たな事前学習手法を提案。言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習。&lt;br&gt;
+　トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM。&lt;br&gt;
+　単一の文章における単語の関連性による出現確率についてだけでなく，２つの文章を比較させることによって文章全体としてより良い特徴表現を得ようということを目的としているのがNSP.&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75126078-ac8e2c00-56fb-11ea-8461-a89f2a8048e0.png&#34;&gt;
+&lt;h2 id=&#34;masked-language-model&#34;&gt;Masked Language Model&lt;/h2&gt;
+&lt;p&gt;入力の単語を予めいくつかマスキングしてしまい穴埋め問題を溶かせることによって，マスキングした部分の単語を前後の文脈の理解から復元させるタスク。入力シーケンスのうち，15%をランダムに選んでその部分の予測を行う。選んだ部分のうち80%はマスキング，10%は別の単語に置き換え，残りの10%はそのままの単語として入力させている。前後の文脈を考慮した特徴量抽出を行うことが目的。&lt;/p&gt;
+&lt;h2 id=&#34;next-sentence-prediction&#34;&gt;Next Sentence Prediction&lt;/h2&gt;
+&lt;p&gt;２つの文章を並べて入力してあげて，２文目が１文目の次に来る文かどうかを予測するタスク。２つの文章を比較して予測結果を返すため，文章全体として良い特徴表現を得ることが期待できる。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34;  src=&#34;https://user-images.githubusercontent.com/38309191/75126590-0ee82c00-56fe-11ea-852f-ec956e4050cf.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;800&#34; alt=&#34;2019-02-22 16 19 00&#34;  src=&#34;https://user-images.githubusercontent.com/38309191/75126606-20c9cf00-56fe-11ea-8818-cac7e646c346.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;新たな事前学習の枠組み。&lt;/p&gt;
+&lt;p&gt;様々なタスクに転用するだけで精度向上。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Representation Learning with Contrastive Predictive Coding</title>
+      <link>https://example.com/publication/contrastivepredictivecoding/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/contrastivepredictivecoding/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;画像や音声における新しい表現学習の方法を提案。エンコーダーとGRUを組み合わせてGRUが次のエンコーダの出力を予測して,その相互情報量の最大化によって良い特徴表現を獲得する。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;下図は音声入力の例。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134412-789ef900-6061-11ea-8859-d387ef3ad64e.png&#34; alt=&#34;スクリーンショット 2020-03-07 10 50 30&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;GRUの出力が次の潜在表現を回帰・予測し，その相互情報量の最大化を目指すことによって良い特徴表現を得る。&lt;/p&gt;
+&lt;h2 id=&#34;ロス&#34;&gt;ロス&lt;/h2&gt;
+&lt;p&gt;NCEベースのロスを使用し，同じペアは近づけるように，ランダムにサンプルしたペアを遠ざけるよう学習。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134666-63c36500-6063-11ea-9f72-06d67bdaee2e.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 04 14&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;画像の場合&#34;&gt;画像の場合&lt;/h2&gt;
+&lt;p&gt;画像の場合そのままでは系列データにできないので，パッチごとにずらしていくことで系列データとして扱う。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134705-b8ff7680-6063-11ea-95eb-79502e372f83.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 06 35&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;画像&#34;&gt;画像&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134741-ff54d580-6063-11ea-960d-68285a774a83.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 08 34&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;言語&#34;&gt;言語&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134742-05e34d00-6064-11ea-888b-ffaf120fb77b.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 08 45&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;t-sneによる音声表現の可視化&#34;&gt;t-SNEによる音声表現の可視化&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134751-1693c300-6064-11ea-89f1-47f77b9ee28f.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 09 14&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;系列データにおいて次の潜在表現を予測し，相互情報量の最大化を目的にすることによる良い表現の獲得。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Time-Contrastive Networks: Self-Supervised Learning from Video</title>
+      <link>https://example.com/publication/tcnetworks/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/tcnetworks/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Action recognition　におけるSelf-supervisedな事前学習方法の提案。異なる視点から撮った同じアクションにおける同フレームは同じアクションであるとみなせるため，同じフレーム同士は近づけて，ことなるフレームは遠ざけるといったトリプレットな学習方法ができる。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;概要図は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;p&gt;異なる視点のビデオを比べたとき，同じタイムスタンプである青フレームはPositive 同士，それに対して赤フレームはNegativeであるといえる。このような設定で学習させることで，同じ行動でもで視点が変わった際の対応関係を学習可能，より頑健なFeature抽出が可能に。&lt;/p&gt;
+&lt;h2 id=&#34;ロス&#34;&gt;ロス&lt;/h2&gt;
+&lt;p&gt;トリプレットロスとして定義ができる。&lt;/p&gt;
+&lt;img width=&#34;575&#34; alt=&#34;スクリーンショット 2020-03-06 12 43 20&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048081-146c2e80-5fa8-11ea-98f3-a9a07a69870c.png&#34;&gt;
+&lt;img width=&#34;623&#34; alt=&#34;スクリーンショット 2020-03-06 12 43 46&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048101-21891d80-5fa8-11ea-9230-19b8f8579a00.png&#34;&gt;
+&lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
+&lt;p&gt;スマートフォンによるマルチビューな撮影&lt;/p&gt;
+&lt;img width=&#34;614&#34; alt=&#34;スクリーンショット 2020-03-06 12 41 11&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76047988-c6efc180-5fa7-11ea-89c9-fd927c7e8e9d.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Action Alignment のタスクで評価。&lt;/p&gt;
+&lt;img width=&#34;626&#34; alt=&#34;スクリーンショット 2020-03-06 12 46 13&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048197-79c01f80-5fa8-11ea-921d-fc08a52a8c20.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;同時フレームに注目したSelf-supervisedな事前学習方法を提案。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations</title>
+      <link>https://example.com/publication/visualgenome/</link>
+      <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/visualgenome/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成。SceneGraphの研究分野で一般的に使われているデータセットとなっている。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;データセット概要は下図。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76139109-98014a80-6090-11ea-9e98-5ab90485c1e4.png&#34; alt=&#34;スクリーンショット 2020-03-07 16 27 41&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;データセットの内容については以下で構成されている。&lt;/p&gt;
+&lt;h2 id=&#34;multiple-region-graphs-and-their-descriptions&#34;&gt;Multiple region graphs and their descriptions&lt;/h2&gt;
+&lt;p&gt;様々な関係性が存在する一つの画像を，一つの説明文だけで完結させてしまうのは現実的ではない。そこで画像内にBoundingBoxを複数用意し，そのなかでのシーングラフ(Region Graphs)，説明文章(Region Descriptions)をそれぞれ作成している。ひとつの画像に対して平均で42個のこのような領域が用意されている。&lt;/p&gt;
+&lt;h2 id=&#34;multiple-objects-and-their-bounding-boxes&#34;&gt;Multiple objects and their bounding boxes&lt;/h2&gt;
+&lt;p&gt;画像内に平均で２１個の物体情報とそのBoundingBoxを用意。同一物体に対して複数ラベル存在する場合（man and person），大きい括りのラベル(person)が選択される。&lt;/p&gt;
+&lt;h2 id=&#34;a-set-of-attributes&#34;&gt;A set of attributes&lt;/h2&gt;
+&lt;p&gt;画像内に平均で16個のAttributeラベルを用意。AttributeはObjectにつくものであり，一つのObjectに対して0個以上のAttributeが関連づいている。&lt;/p&gt;
+&lt;h2 id=&#34;a-set-of-relationships&#34;&gt;A set of relationships&lt;/h2&gt;
+&lt;p&gt;Relationshipとは２つのobjectをつなぐもの。有向グラフ構造のため，Relationshipをもっている２つのobjectの関係性の間には矢印が向く方と向けられる方が存在する。矢印の出発点がsubject，矢印の終着点がobjectと定義される。上の図の例で言えば，jumping over という関係性に関して，subject は man, object は fire hydrant となる。&lt;/p&gt;
+&lt;h2 id=&#34;one-scene-graph&#34;&gt;One scene graph&lt;/h2&gt;
+&lt;p&gt;今までRegionごとに得ていた情報をまとめて，画像全体として一つのScene Graph を作成。（上図の一番下）&lt;/p&gt;
+&lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
+&lt;p&gt;一部の例。より詳しい内容に関しては元論文をチェック。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76139540-3c38c080-6094-11ea-8aba-9b842ffb4d81.png&#34; alt=&#34;スクリーンショット 2020-03-07 16 53 51&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;シーングラフ用の新たなデータセットの提案。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

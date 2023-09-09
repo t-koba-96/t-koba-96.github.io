@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jingwei Ji | Bianca Blog</title>
+    <link>https://example.com/author/jingwei-ji/</link>
+      <atom:link href="https://example.com/author/jingwei-ji/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jingwei Ji</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Jingwei Ji</title>
+      <link>https://example.com/author/jingwei-ji/</link>
+    </image>
+    
+    <item>
+      <title>Action Genome: Actions as Composition of Spatio-temporal Scene Graphs</title>
+      <link>https://example.com/publication/actiongenome/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/actiongenome/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;../12&#34;&gt;Visual Genome&lt;/a&gt;の動画版のデータセット。また&lt;a href=&#34;../14&#34;&gt;Feature Banks&lt;/a&gt;を用いた手法の提案。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
+&lt;p&gt;データセットのラベル内容としては動画中のActionの領域とそのCaption，またVisualGenomeのようなSceneGraphが与えられている。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76069562-67f57100-5fd6-11ea-9f69-bde35dcb6131.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 14 54&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;動画内の各Actionに関して，Actionを均等な時間間隔で分割した際の5フレームを抽出し，その5フレームにおけるシーングラフのラベルを作成。上記の例では１つの動画で４つのアクションが起きているため，4✖️5の合計20フレーム分のシーングラフが存在する。&lt;/p&gt;
+&lt;p&gt;他のデータセットとの比較としては以下の通り。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76069582-7479c980-5fd6-11ea-80ba-692b805558d6.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 15 20&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;動画から各Actionを抽出するAction Recognitionのタスクを考える。同グループの以前の研究である&lt;a href=&#34;../14&#34;&gt;Feature Banks&lt;/a&gt;をベースラインとして用いている。従来のように抽出した3DCNN特徴に加えて，今回のラベルによって得られるシーングラフを予測させてobjectとrelationshipsを捉えたfeatured map を同様にFeature bank として長期の時系列情報として保持することで，行動の分類を行っている。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76069715-a3903b00-5fd6-11ea-8ec1-ea0443bde2cd.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 16 38&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;提案手法の評価。シーングラフ の利用によって精度の向上を確認。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76141573-1538b980-60a9-11ea-828d-0f1e8964ecd9.png&#34; alt=&#34;スクリーンショット 2020-03-07 19 23 06&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;既存のシーングラフ生成モデルをActionGenomeに適用した際の精度。既存の手法は画像ベースの手法のため精度も低く，動画用に改善の余地ありとのこと。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76141570-0c47e800-60a9-11ea-8edb-0c5419ba821a.png&#34; alt=&#34;スクリーンショット 2020-03-07 19 22 53&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;動画用のシーングラフを提案。シーングラフを用いたActionRecognitionの手法。&lt;/p&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;公開されたら触ってみたい。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

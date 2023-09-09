@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aaron van den Oord | Bianca Blog</title>
+    <link>https://example.com/author/aaron-van-den-oord/</link>
+      <atom:link href="https://example.com/author/aaron-van-den-oord/index.xml" rel="self" type="application/rss+xml" />
+    <description>Aaron van den Oord</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Aaron van den Oord</title>
+      <link>https://example.com/author/aaron-van-den-oord/</link>
+    </image>
+    
+    <item>
+      <title>Representation Learning with Contrastive Predictive Coding</title>
+      <link>https://example.com/publication/contrastivepredictivecoding/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/contrastivepredictivecoding/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;画像や音声における新しい表現学習の方法を提案。エンコーダーとGRUを組み合わせてGRUが次のエンコーダの出力を予測して,その相互情報量の最大化によって良い特徴表現を獲得する。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;下図は音声入力の例。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134412-789ef900-6061-11ea-8859-d387ef3ad64e.png&#34; alt=&#34;スクリーンショット 2020-03-07 10 50 30&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;GRUの出力が次の潜在表現を回帰・予測し，その相互情報量の最大化を目指すことによって良い特徴表現を得る。&lt;/p&gt;
+&lt;h2 id=&#34;ロス&#34;&gt;ロス&lt;/h2&gt;
+&lt;p&gt;NCEベースのロスを使用し，同じペアは近づけるように，ランダムにサンプルしたペアを遠ざけるよう学習。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134666-63c36500-6063-11ea-9f72-06d67bdaee2e.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 04 14&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;画像の場合&#34;&gt;画像の場合&lt;/h2&gt;
+&lt;p&gt;画像の場合そのままでは系列データにできないので，パッチごとにずらしていくことで系列データとして扱う。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134705-b8ff7680-6063-11ea-95eb-79502e372f83.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 06 35&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;画像&#34;&gt;画像&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134741-ff54d580-6063-11ea-960d-68285a774a83.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 08 34&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;言語&#34;&gt;言語&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134742-05e34d00-6064-11ea-888b-ffaf120fb77b.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 08 45&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;t-sneによる音声表現の可視化&#34;&gt;t-SNEによる音声表現の可視化&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134751-1693c300-6064-11ea-89f1-47f77b9ee28f.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 09 14&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;系列データにおいて次の潜在表現を予測し，相互情報量の最大化を目的にすることによる良い表現の獲得。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

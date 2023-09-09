@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Austin Reiter | Bianca Blog</title>
+    <link>https://example.com/author/austin-reiter/</link>
+      <atom:link href="https://example.com/author/austin-reiter/index.xml" rel="self" type="application/rss+xml" />
+    <description>Austin Reiter</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Austin Reiter</title>
+      <link>https://example.com/author/austin-reiter/</link>
+    </image>
+    
+    <item>
+      <title>Temporal Convolutional Networks for Action Segmentation and Detection</title>
+      <link>https://example.com/publication/tcn/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/tcn/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.&lt;br&gt;
+２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;提案した両方のTCNにおいて、入力は各フレームから何かしらのCNN(Resnet,VGG等)を用いて抽出した特徴量を時系列順に並べたものであり、出力としては行動クラス結果が各フレームごとに出力される.&lt;/p&gt;
+&lt;h2 id=&#34;ed-tcn&#34;&gt;ED-TCN&lt;/h2&gt;
+&lt;p&gt;エンコーダとデコーダを組み合わせたTCN. エンコーダで畳み込み＋MaxPoolingを行うことで時系列を考慮した特徴抽出、その後デコーダで畳み込み＋アップサンプリングを行うことで各フレームごとの行動クラス確率分布を得る.&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2018-11-30 22 19 28&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49291542-0babc380-f4ee-11e8-9912-026b18f4d8bb.png&#34;&gt;
+&lt;h2 id=&#34;dilated-tcn&#34;&gt;Dilated-TCN&lt;/h2&gt;
+&lt;p&gt;時系列の畳み込みとしてDilated Convolutionを用いた手法. Dilated Convolutionとは簡単に説明すると、入力の間隔を空けて(間を0とみなす)畳み込みを行うこと(d=1なら間隔なし、d=２なら間隔１、d=4なら間隔３). dの値をどんどん(本論文では指数関数的に)大きくしていったDilated Convolution層を重ねることで、より長期的な時系列の範囲で特徴抽出を行うことが可能となる. またスキップコネクションの導入で層を深くすることを可能に。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2018-11-30 22 20 33&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49291590-2bdb8280-f4ee-11e8-9444-01090dd85fe5.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;50salads、MERL Shopping、GTEAの３種のデータセットを用いて、Spatial CNN等との比較&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2018-11-30 21 58 12&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49291839-e53a5800-f4ee-11e8-9325-46725b25cd76.png&#34;&gt;
+&lt;img width=&#34;374&#34; alt=&#34;2018-11-30 22 27 34&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49291938-292d5d00-f4ef-11e8-9b6f-afef4c731408.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;・各層ごとに同時に処理を行うため、入力フレーム数が増えても処理時間に影響をあまり与えない.&lt;br&gt;
+　→フレームごとに処理を行うLSTM等と比較して高速な処理&lt;/p&gt;
+&lt;p&gt;・３Dconvは動画全体(数フレーム分)に対して1つの行動クラスの出力であるのに対し、TCNでは各フレームごとに行動クラスの出力が可能&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

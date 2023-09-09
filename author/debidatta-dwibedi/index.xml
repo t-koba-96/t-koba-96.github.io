@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debidatta Dwibedi | Bianca Blog</title>
+    <link>https://example.com/author/debidatta-dwibedi/</link>
+      <atom:link href="https://example.com/author/debidatta-dwibedi/index.xml" rel="self" type="application/rss+xml" />
+    <description>Debidatta Dwibedi</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Debidatta Dwibedi</title>
+      <link>https://example.com/author/debidatta-dwibedi/</link>
+    </image>
+    
+    <item>
+      <title>Temporal Cycle-Consistency Learning</title>
+      <link>https://example.com/publication/cycleconsistency/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/cycleconsistency/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135346-91131180-6069-11ea-8d1e-bd86a2119762.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 48 27&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;まず動画のペアにおいて，各フレームの埋め込み表現をエンコーダによって得る。このうち１つのフレームに注目したとき（下図の右下赤い点），ペア動画においてその埋め込み表現から最も近いフレームを選ぶ。同様にして元の動画からもうひとつ点を選んだとき，最初の赤い点にもどることが理想であるが，違うフレームが選ばれたときはそこでロスをとることによって正解に近づけていくことを考える。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;p&gt;しかし単純に上のように定義しただけでは損失関数の微分が不可能なため，勾配の計算ができない。そこでペア動画の各フレームにおいて距離空間に応じた重みを計算し，その重み付きの和を計算して，近似した近傍点を求める。同様に，近似した近傍点から元動画の各フレームの距離空間に応じた重みを計算し，その重み付きの和を計算することでロスをとる。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135486-af2d4180-606a-11ea-8f5e-70fec33a07df.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 56 26&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135690-c40ad480-606c-11ea-8918-00c37b4bb45f.png&#34; alt=&#34;スクリーンショット 2020-03-07 12 11 20&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135695-cff69680-606c-11ea-99bc-6c65699da600.png&#34; alt=&#34;スクリーンショット 2020-03-07 12 11 38&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;動画ペアにおいて，似た動作同士を近づける表現学習におけるCycle-Consistencyなロスの提案。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daochang Liu | Bianca Blog</title>
+    <link>https://example.com/author/daochang-liu/</link>
+      <atom:link href="https://example.com/author/daochang-liu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Daochang Liu</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Daochang Liu</title>
+      <link>https://example.com/author/daochang-liu/</link>
+    </image>
+    
+    <item>
+      <title>Completeness Modeling and Context Separation for Weakly Supervised Temporal Action Localization</title>
+      <link>https://example.com/publication/cmcs/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/cmcs/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;動画のクラスラベルのみのWeaklyなラベルを用いたTemporal Action Localization.&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h2 id=&#34;weaklyなラベルによる難点&#34;&gt;Weaklyなラベルによる難点&lt;/h2&gt;
+&lt;p&gt;Weaklyなラベルによる難点は主に２つあり，解決するための手法を提案。　　&lt;/p&gt;
+&lt;h2 id=&#34;-action-completeness-modeling&#34;&gt;⓵ Action completeness modeling&lt;/h2&gt;
+&lt;p&gt;下図の上部参照。 例えばPKでは選手がシュートする動きとボールが飛んでいく動きによって構成されるが，Weaklyでは動画のクラス分類を元に解くのでより分類において重要であるシュートのところのみ切り取られやすい。そこでこれらの行動を分けて予測するようなマルチブランチのネットワーク構造にする。&lt;/p&gt;
+&lt;h2 id=&#34;-action-context-separation&#34;&gt;⓶ Action-context separation&lt;/h2&gt;
+&lt;p&gt;下図の下部参照。行動の前景と背景ではフレーム全体としてのContextはあまり変わらない（どちらにもビリヤード台はずっと写ってる）。これに関しては人物や物の情報がアクションには関わっていると仮定し，OpticalFlowを用いた解決法を提案。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76378934-1829f780-6392-11ea-8145-b0e018b61c22.png&#34; alt=&#34;スクリーンショット 2020-03-11 12 16 07&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76379387-43f9ad00-6393-11ea-90fe-582e28b16f52.png&#34; alt=&#34;スクリーンショット 2020-03-11 12 24 30&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;マルチブランチネットワークとアテンションモデルによって構成。マルチブランチNetworkではアクションをK分割して，それぞれの集合（Averageをとる）として求める全体のアクションを得るといった考え方。K分割したブランチにおいてそれぞれで違う部分に注目してもらう必要があるため，DiversityLossを採用。アテンションモデルでは時系列方向にSoftmaxをかけてフレームの重要度を算出。最後にこれらをかけあわせ，動画単位での MILLossをとる。&lt;br&gt;
+推論時はマルチブランチをAverageした結果を利用。&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76379423-5e338b00-6393-11ea-9281-00de6e0f5ee6.png&#34; alt=&#34;スクリーンショット 2020-03-11 12 25 12&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76379450-6e4b6a80-6393-11ea-9a6e-78045527b853.png&#34; alt=&#34;スクリーンショット 2020-03-11 12 25 40&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;マルチブランチによる推定。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5 | Bianca Blog</title>
+    <link>https://example.com/publication-type/5/</link>
+      <atom:link href="https://example.com/publication-type/5/index.xml" rel="self" type="application/rss+xml" />
+    <description>5</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>5</title>
+      <link>https://example.com/publication-type/5/</link>
+    </image>
+    
+    <item>
+      <title>Unified Fully and Timestamp Supervised Temporal Action Segmentation via Sequence to Sequence Translation</title>
+      <link>https://example.com/publication/stostranslation/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/stostranslation/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;task&#34;&gt;Task&lt;/h2&gt;
+&lt;p&gt;VideoActionSegmentation&lt;/p&gt;
+&lt;h2 id=&#34;input&#34;&gt;Input&lt;/h2&gt;
+&lt;p&gt;各フレームに対して、行動ラベルが一種類与えられている動画。&lt;/p&gt;
+&lt;h2 id=&#34;output&#34;&gt;Output&lt;/h2&gt;
+&lt;p&gt;一般的にはフレーム毎に行動ラベルの予測結果を返すのに対し、行動ラベルのシーケンス(Transcriptと呼ぶ)とタイムスタンプ(Durationと呼ぶ)を別々に得て、セグメントレベルでの行動予測結果を返すことで、OverSegmentation(予測結果のブレがおきる)の問題を解決する。&lt;/p&gt;
+&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
+&lt;p&gt;以下の２パターンを検証&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;教師あり(全てのフレームに行動ラベルあり)&lt;/li&gt;
+&lt;li&gt;弱教師あり(各Transcriptに属するフレームが１つずつのみ与えられている)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;提案手法&#34;&gt;&lt;code&gt;提案手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/231029029-95189a28-8e1a-457e-99f8-5036fff0e4c8.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;ステップ&#34;&gt;ステップ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(a) : 一般的なSegmentationModelではOverSegmentationの問題が発生しやすく、後段で処理が必要。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(b) : そこでTransformeベースのseq2seqモデルを適用し、Decoderの出力としてTranscriptとDurationを同時に得ることを考える。ただし、以下の２点の要因から、このモデル構造単体では機能しない。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NLPと違い、非常に長い類似したフレーム入力に対して、短い行動出力シーケンスが求められる点。&lt;/li&gt;
+&lt;li&gt;NPLと違い、データセットの規模が非常に小さく、扱える学習データが少ない点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(c) : そこで、(a)のEncoderの出力をDecoderの入力として追加することで、デコーダでは異なる行動に対してより識別性の高い特徴を学習できる。これによりTranscriptでは改善を得るが、Durationについては以前精度が悪いままである。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(d) : そこで、Decoderでの直接のDuration出力はあきらめる。DecoderではあくまでTranscriptを得ることを目的とし、DurationについてはEncoderの出力も同時に活用することを考える。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(e) : Encoderで得たフレーム単位のクラス予測値とDecoderの出力との間で相互アテンションをとって、最終的なセグメントレベルでの行動予測結果を返す。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;損失関数&#34;&gt;損失関数&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Encoder&lt;br&gt;
+通常のACtionSegmentationと同様、CrossEntropyLossを採用。&lt;/li&gt;
+&lt;li&gt;Decoder&lt;br&gt;
+こちらもセグメント単位でのCrossEntropyLossを用いる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;dataset&#34;&gt;Dataset&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Breakfast&lt;/li&gt;
+&lt;li&gt;50salads&lt;/li&gt;
+&lt;li&gt;GTEA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;result&#34;&gt;Result&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/231042891-582b0940-300d-425d-b3ef-0ed8849c79b0.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;弱教師学習でseq2seqを用いた2Branch(Transcript+Duration)手法がでてきていたものが、transformerベースのseq2seqとなったというイメージ。
+ActionSegmentationのタスクでTransformerを利用していく中で、この論文でも述べているようにデータの少なさ+非常に長い類似したフレーム入力をどう扱っていくかが焦点になりそう。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Graph R-CNN for Scene Graph Generation</title>
+      <link>https://example.com/publication/graph-rcnn/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/graph-rcnn/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。Graphの参考資料は&lt;a href=&#34;../14&#34;&gt;こちら&lt;/a&gt;。SceneGraphとは&lt;a href=&#34;../31&#34;&gt;VisualGenome&lt;/a&gt;において定義されているもので，{Subject,Relationship(Predicate),Object} (+Attribute) によるグラフ構造で表される。例として，A man is swinging a bat というような画像内の関係性があったとき， {man, swinging, bat} (+Attribute)というふうになる。これらの関係性を考えていき，最終的には(d)の関係性の出力を目指す。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76067616-05e73c80-5fd3-11ea-8119-67d05fc1a697.png&#34; alt=&#34;スクリーンショット 2020-03-06 17 50 46&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;全体の概要図配下の通り。３つのパートに分かれている。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140206-372b3f80-609b-11ea-9f11-7ea8112540ea.png&#34; alt=&#34;スクリーンショット 2020-03-07 17 43 51&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;⓵ Object Region Proposal&lt;br&gt;
+⓶ Relationship Proposal&lt;br&gt;
+⓷ Graph Labeling&lt;/p&gt;
+&lt;img width=&#34;948&#34; alt=&#34;スクリーンショット 2020-03-07 17 43 38&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76140203-30043180-609b-11ea-8bd6-e15aeac7e84c.png&#34;&gt;
+&lt;h2 id=&#34;object-region-proposal&#34;&gt;Object Region Proposal&lt;/h2&gt;
+&lt;p&gt;Faster R-CNNを学習させて物体検出。出力としては物体の位置情報（BoundingBox），特徴量，クラスラベルの３つがある。&lt;/p&gt;
+&lt;h2 id=&#34;relationship-proposal&#34;&gt;Relationship Proposal 　&lt;/h2&gt;
+&lt;p&gt;物体検出したもののうち，全てを繋ぐようなグラフ構造はパラメータ数的にも，現実世界における物体の関係性的にも現実的ではないため，本当に重要なエッジのみ抽出する段階。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140280-00a1f480-609c-11ea-9b85-3001bb7db3da.png&#34; alt=&#34;スクリーンショット 2020-03-07 17 49 27&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;物体がObjectである場合とSubjectである場合（Relationship次第でどっちにもなり得るということ）は分けて考慮する必要があるため，構造は一緒だが異なるパラメータをもつ学習モデルを用意してあげて，それらのを通した行列積をエッジのスコアとして用いる。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140311-5e364100-609c-11ea-81d0-41da86f15864.png&#34; alt=&#34;スクリーンショット 2020-03-07 17 52 05&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;最終的に，スコアの高い上位k個のエッジを次のフェーズの入力として用いる。&lt;/p&gt;
+&lt;p&gt;また，物体ペアに関するNMSもここで行う。通常と違って，物体ペアによるIoU値を用いてNMSを行う。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76141173-0cde7f80-60a5-11ea-9593-b7484fc969db.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 54 13&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;graph-labeling&#34;&gt;Graph Labeling&lt;/h2&gt;
+&lt;p&gt;AttentionalGCNを用いて最終的に物体，関係性の分類。GraphConvによってobject，relationshipがまわりのグラフ構造を考慮した上でそれぞれの特徴量を更新していく。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76141118-a3f70780-60a4-11ea-824c-756aa12e8372.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 51 19&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;A. Objectの更新について&lt;/p&gt;
+&lt;p&gt;大きく３つの関係性を踏まえて特徴量の更新　&lt;/p&gt;
+&lt;p&gt;⓵ 自分のまわりのObject(Message from other objects)&lt;/p&gt;
+&lt;p&gt;ただしObjectに関してはSkipconnectionを採用していて，離れたノード同士の関係性も考慮するようにしている。アテンションのαがskipとされているのもそのためである。特徴行列に掛け合わせる隣接行列のパラメータも学習させることで，隣接行列がノード同士の関係性を表すアテンションであるとみなすのがAttentionalGCN。そのため通常は同じノードを繋ぐ対角成分は１，エッジによってつながっていないノード同士は0となるようにし，残りの部分を学習させていくが，skipの場合は全ノード考慮するため，０成分で埋めずに対角成分以外をすべて更新していく。&lt;/p&gt;
+&lt;p&gt;⓶ Subjectからみたrelationship&lt;/p&gt;
+&lt;p&gt;⓷ Objectからみたrelationship&lt;/p&gt;
+&lt;p&gt;注意としては⓶，⓷を区別する必要あり&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140548-15cc5280-609f-11ea-9358-abb51ee7b3de.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 11 30&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;B. Relationshipの更新について&lt;/p&gt;
+&lt;p&gt;⓵ Relationshipからみたsubject&lt;/p&gt;
+&lt;p&gt;⓶ Relationshipからみたobject&lt;/p&gt;
+&lt;p&gt;同様に⓶，⓷の区別の必要あり。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76141083-4d89c900-60a4-11ea-90f7-8eb612ca3059.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 48 54&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;損失関数学習&#34;&gt;損失関数・学習&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考文献&lt;/a&gt;より引用&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140447-cfc2bf00-609d-11ea-893a-14f26273a77d.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 01 35&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140449-d2251900-609d-11ea-96e9-47ae94ed1bc1.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 01 55&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;評価方法&#34;&gt;評価方法&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;../31&#34;&gt;VisualGenome&lt;/a&gt;で用いられていたSGGenという評価方法を改善し，SGGen+と呼ばれる新たな評価軸を提案。&lt;/p&gt;
+&lt;h2 id=&#34;sggen&#34;&gt;SGGen&lt;/h2&gt;
+&lt;p&gt;以下の二つの評価によって決定される。&lt;/p&gt;
+&lt;p&gt;⓵　{Subject,Relationship(Predicate),Object}　のすべての要素が完全に一致している&lt;br&gt;
+⓶　SubjectとObjectのローカライズ（位置予測）におけるIoUがともに0.5以上&lt;/p&gt;
+&lt;p&gt;について，両方満たしているときのみ正解として扱われ，１点加点される。しかしこれでは条件が厳しいため，見当違いな出力と１箇所だけ違う惜しい出力も同じとみなされ，結果の反映が正確にできていないと言える。&lt;/p&gt;
+&lt;h2 id=&#34;sggen-1&#34;&gt;SGGen+&lt;/h2&gt;
+&lt;p&gt;そこで新しく，以下の３つの評価それぞれについて，満たしていれば随時１点加点される。&lt;/p&gt;
+&lt;p&gt;⓵C(0)：正しく認識された(位置，クラス) Objectノードの数&lt;br&gt;
+⓶C(P)：SubjectとObjectのローカライズ（位置予測）におけるIoUがともに0.5以上で，Relation(predicat)が正しいとき&lt;br&gt;
+⓷C(T)：SGGenの評価&lt;/p&gt;
+&lt;p&gt;これらの合計点数をノードとエッジの合計Nで割ったもの.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76139951-df8bd480-6098-11ea-96c9-42f4e52a928e.png&#34; alt=&#34;スクリーンショット 2020-03-07 17 27 03&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;比較結果&#34;&gt;比較結果&lt;/h2&gt;
+&lt;p&gt;SGGenとSGGen+の比較結果(SGGen+については分母)。SGGen+を用いた方が，より正解に近いグラフが出力できたときそれをより反映できるような評価値となっている。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76068119-e7357580-5fd3-11ea-8499-d496d1665b0a.png&#34; alt=&#34;スクリーンショット 2020-03-06 17 57 07&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76068156-fc120900-5fd3-11ea-916c-334c0d994886.png&#34; alt=&#34;スクリーンショット 2020-03-06 17 57 42&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76068178-07653480-5fd4-11ea-82b7-d46162aef160.png&#34; alt=&#34;スクリーンショット 2020-03-06 17 57 57&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;GraphConvを用いたシーングラフの生成に関する初期の論文であり基本形。&lt;/p&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考文献&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Objectという単語がSubjectと区別している場合としていない場合の２通りの使われ方がしていて紛らわしく感じた。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

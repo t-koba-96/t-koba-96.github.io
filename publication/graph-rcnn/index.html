@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: September 9, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.b6d003f494885717a4e7a7dae0d96b7b.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Takuya Kobayashi" />
+
+
+
+
+
+  
+
+<meta name="description" content="GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://example.com/publication/graph-rcnn/" />
+<link rel="canonical" href="https://example.com/publication/graph-rcnn/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#707070" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://example.com/publication/graph-rcnn/featured.png" />
+<meta property="og:site_name" content="Bianca Blog" />
+<meta property="og:url" content="https://example.com/publication/graph-rcnn/" />
+<meta property="og:title" content="Graph R-CNN for Scene Graph Generation | Bianca Blog" />
+<meta property="og:description" content="GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。" /><meta property="og:image" content="https://example.com/publication/graph-rcnn/featured.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2018-08-01T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2018-08-01T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.com/publication/graph-rcnn/"
+  },
+  "headline": "Graph R-CNN for Scene Graph Generation",
+  
+  "image": [
+    "https://example.com/publication/graph-rcnn/featured.png"
+  ],
+  
+  "datePublished": "2018-08-01T00:00:00Z",
+  "dateModified": "2018-08-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Jianwei Yang"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bianca Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Graph R-CNN for Scene Graph Generation | Bianca Blog</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="1738146322f197a0bd3ff5c7936b32d5" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bianca Blog</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bianca Blog</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-center" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/publication"><span>PaperSummaries</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/blog"><span>BlogPosts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/published"><span>Works</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Graph R-CNN for Scene Graph Generation</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      <a href="/author/jianwei-yang/">Jianwei Yang</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    August 2018
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/pdf/1808.00191.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/jwyang/graph-rcnn.pytorch" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 393px;">
+  <div style="position: relative">
+    <img src="/publication/graph-rcnn/featured_hua266015fb9adb45cae3498270e59518e_225671_720x2500_fit_q75_h2_lanczos_3.webp" width="720" height="393" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    
+
+    
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            <a href="/publication/#5">
+              ECCV
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">In <em>ECCV 2018</em></div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"><h1 id="概要"><code>概要</code></h1>
+<p>GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。Graphの参考資料は<a href="../14">こちら</a>。SceneGraphとは<a href="../31">VisualGenome</a>において定義されているもので，{Subject,Relationship(Predicate),Object} (+Attribute) によるグラフ構造で表される。例として，A man is swinging a bat というような画像内の関係性があったとき， {man, swinging, bat} (+Attribute)というふうになる。これらの関係性を考えていき，最終的には(d)の関係性の出力を目指す。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76067616-05e73c80-5fd3-11ea-8119-67d05fc1a697.png" alt="スクリーンショット 2020-03-06 17 50 46" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h1 id="手法"><code>手法</code></h1>
+<p>全体の概要図配下の通り。３つのパートに分かれている。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76140206-372b3f80-609b-11ea-9f11-7ea8112540ea.png" alt="スクリーンショット 2020-03-07 17 43 51" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>⓵ Object Region Proposal<br>
+⓶ Relationship Proposal<br>
+⓷ Graph Labeling</p>
+<img width="948" alt="スクリーンショット 2020-03-07 17 43 38" src="https://user-images.githubusercontent.com/38309191/76140203-30043180-609b-11ea-8bd6-e15aeac7e84c.png">
+<h2 id="object-region-proposal">Object Region Proposal</h2>
+<p>Faster R-CNNを学習させて物体検出。出力としては物体の位置情報（BoundingBox），特徴量，クラスラベルの３つがある。</p>
+<h2 id="relationship-proposal">Relationship Proposal 　</h2>
+<p>物体検出したもののうち，全てを繋ぐようなグラフ構造はパラメータ数的にも，現実世界における物体の関係性的にも現実的ではないため，本当に重要なエッジのみ抽出する段階。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76140280-00a1f480-609c-11ea-9b85-3001bb7db3da.png" alt="スクリーンショット 2020-03-07 17 49 27" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>物体がObjectである場合とSubjectである場合（Relationship次第でどっちにもなり得るということ）は分けて考慮する必要があるため，構造は一緒だが異なるパラメータをもつ学習モデルを用意してあげて，それらのを通した行列積をエッジのスコアとして用いる。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76140311-5e364100-609c-11ea-81d0-41da86f15864.png" alt="スクリーンショット 2020-03-07 17 52 05" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>最終的に，スコアの高い上位k個のエッジを次のフェーズの入力として用いる。</p>
+<p>また，物体ペアに関するNMSもここで行う。通常と違って，物体ペアによるIoU値を用いてNMSを行う。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76141173-0cde7f80-60a5-11ea-9593-b7484fc969db.png" alt="スクリーンショット 2020-03-07 18 54 13" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="graph-labeling">Graph Labeling</h2>
+<p>AttentionalGCNを用いて最終的に物体，関係性の分類。GraphConvによってobject，relationshipがまわりのグラフ構造を考慮した上でそれぞれの特徴量を更新していく。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76141118-a3f70780-60a4-11ea-824c-756aa12e8372.png" alt="スクリーンショット 2020-03-07 18 51 19" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>A. Objectの更新について</p>
+<p>大きく３つの関係性を踏まえて特徴量の更新　</p>
+<p>⓵ 自分のまわりのObject(Message from other objects)</p>
+<p>ただしObjectに関してはSkipconnectionを採用していて，離れたノード同士の関係性も考慮するようにしている。アテンションのαがskipとされているのもそのためである。特徴行列に掛け合わせる隣接行列のパラメータも学習させることで，隣接行列がノード同士の関係性を表すアテンションであるとみなすのがAttentionalGCN。そのため通常は同じノードを繋ぐ対角成分は１，エッジによってつながっていないノード同士は0となるようにし，残りの部分を学習させていくが，skipの場合は全ノード考慮するため，０成分で埋めずに対角成分以外をすべて更新していく。</p>
+<p>⓶ Subjectからみたrelationship</p>
+<p>⓷ Objectからみたrelationship</p>
+<p>注意としては⓶，⓷を区別する必要あり</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76140548-15cc5280-609f-11ea-9358-abb51ee7b3de.png" alt="スクリーンショット 2020-03-07 18 11 30" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>B. Relationshipの更新について</p>
+<p>⓵ Relationshipからみたsubject</p>
+<p>⓶ Relationshipからみたobject</p>
+<p>同様に⓶，⓷の区別の必要あり。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76141083-4d89c900-60a4-11ea-90f7-8eb612ca3059.png" alt="スクリーンショット 2020-03-07 18 48 54" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="損失関数学習">損失関数・学習</h2>
+<p><a href="https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation" target="_blank" rel="noopener">参考文献</a>より引用</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76140447-cfc2bf00-609d-11ea-893a-14f26273a77d.png" alt="スクリーンショット 2020-03-07 18 01 35" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76140449-d2251900-609d-11ea-96e9-47ae94ed1bc1.png" alt="スクリーンショット 2020-03-07 18 01 55" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="評価方法">評価方法</h2>
+<p><a href="../31">VisualGenome</a>で用いられていたSGGenという評価方法を改善し，SGGen+と呼ばれる新たな評価軸を提案。</p>
+<h2 id="sggen">SGGen</h2>
+<p>以下の二つの評価によって決定される。</p>
+<p>⓵　{Subject,Relationship(Predicate),Object}　のすべての要素が完全に一致している<br>
+⓶　SubjectとObjectのローカライズ（位置予測）におけるIoUがともに0.5以上</p>
+<p>について，両方満たしているときのみ正解として扱われ，１点加点される。しかしこれでは条件が厳しいため，見当違いな出力と１箇所だけ違う惜しい出力も同じとみなされ，結果の反映が正確にできていないと言える。</p>
+<h2 id="sggen-1">SGGen+</h2>
+<p>そこで新しく，以下の３つの評価それぞれについて，満たしていれば随時１点加点される。</p>
+<p>⓵C(0)：正しく認識された(位置，クラス) Objectノードの数<br>
+⓶C(P)：SubjectとObjectのローカライズ（位置予測）におけるIoUがともに0.5以上で，Relation(predicat)が正しいとき<br>
+⓷C(T)：SGGenの評価</p>
+<p>これらの合計点数をノードとエッジの合計Nで割ったもの.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76139951-df8bd480-6098-11ea-96c9-42f4e52a928e.png" alt="スクリーンショット 2020-03-07 17 27 03" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="比較結果">比較結果</h2>
+<p>SGGenとSGGen+の比較結果(SGGen+については分母)。SGGen+を用いた方が，より正解に近いグラフが出力できたときそれをより反映できるような評価値となっている。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76068119-e7357580-5fd3-11ea-8499-d496d1665b0a.png" alt="スクリーンショット 2020-03-06 17 57 07" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h1 id="実験"><code>実験</code></h1>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76068156-fc120900-5fd3-11ea-916c-334c0d994886.png" alt="スクリーンショット 2020-03-06 17 57 42" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76068178-07653480-5fd4-11ea-82b7-d46162aef160.png" alt="スクリーンショット 2020-03-06 17 57 57" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h1 id="新規性"><code>新規性</code></h1>
+<p>GraphConvを用いたシーングラフの生成に関する初期の論文であり基本形。</p>
+<h1 id="コメント"><code>コメント</code></h1>
+<p><a href="https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation" target="_blank" rel="noopener">参考文献</a></p>
+<p>Objectという単語がSubjectと区別している場合としていない場合の２通りの使われ方がしていて紛らわしく感じた。</p>
+</div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:takukoba1996@gmail.com" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/in/takuya-kobayashi-4775901aa/" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://github.com/t-koba-96" target="_blank" rel="noopener" class="share-btn-github" aria-label="github">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.46271ef31da3f018e9cd1b59300aa265.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.62ee204c51ab1af036605c7fd0a94a0b.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Karen Simonyan | Bianca Blog</title>
+    <link>https://example.com/author/karen-simonyan/</link>
+      <atom:link href="https://example.com/author/karen-simonyan/index.xml" rel="self" type="application/rss+xml" />
+    <description>Karen Simonyan</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jul 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Karen Simonyan</title>
+      <link>https://example.com/author/karen-simonyan/</link>
+    </image>
+    
+    <item>
+      <title>Two-Stream Convolutional Networks for Action Recognition in Videos</title>
+      <link>https://example.com/publication/two-stream/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/two-stream/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Spatial stream ConvNet(以後Spatial Conv)とTemporal stream ConvNet(以後Temporal Conv)の組み合わせ. Spatial Convでは各フレームの静止画（RGB画像）を入力して畳み込み、空間情報の抽出によるクラス分類. Temporal Convでは各フレームのオプティカルフローを入力して畳み込み、動き情報の抽出によるクラス分類.   下図のように，Spatial Convにおける1つの入力フレームに対して，Temporal ConvではそのフレームからNフレーム分のオプティカルフローを用いる。（RGBとオプティカルフローの入力が1:N）。
+最終的な結果は、それぞれのネットワークのクラスの確率分布を統合し、最も高確率のクラスを出力.&lt;/p&gt;
+&lt;p&gt;Temporal Convにおいて、オプティカルフローは各フレームにおいてそれぞれ X,Y 方向に2次元配列として入力. よって、入力動画のRGBフレーム数がTの時、入力するオプティカルフローのフレーム数は2NT&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;590&#34; alt=&#34;2018-11-30 18 23 42&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49281727-a4334b00-f4d0-11e8-934d-088a32deb1b5.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;UCF-101、HMDB-51データセットを用いてハンドクラフト特徴量を用いた行動認識（IDT等）と比較.&lt;/p&gt;
+&lt;h2 id=&#34;ucf-101データセット&#34;&gt;UCF-101データセット&lt;/h2&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2018-11-30 18 34 21&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49281444-eb6d0c00-f4cf-11e8-9372-f63bb53526b7.png&#34;&gt;
+&lt;h2 id=&#34;hmdb-501&#34;&gt;HMDB-501&lt;/h2&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2018-11-30 18 46 21&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49281736-abf2ef80-f4d0-11e8-8edb-4dfbeb960410.png&#34;&gt;
+&lt;p&gt;またSpatial Conv、Temporal Convそれぞれ単独で用いた場合とも比較.&lt;/p&gt;
+&lt;img width=&#34;604&#34; alt=&#34;2018-11-30 18 51 39&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49281864-03915b00-f4d1-11e8-9b05-6e2f15c48694.png&#34;&gt;
+&lt;p&gt;UCF-101においては最も高精度. HMDB-51においてはハンドクラフトの方が高精度の場合も&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;・当時はハンドクラフト特徴量による認識が主流の中、深層学習を用いた手法.&lt;/p&gt;
+&lt;p&gt;・オプティカルフローを用いることで動画の時系列情報を捉えようとするアプローチ&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yazan Abu Farha | Bianca Blog</title>
+    <link>https://example.com/author/yazan-abu-farha/</link>
+      <atom:link href="https://example.com/author/yazan-abu-farha/index.xml" rel="self" type="application/rss+xml" />
+    <description>Yazan Abu Farha</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Yazan Abu Farha</title>
+      <link>https://example.com/author/yazan-abu-farha/</link>
+    </image>
+    
+    <item>
+      <title>MS-TCN: Multi-Stage Temporal Convolutional Network for Action Segmentation</title>
+      <link>https://example.com/publication/ms-tcn/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/ms-tcn/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;行動認識のタスクにおいて,&lt;a href=&#34;https://github.com/t-koba-96/paper_summarize/issues/2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Temporal Convolutional Networks&lt;/a&gt;を複数重ねるMulti-TCNの提案。２個目以降のTCNには各クラスのPredictのSoftmax値を入力とすることで，OverSegmentation（予測結果の頻繁な変化）の抑止を実現。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;下図のようにTCNを複数ステージ重ねていき，最終ステージの出力を予測結果として用いる。特徴として，２ステージ目以降の入力は前のステージのSoftmax出力を使う。&lt;br&gt;
+イメージとしては，１ステージ目で大まかな行動の認識を行って，２ステージ目以降では時系列情報を考慮しながら細かい行動遷移の予測（主にOversegmentationの抑止）を行っている感じ？&lt;/p&gt;
+&lt;img width=&#34;369&#34; alt=&#34;スクリーンショット 2019-04-22 20 25 22&#34; src=&#34;https://user-images.githubusercontent.com/38309191/56498481-d1929b00-653c-11e9-9e08-1e375a0fa2e9.png&#34;&gt;
+&lt;h2 id=&#34;ロス&#34;&gt;ロス&lt;/h2&gt;
+&lt;p&gt;交差エントロピーに加え，以下のようにフレーム間での正解クラスの予測値の変化を罰している。クラスが本当に切り替わるところは考慮しないよう，閾値を設けている。&lt;/p&gt;
+&lt;img width=&#34;294&#34; alt=&#34;スクリーンショット 2019-04-22 20 33 21&#34; src=&#34;https://user-images.githubusercontent.com/38309191/56498721-018e6e00-653e-11e9-89bc-31d3d5fe8e91.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cvip.computing.dundee.ac.uk/datasets/foodpreparation/50salads/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;50salads&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;single-tcnとの比較&#34;&gt;Single-TCNとの比較&lt;/h2&gt;
+&lt;img width=&#34;353&#34; alt=&#34;スクリーンショット 2019-04-22 20 36 36&#34; src=&#34;https://user-images.githubusercontent.com/38309191/56498806-5cc06080-653e-11e9-8412-199647b033b3.png&#34;&gt;  
+&lt;h2 id=&#34;ロスの違いによる比較&#34;&gt;ロスの違いによる比較&lt;/h2&gt;
+&lt;img width=&#34;358&#34; alt=&#34;スクリーンショット 2019-04-22 20 36 46&#34; src=&#34;https://user-images.githubusercontent.com/38309191/56498809-5e8a2400-653e-11e9-8cca-71b62d40f6d6.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;・クラス毎のsoftmax値を次のステージへの入力に用いている&lt;/p&gt;
+&lt;p&gt;・遷移に制限をかけたロスの提案&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

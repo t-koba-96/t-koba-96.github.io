@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 | Bianca Blog</title>
+    <link>https://example.com/publication-type/3/</link>
+      <atom:link href="https://example.com/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
+    <description>3</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>3</title>
+      <link>https://example.com/publication-type/3/</link>
+    </image>
+    
+    <item>
+      <title>BMN: Boundary-Matching Network for Temporal Action Proposal Generation</title>
+      <link>https://example.com/publication/bmn/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/bmn/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Temporal action proposalのタスク。従来のような始点終点予測とは別に，Proposalの始点と長さを表すヒートマップを作成する。最終的に始点終点情報とヒートマップのConfidenceを組み合わせることで，Proposalを出してくる手法を提案。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130552-5f698480-5712-11ea-921e-d6e5f8fc4711.png&#34;&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ネットワーク全体の概要は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130736-3d243680-5713-11ea-965e-4e9466b9dc7e.png&#34;&gt;
+&lt;h2 id=&#34;bm-confidence-map&#34;&gt;BM confidence map&lt;/h2&gt;
+&lt;p&gt;ヒートマップは始点を横軸，Proposalの長さを縦軸として予測される。つまり同一の始点から始まる長さの違うProposalについても，ヒートマップを利用することによってConfidenceの算出が容易となる。このようにヒートマップはconfidenceのスコアを測るために用いる。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130601-a22b5c80-5712-11ea-94e6-a73ccc9f399f.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ActivityNetを用いて他手法との比較。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130962-2d592200-5714-11ea-8030-b0158af42f4f.png&#34;&gt;
+&lt;p&gt;出力例&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130996-537ec200-5714-11ea-8657-4585050d66ba.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ヒートマップを用いたConfidenceの算出&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Video Representation Learning by Dense Predictive Coding</title>
+      <link>https://example.com/publication/densepredictivecoding/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/densepredictivecoding/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;../16&#34;&gt;Predictive Coding&lt;/a&gt;で用いた手法を動画にも適用した論文。動画の次の潜在表現を回帰で予測させてあげて，相互情報量
+の最大化を目指す。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;全体としての考え方は&lt;a href=&#34;../16&#34;&gt;Predictive Coding&lt;/a&gt;と一緒。ただし今回は動画を入力として扱うので，単純にフレームごとに系列データとして扱っていく。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134991-3deb8f80-6066-11ea-8d70-d0ba0d610780.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 24 38&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;PositiveペアとNegativeペアによるMetric Learning。NegativeとしてはTemporalとSpatialがあり，フレーム内での同じ位置でも時間情報が違ったらNegativeとして遠ざけるよう学習する（背景に依存して動画全体として変化の少ない特徴表現となることを避けるため？）。&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135068-f87b9200-6066-11ea-9c1c-ff3ba1983a61.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 29 51&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135077-04ffea80-6067-11ea-8089-353b7c07b0f4.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 30 13&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;相互情報量最大化の考え方を動画にも応用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning</title>
+      <link>https://example.com/publication/nnviterbi/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/nnviterbi/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;クラスラベルの遷移順のみのWeaklyなラベルを用いたAction Segmentation. Viterbi algorism を用いた方法を提案。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;p&gt;LSTMか何かしらの時系列モデルを通して得た特徴量のsoftmax値に関して，クラスの遷移順を教師ラベルとして，その各クラスの長さを求めるようなvitervi algorism を定義。Viterbiを適用する前と適用したあとでCrossentropy Lossをとる。Viterbiを通す前の結果を通した後の遷移に近づけるイメージ。&lt;/p&gt;
+&lt;img width=&#34;417&#34; alt=&#34;スクリーンショット 2020-03-14 19 06 43&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76679833-01e89980-6627-11ea-8496-ee43a1f8e74b.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;462&#34; alt=&#34;スクリーンショット 2020-03-14 19 10 20&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76679875-74f21000-6627-11ea-8c8f-84b2c2931f88.png&#34;&gt;
+&lt;img width=&#34;450&#34; alt=&#34;スクリーンショット 2020-03-14 19 10 29&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76679878-7a4f5a80-6627-11ea-88dc-cdd3858225e8.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Viterbiによる手法。&lt;/p&gt;
+&lt;p&gt;今まではクラスの遷移ラベルから，フレーム単位での仮のラベルを使うことでロスを計算していたが，そうではなくviterbiを通す前と後でロスをとることで仮ラベルをなくし，精度向上。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

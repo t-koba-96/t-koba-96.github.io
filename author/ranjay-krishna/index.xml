@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ranjay Krishna | Bianca Blog</title>
+    <link>https://example.com/author/ranjay-krishna/</link>
+      <atom:link href="https://example.com/author/ranjay-krishna/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ranjay Krishna</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Ranjay Krishna</title>
+      <link>https://example.com/author/ranjay-krishna/</link>
+    </image>
+    
+    <item>
+      <title>Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations</title>
+      <link>https://example.com/publication/visualgenome/</link>
+      <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/visualgenome/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成。SceneGraphの研究分野で一般的に使われているデータセットとなっている。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;データセット概要は下図。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76139109-98014a80-6090-11ea-9e98-5ab90485c1e4.png&#34; alt=&#34;スクリーンショット 2020-03-07 16 27 41&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;データセットの内容については以下で構成されている。&lt;/p&gt;
+&lt;h2 id=&#34;multiple-region-graphs-and-their-descriptions&#34;&gt;Multiple region graphs and their descriptions&lt;/h2&gt;
+&lt;p&gt;様々な関係性が存在する一つの画像を，一つの説明文だけで完結させてしまうのは現実的ではない。そこで画像内にBoundingBoxを複数用意し，そのなかでのシーングラフ(Region Graphs)，説明文章(Region Descriptions)をそれぞれ作成している。ひとつの画像に対して平均で42個のこのような領域が用意されている。&lt;/p&gt;
+&lt;h2 id=&#34;multiple-objects-and-their-bounding-boxes&#34;&gt;Multiple objects and their bounding boxes&lt;/h2&gt;
+&lt;p&gt;画像内に平均で２１個の物体情報とそのBoundingBoxを用意。同一物体に対して複数ラベル存在する場合（man and person），大きい括りのラベル(person)が選択される。&lt;/p&gt;
+&lt;h2 id=&#34;a-set-of-attributes&#34;&gt;A set of attributes&lt;/h2&gt;
+&lt;p&gt;画像内に平均で16個のAttributeラベルを用意。AttributeはObjectにつくものであり，一つのObjectに対して0個以上のAttributeが関連づいている。&lt;/p&gt;
+&lt;h2 id=&#34;a-set-of-relationships&#34;&gt;A set of relationships&lt;/h2&gt;
+&lt;p&gt;Relationshipとは２つのobjectをつなぐもの。有向グラフ構造のため，Relationshipをもっている２つのobjectの関係性の間には矢印が向く方と向けられる方が存在する。矢印の出発点がsubject，矢印の終着点がobjectと定義される。上の図の例で言えば，jumping over という関係性に関して，subject は man, object は fire hydrant となる。&lt;/p&gt;
+&lt;h2 id=&#34;one-scene-graph&#34;&gt;One scene graph&lt;/h2&gt;
+&lt;p&gt;今までRegionごとに得ていた情報をまとめて，画像全体として一つのScene Graph を作成。（上図の一番下）&lt;/p&gt;
+&lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
+&lt;p&gt;一部の例。より詳しい内容に関しては元論文をチェック。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76139540-3c38c080-6094-11ea-8aba-9b842ffb4d81.png&#34; alt=&#34;スクリーンショット 2020-03-07 16 53 51&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;シーングラフ用の新たなデータセットの提案。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

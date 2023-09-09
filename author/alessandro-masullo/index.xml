@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alessandro Masullo | Bianca Blog</title>
+    <link>https://example.com/author/alessandro-masullo/</link>
+      <atom:link href="https://example.com/author/alessandro-masullo/index.xml" rel="self" type="application/rss+xml" />
+    <description>Alessandro Masullo</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Alessandro Masullo</title>
+      <link>https://example.com/author/alessandro-masullo/</link>
+    </image>
+    
+    <item>
+      <title>Temporal-Relational CrossTransformers for Few-Shot Action Recognition</title>
+      <link>https://example.com/publication/tr_crosstransformers/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/tr_crosstransformers/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;CrossTransformerを応用したFew-ShotのActionRecognition手法の提案。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187157046-d613723d-1f64-4233-96fa-ff09fe31c852.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;各学習クラスのサンプルが少ない中で、Queryビデオがどのクラスであるかを認識する。
+N-way、K-shotのFSLの時について考える。通常だとQueryビデオがNクラスのうちのどのクラスに属しているか、各クラスのSupportVideo一つずつと比較し、その最大値もしくは平均値を取って判断するが、Transformerのネットワーク構造を用いることですべてのSupportVideoをまとめて見たうえで判断することが可能になるよ、という話。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187158126-ca72e67f-0a31-42c9-b3c3-2e73e202fc68.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;各動画は等間隔でフレームサンプリングされたものを使う。QueryVideoからクエリ、SupportVideoからキーとバリューを作成し、&lt;a href=&#34;../22&#34;&gt;CrossTransormer&lt;/a&gt;と同様の構造を用いたAttentionの計算を行う。
+この際、上図にはPair representationsとTriple representationsがあるが、Pair representationsでは各動画の中から2フレーム(ペア)のみを用いて特徴量化し、Triple representations では3フレームのみを用いて特徴量化する。そのため、各動画の特徴量をあらわすために扱うのは実際には2~3フレームである(Ablationで4の場合についても検証している）。&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187323944-c9d11afd-228d-4789-804e-f4440461ba2f.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187324052-fe3ca87b-e2fe-4291-9038-7fd07a7159a8.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187324075-6cd5f632-95e4-4343-9064-19260514077b.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

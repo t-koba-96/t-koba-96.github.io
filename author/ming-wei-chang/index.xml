@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ming-Wei Chang | Bianca Blog</title>
+    <link>https://example.com/author/ming-wei-chang/</link>
+      <atom:link href="https://example.com/author/ming-wei-chang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ming-Wei Chang</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Ming-Wei Chang</title>
+      <link>https://example.com/author/ming-wei-chang/</link>
+    </image>
+    
+    <item>
+      <title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</title>
+      <link>https://example.com/publication/bert/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/bert/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Bi-directional な &lt;a href=&#34;https://example.com/paper/15/&#34;&gt;Transformer&lt;/a&gt; を用いて，自然言語分野における新たな事前学習手法を提案。言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習。&lt;br&gt;
+　トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM。&lt;br&gt;
+　単一の文章における単語の関連性による出現確率についてだけでなく，２つの文章を比較させることによって文章全体としてより良い特徴表現を得ようということを目的としているのがNSP.&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75126078-ac8e2c00-56fb-11ea-8461-a89f2a8048e0.png&#34;&gt;
+&lt;h2 id=&#34;masked-language-model&#34;&gt;Masked Language Model&lt;/h2&gt;
+&lt;p&gt;入力の単語を予めいくつかマスキングしてしまい穴埋め問題を溶かせることによって，マスキングした部分の単語を前後の文脈の理解から復元させるタスク。入力シーケンスのうち，15%をランダムに選んでその部分の予測を行う。選んだ部分のうち80%はマスキング，10%は別の単語に置き換え，残りの10%はそのままの単語として入力させている。前後の文脈を考慮した特徴量抽出を行うことが目的。&lt;/p&gt;
+&lt;h2 id=&#34;next-sentence-prediction&#34;&gt;Next Sentence Prediction&lt;/h2&gt;
+&lt;p&gt;２つの文章を並べて入力してあげて，２文目が１文目の次に来る文かどうかを予測するタスク。２つの文章を比較して予測結果を返すため，文章全体として良い特徴表現を得ることが期待できる。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34;  src=&#34;https://user-images.githubusercontent.com/38309191/75126590-0ee82c00-56fe-11ea-852f-ec956e4050cf.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;800&#34; alt=&#34;2019-02-22 16 19 00&#34;  src=&#34;https://user-images.githubusercontent.com/38309191/75126606-20c9cf00-56fe-11ea-8818-cac7e646c346.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;新たな事前学習の枠組み。&lt;/p&gt;
+&lt;p&gt;様々なタスクに転用するだけで精度向上。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BMN: Boundary-Matching Network for Temporal Action Proposal Generation</title>
+      <link>https://example.com/publication/bmn/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/bmn/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Temporal action proposalのタスク。従来のような始点終点予測とは別に，Proposalの始点と長さを表すヒートマップを作成する。最終的に始点終点情報とヒートマップのConfidenceを組み合わせることで，Proposalを出してくる手法を提案。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130552-5f698480-5712-11ea-921e-d6e5f8fc4711.png&#34;&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ネットワーク全体の概要は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130736-3d243680-5713-11ea-965e-4e9466b9dc7e.png&#34;&gt;
+&lt;h2 id=&#34;bm-confidence-map&#34;&gt;BM confidence map&lt;/h2&gt;
+&lt;p&gt;ヒートマップは始点を横軸，Proposalの長さを縦軸として予測される。つまり同一の始点から始まる長さの違うProposalについても，ヒートマップを利用することによってConfidenceの算出が容易となる。このようにヒートマップはconfidenceのスコアを測るために用いる。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130601-a22b5c80-5712-11ea-94e6-a73ccc9f399f.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ActivityNetを用いて他手法との比較。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130962-2d592200-5714-11ea-8030-b0158af42f4f.png&#34;&gt;
+&lt;p&gt;出力例&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130996-537ec200-5714-11ea-8657-4585050d66ba.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ヒートマップを用いたConfidenceの算出&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>VideoBERT: A Joint Model for Video and Language Representation Learning</title>
+      <link>https://example.com/publication/videobert/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/videobert/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;を応用することでマルチモーダルに事前学習させる方法を提案。基本的には&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;のMask穴埋め問題をLanguage+Visionに拡張したもの。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;p&gt;Downstreamのタスクとしては入力テキスト情報に対応したビデオフレームの出力や，入力ビデオの次におきうるアクションのビデオ出力等が挙げられる。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ネットワーク全体の概要は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;800&#34; alt=&#34;スクリーンショット 2020-03-06 12 15 33&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76046767-2fd53a80-5fa4-11ea-818a-03af32cd8904.png&#34;&gt;
+&lt;h2 id=&#34;マスク穴埋め問題&#34;&gt;マスク穴埋め問題&lt;/h2&gt;
+&lt;p&gt;ランダムで入力をマスクして，出力を予測させることでSelf-supervisedに学習するのはBertと一緒。違いとして，文章同士で入力ではなく，文章と対応するビデオのセットでの入力となる。ビデオ側のトークンはクラスタリングで定義し，４階層✖️12次元の計20736次元の階層的Kmeansによって分類し，言語側と同じくクロスエントロピーをロスとして学習。&lt;/p&gt;
+&lt;img width=&#34;618&#34; alt=&#34;スクリーンショット 2020-03-06 12 20 13&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76047018-d6b9d680-5fa4-11ea-9011-73bd036d5fa9.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;様々なDown Streamタスクでの比較。&lt;/p&gt;
+&lt;h2 id=&#34;action-classification&#34;&gt;Action classification&lt;/h2&gt;
+&lt;img width=&#34;800&#34; alt=&#34;スクリーンショット 2020-03-06 12 24 30&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76047240-6f505680-5fa5-11ea-906d-27f0afef1bb2.png&#34;&gt;  
+&lt;h2 id=&#34;video-captioning&#34;&gt;Video captioning&lt;/h2&gt;
+&lt;img width=&#34;800&#34; alt=&#34;スクリーンショット 2020-03-06 12 24 45&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76047253-79725500-5fa5-11ea-9aa3-79f3ee5e5d25.png&#34;&gt;
+&lt;img width=&#34;800&#34; alt=&#34;スクリーンショット 2020-03-06 12 24 59&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76047261-80996300-5fa5-11ea-926b-25367f985f12.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;BertのようにSelf-supervisedな事前学習方法の提案によって大きなデータセット規模での学習を可能とし，精度の向上&lt;/p&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Videoの入力があいまいなイメージ。Bertへの入力としてどのようなルールでフレームを選んでくるかは難しい問題に感じる。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

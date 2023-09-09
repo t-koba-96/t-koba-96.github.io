@@ -1,0 +1,2302 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bianca Blog</title>
+    <link>https://example.com/</link>
+      <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <description>Bianca Blog</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Bianca Blog</title>
+      <link>https://example.com/</link>
+    </image>
+    
+    <item>
+      <title>論文</title>
+      <link>https://example.com/author/%E8%AB%96%E6%96%87/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.com/author/%E8%AB%96%E6%96%87/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fast and Unsupervised Action Boundary Detection for Action Segmentation</title>
+      <link>https://example.com/publication/abdetection/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/abdetection/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;提案手法&#34;&gt;&lt;code&gt;提案手法&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Unified Fully and Timestamp Supervised Temporal Action Segmentation via Sequence to Sequence Translation</title>
+      <link>https://example.com/publication/stostranslation/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/stostranslation/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;task&#34;&gt;Task&lt;/h2&gt;
+&lt;p&gt;VideoActionSegmentation&lt;/p&gt;
+&lt;h2 id=&#34;input&#34;&gt;Input&lt;/h2&gt;
+&lt;p&gt;各フレームに対して、行動ラベルが一種類与えられている動画。&lt;/p&gt;
+&lt;h2 id=&#34;output&#34;&gt;Output&lt;/h2&gt;
+&lt;p&gt;一般的にはフレーム毎に行動ラベルの予測結果を返すのに対し、行動ラベルのシーケンス(Transcriptと呼ぶ)とタイムスタンプ(Durationと呼ぶ)を別々に得て、セグメントレベルでの行動予測結果を返すことで、OverSegmentation(予測結果のブレがおきる)の問題を解決する。&lt;/p&gt;
+&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
+&lt;p&gt;以下の２パターンを検証&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;教師あり(全てのフレームに行動ラベルあり)&lt;/li&gt;
+&lt;li&gt;弱教師あり(各Transcriptに属するフレームが１つずつのみ与えられている)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;提案手法&#34;&gt;&lt;code&gt;提案手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/231029029-95189a28-8e1a-457e-99f8-5036fff0e4c8.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;ステップ&#34;&gt;ステップ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(a) : 一般的なSegmentationModelではOverSegmentationの問題が発生しやすく、後段で処理が必要。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(b) : そこでTransformeベースのseq2seqモデルを適用し、Decoderの出力としてTranscriptとDurationを同時に得ることを考える。ただし、以下の２点の要因から、このモデル構造単体では機能しない。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NLPと違い、非常に長い類似したフレーム入力に対して、短い行動出力シーケンスが求められる点。&lt;/li&gt;
+&lt;li&gt;NPLと違い、データセットの規模が非常に小さく、扱える学習データが少ない点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(c) : そこで、(a)のEncoderの出力をDecoderの入力として追加することで、デコーダでは異なる行動に対してより識別性の高い特徴を学習できる。これによりTranscriptでは改善を得るが、Durationについては以前精度が悪いままである。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(d) : そこで、Decoderでの直接のDuration出力はあきらめる。DecoderではあくまでTranscriptを得ることを目的とし、DurationについてはEncoderの出力も同時に活用することを考える。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(e) : Encoderで得たフレーム単位のクラス予測値とDecoderの出力との間で相互アテンションをとって、最終的なセグメントレベルでの行動予測結果を返す。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;損失関数&#34;&gt;損失関数&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Encoder&lt;br&gt;
+通常のACtionSegmentationと同様、CrossEntropyLossを採用。&lt;/li&gt;
+&lt;li&gt;Decoder&lt;br&gt;
+こちらもセグメント単位でのCrossEntropyLossを用いる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;dataset&#34;&gt;Dataset&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Breakfast&lt;/li&gt;
+&lt;li&gt;50salads&lt;/li&gt;
+&lt;li&gt;GTEA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;result&#34;&gt;Result&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/231042891-582b0940-300d-425d-b3ef-0ed8849c79b0.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;弱教師学習でseq2seqを用いた2Branch(Transcript+Duration)手法がでてきていたものが、transformerベースのseq2seqとなったというイメージ。
+ActionSegmentationのタスクでTransformerを利用していく中で、この論文でも述べているようにデータの少なさ+非常に長い類似したフレーム入力をどう扱っていくかが焦点になりそう。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Temporal-Relational CrossTransformers for Few-Shot Action Recognition</title>
+      <link>https://example.com/publication/tr_crosstransformers/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/tr_crosstransformers/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;CrossTransformerを応用したFew-ShotのActionRecognition手法の提案。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187157046-d613723d-1f64-4233-96fa-ff09fe31c852.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;各学習クラスのサンプルが少ない中で、Queryビデオがどのクラスであるかを認識する。
+N-way、K-shotのFSLの時について考える。通常だとQueryビデオがNクラスのうちのどのクラスに属しているか、各クラスのSupportVideo一つずつと比較し、その最大値もしくは平均値を取って判断するが、Transformerのネットワーク構造を用いることですべてのSupportVideoをまとめて見たうえで判断することが可能になるよ、という話。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187158126-ca72e67f-0a31-42c9-b3c3-2e73e202fc68.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;各動画は等間隔でフレームサンプリングされたものを使う。QueryVideoからクエリ、SupportVideoからキーとバリューを作成し、&lt;a href=&#34;../22&#34;&gt;CrossTransormer&lt;/a&gt;と同様の構造を用いたAttentionの計算を行う。
+この際、上図にはPair representationsとTriple representationsがあるが、Pair representationsでは各動画の中から2フレーム(ペア)のみを用いて特徴量化し、Triple representations では3フレームのみを用いて特徴量化する。そのため、各動画の特徴量をあらわすために扱うのは実際には2~3フレームである(Ablationで4の場合についても検証している）。&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187323944-c9d11afd-228d-4789-804e-f4440461ba2f.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187324052-fe3ca87b-e2fe-4291-9038-7fd07a7159a8.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187324075-6cd5f632-95e4-4343-9064-19260514077b.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Action Genome: Actions as Composition of Spatio-temporal Scene Graphs</title>
+      <link>https://example.com/publication/actiongenome/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/actiongenome/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;../12&#34;&gt;Visual Genome&lt;/a&gt;の動画版のデータセット。また&lt;a href=&#34;../14&#34;&gt;Feature Banks&lt;/a&gt;を用いた手法の提案。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
+&lt;p&gt;データセットのラベル内容としては動画中のActionの領域とそのCaption，またVisualGenomeのようなSceneGraphが与えられている。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76069562-67f57100-5fd6-11ea-9f69-bde35dcb6131.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 14 54&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;動画内の各Actionに関して，Actionを均等な時間間隔で分割した際の5フレームを抽出し，その5フレームにおけるシーングラフのラベルを作成。上記の例では１つの動画で４つのアクションが起きているため，4✖️5の合計20フレーム分のシーングラフが存在する。&lt;/p&gt;
+&lt;p&gt;他のデータセットとの比較としては以下の通り。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76069582-7479c980-5fd6-11ea-80ba-692b805558d6.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 15 20&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;動画から各Actionを抽出するAction Recognitionのタスクを考える。同グループの以前の研究である&lt;a href=&#34;../14&#34;&gt;Feature Banks&lt;/a&gt;をベースラインとして用いている。従来のように抽出した3DCNN特徴に加えて，今回のラベルによって得られるシーングラフを予測させてobjectとrelationshipsを捉えたfeatured map を同様にFeature bank として長期の時系列情報として保持することで，行動の分類を行っている。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76069715-a3903b00-5fd6-11ea-8ec1-ea0443bde2cd.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 16 38&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;提案手法の評価。シーングラフ の利用によって精度の向上を確認。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76141573-1538b980-60a9-11ea-828d-0f1e8964ecd9.png&#34; alt=&#34;スクリーンショット 2020-03-07 19 23 06&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;既存のシーングラフ生成モデルをActionGenomeに適用した際の精度。既存の手法は画像ベースの手法のため精度も低く，動画用に改善の余地ありとのこと。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76141570-0c47e800-60a9-11ea-8edb-0c5419ba821a.png&#34; alt=&#34;スクリーンショット 2020-03-07 19 22 53&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;動画用のシーングラフを提案。シーングラフを用いたActionRecognitionの手法。&lt;/p&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;公開されたら触ってみたい。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CrossTransformers: spatially-aware few-shot transfer</title>
+      <link>https://example.com/publication/crosstransformer/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/crosstransformer/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;2 Contributions&lt;/p&gt;
+&lt;p&gt;[1] SimCLRを用いた自己表現学習: クラスラベルを用いた学習を行うと、抽出した特徴量は一般化されたクラスの情報のみを保持したものとなり、その過程で局所的な特徴や表現をそぎ落としたものとなってしまう。そこでSimCLR同様の自己表現学習方法を導入する。自身の画像自体を正解レベルとして扱うことで、細部の表現をそぎ落とさないような学習を実現する。&lt;/p&gt;
+&lt;p&gt;[2] Transformerによる局所マップ同士の表現の親和性を学習。例えば動物であれば、各体の部位の形や色等、その局所的な特徴の対応性から同一の動物であると決定することができる。Transformerを用いてこのような局所的な特徴同士の比較により、最終的にどのクラスに属しているかの決定を行う。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187329611-db8fa17c-59bf-4059-b3d7-ff6c703a04c3.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187352584-0f526e64-e888-4125-a694-0d4fd26db809.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187352620-7cf52b28-00ba-4f1f-88f0-1825dba58e47.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fine-grained Action Recognition in Assembly Work Scenes by Drawing Attention to the Hands</title>
+      <link>https://example.com/published/sitis2019/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/published/sitis2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>三菱電機との共同研究成果がプレスリリースされました</title>
+      <link>https://example.com/blog/mitsubishi/</link>
+      <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/blog/mitsubishi/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;三菱電機との共同研究成果が公開されました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://aoki-medialab.jp/information/%e4%b8%89%e8%8f%b1%e9%9b%bb%e6%a9%9f%ef%bc%88%e6%a0%aa%ef%bc%89%e3%81%a8%e3%81%ae%e5%85%b1%e5%90%8c%e7%a0%94%e7%a9%b6%e6%88%90%e6%9e%9c%e3%81%8cceatec2019%e3%81%a7%e5%85%ac%e9%96%8b%e3%81%95%e3%82%8c/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;共同研究成果&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.mitsubishielectric.co.jp/news/2019/pdf/1009.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;三菱電機プレスリリース&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://xtech.nikkei.com/atcl/nxt/news/18/06194/?ST=nnm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;日経ニューメディア&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>フレーム単位での行動認識結果のデモをFlaskを用いてデプロイ</title>
+      <link>https://example.com/blog/video-demo/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/blog/video-demo/</guid>
+      <description>&lt;h1 id=&#34;動画認識デモについて&#34;&gt;&lt;code&gt;動画認識デモについて&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;今まで作成したデモを汎用的に利用するために，最低限の機能のみに簡略化したデモを作成したので，使い方の手順とともに軽く説明していきたい。
+まずはデモの実際の様子を以下に示した。フレーム単位での正解ラベルと予測ラベルを見ることができ，また手動でフレームを選ぶか自動再生するかの2つのモードを切り替えられる。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://classification-tkoba.appspot.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
+&lt;video src=&#34;demo.mp4&#34; controls&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h1 id=&#34;実行までの流れ&#34;&gt;&lt;code&gt;実行までの流れ&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;次に使い方についても軽く説明していきたい。&lt;/p&gt;
+&lt;p&gt;➊&lt;br&gt;
+まずはコードを公開している&lt;a href=&#34;https://github.com/t-koba-96/demo-light&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHubページ&lt;/a&gt;に移動し，gitレポジトリのクローンを行う。。&lt;br&gt;
+&lt;code&gt;$ git clone [リポジトリ名]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;➋&lt;br&gt;
+gitレポジトリには実際に試すためのサンプルデータ（動画，正解ラベル，認識結果）は載せていないため，別にデータをダウンロードしてもらう必要がある。&lt;a href=&#34;https://github.com/t-koba-96/demo-light/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;URL先&lt;/a&gt;のzipファイル(Assets内のdatas.zip)を解凍し，app.pyと同じ階層にdatasファイルが来るように配置する(元々あるdatasファイルと置き換える)。今回はサンプルデータとして&lt;a href=&#34;http://www.cbi.gatech.edu/fpv/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gteaデータセット&lt;/a&gt;を用いている。&lt;/p&gt;
+&lt;p&gt;➌&lt;br&gt;
+必要なコードとデータは揃ったので，最後にアプリを動かすために必要なパッケージのインストールを行う。&lt;br&gt;
+&lt;code&gt;$ pip install -r requirements.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;➍&lt;br&gt;
+以上で準備は整ったので，アプリを実行する。&lt;br&gt;
+&lt;code&gt;$ python app.py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;➎&lt;br&gt;
+&amp;ldquo;Running on [ローカルのURL] &amp;ldquo;，といったメッセージが表示されるので，指定されたURLを開けばアプリが実行されていることが確認できる。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_2fe439c1b2e85c7c2d9c461487a30e17.webp 400w,
+               /blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_f14347a3311062ae3c716d0054e33cbe.webp 760w,
+               /blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://example.com/blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_2fe439c1b2e85c7c2d9c461487a30e17.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;54&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;最後に&#34;&gt;&lt;code&gt;最後に&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Demo結果の様子だけ見たい場合は&lt;a href=&#34;https://classification-tkoba.appspot.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;リンク先&lt;/a&gt;にあります。
+フレームレートがまだまだ遅いので(Google App Engine の仮想マシン環境の影響もある)，より快適な可視化の為に改善をしていきたいとは思っている。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</title>
+      <link>https://example.com/publication/bert/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/bert/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Bi-directional な &lt;a href=&#34;https://example.com/paper/15/&#34;&gt;Transformer&lt;/a&gt; を用いて，自然言語分野における新たな事前学習手法を提案。言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習。&lt;br&gt;
+　トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM。&lt;br&gt;
+　単一の文章における単語の関連性による出現確率についてだけでなく，２つの文章を比較させることによって文章全体としてより良い特徴表現を得ようということを目的としているのがNSP.&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75126078-ac8e2c00-56fb-11ea-8461-a89f2a8048e0.png&#34;&gt;
+&lt;h2 id=&#34;masked-language-model&#34;&gt;Masked Language Model&lt;/h2&gt;
+&lt;p&gt;入力の単語を予めいくつかマスキングしてしまい穴埋め問題を溶かせることによって，マスキングした部分の単語を前後の文脈の理解から復元させるタスク。入力シーケンスのうち，15%をランダムに選んでその部分の予測を行う。選んだ部分のうち80%はマスキング，10%は別の単語に置き換え，残りの10%はそのままの単語として入力させている。前後の文脈を考慮した特徴量抽出を行うことが目的。&lt;/p&gt;
+&lt;h2 id=&#34;next-sentence-prediction&#34;&gt;Next Sentence Prediction&lt;/h2&gt;
+&lt;p&gt;２つの文章を並べて入力してあげて，２文目が１文目の次に来る文かどうかを予測するタスク。２つの文章を比較して予測結果を返すため，文章全体として良い特徴表現を得ることが期待できる。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34;  src=&#34;https://user-images.githubusercontent.com/38309191/75126590-0ee82c00-56fe-11ea-852f-ec956e4050cf.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;800&#34; alt=&#34;2019-02-22 16 19 00&#34;  src=&#34;https://user-images.githubusercontent.com/38309191/75126606-20c9cf00-56fe-11ea-8818-cac7e646c346.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;新たな事前学習の枠組み。&lt;/p&gt;
+&lt;p&gt;様々なタスクに転用するだけで精度向上。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BMN: Boundary-Matching Network for Temporal Action Proposal Generation</title>
+      <link>https://example.com/publication/bmn/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/bmn/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Temporal action proposalのタスク。従来のような始点終点予測とは別に，Proposalの始点と長さを表すヒートマップを作成する。最終的に始点終点情報とヒートマップのConfidenceを組み合わせることで，Proposalを出してくる手法を提案。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130552-5f698480-5712-11ea-921e-d6e5f8fc4711.png&#34;&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ネットワーク全体の概要は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130736-3d243680-5713-11ea-965e-4e9466b9dc7e.png&#34;&gt;
+&lt;h2 id=&#34;bm-confidence-map&#34;&gt;BM confidence map&lt;/h2&gt;
+&lt;p&gt;ヒートマップは始点を横軸，Proposalの長さを縦軸として予測される。つまり同一の始点から始まる長さの違うProposalについても，ヒートマップを利用することによってConfidenceの算出が容易となる。このようにヒートマップはconfidenceのスコアを測るために用いる。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130601-a22b5c80-5712-11ea-94e6-a73ccc9f399f.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ActivityNetを用いて他手法との比較。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130962-2d592200-5714-11ea-8030-b0158af42f4f.png&#34;&gt;
+&lt;p&gt;出力例&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130996-537ec200-5714-11ea-8657-4585050d66ba.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ヒートマップを用いたConfidenceの算出&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Completeness Modeling and Context Separation for Weakly Supervised Temporal Action Localization</title>
+      <link>https://example.com/publication/cmcs/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/cmcs/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;動画のクラスラベルのみのWeaklyなラベルを用いたTemporal Action Localization.&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h2 id=&#34;weaklyなラベルによる難点&#34;&gt;Weaklyなラベルによる難点&lt;/h2&gt;
+&lt;p&gt;Weaklyなラベルによる難点は主に２つあり，解決するための手法を提案。　　&lt;/p&gt;
+&lt;h2 id=&#34;-action-completeness-modeling&#34;&gt;⓵ Action completeness modeling&lt;/h2&gt;
+&lt;p&gt;下図の上部参照。 例えばPKでは選手がシュートする動きとボールが飛んでいく動きによって構成されるが，Weaklyでは動画のクラス分類を元に解くのでより分類において重要であるシュートのところのみ切り取られやすい。そこでこれらの行動を分けて予測するようなマルチブランチのネットワーク構造にする。&lt;/p&gt;
+&lt;h2 id=&#34;-action-context-separation&#34;&gt;⓶ Action-context separation&lt;/h2&gt;
+&lt;p&gt;下図の下部参照。行動の前景と背景ではフレーム全体としてのContextはあまり変わらない（どちらにもビリヤード台はずっと写ってる）。これに関しては人物や物の情報がアクションには関わっていると仮定し，OpticalFlowを用いた解決法を提案。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76378934-1829f780-6392-11ea-8145-b0e018b61c22.png&#34; alt=&#34;スクリーンショット 2020-03-11 12 16 07&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76379387-43f9ad00-6393-11ea-90fe-582e28b16f52.png&#34; alt=&#34;スクリーンショット 2020-03-11 12 24 30&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;マルチブランチネットワークとアテンションモデルによって構成。マルチブランチNetworkではアクションをK分割して，それぞれの集合（Averageをとる）として求める全体のアクションを得るといった考え方。K分割したブランチにおいてそれぞれで違う部分に注目してもらう必要があるため，DiversityLossを採用。アテンションモデルでは時系列方向にSoftmaxをかけてフレームの重要度を算出。最後にこれらをかけあわせ，動画単位での MILLossをとる。&lt;br&gt;
+推論時はマルチブランチをAverageした結果を利用。&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76379423-5e338b00-6393-11ea-9281-00de6e0f5ee6.png&#34; alt=&#34;スクリーンショット 2020-03-11 12 25 12&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76379450-6e4b6a80-6393-11ea-9a6e-78045527b853.png&#34; alt=&#34;スクリーンショット 2020-03-11 12 25 40&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;マルチブランチによる推定。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Graphical Contrastive Losses for Scene Graph Parsing</title>
+      <link>https://example.com/publication/graphicalcontrastiveloss/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/graphicalcontrastiveloss/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;シーングラフの生成において従来モデルの課題点を指摘した上で，それを改善するための新たなロスを提案し，SoTAを達成。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h2 id=&#34;シーングラフにおける言葉の定義&#34;&gt;シーングラフにおける言葉の定義&lt;/h2&gt;
+&lt;p&gt;まずはじめに論文の内容とは関係ないが，&lt;a href=&#34;../24&#34;&gt;Graph-RCNN&lt;/a&gt;ではあいまいになっていて読みにくかったシーングラフにおける言葉の定義をしっかり記していてくれたのが地味にありがたい。&lt;/p&gt;
+&lt;p&gt;・シーングラフを構成するにあたって必要にになるのは，objectとsubject,それをつなぐ関係性であるpredicateと，objectやsubjectに関するattributeの4つ。&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;[object, subject, predicate, attribute]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;・実際に画像上に登場する物体(Object or Subject)は総称してentity.&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;[enitity]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;・最終的に求めるべきobject,subject,predicateの関係性を&amp;lt;s,pred,o&amp;gt;と定義し，これのことをrelationshipsと呼ぶ。&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;[relationships]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;従来手法の課題点&#34;&gt;従来手法の課題点&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;../25&#34;&gt;MotifNet&lt;/a&gt;のように，従来の手法ではまず初めにentityの情報を得てから，それをもとにpredicateをラベルのクラス分類問題として解くことでrelationshipsを求めるという２段階のアプローチが主流である。しかし，このようなアプローチには２つの課題が存在すると主張している。&lt;/p&gt;
+&lt;h2 id=&#34;-entity-instance-confusion&#34;&gt;⓵ Entity Instance Confusion&lt;/h2&gt;
+&lt;p&gt;同じラベルのentityが複数登場した時，relationshipにおけるenitityがそのうちのどれであるかの判断が難しくなる。以下の例では，男の人が持っているのではない方のワイングラスにobjectが付加されてしまっている。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76162930-5b634b00-6185-11ea-9618-2ccf2b3978e6.png&#34; alt=&#34;スクリーンショット 2020-03-08 21 39 54&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;-proximal-rel-ambiguity&#34;&gt;⓶ Proximal Rel Ambiguity&lt;/h2&gt;
+&lt;p&gt;同様に同じラベルのpredicateを持ちうるobjectとsubjectのペアが複数ある時も，どのobjectとsubjectがペアであるかの判別が難しい。以下の例ではplaysというpredicateに対して3人の男と３つの楽器によるペアを判別する必要があるが，正しくマッチングできていないことがみて取れる。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76162933-6027ff00-6185-11ea-88fc-4cebc7aca47b.png&#34; alt=&#34;スクリーンショット 2020-03-08 21 40 03&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;上記の２つともの問題点が発生する原因として，relationshipsを求める際にそれぞれ独立のクラス分類問題として解いてしまっていることがあげられる。そのため同じ物体や考えられるペアが複数存在してもそれぞれを独立の問題として解いてしまっており，お互いを比較した上でどちらがより正しいかを考慮できていない。&lt;br&gt;
+本論文ではそれを解決するための新たなロスを提案している。&lt;/p&gt;
+&lt;h2 id=&#34;提案するロス&#34;&gt;提案するロス&lt;/h2&gt;
+&lt;p&gt;新たなロス関数では３種類のロスを組み合わせたものとなっている。&lt;/p&gt;
+&lt;h2 id=&#34;-class-agnostic-loss&#34;&gt;⓵ CLass Agnostic Loss&lt;/h2&gt;
+&lt;p&gt;クラスラベルを考慮しないトリプレットロス。背景（関連なし）クラスを除いた全てのpredicateクラスに関して，以下のような関数として定義する。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76163467-a4b59980-6189-11ea-9feb-1105c568c435.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 10 34&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;今各entityにおいて，関係性を持つ他のentityとの間のスコアのうち最小のものを最大化し，関係性を持たない他のentityとの間のスコアのうち最大のものを最小化することを考える。そのためには，objectとsubjectに分けるとそれぞれ&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76163471-ac753e00-6189-11ea-9382-7195dcb3e477.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 10 47&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;を最大化することと同義。そのため最小化するロス関数は&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76163474-b39c4c00-6189-11ea-8067-cf13f3e631d0.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 11 00&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;となる。&lt;/p&gt;
+&lt;h2 id=&#34;-entity-class-aware-loss&#34;&gt;⓶ Entity Class Aware Loss&lt;/h2&gt;
+&lt;p&gt;EntityInstanceConfusionを解決するためのロス。基本的には⓵と同じだが，対応するentityのクラスが同じ中でトリプレットロスを計算する。&lt;/p&gt;
+&lt;p&gt;各クラスcに属するenitityに対して&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76163672-88b2f780-618b-11ea-91dd-b7590118d0bd.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 24 05&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;を計算するため，ロス関数は&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76163675-90729c00-618b-11ea-8632-364ef7e3fae9.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 24 19&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;となる。&lt;/p&gt;
+&lt;h2 id=&#34;-predicate-class-aware-loss&#34;&gt;⓷ Predicate Class Aware Loss&lt;/h2&gt;
+&lt;p&gt;⓶のpredicate版。ProximalRelAmbiguityを解決するためのロス。entityに付加されているpredicateのクラスが同じ中でトリプレットロスを計算する。&lt;/p&gt;
+&lt;p&gt;各predicateクラスeが付加されているentityに対して&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76163717-f19a6f80-618b-11ea-9ece-95c1462c1eb3.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 27 01&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;を計算するため，ロス関数は&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76163722-fa8b4100-618b-11ea-9847-4253ee8df19b.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 27 18&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;となる。&lt;/p&gt;
+&lt;h2 id=&#34;最終的なロス&#34;&gt;最終的なロス&lt;/h2&gt;
+&lt;p&gt;以上３つのロスを(L1,2,3)，従来のcrossentropyloss(L0)に加えることによって学習する。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76163726-ff4ff500-618b-11ea-986e-ebfba67def58.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 27 26&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;モデル&#34;&gt;モデル&lt;/h2&gt;
+&lt;p&gt;RelDNと呼ばれるモデルを提案。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76164082-4b506900-618f-11ea-8fdb-23d7a2c4e348.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 51 01&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Semantic, Spatial, Visualの３つのmoduleを用意し，最後に足し合わせたのちsoftmaxをかけてpredicateを出力。&lt;br&gt;
+Visualのうち，relationships全体の特徴量の抽出のみ別に用意したCNN(構造は同じ)を用いて行う。理由としては関係性を捉えるための特徴としてはその限定された領域に注目して欲しく，全体をみてしまうCNNと区別したかったから。（以下図参照）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76164160-eea17e00-618f-11ea-9cfc-0599176007df.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 55 36&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76164113-7dfa6180-618f-11ea-884d-be2c85bae456.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 52 27&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76164212-666fa880-6190-11ea-881a-46f2b7445677.png&#34; alt=&#34;スクリーンショット 2020-03-08 22 58 56&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;シーングラフ用の新たなロスの提案。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Long-Term Feature Banks for Detailed Video Understanding</title>
+      <link>https://example.com/publication/featurebank/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/featurebank/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;３DCNNでは4秒近くにおける時系列情報しか捉えられない。そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文。&lt;/p&gt;
+&lt;img width=&#34;655&#34; alt=&#34;スクリーンショット 2020-03-06 12 52 25&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048917-56e23b00-5fa9-11ea-8618-ca469d4c0bc9.png&#34;&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;３DCNNの元論文では，何フレームごとかに得た特徴をROI Poolingによってある区間における平均特徴量としたのち，全結合層で分類問題を解く（下図）。しかしこれではShortTermな情報しか捉えられず，ビデオ全体から判断が必要な情報が抜け落ちてしまう。&lt;/p&gt;
+&lt;img width=&#34;436&#34; alt=&#34;スクリーンショット 2020-03-06 12 56 58&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76050201-fb647d00-5fa9-11ea-8d3d-ea07d839e0c4.png&#34;&gt;  
+&lt;p&gt;そこでFeatureBankOperationを導入し，ShortTermとは別に得たLongTermな情報も同時に捉えるようなネットワークを用意してあげて，そこから得た特徴量も用いて認識を行う。&lt;/p&gt;
+&lt;img width=&#34;512&#34; alt=&#34;スクリーンショット 2020-03-06 12 57 15&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76050211-03bcb800-5faa-11ea-8d51-86a5ef139f8d.png&#34;&gt;
+&lt;p&gt;FeatureBankOperatorの構造は以下。&lt;/p&gt;
+&lt;img width=&#34;636&#34; alt=&#34;スクリーンショット 2020-03-06 12 59 27&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76050307-526a5200-5faa-11ea-8a9a-1ab6a57fb7f7.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;704&#34; alt=&#34;スクリーンショット 2020-03-06 13 02 12&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76050422-b3922580-5faa-11ea-8c98-89f688cd23a4.png&#34;&gt;
+&lt;img width=&#34;900&#34; alt=&#34;スクリーンショット 2020-03-06 13 03 27&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76050485-e1776a00-5faa-11ea-8a14-a6204f5e55d4.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ShortTerm+LongTerm&lt;/p&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;単純な理論だが精度向上に結構寄与してる。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MS-TCN: Multi-Stage Temporal Convolutional Network for Action Segmentation</title>
+      <link>https://example.com/publication/ms-tcn/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/ms-tcn/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;行動認識のタスクにおいて,&lt;a href=&#34;https://github.com/t-koba-96/paper_summarize/issues/2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Temporal Convolutional Networks&lt;/a&gt;を複数重ねるMulti-TCNの提案。２個目以降のTCNには各クラスのPredictのSoftmax値を入力とすることで，OverSegmentation（予測結果の頻繁な変化）の抑止を実現。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;下図のようにTCNを複数ステージ重ねていき，最終ステージの出力を予測結果として用いる。特徴として，２ステージ目以降の入力は前のステージのSoftmax出力を使う。&lt;br&gt;
+イメージとしては，１ステージ目で大まかな行動の認識を行って，２ステージ目以降では時系列情報を考慮しながら細かい行動遷移の予測（主にOversegmentationの抑止）を行っている感じ？&lt;/p&gt;
+&lt;img width=&#34;369&#34; alt=&#34;スクリーンショット 2019-04-22 20 25 22&#34; src=&#34;https://user-images.githubusercontent.com/38309191/56498481-d1929b00-653c-11e9-9e08-1e375a0fa2e9.png&#34;&gt;
+&lt;h2 id=&#34;ロス&#34;&gt;ロス&lt;/h2&gt;
+&lt;p&gt;交差エントロピーに加え，以下のようにフレーム間での正解クラスの予測値の変化を罰している。クラスが本当に切り替わるところは考慮しないよう，閾値を設けている。&lt;/p&gt;
+&lt;img width=&#34;294&#34; alt=&#34;スクリーンショット 2019-04-22 20 33 21&#34; src=&#34;https://user-images.githubusercontent.com/38309191/56498721-018e6e00-653e-11e9-89bc-31d3d5fe8e91.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cvip.computing.dundee.ac.uk/datasets/foodpreparation/50salads/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;50salads&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;single-tcnとの比較&#34;&gt;Single-TCNとの比較&lt;/h2&gt;
+&lt;img width=&#34;353&#34; alt=&#34;スクリーンショット 2019-04-22 20 36 36&#34; src=&#34;https://user-images.githubusercontent.com/38309191/56498806-5cc06080-653e-11e9-8412-199647b033b3.png&#34;&gt;  
+&lt;h2 id=&#34;ロスの違いによる比較&#34;&gt;ロスの違いによる比較&lt;/h2&gt;
+&lt;img width=&#34;358&#34; alt=&#34;スクリーンショット 2019-04-22 20 36 46&#34; src=&#34;https://user-images.githubusercontent.com/38309191/56498809-5e8a2400-653e-11e9-8cca-71b62d40f6d6.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;・クラス毎のsoftmax値を次のステージへの入力に用いている&lt;/p&gt;
+&lt;p&gt;・遷移に制限をかけたロスの提案&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Temporal Cycle-Consistency Learning</title>
+      <link>https://example.com/publication/cycleconsistency/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/cycleconsistency/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135346-91131180-6069-11ea-8d1e-bd86a2119762.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 48 27&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;まず動画のペアにおいて，各フレームの埋め込み表現をエンコーダによって得る。このうち１つのフレームに注目したとき（下図の右下赤い点），ペア動画においてその埋め込み表現から最も近いフレームを選ぶ。同様にして元の動画からもうひとつ点を選んだとき，最初の赤い点にもどることが理想であるが，違うフレームが選ばれたときはそこでロスをとることによって正解に近づけていくことを考える。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;p&gt;しかし単純に上のように定義しただけでは損失関数の微分が不可能なため，勾配の計算ができない。そこでペア動画の各フレームにおいて距離空間に応じた重みを計算し，その重み付きの和を計算して，近似した近傍点を求める。同様に，近似した近傍点から元動画の各フレームの距離空間に応じた重みを計算し，その重み付きの和を計算することでロスをとる。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135486-af2d4180-606a-11ea-8f5e-70fec33a07df.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 56 26&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135690-c40ad480-606c-11ea-8918-00c37b4bb45f.png&#34; alt=&#34;スクリーンショット 2020-03-07 12 11 20&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135695-cff69680-606c-11ea-99bc-6c65699da600.png&#34; alt=&#34;スクリーンショット 2020-03-07 12 11 38&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;動画ペアにおいて，似た動作同士を近づける表現学習におけるCycle-Consistencyなロスの提案。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Video Representation Learning by Dense Predictive Coding</title>
+      <link>https://example.com/publication/densepredictivecoding/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/densepredictivecoding/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;../16&#34;&gt;Predictive Coding&lt;/a&gt;で用いた手法を動画にも適用した論文。動画の次の潜在表現を回帰で予測させてあげて，相互情報量
+の最大化を目指す。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;全体としての考え方は&lt;a href=&#34;../16&#34;&gt;Predictive Coding&lt;/a&gt;と一緒。ただし今回は動画を入力として扱うので，単純にフレームごとに系列データとして扱っていく。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134991-3deb8f80-6066-11ea-8d70-d0ba0d610780.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 24 38&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;PositiveペアとNegativeペアによるMetric Learning。NegativeとしてはTemporalとSpatialがあり，フレーム内での同じ位置でも時間情報が違ったらNegativeとして遠ざけるよう学習する（背景に依存して動画全体として変化の少ない特徴表現となることを避けるため？）。&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135068-f87b9200-6066-11ea-9c1c-ff3ba1983a61.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 29 51&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76135077-04ffea80-6067-11ea-8089-353b7c07b0f4.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 30 13&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;相互情報量最大化の考え方を動画にも応用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>VideoBERT: A Joint Model for Video and Language Representation Learning</title>
+      <link>https://example.com/publication/videobert/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/videobert/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;を応用することでマルチモーダルに事前学習させる方法を提案。基本的には&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;のMask穴埋め問題をLanguage+Visionに拡張したもの。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;p&gt;Downstreamのタスクとしては入力テキスト情報に対応したビデオフレームの出力や，入力ビデオの次におきうるアクションのビデオ出力等が挙げられる。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ネットワーク全体の概要は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;800&#34; alt=&#34;スクリーンショット 2020-03-06 12 15 33&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76046767-2fd53a80-5fa4-11ea-818a-03af32cd8904.png&#34;&gt;
+&lt;h2 id=&#34;マスク穴埋め問題&#34;&gt;マスク穴埋め問題&lt;/h2&gt;
+&lt;p&gt;ランダムで入力をマスクして，出力を予測させることでSelf-supervisedに学習するのはBertと一緒。違いとして，文章同士で入力ではなく，文章と対応するビデオのセットでの入力となる。ビデオ側のトークンはクラスタリングで定義し，４階層✖️12次元の計20736次元の階層的Kmeansによって分類し，言語側と同じくクロスエントロピーをロスとして学習。&lt;/p&gt;
+&lt;img width=&#34;618&#34; alt=&#34;スクリーンショット 2020-03-06 12 20 13&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76047018-d6b9d680-5fa4-11ea-9011-73bd036d5fa9.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;様々なDown Streamタスクでの比較。&lt;/p&gt;
+&lt;h2 id=&#34;action-classification&#34;&gt;Action classification&lt;/h2&gt;
+&lt;img width=&#34;800&#34; alt=&#34;スクリーンショット 2020-03-06 12 24 30&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76047240-6f505680-5fa5-11ea-906d-27f0afef1bb2.png&#34;&gt;  
+&lt;h2 id=&#34;video-captioning&#34;&gt;Video captioning&lt;/h2&gt;
+&lt;img width=&#34;800&#34; alt=&#34;スクリーンショット 2020-03-06 12 24 45&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76047253-79725500-5fa5-11ea-9aa3-79f3ee5e5d25.png&#34;&gt;
+&lt;img width=&#34;800&#34; alt=&#34;スクリーンショット 2020-03-06 12 24 59&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76047261-80996300-5fa5-11ea-926b-25367f985f12.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;BertのようにSelf-supervisedな事前学習方法の提案によって大きなデータセット規模での学習を可能とし，精度の向上&lt;/p&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Videoの入力があいまいなイメージ。Bertへの入力としてどのようなルールでフレームを選んでくるかは難しい問題に感じる。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>詳細な作業遷移映像におけるアクションセグメンテーション</title>
+      <link>https://example.com/published/miru2019/</link>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/published/miru2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>生産ラインの作業映像における詳細な行動の認識</title>
+      <link>https://example.com/published/ssii2019/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/published/ssii2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenposeのHandPoseEstimatorを実利用のために改良してみた</title>
+      <link>https://example.com/blog/handpose/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/blog/handpose/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Project for a simple handpose estimator. Openpose based hand pose estimator searches the hand position based on the skeleton keypoints which starts from the persons head. This means when some keypoints of the upper body is occluded, estimating the handpose will be difficult(Second example). To solve this problem, we combined openpose with TTFNet. By using the TTFNet to estimate the hand position directly, it will be able to estimate handpose in occluded cases too.&lt;/p&gt;
+&lt;p&gt;For the code, check &lt;a href=&#34;https://github.com/t-koba-96/handpose-estimator&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>生産ラインの現場映像における姿勢情報と手元画像情報を用いた詳細行動認識</title>
+      <link>https://example.com/published/dia2019/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/published/dia2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph R-CNN for Scene Graph Generation</title>
+      <link>https://example.com/publication/graph-rcnn/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/graph-rcnn/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。Graphの参考資料は&lt;a href=&#34;../14&#34;&gt;こちら&lt;/a&gt;。SceneGraphとは&lt;a href=&#34;../31&#34;&gt;VisualGenome&lt;/a&gt;において定義されているもので，{Subject,Relationship(Predicate),Object} (+Attribute) によるグラフ構造で表される。例として，A man is swinging a bat というような画像内の関係性があったとき， {man, swinging, bat} (+Attribute)というふうになる。これらの関係性を考えていき，最終的には(d)の関係性の出力を目指す。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76067616-05e73c80-5fd3-11ea-8119-67d05fc1a697.png&#34; alt=&#34;スクリーンショット 2020-03-06 17 50 46&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;全体の概要図配下の通り。３つのパートに分かれている。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140206-372b3f80-609b-11ea-9f11-7ea8112540ea.png&#34; alt=&#34;スクリーンショット 2020-03-07 17 43 51&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;⓵ Object Region Proposal&lt;br&gt;
+⓶ Relationship Proposal&lt;br&gt;
+⓷ Graph Labeling&lt;/p&gt;
+&lt;img width=&#34;948&#34; alt=&#34;スクリーンショット 2020-03-07 17 43 38&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76140203-30043180-609b-11ea-8bd6-e15aeac7e84c.png&#34;&gt;
+&lt;h2 id=&#34;object-region-proposal&#34;&gt;Object Region Proposal&lt;/h2&gt;
+&lt;p&gt;Faster R-CNNを学習させて物体検出。出力としては物体の位置情報（BoundingBox），特徴量，クラスラベルの３つがある。&lt;/p&gt;
+&lt;h2 id=&#34;relationship-proposal&#34;&gt;Relationship Proposal 　&lt;/h2&gt;
+&lt;p&gt;物体検出したもののうち，全てを繋ぐようなグラフ構造はパラメータ数的にも，現実世界における物体の関係性的にも現実的ではないため，本当に重要なエッジのみ抽出する段階。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140280-00a1f480-609c-11ea-9b85-3001bb7db3da.png&#34; alt=&#34;スクリーンショット 2020-03-07 17 49 27&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;物体がObjectである場合とSubjectである場合（Relationship次第でどっちにもなり得るということ）は分けて考慮する必要があるため，構造は一緒だが異なるパラメータをもつ学習モデルを用意してあげて，それらのを通した行列積をエッジのスコアとして用いる。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140311-5e364100-609c-11ea-81d0-41da86f15864.png&#34; alt=&#34;スクリーンショット 2020-03-07 17 52 05&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;最終的に，スコアの高い上位k個のエッジを次のフェーズの入力として用いる。&lt;/p&gt;
+&lt;p&gt;また，物体ペアに関するNMSもここで行う。通常と違って，物体ペアによるIoU値を用いてNMSを行う。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76141173-0cde7f80-60a5-11ea-9593-b7484fc969db.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 54 13&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;graph-labeling&#34;&gt;Graph Labeling&lt;/h2&gt;
+&lt;p&gt;AttentionalGCNを用いて最終的に物体，関係性の分類。GraphConvによってobject，relationshipがまわりのグラフ構造を考慮した上でそれぞれの特徴量を更新していく。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76141118-a3f70780-60a4-11ea-824c-756aa12e8372.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 51 19&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;A. Objectの更新について&lt;/p&gt;
+&lt;p&gt;大きく３つの関係性を踏まえて特徴量の更新　&lt;/p&gt;
+&lt;p&gt;⓵ 自分のまわりのObject(Message from other objects)&lt;/p&gt;
+&lt;p&gt;ただしObjectに関してはSkipconnectionを採用していて，離れたノード同士の関係性も考慮するようにしている。アテンションのαがskipとされているのもそのためである。特徴行列に掛け合わせる隣接行列のパラメータも学習させることで，隣接行列がノード同士の関係性を表すアテンションであるとみなすのがAttentionalGCN。そのため通常は同じノードを繋ぐ対角成分は１，エッジによってつながっていないノード同士は0となるようにし，残りの部分を学習させていくが，skipの場合は全ノード考慮するため，０成分で埋めずに対角成分以外をすべて更新していく。&lt;/p&gt;
+&lt;p&gt;⓶ Subjectからみたrelationship&lt;/p&gt;
+&lt;p&gt;⓷ Objectからみたrelationship&lt;/p&gt;
+&lt;p&gt;注意としては⓶，⓷を区別する必要あり&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140548-15cc5280-609f-11ea-9358-abb51ee7b3de.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 11 30&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;B. Relationshipの更新について&lt;/p&gt;
+&lt;p&gt;⓵ Relationshipからみたsubject&lt;/p&gt;
+&lt;p&gt;⓶ Relationshipからみたobject&lt;/p&gt;
+&lt;p&gt;同様に⓶，⓷の区別の必要あり。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76141083-4d89c900-60a4-11ea-90f7-8eb612ca3059.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 48 54&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;損失関数学習&#34;&gt;損失関数・学習&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考文献&lt;/a&gt;より引用&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140447-cfc2bf00-609d-11ea-893a-14f26273a77d.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 01 35&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76140449-d2251900-609d-11ea-96e9-47ae94ed1bc1.png&#34; alt=&#34;スクリーンショット 2020-03-07 18 01 55&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;評価方法&#34;&gt;評価方法&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;../31&#34;&gt;VisualGenome&lt;/a&gt;で用いられていたSGGenという評価方法を改善し，SGGen+と呼ばれる新たな評価軸を提案。&lt;/p&gt;
+&lt;h2 id=&#34;sggen&#34;&gt;SGGen&lt;/h2&gt;
+&lt;p&gt;以下の二つの評価によって決定される。&lt;/p&gt;
+&lt;p&gt;⓵　{Subject,Relationship(Predicate),Object}　のすべての要素が完全に一致している&lt;br&gt;
+⓶　SubjectとObjectのローカライズ（位置予測）におけるIoUがともに0.5以上&lt;/p&gt;
+&lt;p&gt;について，両方満たしているときのみ正解として扱われ，１点加点される。しかしこれでは条件が厳しいため，見当違いな出力と１箇所だけ違う惜しい出力も同じとみなされ，結果の反映が正確にできていないと言える。&lt;/p&gt;
+&lt;h2 id=&#34;sggen-1&#34;&gt;SGGen+&lt;/h2&gt;
+&lt;p&gt;そこで新しく，以下の３つの評価それぞれについて，満たしていれば随時１点加点される。&lt;/p&gt;
+&lt;p&gt;⓵C(0)：正しく認識された(位置，クラス) Objectノードの数&lt;br&gt;
+⓶C(P)：SubjectとObjectのローカライズ（位置予測）におけるIoUがともに0.5以上で，Relation(predicat)が正しいとき&lt;br&gt;
+⓷C(T)：SGGenの評価&lt;/p&gt;
+&lt;p&gt;これらの合計点数をノードとエッジの合計Nで割ったもの.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76139951-df8bd480-6098-11ea-96c9-42f4e52a928e.png&#34; alt=&#34;スクリーンショット 2020-03-07 17 27 03&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;比較結果&#34;&gt;比較結果&lt;/h2&gt;
+&lt;p&gt;SGGenとSGGen+の比較結果(SGGen+については分母)。SGGen+を用いた方が，より正解に近いグラフが出力できたときそれをより反映できるような評価値となっている。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76068119-e7357580-5fd3-11ea-8499-d496d1665b0a.png&#34; alt=&#34;スクリーンショット 2020-03-06 17 57 07&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76068156-fc120900-5fd3-11ea-916c-334c0d994886.png&#34; alt=&#34;スクリーンショット 2020-03-06 17 57 42&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76068178-07653480-5fd4-11ea-82b7-d46162aef160.png&#34; alt=&#34;スクリーンショット 2020-03-06 17 57 57&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;GraphConvを用いたシーングラフの生成に関する初期の論文であり基本形。&lt;/p&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.slideshare.net/DeepLearningJP2016/dlgraph-rcnn-for-scene-graph-generation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考文献&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Objectという単語がSubjectと区別している場合としていない場合の２通りの使われ方がしていて紛らわしく感じた。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Neural Motifs: Scene Graph Parsing with Global Context</title>
+      <link>https://example.com/publication/neuralmotifs/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/neuralmotifs/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;シーングラフ生成のタスクで既存の&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;データセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76068490-97a37980-5fd4-11ea-8535-6f52a8d9c9e8.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 02 02&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;シーングラフの作成における考察&#34;&gt;シーングラフの作成における考察&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;を用いたシーングラフ生成の過程において，以下の２つの特徴があったと主張。&lt;/p&gt;
+&lt;h2 id=&#34;-objectの情報からrelationを更新することはrelationを予測する上で有効であるが逆はそうではない&#34;&gt;⓵ Objectの情報からRelationを更新することはRelationを予測する上で有効であるが，逆はそうではない。&lt;/h2&gt;
+&lt;p&gt;下図は，右下に書かれてる四角の中の右半分の情報(Head=始点のObject，Tail=終点のObject，Edge=Relation)を用いて残りの左半分を予測したときのtopK/精度を示したもの。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76158369-956a2800-6158-11ea-9a39-676a55e028bb.png&#34; alt=&#34;スクリーンショット 2020-03-08 16 19 05&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;見ると，headやtailからedgeを推測する際の精度が高いのに対し，edgeからhead, tailを予測するのは非常に難しくなっているのがわかる。&lt;br&gt;
+既存手法ではobjectとrelationの相互関係性に注目し，relationからobject情報を更新していたが，この操作にはあまり意味がないことを主張している。&lt;/p&gt;
+&lt;h2 id=&#34;-半分以上の画像において一枚の中に複数回以上登場する同一の関係性motifが存在している&#34;&gt;⓶ 半分以上の画像において，一枚の中に複数回以上登場する同一の関係性（Motif）が存在している&lt;/h2&gt;
+&lt;p&gt;動物と手足の関係や，木のように１つではなく大量に存在している物が写っている際，同じ関係性のMotifは何度も登場する可能性が高い。これらについて調査したところ，半分以上の画像においてこのような反復の関係性が確認された。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76158493-9fd8f180-6159-11ea-9fca-7a353bd0d3c6.png&#34; alt=&#34;スクリーンショット 2020-03-08 16 26 50&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;今までのGraphConvを使った手法(&lt;a href=&#34;../10&#34;&gt;Graph-RCNN&lt;/a&gt;とか)と違いLSTMを用いた手法（下図）。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76068549-af7afd80-5fd4-11ea-9f76-c4475098d09c.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 02 40&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;構造としては，物体領域検出，物体クラス分類，関係性抽出の3段階構造。(B=BoundingBox, O=CLasslabel,
+R=Relation)&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76158755-8dac8280-615c-11ea-8d24-b686ce921610.png&#34; alt=&#34;スクリーンショット 2020-03-08 16 47 48&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Objectcontext予測のあとにEdgecontext予測を持ってきているのは，上記の考察における⓵の理由に基づいている。
+以下分けてみていく。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76158834-7c17aa80-615d-11ea-99a8-95f72ea38336.png&#34; alt=&#34;スクリーンショット 2020-03-08 16 54 28&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;-boundingbox&#34;&gt;⓵ BoundingBox&lt;/h2&gt;
+&lt;p&gt;BoundingBoxの出力にはFaster-RCNNを利用。Faster-RCNNの出力はboundingboxの他に領域における特徴ベクトルと仮のクラスラベル（次のステップで更新していく）。&lt;/p&gt;
+&lt;h2 id=&#34;-objects&#34;&gt;⓶ Objects&lt;/h2&gt;
+&lt;p&gt;biLSTMを用いて⓵で得た仮のクラスラベルを更新していく。得たBoundingBoxで得た結果を系列情報として順番にbiLSTMに入力し，最終的なクラスラベルの予測を行う。各層の入力として⓵のクラスラベルの他に，前の入力におけるLSTMの最終出力（クラスのone-hot）を用いる。&lt;/p&gt;
+&lt;h2 id=&#34;-relations&#34;&gt;⓷ Relations&lt;/h2&gt;
+&lt;p&gt;同様にbiLSTMを用いたedge情報の予測。入力として⓶で得たクラスのone-hotと，⓶のLSTMの隠れ層の出力を用いる。
+最後に得た出力同士の全ての組み合わせを考えていき，関係性なしラベルを含んだエッジのラベルを予測させる。⓵で得たboundingbox，⓶で得たクラスラベル，⓷で得たEdgeの関係性ラベルを組み合わせて，最終的にシーングラフが作成できる。&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;を用いて評価。&lt;/p&gt;
+&lt;p&gt;[Scene Graph Detection] &amp;hellip; ラベル情報なしでBBox, Object, Relation 全て予測&lt;br&gt;
+[Scene Graph Classification] &amp;hellip; BBoxラベルありでObject, Relation 予測&lt;br&gt;
+[Predicate Classification] &amp;hellip; BBox, Objectラベルありで Relation 予測&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76068692-f49f2f80-5fd4-11ea-9839-0bdb1013e0b7.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 04 37&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;生成例&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76068711-fec12e00-5fd4-11ea-8daa-d376668d9803.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 04 54&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;LSTMを用いた手法&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning</title>
+      <link>https://example.com/publication/nnviterbi/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/nnviterbi/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;クラスラベルの遷移順のみのWeaklyなラベルを用いたAction Segmentation. Viterbi algorism を用いた方法を提案。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;p&gt;LSTMか何かしらの時系列モデルを通して得た特徴量のsoftmax値に関して，クラスの遷移順を教師ラベルとして，その各クラスの長さを求めるようなvitervi algorism を定義。Viterbiを適用する前と適用したあとでCrossentropy Lossをとる。Viterbiを通す前の結果を通した後の遷移に近づけるイメージ。&lt;/p&gt;
+&lt;img width=&#34;417&#34; alt=&#34;スクリーンショット 2020-03-14 19 06 43&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76679833-01e89980-6627-11ea-8496-ee43a1f8e74b.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;462&#34; alt=&#34;スクリーンショット 2020-03-14 19 10 20&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76679875-74f21000-6627-11ea-8c8f-84b2c2931f88.png&#34;&gt;
+&lt;img width=&#34;450&#34; alt=&#34;スクリーンショット 2020-03-14 19 10 29&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76679878-7a4f5a80-6627-11ea-88dc-cdd3858225e8.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Viterbiによる手法。&lt;/p&gt;
+&lt;p&gt;今まではクラスの遷移ラベルから，フレーム単位での仮のラベルを使うことでロスを計算していたが，そうではなくviterbiを通す前と後でロスをとることで仮ラベルをなくし，精度向上。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Representation Learning with Contrastive Predictive Coding</title>
+      <link>https://example.com/publication/contrastivepredictivecoding/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/contrastivepredictivecoding/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;画像や音声における新しい表現学習の方法を提案。エンコーダーとGRUを組み合わせてGRUが次のエンコーダの出力を予測して,その相互情報量の最大化によって良い特徴表現を獲得する。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;下図は音声入力の例。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134412-789ef900-6061-11ea-8859-d387ef3ad64e.png&#34; alt=&#34;スクリーンショット 2020-03-07 10 50 30&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;GRUの出力が次の潜在表現を回帰・予測し，その相互情報量の最大化を目指すことによって良い特徴表現を得る。&lt;/p&gt;
+&lt;h2 id=&#34;ロス&#34;&gt;ロス&lt;/h2&gt;
+&lt;p&gt;NCEベースのロスを使用し，同じペアは近づけるように，ランダムにサンプルしたペアを遠ざけるよう学習。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134666-63c36500-6063-11ea-9f72-06d67bdaee2e.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 04 14&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;画像の場合&#34;&gt;画像の場合&lt;/h2&gt;
+&lt;p&gt;画像の場合そのままでは系列データにできないので，パッチごとにずらしていくことで系列データとして扱う。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134705-b8ff7680-6063-11ea-95eb-79502e372f83.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 06 35&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;画像&#34;&gt;画像&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134741-ff54d580-6063-11ea-960d-68285a774a83.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 08 34&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;言語&#34;&gt;言語&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134742-05e34d00-6064-11ea-888b-ffaf120fb77b.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 08 45&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;t-sneによる音声表現の可視化&#34;&gt;t-SNEによる音声表現の可視化&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76134751-1693c300-6064-11ea-89f1-47f77b9ee28f.png&#34; alt=&#34;スクリーンショット 2020-03-07 11 09 14&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;系列データにおいて次の潜在表現を予測し，相互情報量の最大化を目的にすることによる良い表現の獲得。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Time-Contrastive Networks: Self-Supervised Learning from Video</title>
+      <link>https://example.com/publication/tcnetworks/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/tcnetworks/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Action recognition　におけるSelf-supervisedな事前学習方法の提案。異なる視点から撮った同じアクションにおける同フレームは同じアクションであるとみなせるため，同じフレーム同士は近づけて，ことなるフレームは遠ざけるといったトリプレットな学習方法ができる。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;概要図は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;p&gt;異なる視点のビデオを比べたとき，同じタイムスタンプである青フレームはPositive 同士，それに対して赤フレームはNegativeであるといえる。このような設定で学習させることで，同じ行動でもで視点が変わった際の対応関係を学習可能，より頑健なFeature抽出が可能に。&lt;/p&gt;
+&lt;h2 id=&#34;ロス&#34;&gt;ロス&lt;/h2&gt;
+&lt;p&gt;トリプレットロスとして定義ができる。&lt;/p&gt;
+&lt;img width=&#34;575&#34; alt=&#34;スクリーンショット 2020-03-06 12 43 20&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048081-146c2e80-5fa8-11ea-98f3-a9a07a69870c.png&#34;&gt;
+&lt;img width=&#34;623&#34; alt=&#34;スクリーンショット 2020-03-06 12 43 46&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048101-21891d80-5fa8-11ea-9230-19b8f8579a00.png&#34;&gt;
+&lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
+&lt;p&gt;スマートフォンによるマルチビューな撮影&lt;/p&gt;
+&lt;img width=&#34;614&#34; alt=&#34;スクリーンショット 2020-03-06 12 41 11&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76047988-c6efc180-5fa7-11ea-89c9-fd927c7e8e9d.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Action Alignment のタスクで評価。&lt;/p&gt;
+&lt;img width=&#34;626&#34; alt=&#34;スクリーンショット 2020-03-06 12 46 13&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048197-79c01f80-5fa8-11ea-921d-fc08a52a8c20.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;同時フレームに注目したSelf-supervisedな事前学習方法を提案。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Weakly-Supervised Action Segmentation with Iterative Soft Boundary Assignment</title>
+      <link>https://example.com/publication/isba/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/isba/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Action Segmentation のタスクにおいてWeakly-supervisedな手法. 学習用の動画デートセットの正解として，動画内の行動ラベルの順番のみ与える（各フレームにおける正解ラベルはなし）. 同様のWeakly-Supervisedな手法と比較して最高精度を記録。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ネットワーク全体の概要は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226176-9f3ffb00-36bd-11e9-9ce6-ec6e8827dd19.png&#34;&gt;
+&lt;p&gt;本手法では，Action Segmentationを行う部分としてTCFPN ，認識結果を元にフレーム毎の正解ラベルの予測を行い，ground truth を更新する部分としてISBAをそれぞれ新たに提案している。&lt;/p&gt;
+&lt;h2 id=&#34;tcfpn&#34;&gt;TCFPN&lt;/h2&gt;
+&lt;p&gt;Action Segmentationを行う既存手法である&lt;a href=&#34;https://github.com/t-koba-96/papers/issues/2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ED-TCN&lt;/a&gt; と物体検出のタスクにおいて用いられるFeature Pyramid Networkを組み合わせた手法。単純にEncoder-Decoderのみを使うと，正確な特徴量を抽出できるものの，位置情報（今回の場合時間情報）が大雑把なものとなってしまう。そこで，Encoderの各層を1×1convして加えることで，より正確な位置情報を得ることが可能となる，というイメージ。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 20 18&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226240-d4e4e400-36bd-11e9-9d2a-23bd0c876b9c.png&#34;&gt;
+&lt;p&gt;TCFPNでSegmentationを行うには，フレーム毎の行動ラベルが必要なので，動画に対してN個の行動が順に起こるというWeaklyなラベルが与えられた時，動画のフレームをN等分して行動ラベルの初期値として与えてやる。その際0，１のみのOne-hotな表現ではなく，動画の行動が徐々に移り変わるだろうという予測を基に，以下のようなSoft Boundaryなラベル付けを行う。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226296-f80f9380-36bd-11e9-857d-a02678039e80.png&#34;&gt;
+&lt;h2 id=&#34;isba&#34;&gt;ISBA&lt;/h2&gt;
+&lt;p&gt;TCFPNの出力を元にフレーム毎の正解ラベルの予測，更新を行う部分。要ははじめに与えたN等分するようなフレーム毎の行動の正解ラベルでは正確ではないため，TCFPNの出力を元にフレーム毎の正解を新たに予測し，更新することで実際のground truthに近いラベルを得ようという考え。&lt;/p&gt;
+&lt;img width=&#34;450&#34; alt=&#34;2019-02-22 16 22 38&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226338-18d7e900-36be-11e9-848a-0f4a50c598b2.png&#34;&gt;
+&lt;h2 id=&#34;学習テスト&#34;&gt;学習・テスト&lt;/h2&gt;
+&lt;p&gt;TCFPNとISBAを繰り返し行い，認識結果を元にフレーム単位の行動ラベルを更新していくことで，フレーム単位の行動ラベルをground truthに近づけることと，Action Segmentationの精度の向上を同時に目指す。 ISBAにおいて独自のロスを導入し，3回連続でロスが小さくならなければ終了し，最もロスの小さかった時の結果を最終出力とする。&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Breakfast datasetを用いて他のWeakly-Supervisedな手法との比較.&lt;/p&gt;
+&lt;img width=&#34;311&#34; alt=&#34;2019-02-22 16 23 52&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226421-4886f100-36be-11e9-8ac8-129b6a3637cf.png&#34;&gt;
+&lt;h2 id=&#34;学習時の評価&#34;&gt;学習時の評価&lt;/h2&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 24 43&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226454-65232900-36be-11e9-9b0c-6fad76b05171.png&#34;&gt;
+&lt;h2 id=&#34;テスト時の評価&#34;&gt;テスト時の評価&lt;/h2&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 25 38&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226501-86841500-36be-11e9-82f1-1fa6cf13f4ea.png&#34;&gt;
+&lt;p&gt;ちなみにfully-Supervisedな時の提案手法のaccuracyは52.0&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;・新たなWeakly-Supervisedな手法の提案。それにより最高精度を記録。&lt;/p&gt;
+&lt;p&gt;・行動認識の結果を元に正解ラベルを更新していくという発想。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Attention is all you need</title>
+      <link>https://example.com/publication/transformer/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/transformer/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;機械翻訳用のネットワーク，トランスフォーマーの提案。従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ネットワーク全体の概要は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75124684-3934ec00-56f4-11ea-924e-ceb279131c5b.png&#34;&gt;
+&lt;p&gt;エンコーダ・デコーダ共に，この手法のキモとなるMulti-Head Attentionを残差接続したものを複数層重ねた構造になっている。
+図中の Inputsは翻訳前言語の原文, Outputsは学習時においてGroundTruth・推論時はBeginning of sentence，Output Probabilitiesにおいて翻訳した文章を得る。&lt;/p&gt;
+&lt;h2 id=&#34;アテンションの構造&#34;&gt;アテンションの構造&lt;/h2&gt;
+&lt;p&gt;アテンションの構造は以下のScaled Dot-Product Attention.　元の入力バッチからQ(Query),K(Key),V(Value)の３つを新たに用意して，そのうちQとKを用いて元のValueに掛け合わせるような重みマップ（Attention Map）のようなものを作成してあげる。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 20 18&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125018-2cb19300-56f6-11ea-8b22-64e8126b8aed.png&#34;&gt;
+&lt;p&gt;単純にAttentionではなくMulti-Headと表現されているのは，このアテンション計算の際にh分割して計算したのち，最後にまたコンカットしていることを指している。（多分計算コストの削減？精度的な寄与も関係あるかも）&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125112-d42ec580-56f6-11ea-8897-627484d38380.png&#34;&gt;
+&lt;h2 id=&#34;既存手法に対する優位性&#34;&gt;既存手法に対する優位性&lt;/h2&gt;
+&lt;p&gt;畳み込みとかリカレントネットワークに比べて長い時系列情報を見れるよねという話。あとリカレントネットワークは前の情報を引き継いで随時計算するのに対し，アテンションは一気に計算できるので，計算速度も全然早い。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125218-78187100-56f7-11ea-9e6c-5ff03ec2ecd6.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75125333-f6751300-56f7-11ea-8a68-4fd175ff4451.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;アテンションのみによる新たなネットワークの提案。&lt;/p&gt;
+&lt;p&gt;State of the art の更新。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Temporal Convolutional Networks for Action Segmentation and Detection</title>
+      <link>https://example.com/publication/tcn/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/tcn/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.&lt;br&gt;
+２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;提案した両方のTCNにおいて、入力は各フレームから何かしらのCNN(Resnet,VGG等)を用いて抽出した特徴量を時系列順に並べたものであり、出力としては行動クラス結果が各フレームごとに出力される.&lt;/p&gt;
+&lt;h2 id=&#34;ed-tcn&#34;&gt;ED-TCN&lt;/h2&gt;
+&lt;p&gt;エンコーダとデコーダを組み合わせたTCN. エンコーダで畳み込み＋MaxPoolingを行うことで時系列を考慮した特徴抽出、その後デコーダで畳み込み＋アップサンプリングを行うことで各フレームごとの行動クラス確率分布を得る.&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2018-11-30 22 19 28&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49291542-0babc380-f4ee-11e8-9912-026b18f4d8bb.png&#34;&gt;
+&lt;h2 id=&#34;dilated-tcn&#34;&gt;Dilated-TCN&lt;/h2&gt;
+&lt;p&gt;時系列の畳み込みとしてDilated Convolutionを用いた手法. Dilated Convolutionとは簡単に説明すると、入力の間隔を空けて(間を0とみなす)畳み込みを行うこと(d=1なら間隔なし、d=２なら間隔１、d=4なら間隔３). dの値をどんどん(本論文では指数関数的に)大きくしていったDilated Convolution層を重ねることで、より長期的な時系列の範囲で特徴抽出を行うことが可能となる. またスキップコネクションの導入で層を深くすることを可能に。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2018-11-30 22 20 33&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49291590-2bdb8280-f4ee-11e8-9444-01090dd85fe5.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;50salads、MERL Shopping、GTEAの３種のデータセットを用いて、Spatial CNN等との比較&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2018-11-30 21 58 12&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49291839-e53a5800-f4ee-11e8-9325-46725b25cd76.png&#34;&gt;
+&lt;img width=&#34;374&#34; alt=&#34;2018-11-30 22 27 34&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49291938-292d5d00-f4ef-11e8-9b6f-afef4c731408.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;・各層ごとに同時に処理を行うため、入力フレーム数が増えても処理時間に影響をあまり与えない.&lt;br&gt;
+　→フレームごとに処理を行うLSTM等と比較して高速な処理&lt;/p&gt;
+&lt;p&gt;・３Dconvは動画全体(数フレーム分)に対して1つの行動クラスの出力であるのに対し、TCNでは各フレームごとに行動クラスの出力が可能&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations</title>
+      <link>https://example.com/publication/visualgenome/</link>
+      <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/visualgenome/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成。SceneGraphの研究分野で一般的に使われているデータセットとなっている。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;データセット概要は下図。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76139109-98014a80-6090-11ea-9e98-5ab90485c1e4.png&#34; alt=&#34;スクリーンショット 2020-03-07 16 27 41&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;データセットの内容については以下で構成されている。&lt;/p&gt;
+&lt;h2 id=&#34;multiple-region-graphs-and-their-descriptions&#34;&gt;Multiple region graphs and their descriptions&lt;/h2&gt;
+&lt;p&gt;様々な関係性が存在する一つの画像を，一つの説明文だけで完結させてしまうのは現実的ではない。そこで画像内にBoundingBoxを複数用意し，そのなかでのシーングラフ(Region Graphs)，説明文章(Region Descriptions)をそれぞれ作成している。ひとつの画像に対して平均で42個のこのような領域が用意されている。&lt;/p&gt;
+&lt;h2 id=&#34;multiple-objects-and-their-bounding-boxes&#34;&gt;Multiple objects and their bounding boxes&lt;/h2&gt;
+&lt;p&gt;画像内に平均で２１個の物体情報とそのBoundingBoxを用意。同一物体に対して複数ラベル存在する場合（man and person），大きい括りのラベル(person)が選択される。&lt;/p&gt;
+&lt;h2 id=&#34;a-set-of-attributes&#34;&gt;A set of attributes&lt;/h2&gt;
+&lt;p&gt;画像内に平均で16個のAttributeラベルを用意。AttributeはObjectにつくものであり，一つのObjectに対して0個以上のAttributeが関連づいている。&lt;/p&gt;
+&lt;h2 id=&#34;a-set-of-relationships&#34;&gt;A set of relationships&lt;/h2&gt;
+&lt;p&gt;Relationshipとは２つのobjectをつなぐもの。有向グラフ構造のため，Relationshipをもっている２つのobjectの関係性の間には矢印が向く方と向けられる方が存在する。矢印の出発点がsubject，矢印の終着点がobjectと定義される。上の図の例で言えば，jumping over という関係性に関して，subject は man, object は fire hydrant となる。&lt;/p&gt;
+&lt;h2 id=&#34;one-scene-graph&#34;&gt;One scene graph&lt;/h2&gt;
+&lt;p&gt;今までRegionごとに得ていた情報をまとめて，画像全体として一つのScene Graph を作成。（上図の一番下）&lt;/p&gt;
+&lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
+&lt;p&gt;一部の例。より詳しい内容に関しては元論文をチェック。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76139540-3c38c080-6094-11ea-8aba-9b842ffb4d81.png&#34; alt=&#34;スクリーンショット 2020-03-07 16 53 51&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;シーングラフ用の新たなデータセットの提案。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Two-Stream Convolutional Networks for Action Recognition in Videos</title>
+      <link>https://example.com/publication/two-stream/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/two-stream/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Spatial stream ConvNet(以後Spatial Conv)とTemporal stream ConvNet(以後Temporal Conv)の組み合わせ. Spatial Convでは各フレームの静止画（RGB画像）を入力して畳み込み、空間情報の抽出によるクラス分類. Temporal Convでは各フレームのオプティカルフローを入力して畳み込み、動き情報の抽出によるクラス分類.   下図のように，Spatial Convにおける1つの入力フレームに対して，Temporal ConvではそのフレームからNフレーム分のオプティカルフローを用いる。（RGBとオプティカルフローの入力が1:N）。
+最終的な結果は、それぞれのネットワークのクラスの確率分布を統合し、最も高確率のクラスを出力.&lt;/p&gt;
+&lt;p&gt;Temporal Convにおいて、オプティカルフローは各フレームにおいてそれぞれ X,Y 方向に2次元配列として入力. よって、入力動画のRGBフレーム数がTの時、入力するオプティカルフローのフレーム数は2NT&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;590&#34; alt=&#34;2018-11-30 18 23 42&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49281727-a4334b00-f4d0-11e8-934d-088a32deb1b5.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;UCF-101、HMDB-51データセットを用いてハンドクラフト特徴量を用いた行動認識（IDT等）と比較.&lt;/p&gt;
+&lt;h2 id=&#34;ucf-101データセット&#34;&gt;UCF-101データセット&lt;/h2&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2018-11-30 18 34 21&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49281444-eb6d0c00-f4cf-11e8-9372-f63bb53526b7.png&#34;&gt;
+&lt;h2 id=&#34;hmdb-501&#34;&gt;HMDB-501&lt;/h2&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2018-11-30 18 46 21&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49281736-abf2ef80-f4d0-11e8-8edb-4dfbeb960410.png&#34;&gt;
+&lt;p&gt;またSpatial Conv、Temporal Convそれぞれ単独で用いた場合とも比較.&lt;/p&gt;
+&lt;img width=&#34;604&#34; alt=&#34;2018-11-30 18 51 39&#34; src=&#34;https://user-images.githubusercontent.com/38309191/49281864-03915b00-f4d1-11e8-9b05-6e2f15c48694.png&#34;&gt;
+&lt;p&gt;UCF-101においては最も高精度. HMDB-51においてはハンドクラフトの方が高精度の場合も&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;・当時はハンドクラフト特徴量による認識が主流の中、深層学習を用いた手法.&lt;/p&gt;
+&lt;p&gt;・オプティカルフローを用いることで動画の時系列情報を捉えようとするアプローチ&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/admin/config.yml</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.com/admin/config.yml</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>トピック | Bianca Blog</title>
+    <link>https://example.com/blog/</link>
+      <atom:link href="https://example.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <description>トピック</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 16 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>トピック</title>
+      <link>https://example.com/blog/</link>
+    </image>
+    
+    <item>
+      <title>三菱電機との共同研究成果がプレスリリースされました</title>
+      <link>https://example.com/blog/mitsubishi/</link>
+      <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/blog/mitsubishi/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;三菱電機との共同研究成果が公開されました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://aoki-medialab.jp/information/%e4%b8%89%e8%8f%b1%e9%9b%bb%e6%a9%9f%ef%bc%88%e6%a0%aa%ef%bc%89%e3%81%a8%e3%81%ae%e5%85%b1%e5%90%8c%e7%a0%94%e7%a9%b6%e6%88%90%e6%9e%9c%e3%81%8cceatec2019%e3%81%a7%e5%85%ac%e9%96%8b%e3%81%95%e3%82%8c/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;共同研究成果&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.mitsubishielectric.co.jp/news/2019/pdf/1009.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;三菱電機プレスリリース&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://xtech.nikkei.com/atcl/nxt/news/18/06194/?ST=nnm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;日経ニューメディア&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>フレーム単位での行動認識結果のデモをFlaskを用いてデプロイ</title>
+      <link>https://example.com/blog/video-demo/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/blog/video-demo/</guid>
+      <description>&lt;h1 id=&#34;動画認識デモについて&#34;&gt;&lt;code&gt;動画認識デモについて&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;今まで作成したデモを汎用的に利用するために，最低限の機能のみに簡略化したデモを作成したので，使い方の手順とともに軽く説明していきたい。
+まずはデモの実際の様子を以下に示した。フレーム単位での正解ラベルと予測ラベルを見ることができ，また手動でフレームを選ぶか自動再生するかの2つのモードを切り替えられる。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://classification-tkoba.appspot.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
+&lt;video src=&#34;demo.mp4&#34; controls&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h1 id=&#34;実行までの流れ&#34;&gt;&lt;code&gt;実行までの流れ&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;次に使い方についても軽く説明していきたい。&lt;/p&gt;
+&lt;p&gt;➊&lt;br&gt;
+まずはコードを公開している&lt;a href=&#34;https://github.com/t-koba-96/demo-light&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHubページ&lt;/a&gt;に移動し，gitレポジトリのクローンを行う。。&lt;br&gt;
+&lt;code&gt;$ git clone [リポジトリ名]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;➋&lt;br&gt;
+gitレポジトリには実際に試すためのサンプルデータ（動画，正解ラベル，認識結果）は載せていないため，別にデータをダウンロードしてもらう必要がある。&lt;a href=&#34;https://github.com/t-koba-96/demo-light/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;URL先&lt;/a&gt;のzipファイル(Assets内のdatas.zip)を解凍し，app.pyと同じ階層にdatasファイルが来るように配置する(元々あるdatasファイルと置き換える)。今回はサンプルデータとして&lt;a href=&#34;http://www.cbi.gatech.edu/fpv/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gteaデータセット&lt;/a&gt;を用いている。&lt;/p&gt;
+&lt;p&gt;➌&lt;br&gt;
+必要なコードとデータは揃ったので，最後にアプリを動かすために必要なパッケージのインストールを行う。&lt;br&gt;
+&lt;code&gt;$ pip install -r requirements.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;➍&lt;br&gt;
+以上で準備は整ったので，アプリを実行する。&lt;br&gt;
+&lt;code&gt;$ python app.py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;➎&lt;br&gt;
+&amp;ldquo;Running on [ローカルのURL] &amp;ldquo;，といったメッセージが表示されるので，指定されたURLを開けばアプリが実行されていることが確認できる。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_2fe439c1b2e85c7c2d9c461487a30e17.webp 400w,
+               /blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_f14347a3311062ae3c716d0054e33cbe.webp 760w,
+               /blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://example.com/blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_2fe439c1b2e85c7c2d9c461487a30e17.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;54&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;最後に&#34;&gt;&lt;code&gt;最後に&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Demo結果の様子だけ見たい場合は&lt;a href=&#34;https://classification-tkoba.appspot.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;リンク先&lt;/a&gt;にあります。
+フレームレートがまだまだ遅いので(Google App Engine の仮想マシン環境の影響もある)，より快適な可視化の為に改善をしていきたいとは思っている。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OpenposeのHandPoseEstimatorを実利用のために改良してみた</title>
+      <link>https://example.com/blog/handpose/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/blog/handpose/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Project for a simple handpose estimator. Openpose based hand pose estimator searches the hand position based on the skeleton keypoints which starts from the persons head. This means when some keypoints of the upper body is occluded, estimating the handpose will be difficult(Second example). To solve this problem, we combined openpose with TTFNet. By using the TTFNet to estimate the hand position directly, it will be able to estimate handpose in occluded cases too.&lt;/p&gt;
+&lt;p&gt;For the code, check &lt;a href=&#34;https://github.com/t-koba-96/handpose-estimator&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

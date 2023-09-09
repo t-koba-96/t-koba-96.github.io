@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>論文 | Bianca Blog</title>
+    <link>https://example.com/published/</link>
+      <atom:link href="https://example.com/published/index.xml" rel="self" type="application/rss+xml" />
+    <description>論文</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>論文</title>
+      <link>https://example.com/published/</link>
+    </image>
+    
+    <item>
+      <title>Fine-grained Action Recognition in Assembly Work Scenes by Drawing Attention to the Hands</title>
+      <link>https://example.com/published/sitis2019/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/published/sitis2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>詳細な作業遷移映像におけるアクションセグメンテーション</title>
+      <link>https://example.com/published/miru2019/</link>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/published/miru2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>生産ラインの作業映像における詳細な行動の認識</title>
+      <link>https://example.com/published/ssii2019/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/published/ssii2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>生産ラインの現場映像における姿勢情報と手元画像情報を用いた詳細行動認識</title>
+      <link>https://example.com/published/dia2019/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/published/dia2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

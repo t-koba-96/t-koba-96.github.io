@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chenliang xu | Bianca Blog</title>
+    <link>https://example.com/author/chenliang-xu/</link>
+      <atom:link href="https://example.com/author/chenliang-xu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Chenliang xu</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Chenliang xu</title>
+      <link>https://example.com/author/chenliang-xu/</link>
+    </image>
+    
+    <item>
+      <title>Weakly-Supervised Action Segmentation with Iterative Soft Boundary Assignment</title>
+      <link>https://example.com/publication/isba/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/isba/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Action Segmentation のタスクにおいてWeakly-supervisedな手法. 学習用の動画デートセットの正解として，動画内の行動ラベルの順番のみ与える（各フレームにおける正解ラベルはなし）. 同様のWeakly-Supervisedな手法と比較して最高精度を記録。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ネットワーク全体の概要は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226176-9f3ffb00-36bd-11e9-9ce6-ec6e8827dd19.png&#34;&gt;
+&lt;p&gt;本手法では，Action Segmentationを行う部分としてTCFPN ，認識結果を元にフレーム毎の正解ラベルの予測を行い，ground truth を更新する部分としてISBAをそれぞれ新たに提案している。&lt;/p&gt;
+&lt;h2 id=&#34;tcfpn&#34;&gt;TCFPN&lt;/h2&gt;
+&lt;p&gt;Action Segmentationを行う既存手法である&lt;a href=&#34;https://github.com/t-koba-96/papers/issues/2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ED-TCN&lt;/a&gt; と物体検出のタスクにおいて用いられるFeature Pyramid Networkを組み合わせた手法。単純にEncoder-Decoderのみを使うと，正確な特徴量を抽出できるものの，位置情報（今回の場合時間情報）が大雑把なものとなってしまう。そこで，Encoderの各層を1×1convして加えることで，より正確な位置情報を得ることが可能となる，というイメージ。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 20 18&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226240-d4e4e400-36bd-11e9-9d2a-23bd0c876b9c.png&#34;&gt;
+&lt;p&gt;TCFPNでSegmentationを行うには，フレーム毎の行動ラベルが必要なので，動画に対してN個の行動が順に起こるというWeaklyなラベルが与えられた時，動画のフレームをN等分して行動ラベルの初期値として与えてやる。その際0，１のみのOne-hotな表現ではなく，動画の行動が徐々に移り変わるだろうという予測を基に，以下のようなSoft Boundaryなラベル付けを行う。&lt;/p&gt;
+&lt;img width=&#34;400&#34; alt=&#34;2019-02-22 16 21 40&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226296-f80f9380-36bd-11e9-857d-a02678039e80.png&#34;&gt;
+&lt;h2 id=&#34;isba&#34;&gt;ISBA&lt;/h2&gt;
+&lt;p&gt;TCFPNの出力を元にフレーム毎の正解ラベルの予測，更新を行う部分。要ははじめに与えたN等分するようなフレーム毎の行動の正解ラベルでは正確ではないため，TCFPNの出力を元にフレーム毎の正解を新たに予測し，更新することで実際のground truthに近いラベルを得ようという考え。&lt;/p&gt;
+&lt;img width=&#34;450&#34; alt=&#34;2019-02-22 16 22 38&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226338-18d7e900-36be-11e9-848a-0f4a50c598b2.png&#34;&gt;
+&lt;h2 id=&#34;学習テスト&#34;&gt;学習・テスト&lt;/h2&gt;
+&lt;p&gt;TCFPNとISBAを繰り返し行い，認識結果を元にフレーム単位の行動ラベルを更新していくことで，フレーム単位の行動ラベルをground truthに近づけることと，Action Segmentationの精度の向上を同時に目指す。 ISBAにおいて独自のロスを導入し，3回連続でロスが小さくならなければ終了し，最もロスの小さかった時の結果を最終出力とする。&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Breakfast datasetを用いて他のWeakly-Supervisedな手法との比較.&lt;/p&gt;
+&lt;img width=&#34;311&#34; alt=&#34;2019-02-22 16 23 52&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226421-4886f100-36be-11e9-8ac8-129b6a3637cf.png&#34;&gt;
+&lt;h2 id=&#34;学習時の評価&#34;&gt;学習時の評価&lt;/h2&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 24 43&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226454-65232900-36be-11e9-9b0c-6fad76b05171.png&#34;&gt;
+&lt;h2 id=&#34;テスト時の評価&#34;&gt;テスト時の評価&lt;/h2&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 25 38&#34; src=&#34;https://user-images.githubusercontent.com/38309191/53226501-86841500-36be-11e9-82f1-1fa6cf13f4ea.png&#34;&gt;
+&lt;p&gt;ちなみにfully-Supervisedな時の提案手法のaccuracyは52.0&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;・新たなWeakly-Supervisedな手法の提案。それにより最高精度を記録。&lt;/p&gt;
+&lt;p&gt;・行動認識の結果を元に正解ラベルを更新していくという発想。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

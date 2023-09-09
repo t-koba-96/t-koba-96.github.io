@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alexander Richard | Bianca Blog</title>
+    <link>https://example.com/author/alexander-richard/</link>
+      <atom:link href="https://example.com/author/alexander-richard/index.xml" rel="self" type="application/rss+xml" />
+    <description>Alexander Richard</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Alexander Richard</title>
+      <link>https://example.com/author/alexander-richard/</link>
+    </image>
+    
+    <item>
+      <title>NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning</title>
+      <link>https://example.com/publication/nnviterbi/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/nnviterbi/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;クラスラベルの遷移順のみのWeaklyなラベルを用いたAction Segmentation. Viterbi algorism を用いた方法を提案。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;p&gt;LSTMか何かしらの時系列モデルを通して得た特徴量のsoftmax値に関して，クラスの遷移順を教師ラベルとして，その各クラスの長さを求めるようなvitervi algorism を定義。Viterbiを適用する前と適用したあとでCrossentropy Lossをとる。Viterbiを通す前の結果を通した後の遷移に近づけるイメージ。&lt;/p&gt;
+&lt;img width=&#34;417&#34; alt=&#34;スクリーンショット 2020-03-14 19 06 43&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76679833-01e89980-6627-11ea-8496-ee43a1f8e74b.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;462&#34; alt=&#34;スクリーンショット 2020-03-14 19 10 20&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76679875-74f21000-6627-11ea-8c8f-84b2c2931f88.png&#34;&gt;
+&lt;img width=&#34;450&#34; alt=&#34;スクリーンショット 2020-03-14 19 10 29&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76679878-7a4f5a80-6627-11ea-88dc-cdd3858225e8.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Viterbiによる手法。&lt;/p&gt;
+&lt;p&gt;今まではクラスの遷移ラベルから，フレーム単位での仮のラベルを使うことでロスを計算していたが，そうではなくviterbiを通す前と後でロスをとることで仮ラベルをなくし，精度向上。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

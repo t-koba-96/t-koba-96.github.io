@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: September 9, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.b6d003f494885717a4e7a7dae0d96b7b.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Takuya Kobayashi" />
+
+
+
+
+
+  
+
+<meta name="description" content="シーングラフの生成において従来モデルの課題点を指摘した上で，それを改善するための新たなロスを提案し，SoTAを達成。" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://example.com/publication/graphicalcontrastiveloss/" />
+<link rel="canonical" href="https://example.com/publication/graphicalcontrastiveloss/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#707070" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://example.com/publication/graphicalcontrastiveloss/featured.png" />
+<meta property="og:site_name" content="Bianca Blog" />
+<meta property="og:url" content="https://example.com/publication/graphicalcontrastiveloss/" />
+<meta property="og:title" content="Graphical Contrastive Losses for Scene Graph Parsing | Bianca Blog" />
+<meta property="og:description" content="シーングラフの生成において従来モデルの課題点を指摘した上で，それを改善するための新たなロスを提案し，SoTAを達成。" /><meta property="og:image" content="https://example.com/publication/graphicalcontrastiveloss/featured.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2019-08-01T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2019-08-01T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.com/publication/graphicalcontrastiveloss/"
+  },
+  "headline": "Graphical Contrastive Losses for Scene Graph Parsing",
+  
+  "image": [
+    "https://example.com/publication/graphicalcontrastiveloss/featured.png"
+  ],
+  
+  "datePublished": "2019-08-01T00:00:00Z",
+  "dateModified": "2019-08-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Ji Zhang"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bianca Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "シーングラフの生成において従来モデルの課題点を指摘した上で，それを改善するための新たなロスを提案し，SoTAを達成。"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Graphical Contrastive Losses for Scene Graph Parsing | Bianca Blog</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="3a0dde6f7ad3b9db97b04e5e071f409b" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bianca Blog</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bianca Blog</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-center" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/publication"><span>PaperSummaries</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/blog"><span>BlogPosts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/published"><span>Works</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Graphical Contrastive Losses for Scene Graph Parsing</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      <a href="/author/ji-zhang/">Ji Zhang</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    August 2019
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_Graphical_Contrastive_Losses_for_Scene_Graph_Parsing_CVPR_2019_paper.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/NVIDIA/ContrastiveLosses4VRD" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 335px;">
+  <div style="position: relative">
+    <img src="/publication/graphicalcontrastiveloss/featured_hu5b50b3d3cef88e3b21f965cc1db46992_411924_720x2500_fit_q75_h2_lanczos_3.webp" width="720" height="335" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    
+
+    
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">In <em>CVPR 2019</em></div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"><h1 id="概要"><code>概要</code></h1>
+<p>シーングラフの生成において従来モデルの課題点を指摘した上で，それを改善するための新たなロスを提案し，SoTAを達成。</p>
+<img width="600" alt="2019-02-22 16 19 00" src="featured.png">  
+<h2 id="シーングラフにおける言葉の定義">シーングラフにおける言葉の定義</h2>
+<p>まずはじめに論文の内容とは関係ないが，<a href="../24">Graph-RCNN</a>ではあいまいになっていて読みにくかったシーングラフにおける言葉の定義をしっかり記していてくれたのが地味にありがたい。</p>
+<p>・シーングラフを構成するにあたって必要にになるのは，objectとsubject,それをつなぐ関係性であるpredicateと，objectやsubjectに関するattributeの4つ。<br>
+<em><strong>[object, subject, predicate, attribute]</strong></em></p>
+<p>・実際に画像上に登場する物体(Object or Subject)は総称してentity.<br>
+<em><strong>[enitity]</strong></em></p>
+<p>・最終的に求めるべきobject,subject,predicateの関係性を&lt;s,pred,o&gt;と定義し，これのことをrelationshipsと呼ぶ。<br>
+<em><strong>[relationships]</strong></em></p>
+<h2 id="従来手法の課題点">従来手法の課題点</h2>
+<p><a href="../25">MotifNet</a>のように，従来の手法ではまず初めにentityの情報を得てから，それをもとにpredicateをラベルのクラス分類問題として解くことでrelationshipsを求めるという２段階のアプローチが主流である。しかし，このようなアプローチには２つの課題が存在すると主張している。</p>
+<h2 id="-entity-instance-confusion">⓵ Entity Instance Confusion</h2>
+<p>同じラベルのentityが複数登場した時，relationshipにおけるenitityがそのうちのどれであるかの判断が難しくなる。以下の例では，男の人が持っているのではない方のワイングラスにobjectが付加されてしまっている。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76162930-5b634b00-6185-11ea-9618-2ccf2b3978e6.png" alt="スクリーンショット 2020-03-08 21 39 54" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="-proximal-rel-ambiguity">⓶ Proximal Rel Ambiguity</h2>
+<p>同様に同じラベルのpredicateを持ちうるobjectとsubjectのペアが複数ある時も，どのobjectとsubjectがペアであるかの判別が難しい。以下の例ではplaysというpredicateに対して3人の男と３つの楽器によるペアを判別する必要があるが，正しくマッチングできていないことがみて取れる。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76162933-6027ff00-6185-11ea-88fc-4cebc7aca47b.png" alt="スクリーンショット 2020-03-08 21 40 03" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>上記の２つともの問題点が発生する原因として，relationshipsを求める際にそれぞれ独立のクラス分類問題として解いてしまっていることがあげられる。そのため同じ物体や考えられるペアが複数存在してもそれぞれを独立の問題として解いてしまっており，お互いを比較した上でどちらがより正しいかを考慮できていない。<br>
+本論文ではそれを解決するための新たなロスを提案している。</p>
+<h2 id="提案するロス">提案するロス</h2>
+<p>新たなロス関数では３種類のロスを組み合わせたものとなっている。</p>
+<h2 id="-class-agnostic-loss">⓵ CLass Agnostic Loss</h2>
+<p>クラスラベルを考慮しないトリプレットロス。背景（関連なし）クラスを除いた全てのpredicateクラスに関して，以下のような関数として定義する。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76163467-a4b59980-6189-11ea-9feb-1105c568c435.png" alt="スクリーンショット 2020-03-08 22 10 34" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>今各entityにおいて，関係性を持つ他のentityとの間のスコアのうち最小のものを最大化し，関係性を持たない他のentityとの間のスコアのうち最大のものを最小化することを考える。そのためには，objectとsubjectに分けるとそれぞれ</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76163471-ac753e00-6189-11ea-9382-7195dcb3e477.png" alt="スクリーンショット 2020-03-08 22 10 47" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>を最大化することと同義。そのため最小化するロス関数は</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76163474-b39c4c00-6189-11ea-8067-cf13f3e631d0.png" alt="スクリーンショット 2020-03-08 22 11 00" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>となる。</p>
+<h2 id="-entity-class-aware-loss">⓶ Entity Class Aware Loss</h2>
+<p>EntityInstanceConfusionを解決するためのロス。基本的には⓵と同じだが，対応するentityのクラスが同じ中でトリプレットロスを計算する。</p>
+<p>各クラスcに属するenitityに対して</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76163672-88b2f780-618b-11ea-91dd-b7590118d0bd.png" alt="スクリーンショット 2020-03-08 22 24 05" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>を計算するため，ロス関数は</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76163675-90729c00-618b-11ea-8632-364ef7e3fae9.png" alt="スクリーンショット 2020-03-08 22 24 19" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>となる。</p>
+<h2 id="-predicate-class-aware-loss">⓷ Predicate Class Aware Loss</h2>
+<p>⓶のpredicate版。ProximalRelAmbiguityを解決するためのロス。entityに付加されているpredicateのクラスが同じ中でトリプレットロスを計算する。</p>
+<p>各predicateクラスeが付加されているentityに対して</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76163717-f19a6f80-618b-11ea-9ece-95c1462c1eb3.png" alt="スクリーンショット 2020-03-08 22 27 01" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>を計算するため，ロス関数は</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76163722-fa8b4100-618b-11ea-9847-4253ee8df19b.png" alt="スクリーンショット 2020-03-08 22 27 18" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>となる。</p>
+<h2 id="最終的なロス">最終的なロス</h2>
+<p>以上３つのロスを(L1,2,3)，従来のcrossentropyloss(L0)に加えることによって学習する。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76163726-ff4ff500-618b-11ea-986e-ebfba67def58.png" alt="スクリーンショット 2020-03-08 22 27 26" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="モデル">モデル</h2>
+<p>RelDNと呼ばれるモデルを提案。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76164082-4b506900-618f-11ea-8fdb-23d7a2c4e348.png" alt="スクリーンショット 2020-03-08 22 51 01" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Semantic, Spatial, Visualの３つのmoduleを用意し，最後に足し合わせたのちsoftmaxをかけてpredicateを出力。<br>
+Visualのうち，relationships全体の特徴量の抽出のみ別に用意したCNN(構造は同じ)を用いて行う。理由としては関係性を捉えるための特徴としてはその限定された領域に注目して欲しく，全体をみてしまうCNNと区別したかったから。（以下図参照）</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76164160-eea17e00-618f-11ea-9cfc-0599176007df.png" alt="スクリーンショット 2020-03-08 22 55 36" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h1 id="実験"><code>実験</code></h1>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76164113-7dfa6180-618f-11ea-884d-be2c85bae456.png" alt="スクリーンショット 2020-03-08 22 52 27" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://user-images.githubusercontent.com/38309191/76164212-666fa880-6190-11ea-881a-46f2b7445677.png" alt="スクリーンショット 2020-03-08 22 58 56" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h1 id="新規性"><code>新規性</code></h1>
+<p>シーングラフ用の新たなロスの提案。</p>
+</div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:takukoba1996@gmail.com" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/in/takuya-kobayashi-4775901aa/" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://github.com/t-koba-96" target="_blank" rel="noopener" class="share-btn-github" aria-label="github">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.46271ef31da3f018e9cd1b59300aa265.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.62ee204c51ab1af036605c7fd0a94a0b.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

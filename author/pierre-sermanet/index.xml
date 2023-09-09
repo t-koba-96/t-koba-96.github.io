@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pierre Sermanet | Bianca Blog</title>
+    <link>https://example.com/author/pierre-sermanet/</link>
+      <atom:link href="https://example.com/author/pierre-sermanet/index.xml" rel="self" type="application/rss+xml" />
+    <description>Pierre Sermanet</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Pierre Sermanet</title>
+      <link>https://example.com/author/pierre-sermanet/</link>
+    </image>
+    
+    <item>
+      <title>Time-Contrastive Networks: Self-Supervised Learning from Video</title>
+      <link>https://example.com/publication/tcnetworks/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/tcnetworks/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Action recognition　におけるSelf-supervisedな事前学習方法の提案。異なる視点から撮った同じアクションにおける同フレームは同じアクションであるとみなせるため，同じフレーム同士は近づけて，ことなるフレームは遠ざけるといったトリプレットな学習方法ができる。&lt;/p&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;概要図は以下の通り。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;p&gt;異なる視点のビデオを比べたとき，同じタイムスタンプである青フレームはPositive 同士，それに対して赤フレームはNegativeであるといえる。このような設定で学習させることで，同じ行動でもで視点が変わった際の対応関係を学習可能，より頑健なFeature抽出が可能に。&lt;/p&gt;
+&lt;h2 id=&#34;ロス&#34;&gt;ロス&lt;/h2&gt;
+&lt;p&gt;トリプレットロスとして定義ができる。&lt;/p&gt;
+&lt;img width=&#34;575&#34; alt=&#34;スクリーンショット 2020-03-06 12 43 20&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048081-146c2e80-5fa8-11ea-98f3-a9a07a69870c.png&#34;&gt;
+&lt;img width=&#34;623&#34; alt=&#34;スクリーンショット 2020-03-06 12 43 46&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048101-21891d80-5fa8-11ea-9230-19b8f8579a00.png&#34;&gt;
+&lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
+&lt;p&gt;スマートフォンによるマルチビューな撮影&lt;/p&gt;
+&lt;img width=&#34;614&#34; alt=&#34;スクリーンショット 2020-03-06 12 41 11&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76047988-c6efc180-5fa7-11ea-89c9-fd927c7e8e9d.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Action Alignment のタスクで評価。&lt;/p&gt;
+&lt;img width=&#34;626&#34; alt=&#34;スクリーンショット 2020-03-06 12 46 13&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048197-79c01f80-5fa8-11ea-921d-fc08a52a8c20.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;同時フレームに注目したSelf-supervisedな事前学習方法を提案。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

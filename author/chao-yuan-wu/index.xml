@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chao-Yuan Wu | Bianca Blog</title>
+    <link>https://example.com/author/chao-yuan-wu/</link>
+      <atom:link href="https://example.com/author/chao-yuan-wu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Chao-Yuan Wu</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Chao-Yuan Wu</title>
+      <link>https://example.com/author/chao-yuan-wu/</link>
+    </image>
+    
+    <item>
+      <title>Long-Term Feature Banks for Detailed Video Understanding</title>
+      <link>https://example.com/publication/featurebank/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/featurebank/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;３DCNNでは4秒近くにおける時系列情報しか捉えられない。そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文。&lt;/p&gt;
+&lt;img width=&#34;655&#34; alt=&#34;スクリーンショット 2020-03-06 12 52 25&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048917-56e23b00-5fa9-11ea-8618-ca469d4c0bc9.png&#34;&gt;
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;３DCNNの元論文では，何フレームごとかに得た特徴をROI Poolingによってある区間における平均特徴量としたのち，全結合層で分類問題を解く（下図）。しかしこれではShortTermな情報しか捉えられず，ビデオ全体から判断が必要な情報が抜け落ちてしまう。&lt;/p&gt;
+&lt;img width=&#34;436&#34; alt=&#34;スクリーンショット 2020-03-06 12 56 58&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76050201-fb647d00-5fa9-11ea-8d3d-ea07d839e0c4.png&#34;&gt;  
+&lt;p&gt;そこでFeatureBankOperationを導入し，ShortTermとは別に得たLongTermな情報も同時に捉えるようなネットワークを用意してあげて，そこから得た特徴量も用いて認識を行う。&lt;/p&gt;
+&lt;img width=&#34;512&#34; alt=&#34;スクリーンショット 2020-03-06 12 57 15&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76050211-03bcb800-5faa-11ea-8d51-86a5ef139f8d.png&#34;&gt;
+&lt;p&gt;FeatureBankOperatorの構造は以下。&lt;/p&gt;
+&lt;img width=&#34;636&#34; alt=&#34;スクリーンショット 2020-03-06 12 59 27&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76050307-526a5200-5faa-11ea-8a9a-1ab6a57fb7f7.png&#34;&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;img width=&#34;704&#34; alt=&#34;スクリーンショット 2020-03-06 13 02 12&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76050422-b3922580-5faa-11ea-8c98-89f688cd23a4.png&#34;&gt;
+&lt;img width=&#34;900&#34; alt=&#34;スクリーンショット 2020-03-06 13 03 27&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76050485-e1776a00-5faa-11ea-8a14-a6204f5e55d4.png&#34;&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;ShortTerm+LongTerm&lt;/p&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;単純な理論だが精度向上に結構寄与してる。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

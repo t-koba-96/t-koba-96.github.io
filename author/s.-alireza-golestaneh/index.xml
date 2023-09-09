@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>S. Alireza Golestaneh | Bianca Blog</title>
+    <link>https://example.com/author/s.-alireza-golestaneh/</link>
+      <atom:link href="https://example.com/author/s.-alireza-golestaneh/index.xml" rel="self" type="application/rss+xml" />
+    <description>S. Alireza Golestaneh</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>S. Alireza Golestaneh</title>
+      <link>https://example.com/author/s.-alireza-golestaneh/</link>
+    </image>
+    
+    <item>
+      <title>Fast and Unsupervised Action Boundary Detection for Action Segmentation</title>
+      <link>https://example.com/publication/abdetection/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/abdetection/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;提案手法&#34;&gt;&lt;code&gt;提案手法&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Unified Fully and Timestamp Supervised Temporal Action Segmentation via Sequence to Sequence Translation</title>
+      <link>https://example.com/publication/stostranslation/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/stostranslation/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;task&#34;&gt;Task&lt;/h2&gt;
+&lt;p&gt;VideoActionSegmentation&lt;/p&gt;
+&lt;h2 id=&#34;input&#34;&gt;Input&lt;/h2&gt;
+&lt;p&gt;各フレームに対して、行動ラベルが一種類与えられている動画。&lt;/p&gt;
+&lt;h2 id=&#34;output&#34;&gt;Output&lt;/h2&gt;
+&lt;p&gt;一般的にはフレーム毎に行動ラベルの予測結果を返すのに対し、行動ラベルのシーケンス(Transcriptと呼ぶ)とタイムスタンプ(Durationと呼ぶ)を別々に得て、セグメントレベルでの行動予測結果を返すことで、OverSegmentation(予測結果のブレがおきる)の問題を解決する。&lt;/p&gt;
+&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
+&lt;p&gt;以下の２パターンを検証&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;教師あり(全てのフレームに行動ラベルあり)&lt;/li&gt;
+&lt;li&gt;弱教師あり(各Transcriptに属するフレームが１つずつのみ与えられている)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;提案手法&#34;&gt;&lt;code&gt;提案手法&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/231029029-95189a28-8e1a-457e-99f8-5036fff0e4c8.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;ステップ&#34;&gt;ステップ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(a) : 一般的なSegmentationModelではOverSegmentationの問題が発生しやすく、後段で処理が必要。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(b) : そこでTransformeベースのseq2seqモデルを適用し、Decoderの出力としてTranscriptとDurationを同時に得ることを考える。ただし、以下の２点の要因から、このモデル構造単体では機能しない。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NLPと違い、非常に長い類似したフレーム入力に対して、短い行動出力シーケンスが求められる点。&lt;/li&gt;
+&lt;li&gt;NPLと違い、データセットの規模が非常に小さく、扱える学習データが少ない点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(c) : そこで、(a)のEncoderの出力をDecoderの入力として追加することで、デコーダでは異なる行動に対してより識別性の高い特徴を学習できる。これによりTranscriptでは改善を得るが、Durationについては以前精度が悪いままである。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(d) : そこで、Decoderでの直接のDuration出力はあきらめる。DecoderではあくまでTranscriptを得ることを目的とし、DurationについてはEncoderの出力も同時に活用することを考える。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(e) : Encoderで得たフレーム単位のクラス予測値とDecoderの出力との間で相互アテンションをとって、最終的なセグメントレベルでの行動予測結果を返す。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;損失関数&#34;&gt;損失関数&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Encoder&lt;br&gt;
+通常のACtionSegmentationと同様、CrossEntropyLossを採用。&lt;/li&gt;
+&lt;li&gt;Decoder&lt;br&gt;
+こちらもセグメント単位でのCrossEntropyLossを用いる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;dataset&#34;&gt;Dataset&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Breakfast&lt;/li&gt;
+&lt;li&gt;50salads&lt;/li&gt;
+&lt;li&gt;GTEA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;result&#34;&gt;Result&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/231042891-582b0940-300d-425d-b3ef-0ed8849c79b0.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;弱教師学習でseq2seqを用いた2Branch(Transcript+Duration)手法がでてきていたものが、transformerベースのseq2seqとなったというイメージ。
+ActionSegmentationのタスクでTransformerを利用していく中で、この論文でも述べているようにデータの少なさ+非常に長い類似したフレーム入力をどう扱っていくかが焦点になりそう。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
