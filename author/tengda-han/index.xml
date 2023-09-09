@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tengda Han | Bianca Blog</title>
-    <link>https://example.com/author/tengda-han/</link>
-      <atom:link href="https://example.com/author/tengda-han/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/tengda-han/</link>
+      <atom:link href="https://t-koba-96.github.io/author/tengda-han/index.xml" rel="self" type="application/rss+xml" />
     <description>Tengda Han</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Tengda Han</title>
-      <link>https://example.com/author/tengda-han/</link>
+      <link>https://t-koba-96.github.io/author/tengda-han/</link>
     </image>
     
     <item>
       <title>Video Representation Learning by Dense Predictive Coding</title>
-      <link>https://example.com/publication/densepredictivecoding/</link>
+      <link>https://t-koba-96.github.io/publication/densepredictivecoding/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/densepredictivecoding/</guid>
+      <guid>https://t-koba-96.github.io/publication/densepredictivecoding/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;../16&#34;&gt;Predictive Coding&lt;/a&gt;で用いた手法を動画にも適用した論文。動画の次の潜在表現を回帰で予測させてあげて，相互情報量
 の最大化を目指す。&lt;/p&gt;

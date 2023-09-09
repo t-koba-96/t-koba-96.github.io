@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Debidatta Dwibedi | Bianca Blog</title>
-    <link>https://example.com/author/debidatta-dwibedi/</link>
-      <atom:link href="https://example.com/author/debidatta-dwibedi/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/debidatta-dwibedi/</link>
+      <atom:link href="https://t-koba-96.github.io/author/debidatta-dwibedi/index.xml" rel="self" type="application/rss+xml" />
     <description>Debidatta Dwibedi</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Debidatta Dwibedi</title>
-      <link>https://example.com/author/debidatta-dwibedi/</link>
+      <link>https://t-koba-96.github.io/author/debidatta-dwibedi/</link>
     </image>
     
     <item>
       <title>Temporal Cycle-Consistency Learning</title>
-      <link>https://example.com/publication/cycleconsistency/</link>
+      <link>https://t-koba-96.github.io/publication/cycleconsistency/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/cycleconsistency/</guid>
+      <guid>https://t-koba-96.github.io/publication/cycleconsistency/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現。&lt;/p&gt;
 &lt;p&gt;

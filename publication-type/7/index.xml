@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>7 | Bianca Blog</title>
-    <link>https://example.com/publication-type/7/</link>
-      <atom:link href="https://example.com/publication-type/7/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/publication-type/7/</link>
+      <atom:link href="https://t-koba-96.github.io/publication-type/7/index.xml" rel="self" type="application/rss+xml" />
     <description>7</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>7</title>
-      <link>https://example.com/publication-type/7/</link>
+      <link>https://t-koba-96.github.io/publication-type/7/</link>
     </image>
     
     <item>
       <title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</title>
-      <link>https://example.com/publication/bert/</link>
+      <link>https://t-koba-96.github.io/publication/bert/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/bert/</guid>
+      <guid>https://t-koba-96.github.io/publication/bert/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;Bi-directional な &lt;a href=&#34;https://example.com/paper/15/&#34;&gt;Transformer&lt;/a&gt; を用いて，自然言語分野における新たな事前学習手法を提案。言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成。&lt;/p&gt;
+&lt;p&gt;Bi-directional な &lt;a href=&#34;https://t-koba-96.github.io/paper/15/&#34;&gt;Transformer&lt;/a&gt; を用いて，自然言語分野における新たな事前学習手法を提案。言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習。&lt;br&gt;
 　トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM。&lt;br&gt;
@@ -39,9 +39,9 @@
     
     <item>
       <title>Representation Learning with Contrastive Predictive Coding</title>
-      <link>https://example.com/publication/contrastivepredictivecoding/</link>
+      <link>https://t-koba-96.github.io/publication/contrastivepredictivecoding/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/contrastivepredictivecoding/</guid>
+      <guid>https://t-koba-96.github.io/publication/contrastivepredictivecoding/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;画像や音声における新しい表現学習の方法を提案。エンコーダーとGRUを組み合わせてGRUが次のエンコーダの出力を予測して,その相互情報量の最大化によって良い特徴表現を獲得する。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -189,9 +189,9 @@
     
     <item>
       <title>Time-Contrastive Networks: Self-Supervised Learning from Video</title>
-      <link>https://example.com/publication/tcnetworks/</link>
+      <link>https://t-koba-96.github.io/publication/tcnetworks/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/tcnetworks/</guid>
+      <guid>https://t-koba-96.github.io/publication/tcnetworks/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Action recognition　におけるSelf-supervisedな事前学習方法の提案。異なる視点から撮った同じアクションにおける同フレームは同じアクションであるとみなせるため，同じフレーム同士は近づけて，ことなるフレームは遠ざけるといったトリプレットな学習方法ができる。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -215,9 +215,9 @@
     
     <item>
       <title>Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations</title>
-      <link>https://example.com/publication/visualgenome/</link>
+      <link>https://t-koba-96.github.io/publication/visualgenome/</link>
       <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/visualgenome/</guid>
+      <guid>https://t-koba-96.github.io/publication/visualgenome/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成。SceneGraphの研究分野で一般的に使われているデータセットとなっている。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  

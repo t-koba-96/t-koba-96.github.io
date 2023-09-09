@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chao-Yuan Wu | Bianca Blog</title>
-    <link>https://example.com/author/chao-yuan-wu/</link>
-      <atom:link href="https://example.com/author/chao-yuan-wu/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/chao-yuan-wu/</link>
+      <atom:link href="https://t-koba-96.github.io/author/chao-yuan-wu/index.xml" rel="self" type="application/rss+xml" />
     <description>Chao-Yuan Wu</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Chao-Yuan Wu</title>
-      <link>https://example.com/author/chao-yuan-wu/</link>
+      <link>https://t-koba-96.github.io/author/chao-yuan-wu/</link>
     </image>
     
     <item>
       <title>Long-Term Feature Banks for Detailed Video Understanding</title>
-      <link>https://example.com/publication/featurebank/</link>
+      <link>https://t-koba-96.github.io/publication/featurebank/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/featurebank/</guid>
+      <guid>https://t-koba-96.github.io/publication/featurebank/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;３DCNNでは4秒近くにおける時系列情報しか捉えられない。そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文。&lt;/p&gt;
 &lt;img width=&#34;655&#34; alt=&#34;スクリーンショット 2020-03-06 12 52 25&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048917-56e23b00-5fa9-11ea-8618-ca469d4c0bc9.png&#34;&gt;

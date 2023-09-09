@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pierre Sermanet | Bianca Blog</title>
-    <link>https://example.com/author/pierre-sermanet/</link>
-      <atom:link href="https://example.com/author/pierre-sermanet/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/pierre-sermanet/</link>
+      <atom:link href="https://t-koba-96.github.io/author/pierre-sermanet/index.xml" rel="self" type="application/rss+xml" />
     <description>Pierre Sermanet</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Aug 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Pierre Sermanet</title>
-      <link>https://example.com/author/pierre-sermanet/</link>
+      <link>https://t-koba-96.github.io/author/pierre-sermanet/</link>
     </image>
     
     <item>
       <title>Time-Contrastive Networks: Self-Supervised Learning from Video</title>
-      <link>https://example.com/publication/tcnetworks/</link>
+      <link>https://t-koba-96.github.io/publication/tcnetworks/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/tcnetworks/</guid>
+      <guid>https://t-koba-96.github.io/publication/tcnetworks/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Action recognition　におけるSelf-supervisedな事前学習方法の提案。異なる視点から撮った同じアクションにおける同フレームは同じアクションであるとみなせるため，同じフレーム同士は近づけて，ことなるフレームは遠ざけるといったトリプレットな学習方法ができる。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;

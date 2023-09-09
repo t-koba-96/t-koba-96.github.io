@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ji Zhang | Bianca Blog</title>
-    <link>https://example.com/author/ji-zhang/</link>
-      <atom:link href="https://example.com/author/ji-zhang/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/ji-zhang/</link>
+      <atom:link href="https://t-koba-96.github.io/author/ji-zhang/index.xml" rel="self" type="application/rss+xml" />
     <description>Ji Zhang</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Ji Zhang</title>
-      <link>https://example.com/author/ji-zhang/</link>
+      <link>https://t-koba-96.github.io/author/ji-zhang/</link>
     </image>
     
     <item>
       <title>Graphical Contrastive Losses for Scene Graph Parsing</title>
-      <link>https://example.com/publication/graphicalcontrastiveloss/</link>
+      <link>https://t-koba-96.github.io/publication/graphicalcontrastiveloss/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/graphicalcontrastiveloss/</guid>
+      <guid>https://t-koba-96.github.io/publication/graphicalcontrastiveloss/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;シーングラフの生成において従来モデルの課題点を指摘した上で，それを改善するための新たなロスを提案し，SoTAを達成。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  

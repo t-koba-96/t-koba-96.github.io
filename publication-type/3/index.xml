@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>3 | Bianca Blog</title>
-    <link>https://example.com/publication-type/3/</link>
-      <atom:link href="https://example.com/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/publication-type/3/</link>
+      <atom:link href="https://t-koba-96.github.io/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
     <description>3</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>3</title>
-      <link>https://example.com/publication-type/3/</link>
+      <link>https://t-koba-96.github.io/publication-type/3/</link>
     </image>
     
     <item>
       <title>BMN: Boundary-Matching Network for Temporal Action Proposal Generation</title>
-      <link>https://example.com/publication/bmn/</link>
+      <link>https://t-koba-96.github.io/publication/bmn/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/bmn/</guid>
+      <guid>https://t-koba-96.github.io/publication/bmn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Temporal action proposalのタスク。従来のような始点終点予測とは別に，Proposalの始点と長さを表すヒートマップを作成する。最終的に始点終点情報とヒートマップのConfidenceを組み合わせることで，Proposalを出してくる手法を提案。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130552-5f698480-5712-11ea-921e-d6e5f8fc4711.png&#34;&gt;
@@ -38,9 +38,9 @@
     
     <item>
       <title>Video Representation Learning by Dense Predictive Coding</title>
-      <link>https://example.com/publication/densepredictivecoding/</link>
+      <link>https://t-koba-96.github.io/publication/densepredictivecoding/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/densepredictivecoding/</guid>
+      <guid>https://t-koba-96.github.io/publication/densepredictivecoding/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;../16&#34;&gt;Predictive Coding&lt;/a&gt;で用いた手法を動画にも適用した論文。動画の次の潜在表現を回帰で予測させてあげて，相互情報量
 の最大化を目指す。&lt;/p&gt;
@@ -119,9 +119,9 @@
     
     <item>
       <title>NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning</title>
-      <link>https://example.com/publication/nnviterbi/</link>
+      <link>https://t-koba-96.github.io/publication/nnviterbi/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/nnviterbi/</guid>
+      <guid>https://t-koba-96.github.io/publication/nnviterbi/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;クラスラベルの遷移順のみのWeaklyなラベルを用いたAction Segmentation. Viterbi algorism を用いた方法を提案。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Noam Shazeer | Bianca Blog</title>
-    <link>https://example.com/author/noam-shazeer/</link>
-      <atom:link href="https://example.com/author/noam-shazeer/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/noam-shazeer/</link>
+      <atom:link href="https://t-koba-96.github.io/author/noam-shazeer/index.xml" rel="self" type="application/rss+xml" />
     <description>Noam Shazeer</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Aug 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Noam Shazeer</title>
-      <link>https://example.com/author/noam-shazeer/</link>
+      <link>https://t-koba-96.github.io/author/noam-shazeer/</link>
     </image>
     
     <item>
       <title>Attention is all you need</title>
-      <link>https://example.com/publication/transformer/</link>
+      <link>https://t-koba-96.github.io/publication/transformer/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/transformer/</guid>
+      <guid>https://t-koba-96.github.io/publication/transformer/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;機械翻訳用のネットワーク，トランスフォーマーの提案。従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Toby Perrett | Bianca Blog</title>
-    <link>https://example.com/author/toby-perrett/</link>
-      <atom:link href="https://example.com/author/toby-perrett/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/toby-perrett/</link>
+      <atom:link href="https://t-koba-96.github.io/author/toby-perrett/index.xml" rel="self" type="application/rss+xml" />
     <description>Toby Perrett</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Toby Perrett</title>
-      <link>https://example.com/author/toby-perrett/</link>
+      <link>https://t-koba-96.github.io/author/toby-perrett/</link>
     </image>
     
     <item>
       <title>Temporal-Relational CrossTransformers for Few-Shot Action Recognition</title>
-      <link>https://example.com/publication/tr_crosstransformers/</link>
+      <link>https://t-koba-96.github.io/publication/tr_crosstransformers/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/tr_crosstransformers/</guid>
+      <guid>https://t-koba-96.github.io/publication/tr_crosstransformers/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;CrossTransformerを応用したFew-ShotのActionRecognition手法の提案。&lt;/p&gt;
 &lt;p&gt;

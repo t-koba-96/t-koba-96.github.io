@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Colin Lea | Bianca Blog</title>
-    <link>https://example.com/author/colin-lea/</link>
-      <atom:link href="https://example.com/author/colin-lea/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/colin-lea/</link>
+      <atom:link href="https://t-koba-96.github.io/author/colin-lea/index.xml" rel="self" type="application/rss+xml" />
     <description>Colin Lea</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Aug 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Colin Lea</title>
-      <link>https://example.com/author/colin-lea/</link>
+      <link>https://t-koba-96.github.io/author/colin-lea/</link>
     </image>
     
     <item>
       <title>Temporal Convolutional Networks for Action Segmentation and Detection</title>
-      <link>https://example.com/publication/tcn/</link>
+      <link>https://t-koba-96.github.io/publication/tcn/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/tcn/</guid>
+      <guid>https://t-koba-96.github.io/publication/tcn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.&lt;br&gt;
 ２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.&lt;/p&gt;

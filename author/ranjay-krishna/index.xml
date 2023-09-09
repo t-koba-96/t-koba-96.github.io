@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ranjay Krishna | Bianca Blog</title>
-    <link>https://example.com/author/ranjay-krishna/</link>
-      <atom:link href="https://example.com/author/ranjay-krishna/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/ranjay-krishna/</link>
+      <atom:link href="https://t-koba-96.github.io/author/ranjay-krishna/index.xml" rel="self" type="application/rss+xml" />
     <description>Ranjay Krishna</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Aug 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Ranjay Krishna</title>
-      <link>https://example.com/author/ranjay-krishna/</link>
+      <link>https://t-koba-96.github.io/author/ranjay-krishna/</link>
     </image>
     
     <item>
       <title>Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations</title>
-      <link>https://example.com/publication/visualgenome/</link>
+      <link>https://t-koba-96.github.io/publication/visualgenome/</link>
       <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/visualgenome/</guid>
+      <guid>https://t-koba-96.github.io/publication/visualgenome/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成。SceneGraphの研究分野で一般的に使われているデータセットとなっている。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  

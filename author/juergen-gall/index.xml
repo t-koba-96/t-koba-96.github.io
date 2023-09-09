@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Juergen Gall | Bianca Blog</title>
-    <link>https://example.com/author/juergen-gall/</link>
-      <atom:link href="https://example.com/author/juergen-gall/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/juergen-gall/</link>
+      <atom:link href="https://t-koba-96.github.io/author/juergen-gall/index.xml" rel="self" type="application/rss+xml" />
     <description>Juergen Gall</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Juergen Gall</title>
-      <link>https://example.com/author/juergen-gall/</link>
+      <link>https://t-koba-96.github.io/author/juergen-gall/</link>
     </image>
     
     <item>
       <title>MS-TCN: Multi-Stage Temporal Convolutional Network for Action Segmentation</title>
-      <link>https://example.com/publication/ms-tcn/</link>
+      <link>https://t-koba-96.github.io/publication/ms-tcn/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/ms-tcn/</guid>
+      <guid>https://t-koba-96.github.io/publication/ms-tcn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;行動認識のタスクにおいて,&lt;a href=&#34;https://github.com/t-koba-96/paper_summarize/issues/2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Temporal Convolutional Networks&lt;/a&gt;を複数重ねるMulti-TCNの提案。２個目以降のTCNには各クラスのPredictのSoftmax値を入力とすることで，OverSegmentation（予測結果の頻繁な変化）の抑止を実現。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;

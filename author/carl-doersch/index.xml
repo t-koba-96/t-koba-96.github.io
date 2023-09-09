@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Carl Doersch | Bianca Blog</title>
-    <link>https://example.com/author/carl-doersch/</link>
-      <atom:link href="https://example.com/author/carl-doersch/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/carl-doersch/</link>
+      <atom:link href="https://t-koba-96.github.io/author/carl-doersch/index.xml" rel="self" type="application/rss+xml" />
     <description>Carl Doersch</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Carl Doersch</title>
-      <link>https://example.com/author/carl-doersch/</link>
+      <link>https://t-koba-96.github.io/author/carl-doersch/</link>
     </image>
     
     <item>
       <title>CrossTransformers: spatially-aware few-shot transfer</title>
-      <link>https://example.com/publication/crosstransformer/</link>
+      <link>https://t-koba-96.github.io/publication/crosstransformer/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/crosstransformer/</guid>
+      <guid>https://t-koba-96.github.io/publication/crosstransformer/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;2 Contributions&lt;/p&gt;
 &lt;p&gt;[1] SimCLRを用いた自己表現学習: クラスラベルを用いた学習を行うと、抽出した特徴量は一般化されたクラスの情報のみを保持したものとなり、その過程で局所的な特徴や表現をそぎ落としたものとなってしまう。そこでSimCLR同様の自己表現学習方法を導入する。自身の画像自体を正解レベルとして扱うことで、細部の表現をそぎ落とさないような学習を実現する。&lt;/p&gt;

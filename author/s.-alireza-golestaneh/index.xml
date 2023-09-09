@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>S. Alireza Golestaneh | Bianca Blog</title>
-    <link>https://example.com/author/s.-alireza-golestaneh/</link>
-      <atom:link href="https://example.com/author/s.-alireza-golestaneh/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/s.-alireza-golestaneh/</link>
+      <atom:link href="https://t-koba-96.github.io/author/s.-alireza-golestaneh/index.xml" rel="self" type="application/rss+xml" />
     <description>S. Alireza Golestaneh</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>S. Alireza Golestaneh</title>
-      <link>https://example.com/author/s.-alireza-golestaneh/</link>
+      <link>https://t-koba-96.github.io/author/s.-alireza-golestaneh/</link>
     </image>
     
     <item>
       <title>Fast and Unsupervised Action Boundary Detection for Action Segmentation</title>
-      <link>https://example.com/publication/abdetection/</link>
+      <link>https://t-koba-96.github.io/publication/abdetection/</link>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/abdetection/</guid>
+      <guid>https://t-koba-96.github.io/publication/abdetection/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;h1 id=&#34;提案手法&#34;&gt;&lt;code&gt;提案手法&lt;/code&gt;&lt;/h1&gt;
 &lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
@@ -26,9 +26,9 @@
     
     <item>
       <title>Unified Fully and Timestamp Supervised Temporal Action Segmentation via Sequence to Sequence Translation</title>
-      <link>https://example.com/publication/stostranslation/</link>
+      <link>https://t-koba-96.github.io/publication/stostranslation/</link>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/stostranslation/</guid>
+      <guid>https://t-koba-96.github.io/publication/stostranslation/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;task&#34;&gt;Task&lt;/h2&gt;
 &lt;p&gt;VideoActionSegmentation&lt;/p&gt;

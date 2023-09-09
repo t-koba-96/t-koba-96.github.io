@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jacob Devlin | Bianca Blog</title>
-    <link>https://example.com/author/jacob-devlin/</link>
-      <atom:link href="https://example.com/author/jacob-devlin/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/jacob-devlin/</link>
+      <atom:link href="https://t-koba-96.github.io/author/jacob-devlin/index.xml" rel="self" type="application/rss+xml" />
     <description>Jacob Devlin</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Jacob Devlin</title>
-      <link>https://example.com/author/jacob-devlin/</link>
+      <link>https://t-koba-96.github.io/author/jacob-devlin/</link>
     </image>
     
     <item>
       <title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</title>
-      <link>https://example.com/publication/bert/</link>
+      <link>https://t-koba-96.github.io/publication/bert/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/bert/</guid>
+      <guid>https://t-koba-96.github.io/publication/bert/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;Bi-directional な &lt;a href=&#34;https://example.com/paper/15/&#34;&gt;Transformer&lt;/a&gt; を用いて，自然言語分野における新たな事前学習手法を提案。言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成。&lt;/p&gt;
+&lt;p&gt;Bi-directional な &lt;a href=&#34;https://t-koba-96.github.io/paper/15/&#34;&gt;Transformer&lt;/a&gt; を用いて，自然言語分野における新たな事前学習手法を提案。言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習。&lt;br&gt;
 　トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM。&lt;br&gt;
@@ -39,9 +39,9 @@
     
     <item>
       <title>BMN: Boundary-Matching Network for Temporal Action Proposal Generation</title>
-      <link>https://example.com/publication/bmn/</link>
+      <link>https://t-koba-96.github.io/publication/bmn/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/bmn/</guid>
+      <guid>https://t-koba-96.github.io/publication/bmn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Temporal action proposalのタスク。従来のような始点終点予測とは別に，Proposalの始点と長さを表すヒートマップを作成する。最終的に始点終点情報とヒートマップのConfidenceを組み合わせることで，Proposalを出してくる手法を提案。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130552-5f698480-5712-11ea-921e-d6e5f8fc4711.png&#34;&gt;
@@ -63,9 +63,9 @@
     
     <item>
       <title>VideoBERT: A Joint Model for Video and Language Representation Learning</title>
-      <link>https://example.com/publication/videobert/</link>
+      <link>https://t-koba-96.github.io/publication/videobert/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/videobert/</guid>
+      <guid>https://t-koba-96.github.io/publication/videobert/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;を応用することでマルチモーダルに事前学習させる方法を提案。基本的には&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;のMask穴埋め問題をLanguage+Visionに拡張したもの。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rowan Zellers | Bianca Blog</title>
-    <link>https://example.com/author/rowan-zellers/</link>
-      <atom:link href="https://example.com/author/rowan-zellers/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/rowan-zellers/</link>
+      <atom:link href="https://t-koba-96.github.io/author/rowan-zellers/index.xml" rel="self" type="application/rss+xml" />
     <description>Rowan Zellers</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Aug 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Rowan Zellers</title>
-      <link>https://example.com/author/rowan-zellers/</link>
+      <link>https://t-koba-96.github.io/author/rowan-zellers/</link>
     </image>
     
     <item>
       <title>Neural Motifs: Scene Graph Parsing with Global Context</title>
-      <link>https://example.com/publication/neuralmotifs/</link>
+      <link>https://t-koba-96.github.io/publication/neuralmotifs/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/neuralmotifs/</guid>
+      <guid>https://t-koba-96.github.io/publication/neuralmotifs/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;シーングラフ生成のタスクで既存の&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;データセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案。&lt;/p&gt;
 &lt;p&gt;

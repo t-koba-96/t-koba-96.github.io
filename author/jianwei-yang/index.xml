@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jianwei Yang | Bianca Blog</title>
-    <link>https://example.com/author/jianwei-yang/</link>
-      <atom:link href="https://example.com/author/jianwei-yang/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/jianwei-yang/</link>
+      <atom:link href="https://t-koba-96.github.io/author/jianwei-yang/index.xml" rel="self" type="application/rss+xml" />
     <description>Jianwei Yang</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Aug 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Jianwei Yang</title>
-      <link>https://example.com/author/jianwei-yang/</link>
+      <link>https://t-koba-96.github.io/author/jianwei-yang/</link>
     </image>
     
     <item>
       <title>Graph R-CNN for Scene Graph Generation</title>
-      <link>https://example.com/publication/graph-rcnn/</link>
+      <link>https://t-koba-96.github.io/publication/graph-rcnn/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/graph-rcnn/</guid>
+      <guid>https://t-koba-96.github.io/publication/graph-rcnn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。Graphの参考資料は&lt;a href=&#34;../14&#34;&gt;こちら&lt;/a&gt;。SceneGraphとは&lt;a href=&#34;../31&#34;&gt;VisualGenome&lt;/a&gt;において定義されているもので，{Subject,Relationship(Predicate),Object} (+Attribute) によるグラフ構造で表される。例として，A man is swinging a bat というような画像内の関係性があったとき， {man, swinging, bat} (+Attribute)というふうになる。これらの関係性を考えていき，最終的には(d)の関係性の出力を目指す。&lt;/p&gt;
 &lt;p&gt;

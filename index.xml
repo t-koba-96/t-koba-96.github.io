@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bianca Blog</title>
-    <link>https://example.com/</link>
-      <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/</link>
+      <atom:link href="https://t-koba-96.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Bianca Blog</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Bianca Blog</title>
-      <link>https://example.com/</link>
+      <link>https://t-koba-96.github.io/</link>
     </image>
     
     <item>
       <title>論文</title>
-      <link>https://example.com/author/%E8%AB%96%E6%96%87/</link>
+      <link>https://t-koba-96.github.io/author/%E8%AB%96%E6%96%87/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/author/%E8%AB%96%E6%96%87/</guid>
+      <guid>https://t-koba-96.github.io/author/%E8%AB%96%E6%96%87/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fast and Unsupervised Action Boundary Detection for Action Segmentation</title>
-      <link>https://example.com/publication/abdetection/</link>
+      <link>https://t-koba-96.github.io/publication/abdetection/</link>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/abdetection/</guid>
+      <guid>https://t-koba-96.github.io/publication/abdetection/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;h1 id=&#34;提案手法&#34;&gt;&lt;code&gt;提案手法&lt;/code&gt;&lt;/h1&gt;
 &lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
@@ -34,9 +34,9 @@
     
     <item>
       <title>Unified Fully and Timestamp Supervised Temporal Action Segmentation via Sequence to Sequence Translation</title>
-      <link>https://example.com/publication/stostranslation/</link>
+      <link>https://t-koba-96.github.io/publication/stostranslation/</link>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/stostranslation/</guid>
+      <guid>https://t-koba-96.github.io/publication/stostranslation/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;task&#34;&gt;Task&lt;/h2&gt;
 &lt;p&gt;VideoActionSegmentation&lt;/p&gt;
@@ -138,9 +138,9 @@ ActionSegmentationのタスクでTransformerを利用していく中で、この
     
     <item>
       <title>Temporal-Relational CrossTransformers for Few-Shot Action Recognition</title>
-      <link>https://example.com/publication/tr_crosstransformers/</link>
+      <link>https://t-koba-96.github.io/publication/tr_crosstransformers/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/tr_crosstransformers/</guid>
+      <guid>https://t-koba-96.github.io/publication/tr_crosstransformers/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;CrossTransformerを応用したFew-ShotのActionRecognition手法の提案。&lt;/p&gt;
 &lt;p&gt;
@@ -260,9 +260,9 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     
     <item>
       <title>Action Genome: Actions as Composition of Spatio-temporal Scene Graphs</title>
-      <link>https://example.com/publication/actiongenome/</link>
+      <link>https://t-koba-96.github.io/publication/actiongenome/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/actiongenome/</guid>
+      <guid>https://t-koba-96.github.io/publication/actiongenome/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;../12&#34;&gt;Visual Genome&lt;/a&gt;の動画版のデータセット。また&lt;a href=&#34;../14&#34;&gt;Feature Banks&lt;/a&gt;を用いた手法の提案。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -389,9 +389,9 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     
     <item>
       <title>CrossTransformers: spatially-aware few-shot transfer</title>
-      <link>https://example.com/publication/crosstransformer/</link>
+      <link>https://t-koba-96.github.io/publication/crosstransformer/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/crosstransformer/</guid>
+      <guid>https://t-koba-96.github.io/publication/crosstransformer/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;2 Contributions&lt;/p&gt;
 &lt;p&gt;[1] SimCLRを用いた自己表現学習: クラスラベルを用いた学習を行うと、抽出した特徴量は一般化されたクラスの情報のみを保持したものとなり、その過程で局所的な特徴や表現をそぎ落としたものとなってしまう。そこでSimCLR同様の自己表現学習方法を導入する。自身の画像自体を正解レベルとして扱うことで、細部の表現をそぎ落とさないような学習を実現する。&lt;/p&gt;
@@ -467,17 +467,17 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     
     <item>
       <title>Fine-grained Action Recognition in Assembly Work Scenes by Drawing Attention to the Hands</title>
-      <link>https://example.com/published/sitis2019/</link>
+      <link>https://t-koba-96.github.io/published/sitis2019/</link>
       <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/published/sitis2019/</guid>
+      <guid>https://t-koba-96.github.io/published/sitis2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>三菱電機との共同研究成果がプレスリリースされました</title>
-      <link>https://example.com/blog/mitsubishi/</link>
+      <link>https://t-koba-96.github.io/blog/mitsubishi/</link>
       <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/blog/mitsubishi/</guid>
+      <guid>https://t-koba-96.github.io/blog/mitsubishi/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;三菱電機との共同研究成果が公開されました。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://aoki-medialab.jp/information/%e4%b8%89%e8%8f%b1%e9%9b%bb%e6%a9%9f%ef%bc%88%e6%a0%aa%ef%bc%89%e3%81%a8%e3%81%ae%e5%85%b1%e5%90%8c%e7%a0%94%e7%a9%b6%e6%88%90%e6%9e%9c%e3%81%8cceatec2019%e3%81%a7%e5%85%ac%e9%96%8b%e3%81%95%e3%82%8c/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;共同研究成果&lt;/a&gt;&lt;/p&gt;
@@ -488,9 +488,9 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     
     <item>
       <title>フレーム単位での行動認識結果のデモをFlaskを用いてデプロイ</title>
-      <link>https://example.com/blog/video-demo/</link>
+      <link>https://t-koba-96.github.io/blog/video-demo/</link>
       <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/blog/video-demo/</guid>
+      <guid>https://t-koba-96.github.io/blog/video-demo/</guid>
       <description>&lt;h1 id=&#34;動画認識デモについて&#34;&gt;&lt;code&gt;動画認識デモについて&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;今まで作成したデモを汎用的に利用するために，最低限の機能のみに簡略化したデモを作成したので，使い方の手順とともに軽く説明していきたい。
 まずはデモの実際の様子を以下に示した。フレーム単位での正解ラベルと予測ラベルを見ることができ，また手動でフレームを選ぶか自動再生するかの2つのモードを切り替えられる。&lt;/p&gt;
@@ -535,7 +535,7 @@ gitレポジトリには実際に試すためのサンプルデータ（動画�
                /blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_2fe439c1b2e85c7c2d9c461487a30e17.webp 400w,
                /blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_f14347a3311062ae3c716d0054e33cbe.webp 760w,
                /blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://example.com/blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_2fe439c1b2e85c7c2d9c461487a30e17.webp&#34;
+               src=&#34;https://t-koba-96.github.io/blog/video-demo/fact_hu08237754c0b94273cc9e4f128584029d_120360_2fe439c1b2e85c7c2d9c461487a30e17.webp&#34;
                width=&#34;760&#34;
                height=&#34;54&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -549,11 +549,11 @@ gitレポジトリには実際に試すためのサンプルデータ（動画�
     
     <item>
       <title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</title>
-      <link>https://example.com/publication/bert/</link>
+      <link>https://t-koba-96.github.io/publication/bert/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/bert/</guid>
+      <guid>https://t-koba-96.github.io/publication/bert/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;Bi-directional な &lt;a href=&#34;https://example.com/paper/15/&#34;&gt;Transformer&lt;/a&gt; を用いて，自然言語分野における新たな事前学習手法を提案。言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成。&lt;/p&gt;
+&lt;p&gt;Bi-directional な &lt;a href=&#34;https://t-koba-96.github.io/paper/15/&#34;&gt;Transformer&lt;/a&gt; を用いて，自然言語分野における新たな事前学習手法を提案。言語の事前学習によって，自然言語分野の複数のタスクにおいてSoTAを達成。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;MLMとNSPという二つのタスクを解かせてトランスフォーマのエンコーダ側を事前学習。&lt;br&gt;
 　トランスフォーマで文章生成する際は，結局リカレントモデルと同じくそれ以前の単語の情報しか見れないという制約があるため，その制約を予め違う形でかけてPretrainしようというのがMLM。&lt;br&gt;
@@ -574,9 +574,9 @@ gitレポジトリには実際に試すためのサンプルデータ（動画�
     
     <item>
       <title>BMN: Boundary-Matching Network for Temporal Action Proposal Generation</title>
-      <link>https://example.com/publication/bmn/</link>
+      <link>https://t-koba-96.github.io/publication/bmn/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/bmn/</guid>
+      <guid>https://t-koba-96.github.io/publication/bmn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Temporal action proposalのタスク。従来のような始点終点予測とは別に，Proposalの始点と長さを表すヒートマップを作成する。最終的に始点終点情報とヒートマップのConfidenceを組み合わせることで，Proposalを出してくる手法を提案。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;https://user-images.githubusercontent.com/38309191/75130552-5f698480-5712-11ea-921e-d6e5f8fc4711.png&#34;&gt;
@@ -598,9 +598,9 @@ gitレポジトリには実際に試すためのサンプルデータ（動画�
     
     <item>
       <title>Completeness Modeling and Context Separation for Weakly Supervised Temporal Action Localization</title>
-      <link>https://example.com/publication/cmcs/</link>
+      <link>https://t-koba-96.github.io/publication/cmcs/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/cmcs/</guid>
+      <guid>https://t-koba-96.github.io/publication/cmcs/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;動画のクラスラベルのみのWeaklyなラベルを用いたTemporal Action Localization.&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -705,9 +705,9 @@ gitレポジトリには実際に試すためのサンプルデータ（動画�
     
     <item>
       <title>Graphical Contrastive Losses for Scene Graph Parsing</title>
-      <link>https://example.com/publication/graphicalcontrastiveloss/</link>
+      <link>https://t-koba-96.github.io/publication/graphicalcontrastiveloss/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/graphicalcontrastiveloss/</guid>
+      <guid>https://t-koba-96.github.io/publication/graphicalcontrastiveloss/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;シーングラフの生成において従来モデルの課題点を指摘した上で，それを改善するための新たなロスを提案し，SoTAを達成。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -1052,9 +1052,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>Long-Term Feature Banks for Detailed Video Understanding</title>
-      <link>https://example.com/publication/featurebank/</link>
+      <link>https://t-koba-96.github.io/publication/featurebank/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/featurebank/</guid>
+      <guid>https://t-koba-96.github.io/publication/featurebank/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;３DCNNでは4秒近くにおける時系列情報しか捉えられない。そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文。&lt;/p&gt;
 &lt;img width=&#34;655&#34; alt=&#34;スクリーンショット 2020-03-06 12 52 25&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048917-56e23b00-5fa9-11ea-8618-ca469d4c0bc9.png&#34;&gt;
@@ -1077,9 +1077,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>MS-TCN: Multi-Stage Temporal Convolutional Network for Action Segmentation</title>
-      <link>https://example.com/publication/ms-tcn/</link>
+      <link>https://t-koba-96.github.io/publication/ms-tcn/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/ms-tcn/</guid>
+      <guid>https://t-koba-96.github.io/publication/ms-tcn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;行動認識のタスクにおいて,&lt;a href=&#34;https://github.com/t-koba-96/paper_summarize/issues/2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Temporal Convolutional Networks&lt;/a&gt;を複数重ねるMulti-TCNの提案。２個目以降のTCNには各クラスのPredictのSoftmax値を入力とすることで，OverSegmentation（予測結果の頻繁な変化）の抑止を実現。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -1104,9 +1104,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>Temporal Cycle-Consistency Learning</title>
-      <link>https://example.com/publication/cycleconsistency/</link>
+      <link>https://t-koba-96.github.io/publication/cycleconsistency/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/cycleconsistency/</guid>
+      <guid>https://t-koba-96.github.io/publication/cycleconsistency/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現。&lt;/p&gt;
 &lt;p&gt;
@@ -1205,9 +1205,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>Video Representation Learning by Dense Predictive Coding</title>
-      <link>https://example.com/publication/densepredictivecoding/</link>
+      <link>https://t-koba-96.github.io/publication/densepredictivecoding/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/densepredictivecoding/</guid>
+      <guid>https://t-koba-96.github.io/publication/densepredictivecoding/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;../16&#34;&gt;Predictive Coding&lt;/a&gt;で用いた手法を動画にも適用した論文。動画の次の潜在表現を回帰で予測させてあげて，相互情報量
 の最大化を目指す。&lt;/p&gt;
@@ -1286,9 +1286,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>VideoBERT: A Joint Model for Video and Language Representation Learning</title>
-      <link>https://example.com/publication/videobert/</link>
+      <link>https://t-koba-96.github.io/publication/videobert/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/videobert/</guid>
+      <guid>https://t-koba-96.github.io/publication/videobert/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;を応用することでマルチモーダルに事前学習させる方法を提案。基本的には&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;のMask穴埋め問題をLanguage+Visionに拡張したもの。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -1315,25 +1315,25 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>詳細な作業遷移映像におけるアクションセグメンテーション</title>
-      <link>https://example.com/published/miru2019/</link>
+      <link>https://t-koba-96.github.io/published/miru2019/</link>
       <pubDate>Mon, 29 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/published/miru2019/</guid>
+      <guid>https://t-koba-96.github.io/published/miru2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>生産ラインの作業映像における詳細な行動の認識</title>
-      <link>https://example.com/published/ssii2019/</link>
+      <link>https://t-koba-96.github.io/published/ssii2019/</link>
       <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/published/ssii2019/</guid>
+      <guid>https://t-koba-96.github.io/published/ssii2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OpenposeのHandPoseEstimatorを実利用のために改良してみた</title>
-      <link>https://example.com/blog/handpose/</link>
+      <link>https://t-koba-96.github.io/blog/handpose/</link>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/blog/handpose/</guid>
+      <guid>https://t-koba-96.github.io/blog/handpose/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Project for a simple handpose estimator. Openpose based hand pose estimator searches the hand position based on the skeleton keypoints which starts from the persons head. This means when some keypoints of the upper body is occluded, estimating the handpose will be difficult(Second example). To solve this problem, we combined openpose with TTFNet. By using the TTFNet to estimate the hand position directly, it will be able to estimate handpose in occluded cases too.&lt;/p&gt;
 &lt;p&gt;For the code, check &lt;a href=&#34;https://github.com/t-koba-96/handpose-estimator&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/p&gt;
@@ -1342,17 +1342,17 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>生産ラインの現場映像における姿勢情報と手元画像情報を用いた詳細行動認識</title>
-      <link>https://example.com/published/dia2019/</link>
+      <link>https://t-koba-96.github.io/published/dia2019/</link>
       <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/published/dia2019/</guid>
+      <guid>https://t-koba-96.github.io/published/dia2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Graph R-CNN for Scene Graph Generation</title>
-      <link>https://example.com/publication/graph-rcnn/</link>
+      <link>https://t-koba-96.github.io/publication/graph-rcnn/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/graph-rcnn/</guid>
+      <guid>https://t-koba-96.github.io/publication/graph-rcnn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。Graphの参考資料は&lt;a href=&#34;../14&#34;&gt;こちら&lt;/a&gt;。SceneGraphとは&lt;a href=&#34;../31&#34;&gt;VisualGenome&lt;/a&gt;において定義されているもので，{Subject,Relationship(Predicate),Object} (+Attribute) によるグラフ構造で表される。例として，A man is swinging a bat というような画像内の関係性があったとき， {man, swinging, bat} (+Attribute)というふうになる。これらの関係性を考えていき，最終的には(d)の関係性の出力を目指す。&lt;/p&gt;
 &lt;p&gt;
@@ -1703,9 +1703,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>Neural Motifs: Scene Graph Parsing with Global Context</title>
-      <link>https://example.com/publication/neuralmotifs/</link>
+      <link>https://t-koba-96.github.io/publication/neuralmotifs/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/neuralmotifs/</guid>
+      <guid>https://t-koba-96.github.io/publication/neuralmotifs/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;シーングラフ生成のタスクで既存の&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;データセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案。&lt;/p&gt;
 &lt;p&gt;
@@ -1910,9 +1910,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning</title>
-      <link>https://example.com/publication/nnviterbi/</link>
+      <link>https://t-koba-96.github.io/publication/nnviterbi/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/nnviterbi/</guid>
+      <guid>https://t-koba-96.github.io/publication/nnviterbi/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;クラスラベルの遷移順のみのWeaklyなラベルを用いたAction Segmentation. Viterbi algorism を用いた方法を提案。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -1930,9 +1930,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>Representation Learning with Contrastive Predictive Coding</title>
-      <link>https://example.com/publication/contrastivepredictivecoding/</link>
+      <link>https://t-koba-96.github.io/publication/contrastivepredictivecoding/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/contrastivepredictivecoding/</guid>
+      <guid>https://t-koba-96.github.io/publication/contrastivepredictivecoding/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;画像や音声における新しい表現学習の方法を提案。エンコーダーとGRUを組み合わせてGRUが次のエンコーダの出力を予測して,その相互情報量の最大化によって良い特徴表現を獲得する。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -2080,9 +2080,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>Time-Contrastive Networks: Self-Supervised Learning from Video</title>
-      <link>https://example.com/publication/tcnetworks/</link>
+      <link>https://t-koba-96.github.io/publication/tcnetworks/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/tcnetworks/</guid>
+      <guid>https://t-koba-96.github.io/publication/tcnetworks/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Action recognition　におけるSelf-supervisedな事前学習方法の提案。異なる視点から撮った同じアクションにおける同フレームは同じアクションであるとみなせるため，同じフレーム同士は近づけて，ことなるフレームは遠ざけるといったトリプレットな学習方法ができる。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -2106,9 +2106,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>Weakly-Supervised Action Segmentation with Iterative Soft Boundary Assignment</title>
-      <link>https://example.com/publication/isba/</link>
+      <link>https://t-koba-96.github.io/publication/isba/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/isba/</guid>
+      <guid>https://t-koba-96.github.io/publication/isba/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Action Segmentation のタスクにおいてWeakly-supervisedな手法. 学習用の動画デートセットの正解として，動画内の行動ラベルの順番のみ与える（各フレームにおける正解ラベルはなし）. 同様のWeakly-Supervisedな手法と比較して最高精度を記録。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -2141,9 +2141,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>Attention is all you need</title>
-      <link>https://example.com/publication/transformer/</link>
+      <link>https://t-koba-96.github.io/publication/transformer/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/transformer/</guid>
+      <guid>https://t-koba-96.github.io/publication/transformer/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;機械翻訳用のネットワーク，トランスフォーマーの提案。従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -2169,9 +2169,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>Temporal Convolutional Networks for Action Segmentation and Detection</title>
-      <link>https://example.com/publication/tcn/</link>
+      <link>https://t-koba-96.github.io/publication/tcn/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/tcn/</guid>
+      <guid>https://t-koba-96.github.io/publication/tcn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.&lt;br&gt;
 ２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.&lt;/p&gt;
@@ -2196,9 +2196,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations</title>
-      <link>https://example.com/publication/visualgenome/</link>
+      <link>https://t-koba-96.github.io/publication/visualgenome/</link>
       <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/visualgenome/</guid>
+      <guid>https://t-koba-96.github.io/publication/visualgenome/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成。SceneGraphの研究分野で一般的に使われているデータセットとなっている。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -2266,9 +2266,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>Two-Stream Convolutional Networks for Action Recognition in Videos</title>
-      <link>https://example.com/publication/two-stream/</link>
+      <link>https://t-koba-96.github.io/publication/two-stream/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/two-stream/</guid>
+      <guid>https://t-koba-96.github.io/publication/two-stream/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Spatial stream ConvNet(以後Spatial Conv)とTemporal stream ConvNet(以後Temporal Conv)の組み合わせ. Spatial Convでは各フレームの静止画（RGB画像）を入力して畳み込み、空間情報の抽出によるクラス分類. Temporal Convでは各フレームのオプティカルフローを入力して畳み込み、動き情報の抽出によるクラス分類.   下図のように，Spatial Convにおける1つの入力フレームに対して，Temporal ConvではそのフレームからNフレーム分のオプティカルフローを用いる。（RGBとオプティカルフローの入力が1:N）。
 最終的な結果は、それぞれのネットワークのクラスの確率分布を統合し、最も高確率のクラスを出力.&lt;/p&gt;
@@ -2292,9 +2292,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://example.com/admin/config.yml</link>
+      <link>https://t-koba-96.github.io/admin/config.yml</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/admin/config.yml</guid>
+      <guid>https://t-koba-96.github.io/admin/config.yml</guid>
       <description></description>
     </item>
     

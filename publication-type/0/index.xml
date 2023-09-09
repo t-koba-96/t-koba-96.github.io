@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>0 | Bianca Blog</title>
-    <link>https://example.com/publication-type/0/</link>
-      <atom:link href="https://example.com/publication-type/0/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/publication-type/0/</link>
+      <atom:link href="https://t-koba-96.github.io/publication-type/0/index.xml" rel="self" type="application/rss+xml" />
     <description>0</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>0</title>
-      <link>https://example.com/publication-type/0/</link>
+      <link>https://t-koba-96.github.io/publication-type/0/</link>
     </image>
     
     <item>
       <title>Fast and Unsupervised Action Boundary Detection for Action Segmentation</title>
-      <link>https://example.com/publication/abdetection/</link>
+      <link>https://t-koba-96.github.io/publication/abdetection/</link>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/abdetection/</guid>
+      <guid>https://t-koba-96.github.io/publication/abdetection/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;h1 id=&#34;提案手法&#34;&gt;&lt;code&gt;提案手法&lt;/code&gt;&lt;/h1&gt;
 &lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
@@ -26,9 +26,9 @@
     
     <item>
       <title>Temporal-Relational CrossTransformers for Few-Shot Action Recognition</title>
-      <link>https://example.com/publication/tr_crosstransformers/</link>
+      <link>https://t-koba-96.github.io/publication/tr_crosstransformers/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/tr_crosstransformers/</guid>
+      <guid>https://t-koba-96.github.io/publication/tr_crosstransformers/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;CrossTransformerを応用したFew-ShotのActionRecognition手法の提案。&lt;/p&gt;
 &lt;p&gt;
@@ -148,9 +148,9 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     
     <item>
       <title>Action Genome: Actions as Composition of Spatio-temporal Scene Graphs</title>
-      <link>https://example.com/publication/actiongenome/</link>
+      <link>https://t-koba-96.github.io/publication/actiongenome/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/actiongenome/</guid>
+      <guid>https://t-koba-96.github.io/publication/actiongenome/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;../12&#34;&gt;Visual Genome&lt;/a&gt;の動画版のデータセット。また&lt;a href=&#34;../14&#34;&gt;Feature Banks&lt;/a&gt;を用いた手法の提案。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -277,9 +277,9 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     
     <item>
       <title>Completeness Modeling and Context Separation for Weakly Supervised Temporal Action Localization</title>
-      <link>https://example.com/publication/cmcs/</link>
+      <link>https://t-koba-96.github.io/publication/cmcs/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/cmcs/</guid>
+      <guid>https://t-koba-96.github.io/publication/cmcs/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;動画のクラスラベルのみのWeaklyなラベルを用いたTemporal Action Localization.&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -384,9 +384,9 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     
     <item>
       <title>Graphical Contrastive Losses for Scene Graph Parsing</title>
-      <link>https://example.com/publication/graphicalcontrastiveloss/</link>
+      <link>https://t-koba-96.github.io/publication/graphicalcontrastiveloss/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/graphicalcontrastiveloss/</guid>
+      <guid>https://t-koba-96.github.io/publication/graphicalcontrastiveloss/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;シーングラフの生成において従来モデルの課題点を指摘した上で，それを改善するための新たなロスを提案し，SoTAを達成。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -731,9 +731,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>Long-Term Feature Banks for Detailed Video Understanding</title>
-      <link>https://example.com/publication/featurebank/</link>
+      <link>https://t-koba-96.github.io/publication/featurebank/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/featurebank/</guid>
+      <guid>https://t-koba-96.github.io/publication/featurebank/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;３DCNNでは4秒近くにおける時系列情報しか捉えられない。そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文。&lt;/p&gt;
 &lt;img width=&#34;655&#34; alt=&#34;スクリーンショット 2020-03-06 12 52 25&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048917-56e23b00-5fa9-11ea-8618-ca469d4c0bc9.png&#34;&gt;
@@ -756,9 +756,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>MS-TCN: Multi-Stage Temporal Convolutional Network for Action Segmentation</title>
-      <link>https://example.com/publication/ms-tcn/</link>
+      <link>https://t-koba-96.github.io/publication/ms-tcn/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/ms-tcn/</guid>
+      <guid>https://t-koba-96.github.io/publication/ms-tcn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;行動認識のタスクにおいて,&lt;a href=&#34;https://github.com/t-koba-96/paper_summarize/issues/2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Temporal Convolutional Networks&lt;/a&gt;を複数重ねるMulti-TCNの提案。２個目以降のTCNには各クラスのPredictのSoftmax値を入力とすることで，OverSegmentation（予測結果の頻繁な変化）の抑止を実現。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -783,9 +783,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>Temporal Cycle-Consistency Learning</title>
-      <link>https://example.com/publication/cycleconsistency/</link>
+      <link>https://t-koba-96.github.io/publication/cycleconsistency/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/cycleconsistency/</guid>
+      <guid>https://t-koba-96.github.io/publication/cycleconsistency/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現。&lt;/p&gt;
 &lt;p&gt;
@@ -884,9 +884,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>VideoBERT: A Joint Model for Video and Language Representation Learning</title>
-      <link>https://example.com/publication/videobert/</link>
+      <link>https://t-koba-96.github.io/publication/videobert/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/videobert/</guid>
+      <guid>https://t-koba-96.github.io/publication/videobert/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;を応用することでマルチモーダルに事前学習させる方法を提案。基本的には&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;のMask穴埋め問題をLanguage+Visionに拡張したもの。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -913,9 +913,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>Neural Motifs: Scene Graph Parsing with Global Context</title>
-      <link>https://example.com/publication/neuralmotifs/</link>
+      <link>https://t-koba-96.github.io/publication/neuralmotifs/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/neuralmotifs/</guid>
+      <guid>https://t-koba-96.github.io/publication/neuralmotifs/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;シーングラフ生成のタスクで既存の&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;データセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案。&lt;/p&gt;
 &lt;p&gt;
@@ -1120,9 +1120,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>Weakly-Supervised Action Segmentation with Iterative Soft Boundary Assignment</title>
-      <link>https://example.com/publication/isba/</link>
+      <link>https://t-koba-96.github.io/publication/isba/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/isba/</guid>
+      <guid>https://t-koba-96.github.io/publication/isba/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Action Segmentation のタスクにおいてWeakly-supervisedな手法. 学習用の動画デートセットの正解として，動画内の行動ラベルの順番のみ与える（各フレームにおける正解ラベルはなし）. 同様のWeakly-Supervisedな手法と比較して最高精度を記録。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -1155,9 +1155,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>Temporal Convolutional Networks for Action Segmentation and Detection</title>
-      <link>https://example.com/publication/tcn/</link>
+      <link>https://t-koba-96.github.io/publication/tcn/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/tcn/</guid>
+      <guid>https://t-koba-96.github.io/publication/tcn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.&lt;br&gt;
 ２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.&lt;/p&gt;

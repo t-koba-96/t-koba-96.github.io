@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jingwei Ji | Bianca Blog</title>
-    <link>https://example.com/author/jingwei-ji/</link>
-      <atom:link href="https://example.com/author/jingwei-ji/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://t-koba-96.github.io/author/jingwei-ji/</link>
+      <atom:link href="https://t-koba-96.github.io/author/jingwei-ji/index.xml" rel="self" type="application/rss+xml" />
     <description>Jingwei Ji</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>Jingwei Ji</title>
-      <link>https://example.com/author/jingwei-ji/</link>
+      <link>https://t-koba-96.github.io/author/jingwei-ji/</link>
     </image>
     
     <item>
       <title>Action Genome: Actions as Composition of Spatio-temporal Scene Graphs</title>
-      <link>https://example.com/publication/actiongenome/</link>
+      <link>https://t-koba-96.github.io/publication/actiongenome/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/actiongenome/</guid>
+      <guid>https://t-koba-96.github.io/publication/actiongenome/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;../12&#34;&gt;Visual Genome&lt;/a&gt;の動画版のデータセット。また&lt;a href=&#34;../14&#34;&gt;Feature Banks&lt;/a&gt;を用いた手法の提案。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
