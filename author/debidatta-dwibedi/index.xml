@@ -14,9 +14,9 @@
     
     <item>
       <title>Temporal Cycle-Consistency Learning</title>
-      <link>https://t-koba-96.github.io/publication/cycleconsistency/</link>
+      <link>https://t-koba-96.github.io/publication/temporal-cycle-consistency/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/cycleconsistency/</guid>
+      <guid>https://t-koba-96.github.io/publication/temporal-cycle-consistency/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現。&lt;/p&gt;
 &lt;p&gt;

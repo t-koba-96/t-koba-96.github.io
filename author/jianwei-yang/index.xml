@@ -18,7 +18,7 @@
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       <guid>https://t-koba-96.github.io/publication/graph-rcnn/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。Graphの参考資料は&lt;a href=&#34;../14&#34;&gt;こちら&lt;/a&gt;。SceneGraphとは&lt;a href=&#34;../31&#34;&gt;VisualGenome&lt;/a&gt;において定義されているもので，{Subject,Relationship(Predicate),Object} (+Attribute) によるグラフ構造で表される。例として，A man is swinging a bat というような画像内の関係性があったとき， {man, swinging, bat} (+Attribute)というふうになる。これらの関係性を考えていき，最終的には(d)の関係性の出力を目指す。&lt;/p&gt;
+&lt;p&gt;GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。SceneGraphとは&lt;a href=&#34;../visual-genome&#34;&gt;VisualGenome&lt;/a&gt;において定義されているもので，{Subject,Relationship(Predicate),Object} (+Attribute) によるグラフ構造で表される。例として，A man is swinging a bat というような画像内の関係性があったとき， {man, swinging, bat} (+Attribute)というふうになる。これらの関係性を考えていき，最終的には(d)の関係性の出力を目指す。&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -258,7 +258,7 @@
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;評価方法&#34;&gt;評価方法&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;../31&#34;&gt;VisualGenome&lt;/a&gt;で用いられていたSGGenという評価方法を改善し，SGGen+と呼ばれる新たな評価軸を提案。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../visual-genome&#34;&gt;VisualGenome&lt;/a&gt;で用いられていたSGGenという評価方法を改善し，SGGen+と呼ばれる新たな評価軸を提案。&lt;/p&gt;
 &lt;h2 id=&#34;sggen&#34;&gt;SGGen&lt;/h2&gt;
 &lt;p&gt;以下の二つの評価によって決定される。&lt;/p&gt;
 &lt;p&gt;⓵　{Subject,Relationship(Predicate),Object}　のすべての要素が完全に一致している&lt;br&gt;

@@ -39,9 +39,9 @@
     
     <item>
       <title>Representation Learning with Contrastive Predictive Coding</title>
-      <link>https://t-koba-96.github.io/publication/contrastivepredictivecoding/</link>
+      <link>https://t-koba-96.github.io/publication/representation-learning-with-contrastive-predictive-coding/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/contrastivepredictivecoding/</guid>
+      <guid>https://t-koba-96.github.io/publication/representation-learning-with-contrastive-predictive-coding/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;画像や音声における新しい表現学習の方法を提案。エンコーダーとGRUを組み合わせてGRUが次のエンコーダの出力を予測して,その相互情報量の最大化によって良い特徴表現を獲得する。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -189,9 +189,9 @@
     
     <item>
       <title>Time-Contrastive Networks: Self-Supervised Learning from Video</title>
-      <link>https://t-koba-96.github.io/publication/tcnetworks/</link>
+      <link>https://t-koba-96.github.io/publication/time-contrastive-networks/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/tcnetworks/</guid>
+      <guid>https://t-koba-96.github.io/publication/time-contrastive-networks/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Action recognition　におけるSelf-supervisedな事前学習方法の提案。異なる視点から撮った同じアクションにおける同フレームは同じアクションであるとみなせるため，同じフレーム同士は近づけて，ことなるフレームは遠ざけるといったトリプレットな学習方法ができる。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -215,9 +215,9 @@
     
     <item>
       <title>Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations</title>
-      <link>https://t-koba-96.github.io/publication/visualgenome/</link>
+      <link>https://t-koba-96.github.io/publication/visual-genome/</link>
       <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/visualgenome/</guid>
+      <guid>https://t-koba-96.github.io/publication/visual-genome/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成。SceneGraphの研究分野で一般的に使われているデータセットとなっている。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  

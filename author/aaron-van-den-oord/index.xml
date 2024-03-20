@@ -14,9 +14,9 @@
     
     <item>
       <title>Representation Learning with Contrastive Predictive Coding</title>
-      <link>https://t-koba-96.github.io/publication/contrastivepredictivecoding/</link>
+      <link>https://t-koba-96.github.io/publication/representation-learning-with-contrastive-predictive-coding/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/contrastivepredictivecoding/</guid>
+      <guid>https://t-koba-96.github.io/publication/representation-learning-with-contrastive-predictive-coding/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;画像や音声における新しい表現学習の方法を提案。エンコーダーとGRUを組み合わせてGRUが次のエンコーダの出力を予測して,その相互情報量の最大化によって良い特徴表現を獲得する。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  

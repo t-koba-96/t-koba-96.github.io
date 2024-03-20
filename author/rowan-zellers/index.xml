@@ -14,11 +14,11 @@
     
     <item>
       <title>Neural Motifs: Scene Graph Parsing with Global Context</title>
-      <link>https://t-koba-96.github.io/publication/neuralmotifs/</link>
+      <link>https://t-koba-96.github.io/publication/neural-motifs/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/neuralmotifs/</guid>
+      <guid>https://t-koba-96.github.io/publication/neural-motifs/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;シーングラフ生成のタスクで既存の&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;データセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案。&lt;/p&gt;
+&lt;p&gt;シーングラフ生成のタスクで既存の&lt;a href=&#34;../visual-genome&#34;&gt;VisualGenome&lt;/a&gt;データセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案。&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -41,7 +41,7 @@
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;シーングラフの作成における考察&#34;&gt;シーングラフの作成における考察&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;を用いたシーングラフ生成の過程において，以下の２つの特徴があったと主張。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../visual-genome&#34;&gt;VisualGenome&lt;/a&gt;を用いたシーングラフ生成の過程において，以下の２つの特徴があったと主張。&lt;/p&gt;
 &lt;h2 id=&#34;-objectの情報からrelationを更新することはrelationを予測する上で有効であるが逆はそうではない&#34;&gt;⓵ Objectの情報からRelationを更新することはRelationを予測する上で有効であるが，逆はそうではない。&lt;/h2&gt;
 &lt;p&gt;下図は，右下に書かれてる四角の中の右半分の情報(Head=始点のObject，Tail=終点のObject，Edge=Relation)を用いて残りの左半分を予測したときのtopK/精度を示したもの。&lt;/p&gt;
 &lt;p&gt;
@@ -91,7 +91,7 @@
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;今までのGraphConvを使った手法(&lt;a href=&#34;../10&#34;&gt;Graph-RCNN&lt;/a&gt;とか)と違いLSTMを用いた手法（下図）。&lt;/p&gt;
+&lt;p&gt;今までのGraphConvを使った手法(&lt;a href=&#34;../graph-rcnn&#34;&gt;Graph-RCNN&lt;/a&gt;とか)と違いLSTMを用いた手法（下図）。&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -167,7 +167,7 @@ R=Relation)&lt;/p&gt;
 &lt;p&gt;同様にbiLSTMを用いたedge情報の予測。入力として⓶で得たクラスのone-hotと，⓶のLSTMの隠れ層の出力を用いる。
 最後に得た出力同士の全ての組み合わせを考えていき，関係性なしラベルを含んだエッジのラベルを予測させる。⓵で得たboundingbox，⓶で得たクラスラベル，⓷で得たEdgeの関係性ラベルを組み合わせて，最終的にシーングラフが作成できる。&lt;/p&gt;
 &lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;を用いて評価。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../visual-genome&#34;&gt;VisualGenome&lt;/a&gt;を用いて評価。&lt;/p&gt;
 &lt;p&gt;[Scene Graph Detection] &amp;hellip; ラベル情報なしでBBox, Object, Relation 全て予測&lt;br&gt;
 [Scene Graph Classification] &amp;hellip; BBoxラベルありでObject, Relation 予測&lt;br&gt;
 [Predicate Classification] &amp;hellip; BBox, Objectラベルありで Relation 予測&lt;/p&gt;

@@ -14,14 +14,14 @@
     
     <item>
       <title>Graphical Contrastive Losses for Scene Graph Parsing</title>
-      <link>https://t-koba-96.github.io/publication/graphicalcontrastiveloss/</link>
+      <link>https://t-koba-96.github.io/publication/graphical-contrastive-loss/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/graphicalcontrastiveloss/</guid>
+      <guid>https://t-koba-96.github.io/publication/graphical-contrastive-loss/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;シーングラフの生成において従来モデルの課題点を指摘した上で，それを改善するための新たなロスを提案し，SoTAを達成。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
 &lt;h2 id=&#34;シーングラフにおける言葉の定義&#34;&gt;シーングラフにおける言葉の定義&lt;/h2&gt;
-&lt;p&gt;まずはじめに論文の内容とは関係ないが，&lt;a href=&#34;../24&#34;&gt;Graph-RCNN&lt;/a&gt;ではあいまいになっていて読みにくかったシーングラフにおける言葉の定義をしっかり記していてくれたのが地味にありがたい。&lt;/p&gt;
+&lt;p&gt;まずはじめに論文の内容とは関係ないが，&lt;a href=&#34;../graph-rcnn&#34;&gt;Graph-RCNN&lt;/a&gt;ではあいまいになっていて読みにくかったシーングラフにおける言葉の定義をしっかり記していてくれたのが地味にありがたい。&lt;/p&gt;
 &lt;p&gt;・シーングラフを構成するにあたって必要にになるのは，objectとsubject,それをつなぐ関係性であるpredicateと，objectやsubjectに関するattributeの4つ。&lt;br&gt;
 &lt;em&gt;&lt;strong&gt;[object, subject, predicate, attribute]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;・実際に画像上に登場する物体(Object or Subject)は総称してentity.&lt;br&gt;
@@ -29,7 +29,7 @@
 &lt;p&gt;・最終的に求めるべきobject,subject,predicateの関係性を&amp;lt;s,pred,o&amp;gt;と定義し，これのことをrelationshipsと呼ぶ。&lt;br&gt;
 &lt;em&gt;&lt;strong&gt;[relationships]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;従来手法の課題点&#34;&gt;従来手法の課題点&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;../25&#34;&gt;MotifNet&lt;/a&gt;のように，従来の手法ではまず初めにentityの情報を得てから，それをもとにpredicateをラベルのクラス分類問題として解くことでrelationshipsを求めるという２段階のアプローチが主流である。しかし，このようなアプローチには２つの課題が存在すると主張している。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../neural-motifs&#34;&gt;MotifNet&lt;/a&gt;のように，従来の手法ではまず初めにentityの情報を得てから，それをもとにpredicateをラベルのクラス分類問題として解くことでrelationshipsを求めるという２段階のアプローチが主流である。しかし，このようなアプローチには２つの課題が存在すると主張している。&lt;/p&gt;
 &lt;h2 id=&#34;-entity-instance-confusion&#34;&gt;⓵ Entity Instance Confusion&lt;/h2&gt;
 &lt;p&gt;同じラベルのentityが複数登場した時，relationshipにおけるenitityがそのうちのどれであるかの判断が難しくなる。以下の例では，男の人が持っているのではない方のワイングラスにobjectが付加されてしまっている。&lt;/p&gt;
 &lt;p&gt;

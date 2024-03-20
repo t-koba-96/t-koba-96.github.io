@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: March 20, 2024 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.b6d003f494885717a4e7a7dae0d96b7b.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Takuya Kobayashi" />
+
+
+
+
+
+  
+
+<meta name="description" content="３DCNNでは4秒近くにおける時系列情報しか捉えられない。そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文。" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://t-koba-96.github.io/publication/long-term-feature-banks/" />
+<link rel="canonical" href="https://t-koba-96.github.io/publication/long-term-feature-banks/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#707070" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://t-koba-96.github.io/publication/long-term-feature-banks/featured.png" />
+<meta property="og:site_name" content="Bianca Blog" />
+<meta property="og:url" content="https://t-koba-96.github.io/publication/long-term-feature-banks/" />
+<meta property="og:title" content="Long-Term Feature Banks for Detailed Video Understanding | Bianca Blog" />
+<meta property="og:description" content="３DCNNでは4秒近くにおける時系列情報しか捉えられない。そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文。" /><meta property="og:image" content="https://t-koba-96.github.io/publication/long-term-feature-banks/featured.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2019-08-01T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2019-08-01T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://t-koba-96.github.io/publication/long-term-feature-banks/"
+  },
+  "headline": "Long-Term Feature Banks for Detailed Video Understanding",
+  
+  "image": [
+    "https://t-koba-96.github.io/publication/long-term-feature-banks/featured.png"
+  ],
+  
+  "datePublished": "2019-08-01T00:00:00Z",
+  "dateModified": "2019-08-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Chao-Yuan Wu"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bianca Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "３DCNNでは4秒近くにおける時系列情報しか捉えられない。そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文。"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Long-Term Feature Banks for Detailed Video Understanding | Bianca Blog</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="20dea59188d49ea0f3c7b6aca1ea8740" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bianca Blog</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bianca Blog</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-center" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/publication"><span>PaperSummaries</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/blog"><span>BlogPosts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/published"><span>Works</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Long-Term Feature Banks for Detailed Video Understanding</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      <a href="/author/chao-yuan-wu/">Chao-Yuan Wu</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    August 2019
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/pdf/1812.05038.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 414px;">
+  <div style="position: relative">
+    <img src="/publication/long-term-feature-banks/featured_hud08bb8ba71c2b6f168ec29d4501f232d_83240_720x2500_fit_q75_h2_lanczos_3.webp" width="720" height="414" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    
+
+    
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">In <em>CVPR 2019</em></div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"><h1 id="概要"><code>概要</code></h1>
+<p>３DCNNでは4秒近くにおける時系列情報しか捉えられない。そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文。</p>
+<img width="655" alt="スクリーンショット 2020-03-06 12 52 25" src="https://user-images.githubusercontent.com/38309191/76048917-56e23b00-5fa9-11ea-8618-ca469d4c0bc9.png">
+<h1 id="手法"><code>手法</code></h1>
+<p>３DCNNの元論文では，何フレームごとかに得た特徴をROI Poolingによってある区間における平均特徴量としたのち，全結合層で分類問題を解く（下図）。しかしこれではShortTermな情報しか捉えられず，ビデオ全体から判断が必要な情報が抜け落ちてしまう。</p>
+<img width="436" alt="スクリーンショット 2020-03-06 12 56 58" src="https://user-images.githubusercontent.com/38309191/76050201-fb647d00-5fa9-11ea-8d3d-ea07d839e0c4.png">  
+<p>そこでFeatureBankOperationを導入し，ShortTermとは別に得たLongTermな情報も同時に捉えるようなネットワークを用意してあげて，そこから得た特徴量も用いて認識を行う。</p>
+<img width="512" alt="スクリーンショット 2020-03-06 12 57 15" src="https://user-images.githubusercontent.com/38309191/76050211-03bcb800-5faa-11ea-8d51-86a5ef139f8d.png">
+<p>FeatureBankOperatorの構造は以下。</p>
+<img width="636" alt="スクリーンショット 2020-03-06 12 59 27" src="https://user-images.githubusercontent.com/38309191/76050307-526a5200-5faa-11ea-8a9a-1ab6a57fb7f7.png">
+<h1 id="実験"><code>実験</code></h1>
+<img width="704" alt="スクリーンショット 2020-03-06 13 02 12" src="https://user-images.githubusercontent.com/38309191/76050422-b3922580-5faa-11ea-8c98-89f688cd23a4.png">
+<img width="900" alt="スクリーンショット 2020-03-06 13 03 27" src="https://user-images.githubusercontent.com/38309191/76050485-e1776a00-5faa-11ea-8a14-a6204f5e55d4.png">
+<h1 id="新規性"><code>新規性</code></h1>
+<p>ShortTerm+LongTerm</p>
+<h1 id="コメント"><code>コメント</code></h1>
+<p>単純な理論だが精度向上に結構寄与してる。</p>
+</div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:takukoba1996@gmail.com" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/in/takuya-kobayashi-4775901aa/" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://github.com/t-koba-96" target="_blank" rel="noopener" class="share-btn-github" aria-label="github">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.46271ef31da3f018e9cd1b59300aa265.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.62ee204c51ab1af036605c7fd0a94a0b.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

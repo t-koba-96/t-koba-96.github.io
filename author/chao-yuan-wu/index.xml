@@ -14,9 +14,9 @@
     
     <item>
       <title>Long-Term Feature Banks for Detailed Video Understanding</title>
-      <link>https://t-koba-96.github.io/publication/featurebank/</link>
+      <link>https://t-koba-96.github.io/publication/long-term-feature-banks/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/featurebank/</guid>
+      <guid>https://t-koba-96.github.io/publication/long-term-feature-banks/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;３DCNNでは4秒近くにおける時系列情報しか捉えられない。そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文。&lt;/p&gt;
 &lt;img width=&#34;655&#34; alt=&#34;スクリーンショット 2020-03-06 12 52 25&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048917-56e23b00-5fa9-11ea-8618-ca469d4c0bc9.png&#34;&gt;

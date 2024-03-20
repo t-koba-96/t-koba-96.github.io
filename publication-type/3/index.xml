@@ -38,15 +38,15 @@
     
     <item>
       <title>Video Representation Learning by Dense Predictive Coding</title>
-      <link>https://t-koba-96.github.io/publication/densepredictivecoding/</link>
+      <link>https://t-koba-96.github.io/publication/video-representation-learning-by-dense-predictive-coding/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/densepredictivecoding/</guid>
+      <guid>https://t-koba-96.github.io/publication/video-representation-learning-by-dense-predictive-coding/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;../16&#34;&gt;Predictive Coding&lt;/a&gt;で用いた手法を動画にも適用した論文。動画の次の潜在表現を回帰で予測させてあげて，相互情報量
+&lt;p&gt;&lt;a href=&#34;../representation-learning-with-contrastive-predictive-coding&#34;&gt;Predictive Coding&lt;/a&gt;で用いた手法を動画にも適用した論文。動画の次の潜在表現を回帰で予測させてあげて，相互情報量
 の最大化を目指す。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;全体としての考え方は&lt;a href=&#34;../16&#34;&gt;Predictive Coding&lt;/a&gt;と一緒。ただし今回は動画を入力として扱うので，単純にフレームごとに系列データとして扱っていく。&lt;/p&gt;
+&lt;p&gt;全体としての考え方は&lt;a href=&#34;../representation-learning-with-contrastive-predictive-coding&#34;&gt;Predictive Coding&lt;/a&gt;と一緒。ただし今回は動画を入力として扱うので，単純にフレームごとに系列データとして扱っていく。&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -119,9 +119,9 @@
     
     <item>
       <title>NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning</title>
-      <link>https://t-koba-96.github.io/publication/nnviterbi/</link>
+      <link>https://t-koba-96.github.io/publication/neuralnetwork-viterbi/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/nnviterbi/</guid>
+      <guid>https://t-koba-96.github.io/publication/neuralnetwork-viterbi/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;クラスラベルの遷移順のみのWeaklyなラベルを用いたAction Segmentation. Viterbi algorism を用いた方法を提案。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;

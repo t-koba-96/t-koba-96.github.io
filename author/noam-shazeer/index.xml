@@ -14,9 +14,9 @@
     
     <item>
       <title>Attention is all you need</title>
-      <link>https://t-koba-96.github.io/publication/transformer/</link>
+      <link>https://t-koba-96.github.io/publication/attention-is-all-you-need/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/transformer/</guid>
+      <guid>https://t-koba-96.github.io/publication/attention-is-all-you-need/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;機械翻訳用のネットワーク，トランスフォーマーの提案。従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;

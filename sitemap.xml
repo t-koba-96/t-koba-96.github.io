@@ -5,12 +5,16 @@
     <loc>https://t-koba-96.github.io/author/%E8%AB%96%E6%96%87/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/</loc>
-    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
+    <loc>https://t-koba-96.github.io/blog/graphconv/</loc>
+    <lastmod>2019-10-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication-type/0/</loc>
-    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+    <loc>https://t-koba-96.github.io/blog/</loc>
+    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://t-koba-96.github.io/</loc>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://t-koba-96.github.io/publication-type/5/</loc>
@@ -22,10 +26,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://t-koba-96.github.io/authors/</loc>
-    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://t-koba-96.github.io/publication/abdetection/</loc>
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -41,7 +41,7 @@
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/stostranslation/</loc>
+    <loc>https://t-koba-96.github.io/publication/unified-fully/</loc>
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -49,11 +49,15 @@
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://t-koba-96.github.io/publication-type/0/</loc>
+    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://t-koba-96.github.io/author/alessandro-masullo/</loc>
     <lastmod>2021-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/tr_crosstransformers/</loc>
+    <loc>https://t-koba-96.github.io/publication/temporal-relational-crosstransformers/</loc>
     <lastmod>2021-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -65,7 +69,7 @@
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/actiongenome/</loc>
+    <loc>https://t-koba-96.github.io/publication/action-genome/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -77,7 +81,7 @@
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/crosstransformer/</loc>
+    <loc>https://t-koba-96.github.io/publication/crosstransformers/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -117,10 +121,6 @@
     <lastmod>2019-11-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/blog/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://t-koba-96.github.io/blog/mitsubishi/</loc>
     <lastmod>2019-10-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -149,7 +149,7 @@
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/cmcs/</loc>
+    <loc>https://t-koba-96.github.io/publication/completeness-modeling/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -161,7 +161,7 @@
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/graphicalcontrastiveloss/</loc>
+    <loc>https://t-koba-96.github.io/publication/graphical-contrastive-loss/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -177,7 +177,7 @@
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/featurebank/</loc>
+    <loc>https://t-koba-96.github.io/publication/long-term-feature-banks/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -189,7 +189,7 @@
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/cycleconsistency/</loc>
+    <loc>https://t-koba-96.github.io/publication/temporal-cycle-consistency/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -197,7 +197,7 @@
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/densepredictivecoding/</loc>
+    <loc>https://t-koba-96.github.io/publication/video-representation-learning-by-dense-predictive-coding/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -225,6 +225,10 @@
     <lastmod>2019-02-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://t-koba-96.github.io/publication-type/6/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://t-koba-96.github.io/author/aaron-van-den-oord/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -234,6 +238,10 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://t-koba-96.github.io/author/chenliang-xu/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://t-koba-96.github.io/author/dahua-lin/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -249,11 +257,11 @@
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/neuralmotifs/</loc>
+    <loc>https://t-koba-96.github.io/publication/neural-motifs/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/nnviterbi/</loc>
+    <loc>https://t-koba-96.github.io/publication/neuralnetwork-viterbi/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -261,7 +269,7 @@
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/contrastivepredictivecoding/</loc>
+    <loc>https://t-koba-96.github.io/publication/representation-learning-with-contrastive-predictive-coding/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -269,11 +277,23 @@
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/tcnetworks/</loc>
+    <loc>https://t-koba-96.github.io/author/sijie-yan/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/isba/</loc>
+    <loc>https://t-koba-96.github.io/publication/spatial-temporal-graph-convolutional-networks/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://t-koba-96.github.io/publication/time-contrastive-networks/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://t-koba-96.github.io/publication/weakly-iterative-soft-boundary-assignment/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://t-koba-96.github.io/author/yuanjun-xiong/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -281,7 +301,7 @@
     <lastmod>2017-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/transformer/</loc>
+    <loc>https://t-koba-96.github.io/publication/attention-is-all-you-need/</loc>
     <lastmod>2017-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -309,7 +329,7 @@
     <lastmod>2017-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/tcn/</loc>
+    <loc>https://t-koba-96.github.io/publication/temporal-convolutional-networks/</loc>
     <lastmod>2017-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -317,7 +337,7 @@
     <lastmod>2016-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/visualgenome/</loc>
+    <loc>https://t-koba-96.github.io/publication/visual-genome/</loc>
     <lastmod>2016-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -329,7 +349,7 @@
     <lastmod>2014-07-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://t-koba-96.github.io/publication/two-stream/</loc>
+    <loc>https://t-koba-96.github.io/publication/two-stream-convolutional-networks/</loc>
     <lastmod>2014-07-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>

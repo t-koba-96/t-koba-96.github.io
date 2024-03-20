@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: September 10, 2023 --><html lang="en-us" >
+<!-- Last Published: March 20, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -791,7 +791,7 @@
     <div class="space-below"></div>
 
     <div class="article-style"><h1 id="概要"><code>概要</code></h1>
-<p>GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。Graphの参考資料は<a href="../14">こちら</a>。SceneGraphとは<a href="../31">VisualGenome</a>において定義されているもので，{Subject,Relationship(Predicate),Object} (+Attribute) によるグラフ構造で表される。例として，A man is swinging a bat というような画像内の関係性があったとき， {man, swinging, bat} (+Attribute)というふうになる。これらの関係性を考えていき，最終的には(d)の関係性の出力を目指す。</p>
+<p>GraphConvolutionを用いてSceneGraphの生成をより正確に行うための手法。SceneGraphとは<a href="../visual-genome">VisualGenome</a>において定義されているもので，{Subject,Relationship(Predicate),Object} (+Attribute) によるグラフ構造で表される。例として，A man is swinging a bat というような画像内の関係性があったとき， {man, swinging, bat} (+Attribute)というふうになる。これらの関係性を考えていき，最終的には(d)の関係性の出力を目指す。</p>
 <p>
 
 
@@ -1031,7 +1031,7 @@
   </div></figure>
 </p>
 <h2 id="評価方法">評価方法</h2>
-<p><a href="../31">VisualGenome</a>で用いられていたSGGenという評価方法を改善し，SGGen+と呼ばれる新たな評価軸を提案。</p>
+<p><a href="../visual-genome">VisualGenome</a>で用いられていたSGGenという評価方法を改善し，SGGen+と呼ばれる新たな評価軸を提案。</p>
 <h2 id="sggen">SGGen</h2>
 <p>以下の二つの評価によって決定される。</p>
 <p>⓵　{Subject,Relationship(Predicate),Object}　のすべての要素が完全に一致している<br>

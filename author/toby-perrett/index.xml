@@ -14,9 +14,9 @@
     
     <item>
       <title>Temporal-Relational CrossTransformers for Few-Shot Action Recognition</title>
-      <link>https://t-koba-96.github.io/publication/tr_crosstransformers/</link>
+      <link>https://t-koba-96.github.io/publication/temporal-relational-crosstransformers/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/tr_crosstransformers/</guid>
+      <guid>https://t-koba-96.github.io/publication/temporal-relational-crosstransformers/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;CrossTransformerを応用したFew-ShotのActionRecognition手法の提案。&lt;/p&gt;
 &lt;p&gt;
@@ -64,8 +64,8 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187158126-ca72e67f-0a31-42c9-b3c3-2e73e202fc68.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;各動画は等間隔でフレームサンプリングされたものを使う。QueryVideoからクエリ、SupportVideoからキーとバリューを作成し、&lt;a href=&#34;../22&#34;&gt;CrossTransormer&lt;/a&gt;と同様の構造を用いたAttentionの計算を行う。
-この際、上図にはPair representationsとTriple representationsがあるが、Pair representationsでは各動画の中から2フレーム(ペア)のみを用いて特徴量化し、Triple representations では3フレームのみを用いて特徴量化する。そのため、各動画の特徴量をあらわすために扱うのは実際には2~3フレームである(Ablationで4の場合についても検証している）。&lt;/p&gt;
+&lt;p&gt;各動画は等間隔でフレームサンプリングされたものを使う。QueryVideoからクエリ、SupportVideoからキーとバリューを作成し、&lt;a href=&#34;../crosstransformers&#34;&gt;CrossTransormer&lt;/a&gt;と同様の構造を用いたAttentionの計算を行う。
+この際、上図にはPair representationsとTriple representationsがあるが、Pair representationsでは各動画の中から2フレーム(ペア)のみを用いて特徴量化し、Triple representations では3フレームのみを用いて特徴量化する。そのため、各動画の特徴量をあらわすために扱うのは実際には2~3フレームである（Ablationで4の場合についても検証している）。&lt;/p&gt;
 &lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;
 

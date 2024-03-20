@@ -14,9 +14,9 @@
     
     <item>
       <title>Two-Stream Convolutional Networks for Action Recognition in Videos</title>
-      <link>https://t-koba-96.github.io/publication/two-stream/</link>
+      <link>https://t-koba-96.github.io/publication/two-stream-convolutional-networks/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/two-stream/</guid>
+      <guid>https://t-koba-96.github.io/publication/two-stream-convolutional-networks/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Spatial stream ConvNet(以後Spatial Conv)とTemporal stream ConvNet(以後Temporal Conv)の組み合わせ. Spatial Convでは各フレームの静止画（RGB画像）を入力して畳み込み、空間情報の抽出によるクラス分類. Temporal Convでは各フレームのオプティカルフローを入力して畳み込み、動き情報の抽出によるクラス分類.   下図のように，Spatial Convにおける1つの入力フレームに対して，Temporal ConvではそのフレームからNフレーム分のオプティカルフローを用いる。（RGBとオプティカルフローの入力が1:N）。
 最終的な結果は、それぞれのネットワークのクラスの確率分布を統合し、最も高確率のクラスを出力.&lt;/p&gt;

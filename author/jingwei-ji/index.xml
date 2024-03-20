@@ -14,11 +14,11 @@
     
     <item>
       <title>Action Genome: Actions as Composition of Spatio-temporal Scene Graphs</title>
-      <link>https://t-koba-96.github.io/publication/actiongenome/</link>
+      <link>https://t-koba-96.github.io/publication/action-genome/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/actiongenome/</guid>
+      <guid>https://t-koba-96.github.io/publication/action-genome/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;../12&#34;&gt;Visual Genome&lt;/a&gt;の動画版のデータセット。また&lt;a href=&#34;../14&#34;&gt;Feature Banks&lt;/a&gt;を用いた手法の提案。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../visual-genome&#34;&gt;Visual Genome&lt;/a&gt;の動画版のデータセット。また&lt;a href=&#34;../long-term-feature-banks&#34;&gt;Feature Banks&lt;/a&gt;を用いた手法の提案。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
@@ -67,7 +67,7 @@
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76069582-7479c980-5fd6-11ea-80ba-692b805558d6.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 15 20&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;動画から各Actionを抽出するAction Recognitionのタスクを考える。同グループの以前の研究である&lt;a href=&#34;../14&#34;&gt;Feature Banks&lt;/a&gt;をベースラインとして用いている。従来のように抽出した3DCNN特徴に加えて，今回のラベルによって得られるシーングラフを予測させてobjectとrelationshipsを捉えたfeatured map を同様にFeature bank として長期の時系列情報として保持することで，行動の分類を行っている。&lt;/p&gt;
+&lt;p&gt;動画から各Actionを抽出するAction Recognitionのタスクを考える。同グループの以前の研究である&lt;a href=&#34;../long-term-feature-banks&#34;&gt;Feature Banks&lt;/a&gt;をベースラインとして用いている。従来のように抽出した3DCNN特徴に加えて，今回のラベルによって得られるシーングラフを予測させてobjectとrelationshipsを捉えたfeatured map を同様にFeature bank として長期の時系列情報として保持することで，行動の分類を行っている。&lt;/p&gt;
 &lt;p&gt;
 
 

@@ -14,9 +14,9 @@
     
     <item>
       <title>Visual Genome : Connecting Language and Vision Using Crowdsourced Dense Image Annotations</title>
-      <link>https://t-koba-96.github.io/publication/visualgenome/</link>
+      <link>https://t-koba-96.github.io/publication/visual-genome/</link>
       <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/visualgenome/</guid>
+      <guid>https://t-koba-96.github.io/publication/visual-genome/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;画像をもとにしたシーングラフやそれに関連したVQA等のラベルがついたVisual Genome データセットを作成。SceneGraphの研究分野で一般的に使われているデータセットとなっている。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  

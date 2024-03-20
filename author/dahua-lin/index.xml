@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dahua Lin | Bianca Blog</title>
+    <link>https://t-koba-96.github.io/author/dahua-lin/</link>
+      <atom:link href="https://t-koba-96.github.io/author/dahua-lin/index.xml" rel="self" type="application/rss+xml" />
+    <description>Dahua Lin</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
+      <title>Dahua Lin</title>
+      <link>https://t-koba-96.github.io/author/dahua-lin/</link>
+    </image>
+    
+    <item>
+      <title>Spatial Temporal Graph Convolutional Networks for Skeleton-Based Action Recognition</title>
+      <link>https://t-koba-96.github.io/publication/spatial-temporal-graph-convolutional-networks/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://t-koba-96.github.io/publication/spatial-temporal-graph-convolutional-networks/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;グラフ畳み込みによる骨格ベースの行動認識手法を初めて提案した論文。&lt;br&gt;
+時空間方向のグラフ畳み込みを利用したSkeleton-basedな行動認識手法を提案。&lt;/p&gt;
+&lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
+&lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;コメント&#34;&gt;&lt;code&gt;コメント&lt;/code&gt;&lt;/h1&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

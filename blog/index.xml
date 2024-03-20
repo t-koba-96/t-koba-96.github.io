@@ -5,12 +5,32 @@
     <link>https://t-koba-96.github.io/blog/</link>
       <atom:link href="https://t-koba-96.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>トピック</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 16 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 11 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>トピック</title>
       <link>https://t-koba-96.github.io/blog/</link>
     </image>
+    
+    <item>
+      <title>Graph Convolution について理解</title>
+      <link>https://t-koba-96.github.io/blog/graphconv/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://t-koba-96.github.io/blog/graphconv/</guid>
+      <description>&lt;h1 id=&#34;graph&#34;&gt;&lt;code&gt;Graph&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Graphとは、ノード(点)とエッジ(線)で構成される構造。&lt;/p&gt;
+&lt;img src=&#34;https://github.com/t-koba-96/t-koba-96.github.io/assets/38309191/8cc15c12-0b4a-4c13-8068-ee27a931a485&#34; width=60%&gt;
+&lt;p&gt;と表現できる。&lt;/p&gt;
+&lt;img src=&#34;https://github.com/t-koba-96/food-101-app/assets/38309191/f1ba6b07-4045-4157-bc52-90d761335e5a&#34; width=60%&gt;
+&lt;h2 id=&#34;隣接行列&#34;&gt;&lt;code&gt;隣接行列&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;上記のような適当なグラフ構造について考える。エッジの方向について考えなければ、ノード間のエッジの接続については下位のような隣接行列で表現することができる。尚、対角線上の赤い領域も塗りつぶされているのは、自身への接続(自己ループ)を表している。&lt;/p&gt;
+&lt;img src=&#34;https://github.com/t-koba-96/food-101-app/assets/38309191/62457ddb-5e74-403e-8637-7427cd2b9d21&#34; width=60%&gt;
+&lt;p&gt;畳み込みの前に、まずは隣接行列を使ってノードの特徴量をグラフ構造に合わせて集約してみる。その場合、単純に隣接行列ノード特徴量の内積を取ればよい(下図。)ただし、集約時に結果を足し合わせてしまうと、ノードの接続数が結果に反映されるため、正規化によって接続数による出力の偏りをなくす必要がある(図では簡略化のため接続数でわって平均を求めている。)&lt;/p&gt;
+&lt;img src=&#34;https://github.com/t-koba-96/food-101-app/assets/38309191/a9417e9c-770e-4cbe-b53f-1d493a5410d0&#34; width=60%&gt;
+&lt;h2 id=&#34;グラフ畳み込み&#34;&gt;&lt;code&gt;グラフ畳み込み&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;上記では隣接行列(エッジ)の重みを全て均等に扱っていたが、各接続の重みづけを学習することによって、エッジの重みを畳みこみカーネルと見立ててグラフ畳み込みを行う。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>三菱電機との共同研究成果がプレスリリースされました</title>

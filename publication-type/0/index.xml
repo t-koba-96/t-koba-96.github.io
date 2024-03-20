@@ -5,7 +5,7 @@
     <link>https://t-koba-96.github.io/publication-type/0/</link>
       <atom:link href="https://t-koba-96.github.io/publication-type/0/index.xml" rel="self" type="application/rss+xml" />
     <description>0</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://t-koba-96.github.io/media/icon_huf124860b709ba3b7e308c7ad48690209_1175483_512x512_fill_lanczos_center_3.png</url>
       <title>0</title>
@@ -13,22 +13,10 @@
     </image>
     
     <item>
-      <title>Fast and Unsupervised Action Boundary Detection for Action Segmentation</title>
-      <link>https://t-koba-96.github.io/publication/abdetection/</link>
-      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/abdetection/</guid>
-      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;h1 id=&#34;提案手法&#34;&gt;&lt;code&gt;提案手法&lt;/code&gt;&lt;/h1&gt;
-&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
-&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Temporal-Relational CrossTransformers for Few-Shot Action Recognition</title>
-      <link>https://t-koba-96.github.io/publication/tr_crosstransformers/</link>
+      <link>https://t-koba-96.github.io/publication/temporal-relational-crosstransformers/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/tr_crosstransformers/</guid>
+      <guid>https://t-koba-96.github.io/publication/temporal-relational-crosstransformers/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;CrossTransformerを応用したFew-ShotのActionRecognition手法の提案。&lt;/p&gt;
 &lt;p&gt;
@@ -76,8 +64,8 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/187158126-ca72e67f-0a31-42c9-b3c3-2e73e202fc68.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;各動画は等間隔でフレームサンプリングされたものを使う。QueryVideoからクエリ、SupportVideoからキーとバリューを作成し、&lt;a href=&#34;../22&#34;&gt;CrossTransormer&lt;/a&gt;と同様の構造を用いたAttentionの計算を行う。
-この際、上図にはPair representationsとTriple representationsがあるが、Pair representationsでは各動画の中から2フレーム(ペア)のみを用いて特徴量化し、Triple representations では3フレームのみを用いて特徴量化する。そのため、各動画の特徴量をあらわすために扱うのは実際には2~3フレームである(Ablationで4の場合についても検証している）。&lt;/p&gt;
+&lt;p&gt;各動画は等間隔でフレームサンプリングされたものを使う。QueryVideoからクエリ、SupportVideoからキーとバリューを作成し、&lt;a href=&#34;../crosstransformers&#34;&gt;CrossTransormer&lt;/a&gt;と同様の構造を用いたAttentionの計算を行う。
+この際、上図にはPair representationsとTriple representationsがあるが、Pair representationsでは各動画の中から2フレーム(ペア)のみを用いて特徴量化し、Triple representations では3フレームのみを用いて特徴量化する。そのため、各動画の特徴量をあらわすために扱うのは実際には2~3フレームである（Ablationで4の場合についても検証している）。&lt;/p&gt;
 &lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;
 
@@ -148,11 +136,11 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     
     <item>
       <title>Action Genome: Actions as Composition of Spatio-temporal Scene Graphs</title>
-      <link>https://t-koba-96.github.io/publication/actiongenome/</link>
+      <link>https://t-koba-96.github.io/publication/action-genome/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/actiongenome/</guid>
+      <guid>https://t-koba-96.github.io/publication/action-genome/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;../12&#34;&gt;Visual Genome&lt;/a&gt;の動画版のデータセット。また&lt;a href=&#34;../14&#34;&gt;Feature Banks&lt;/a&gt;を用いた手法の提案。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../visual-genome&#34;&gt;Visual Genome&lt;/a&gt;の動画版のデータセット。また&lt;a href=&#34;../long-term-feature-banks&#34;&gt;Feature Banks&lt;/a&gt;を用いた手法の提案。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;データセット&#34;&gt;データセット&lt;/h2&gt;
@@ -201,7 +189,7 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38309191/76069582-7479c980-5fd6-11ea-80ba-692b805558d6.png&#34; alt=&#34;スクリーンショット 2020-03-06 18 15 20&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;動画から各Actionを抽出するAction Recognitionのタスクを考える。同グループの以前の研究である&lt;a href=&#34;../14&#34;&gt;Feature Banks&lt;/a&gt;をベースラインとして用いている。従来のように抽出した3DCNN特徴に加えて，今回のラベルによって得られるシーングラフを予測させてobjectとrelationshipsを捉えたfeatured map を同様にFeature bank として長期の時系列情報として保持することで，行動の分類を行っている。&lt;/p&gt;
+&lt;p&gt;動画から各Actionを抽出するAction Recognitionのタスクを考える。同グループの以前の研究である&lt;a href=&#34;../long-term-feature-banks&#34;&gt;Feature Banks&lt;/a&gt;をベースラインとして用いている。従来のように抽出した3DCNN特徴に加えて，今回のラベルによって得られるシーングラフを予測させてobjectとrelationshipsを捉えたfeatured map を同様にFeature bank として長期の時系列情報として保持することで，行動の分類を行っている。&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -277,9 +265,9 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     
     <item>
       <title>Completeness Modeling and Context Separation for Weakly Supervised Temporal Action Localization</title>
-      <link>https://t-koba-96.github.io/publication/cmcs/</link>
+      <link>https://t-koba-96.github.io/publication/completeness-modeling/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/cmcs/</guid>
+      <guid>https://t-koba-96.github.io/publication/completeness-modeling/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;動画のクラスラベルのみのWeaklyなラベルを用いたTemporal Action Localization.&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
@@ -384,14 +372,14 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
     
     <item>
       <title>Graphical Contrastive Losses for Scene Graph Parsing</title>
-      <link>https://t-koba-96.github.io/publication/graphicalcontrastiveloss/</link>
+      <link>https://t-koba-96.github.io/publication/graphical-contrastive-loss/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/graphicalcontrastiveloss/</guid>
+      <guid>https://t-koba-96.github.io/publication/graphical-contrastive-loss/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;シーングラフの生成において従来モデルの課題点を指摘した上で，それを改善するための新たなロスを提案し，SoTAを達成。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
 &lt;h2 id=&#34;シーングラフにおける言葉の定義&#34;&gt;シーングラフにおける言葉の定義&lt;/h2&gt;
-&lt;p&gt;まずはじめに論文の内容とは関係ないが，&lt;a href=&#34;../24&#34;&gt;Graph-RCNN&lt;/a&gt;ではあいまいになっていて読みにくかったシーングラフにおける言葉の定義をしっかり記していてくれたのが地味にありがたい。&lt;/p&gt;
+&lt;p&gt;まずはじめに論文の内容とは関係ないが，&lt;a href=&#34;../graph-rcnn&#34;&gt;Graph-RCNN&lt;/a&gt;ではあいまいになっていて読みにくかったシーングラフにおける言葉の定義をしっかり記していてくれたのが地味にありがたい。&lt;/p&gt;
 &lt;p&gt;・シーングラフを構成するにあたって必要にになるのは，objectとsubject,それをつなぐ関係性であるpredicateと，objectやsubjectに関するattributeの4つ。&lt;br&gt;
 &lt;em&gt;&lt;strong&gt;[object, subject, predicate, attribute]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;・実際に画像上に登場する物体(Object or Subject)は総称してentity.&lt;br&gt;
@@ -399,7 +387,7 @@ N-way、K-shotのFSLの時について考える。通常だとQueryビデオがN
 &lt;p&gt;・最終的に求めるべきobject,subject,predicateの関係性を&amp;lt;s,pred,o&amp;gt;と定義し，これのことをrelationshipsと呼ぶ。&lt;br&gt;
 &lt;em&gt;&lt;strong&gt;[relationships]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;従来手法の課題点&#34;&gt;従来手法の課題点&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;../25&#34;&gt;MotifNet&lt;/a&gt;のように，従来の手法ではまず初めにentityの情報を得てから，それをもとにpredicateをラベルのクラス分類問題として解くことでrelationshipsを求めるという２段階のアプローチが主流である。しかし，このようなアプローチには２つの課題が存在すると主張している。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../neural-motifs&#34;&gt;MotifNet&lt;/a&gt;のように，従来の手法ではまず初めにentityの情報を得てから，それをもとにpredicateをラベルのクラス分類問題として解くことでrelationshipsを求めるという２段階のアプローチが主流である。しかし，このようなアプローチには２つの課題が存在すると主張している。&lt;/p&gt;
 &lt;h2 id=&#34;-entity-instance-confusion&#34;&gt;⓵ Entity Instance Confusion&lt;/h2&gt;
 &lt;p&gt;同じラベルのentityが複数登場した時，relationshipにおけるenitityがそのうちのどれであるかの判断が難しくなる。以下の例では，男の人が持っているのではない方のワイングラスにobjectが付加されてしまっている。&lt;/p&gt;
 &lt;p&gt;
@@ -731,9 +719,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>Long-Term Feature Banks for Detailed Video Understanding</title>
-      <link>https://t-koba-96.github.io/publication/featurebank/</link>
+      <link>https://t-koba-96.github.io/publication/long-term-feature-banks/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/featurebank/</guid>
+      <guid>https://t-koba-96.github.io/publication/long-term-feature-banks/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;３DCNNでは4秒近くにおける時系列情報しか捉えられない。そこでよりLongTermな情報と組み合わせて考えることでVideoRecognitionの精度が上がりましたよという論文。&lt;/p&gt;
 &lt;img width=&#34;655&#34; alt=&#34;スクリーンショット 2020-03-06 12 52 25&#34; src=&#34;https://user-images.githubusercontent.com/38309191/76048917-56e23b00-5fa9-11ea-8618-ca469d4c0bc9.png&#34;&gt;
@@ -783,9 +771,9 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>Temporal Cycle-Consistency Learning</title>
-      <link>https://t-koba-96.github.io/publication/cycleconsistency/</link>
+      <link>https://t-koba-96.github.io/publication/temporal-cycle-consistency/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/cycleconsistency/</guid>
+      <guid>https://t-koba-96.github.io/publication/temporal-cycle-consistency/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;異なる動画においても，同じ動作の場合特徴空間上で近くなるように学習させることで，似た動作の動画同士を同期できるようなマッチングを実現。&lt;/p&gt;
 &lt;p&gt;
@@ -888,7 +876,7 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
       <guid>https://t-koba-96.github.io/publication/videobert/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;を応用することでマルチモーダルに事前学習させる方法を提案。基本的には&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;のMask穴埋め問題をLanguage+Visionに拡張したもの。&lt;/p&gt;
+&lt;p&gt;Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，&lt;a href=&#34;../bert&#34;&gt;Bert&lt;/a&gt;を応用することでマルチモーダルに事前学習させる方法を提案。基本的には&lt;a href=&#34;../bert&#34;&gt;Bert&lt;/a&gt;のMask穴埋め問題をLanguage+Visionに拡張したもの。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
 &lt;p&gt;Downstreamのタスクとしては入力テキスト情報に対応したビデオフレームの出力や，入力ビデオの次におきうるアクションのビデオ出力等が挙げられる。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -913,11 +901,11 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
     
     <item>
       <title>Neural Motifs: Scene Graph Parsing with Global Context</title>
-      <link>https://t-koba-96.github.io/publication/neuralmotifs/</link>
+      <link>https://t-koba-96.github.io/publication/neural-motifs/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/neuralmotifs/</guid>
+      <guid>https://t-koba-96.github.io/publication/neural-motifs/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;シーングラフ生成のタスクで既存の&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;データセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案。&lt;/p&gt;
+&lt;p&gt;シーングラフ生成のタスクで既存の&lt;a href=&#34;../visual-genome&#34;&gt;VisualGenome&lt;/a&gt;データセットにおける実験考察をもとに，新たにLSTMを用いた手法を提案。&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -940,7 +928,7 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;シーングラフの作成における考察&#34;&gt;シーングラフの作成における考察&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;を用いたシーングラフ生成の過程において，以下の２つの特徴があったと主張。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../visual-genome&#34;&gt;VisualGenome&lt;/a&gt;を用いたシーングラフ生成の過程において，以下の２つの特徴があったと主張。&lt;/p&gt;
 &lt;h2 id=&#34;-objectの情報からrelationを更新することはrelationを予測する上で有効であるが逆はそうではない&#34;&gt;⓵ Objectの情報からRelationを更新することはRelationを予測する上で有効であるが，逆はそうではない。&lt;/h2&gt;
 &lt;p&gt;下図は，右下に書かれてる四角の中の右半分の情報(Head=始点のObject，Tail=終点のObject，Edge=Relation)を用いて残りの左半分を予測したときのtopK/精度を示したもの。&lt;/p&gt;
 &lt;p&gt;
@@ -990,7 +978,7 @@ Visualのうち，relationships全体の特徴量の抽出のみ別に用意し�
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;今までのGraphConvを使った手法(&lt;a href=&#34;../10&#34;&gt;Graph-RCNN&lt;/a&gt;とか)と違いLSTMを用いた手法（下図）。&lt;/p&gt;
+&lt;p&gt;今までのGraphConvを使った手法(&lt;a href=&#34;../graph-rcnn&#34;&gt;Graph-RCNN&lt;/a&gt;とか)と違いLSTMを用いた手法（下図）。&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -1066,7 +1054,7 @@ R=Relation)&lt;/p&gt;
 &lt;p&gt;同様にbiLSTMを用いたedge情報の予測。入力として⓶で得たクラスのone-hotと，⓶のLSTMの隠れ層の出力を用いる。
 最後に得た出力同士の全ての組み合わせを考えていき，関係性なしラベルを含んだエッジのラベルを予測させる。⓵で得たboundingbox，⓶で得たクラスラベル，⓷で得たEdgeの関係性ラベルを組み合わせて，最終的にシーングラフが作成できる。&lt;/p&gt;
 &lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;../12&#34;&gt;VisualGenome&lt;/a&gt;を用いて評価。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../visual-genome&#34;&gt;VisualGenome&lt;/a&gt;を用いて評価。&lt;/p&gt;
 &lt;p&gt;[Scene Graph Detection] &amp;hellip; ラベル情報なしでBBox, Object, Relation 全て予測&lt;br&gt;
 [Scene Graph Classification] &amp;hellip; BBoxラベルありでObject, Relation 予測&lt;br&gt;
 [Predicate Classification] &amp;hellip; BBox, Objectラベルありで Relation 予測&lt;/p&gt;
@@ -1120,9 +1108,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>Weakly-Supervised Action Segmentation with Iterative Soft Boundary Assignment</title>
-      <link>https://t-koba-96.github.io/publication/isba/</link>
+      <link>https://t-koba-96.github.io/publication/weakly-iterative-soft-boundary-assignment/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/isba/</guid>
+      <guid>https://t-koba-96.github.io/publication/weakly-iterative-soft-boundary-assignment/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Action Segmentation のタスクにおいてWeakly-supervisedな手法. 学習用の動画デートセットの正解として，動画内の行動ラベルの順番のみ与える（各フレームにおける正解ラベルはなし）. 同様のWeakly-Supervisedな手法と比較して最高精度を記録。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -1155,9 +1143,9 @@ R=Relation)&lt;/p&gt;
     
     <item>
       <title>Temporal Convolutional Networks for Action Segmentation and Detection</title>
-      <link>https://t-koba-96.github.io/publication/tcn/</link>
+      <link>https://t-koba-96.github.io/publication/temporal-convolutional-networks/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/tcn/</guid>
+      <guid>https://t-koba-96.github.io/publication/temporal-convolutional-networks/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.&lt;br&gt;
 ２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.&lt;/p&gt;

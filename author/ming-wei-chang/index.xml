@@ -67,7 +67,7 @@
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
       <guid>https://t-koba-96.github.io/publication/videobert/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;を応用することでマルチモーダルに事前学習させる方法を提案。基本的には&lt;a href=&#34;../06&#34;&gt;Bert&lt;/a&gt;のMask穴埋め問題をLanguage+Visionに拡張したもの。&lt;/p&gt;
+&lt;p&gt;Vision and Language において，多くのモデルでVisionとLanguageでネットワークをそれぞれ用意して同時に学習させていた部分を，&lt;a href=&#34;../bert&#34;&gt;Bert&lt;/a&gt;を応用することでマルチモーダルに事前学習させる方法を提案。基本的には&lt;a href=&#34;../bert&#34;&gt;Bert&lt;/a&gt;のMask穴埋め問題をLanguage+Visionに拡張したもの。&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  
 &lt;p&gt;Downstreamのタスクとしては入力テキスト情報に対応したビデオフレームの出力や，入力ビデオの次におきうるアクションのビデオ出力等が挙げられる。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;

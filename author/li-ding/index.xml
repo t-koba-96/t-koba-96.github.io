@@ -14,9 +14,9 @@
     
     <item>
       <title>Weakly-Supervised Action Segmentation with Iterative Soft Boundary Assignment</title>
-      <link>https://t-koba-96.github.io/publication/isba/</link>
+      <link>https://t-koba-96.github.io/publication/weakly-iterative-soft-boundary-assignment/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/isba/</guid>
+      <guid>https://t-koba-96.github.io/publication/weakly-iterative-soft-boundary-assignment/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Action Segmentation のタスクにおいてWeakly-supervisedな手法. 学習用の動画デートセットの正解として，動画内の行動ラベルの順番のみ与える（各フレームにおける正解ラベルはなし）. 同様のWeakly-Supervisedな手法と比較して最高精度を記録。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;

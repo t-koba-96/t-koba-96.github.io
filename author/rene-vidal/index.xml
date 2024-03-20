@@ -14,9 +14,9 @@
     
     <item>
       <title>Temporal Convolutional Networks for Action Segmentation and Detection</title>
-      <link>https://t-koba-96.github.io/publication/tcn/</link>
+      <link>https://t-koba-96.github.io/publication/temporal-convolutional-networks/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/tcn/</guid>
+      <guid>https://t-koba-96.github.io/publication/temporal-convolutional-networks/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;詳細な行動認識のタスクにおいて、動画の各フレームから抽出した特徴を用いて、長期的な時系列情報を考慮するように畳み込みを行って認識を行うネットワークであるTemporal Convolutional Network(以後TCN)の提案.&lt;br&gt;
 ２種類のTCN , Encoder-Decoder TCN(以後ED-TCN) とDilated TCNを提案している.&lt;/p&gt;

@@ -14,9 +14,9 @@
     
     <item>
       <title>Completeness Modeling and Context Separation for Weakly Supervised Temporal Action Localization</title>
-      <link>https://t-koba-96.github.io/publication/cmcs/</link>
+      <link>https://t-koba-96.github.io/publication/completeness-modeling/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/cmcs/</guid>
+      <guid>https://t-koba-96.github.io/publication/completeness-modeling/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;動画のクラスラベルのみのWeaklyなラベルを用いたTemporal Action Localization.&lt;/p&gt;
 &lt;img width=&#34;600&#34; alt=&#34;2019-02-22 16 19 00&#34; src=&#34;featured.png&#34;&gt;  

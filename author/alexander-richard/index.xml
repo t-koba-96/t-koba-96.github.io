@@ -14,9 +14,9 @@
     
     <item>
       <title>NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning</title>
-      <link>https://t-koba-96.github.io/publication/nnviterbi/</link>
+      <link>https://t-koba-96.github.io/publication/neuralnetwork-viterbi/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/nnviterbi/</guid>
+      <guid>https://t-koba-96.github.io/publication/neuralnetwork-viterbi/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;クラスラベルの遷移順のみのWeaklyなラベルを用いたAction Segmentation. Viterbi algorism を用いた方法を提案。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;

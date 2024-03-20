@@ -14,11 +14,11 @@
     
     <item>
       <title>CrossTransformers: spatially-aware few-shot transfer</title>
-      <link>https://t-koba-96.github.io/publication/crosstransformer/</link>
+      <link>https://t-koba-96.github.io/publication/crosstransformers/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/crosstransformer/</guid>
+      <guid>https://t-koba-96.github.io/publication/crosstransformers/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;2 Contributions&lt;/p&gt;
+&lt;h2 id=&#34;貢献&#34;&gt;貢献&lt;/h2&gt;
 &lt;p&gt;[1] SimCLRを用いた自己表現学習: クラスラベルを用いた学習を行うと、抽出した特徴量は一般化されたクラスの情報のみを保持したものとなり、その過程で局所的な特徴や表現をそぎ落としたものとなってしまう。そこでSimCLR同様の自己表現学習方法を導入する。自身の画像自体を正解レベルとして扱うことで、細部の表現をそぎ落とさないような学習を実現する。&lt;/p&gt;
 &lt;p&gt;[2] Transformerによる局所マップ同士の表現の親和性を学習。例えば動物であれば、各体の部位の形や色等、その局所的な特徴の対応性から同一の動物であると決定することができる。Transformerを用いてこのような局所的な特徴同士の比較により、最終的にどのクラスに属しているかの決定を行う。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -92,9 +92,9 @@
     
     <item>
       <title>Attention is all you need</title>
-      <link>https://t-koba-96.github.io/publication/transformer/</link>
+      <link>https://t-koba-96.github.io/publication/attention-is-all-you-need/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/transformer/</guid>
+      <guid>https://t-koba-96.github.io/publication/attention-is-all-you-need/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;機械翻訳用のネットワーク，トランスフォーマーの提案。従来LSTMやGRU等のリカレントネットワークや，畳み込みを主に用いていた自然言語の処理だが，アテンションのみを用いて単語間の関連性を考慮するような手法。&lt;/p&gt;
 &lt;h1 id=&#34;手法&#34;&gt;&lt;code&gt;手法&lt;/code&gt;&lt;/h1&gt;
@@ -120,9 +120,9 @@
     
     <item>
       <title>Two-Stream Convolutional Networks for Action Recognition in Videos</title>
-      <link>https://t-koba-96.github.io/publication/two-stream/</link>
+      <link>https://t-koba-96.github.io/publication/two-stream-convolutional-networks/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>https://t-koba-96.github.io/publication/two-stream/</guid>
+      <guid>https://t-koba-96.github.io/publication/two-stream-convolutional-networks/</guid>
       <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Spatial stream ConvNet(以後Spatial Conv)とTemporal stream ConvNet(以後Temporal Conv)の組み合わせ. Spatial Convでは各フレームの静止画（RGB画像）を入力して畳み込み、空間情報の抽出によるクラス分類. Temporal Convでは各フレームのオプティカルフローを入力して畳み込み、動き情報の抽出によるクラス分類.   下図のように，Spatial Convにおける1つの入力フレームに対して，Temporal ConvではそのフレームからNフレーム分のオプティカルフローを用いる。（RGBとオプティカルフローの入力が1:N）。
 最終的な結果は、それぞれのネットワークのクラスの確率分布を統合し、最も高確率のクラスを出力.&lt;/p&gt;
