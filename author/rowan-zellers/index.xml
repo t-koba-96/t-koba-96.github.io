@@ -14,6 +14,85 @@
     
     <item>
       <title>Neural Motifs: Scene Graph Parsing with Global Context</title>
+      <link>https://t-koba-96.github.io/publication/elaborative_rehearsal_for_zero-shot_action_recognition/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://t-koba-96.github.io/publication/elaborative_rehearsal_for_zero-shot_action_recognition/</guid>
+      <description>&lt;h1 id=&#34;概要&#34;&gt;&lt;code&gt;概要&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Elaborative Rehearsalと呼ばれる人間の記憶に近い方法でZero-shotの行動認識を学習するという枠組み。
+各Action Classに対してElaborative Description(ED)と呼ばれる説明文章を辞書等を用いて作成する。その文章と動画から抽出した特徴量を同じ空間に埋め込み、類似度を用いて最適なクラスを予測する。&lt;/p&gt;
+&lt;h2 id=&#34;action-classに対するelaborative-descriptionの例&#34;&gt;Action Classに対するElaborative Descriptionの例&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/t-koba-96/paper_summarize/assets/38309191/d24c9ee1-d88f-4fc6-93ed-538cee355748&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;モデル全体像&#34;&gt;モデル全体像&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/t-koba-96/paper_summarize/assets/38309191/1bdf9d46-2985-4e53-bcde-bf4d0a4e0f22&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;実験&#34;&gt;&lt;code&gt;実験&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/t-koba-96/paper_summarize/assets/38309191/85ba8cc2-4d86-4bc7-84d9-2c60301a8f9e&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;新規性&#34;&gt;&lt;code&gt;新規性&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Elaborative Descriptionを用いたzero-shotの行動認識学習を提案&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Neural Motifs: Scene Graph Parsing with Global Context</title>
       <link>https://t-koba-96.github.io/publication/neural-motifs/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       <guid>https://t-koba-96.github.io/publication/neural-motifs/</guid>
